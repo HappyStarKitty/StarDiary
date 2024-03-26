@@ -1,7 +1,15 @@
 site_name: StarDiary
 site_url: https://HappyStarKitty.github.io/
 site_author: HappyStarKitty
-theme: material
+theme:
+  name: material
+  feature:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
 
 nav:
   - Math:
