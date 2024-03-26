@@ -6,14 +6,14 @@ theme: material
 nav:
   - Math:
       - Numerical Methods:
-          - Report: Math/Numerical_Methods.md
-          - Lab: Math/Numerical_Methods_Lab_Test.md
+          - Report: Math/Numerical_Method/Numerical_Methods.md
+          - Lab: Math/Numerical_Method/Numerical_Methods_Lab_Test.md
   - CS:
       - C: CS/c_program.md
       - Python: CS/python.md
       - Assembly language: CS/Assembly_Language.md
       - Code: CS/code.md
-      - Data Structure: CS/data_structure.md
+      - Data Structure: CS/Data_Structure.md
       - CSAPP: CS/CSAPP.md
       - The Missing Semester: CS/The Missing Semester.md
 
