@@ -2,4 +2,4 @@ site_name: StarDiary
 site_url: Https://HappyStarKitty.github.io/mkdocs build
 site_author: HappyStarKitty
 theme:
-  name: material
+  name: "rtd-dropdown"

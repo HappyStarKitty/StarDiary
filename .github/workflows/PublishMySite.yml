@@ -1,4 +1,4 @@
-<code class="language-plaintext hljs">name: publish site
+name: publish site
 on: # 在什么时候触发工作流
   push: # 在从本地main分支被push到GitHub仓库时
     branches:
@@ -16,8 +16,3 @@ jobs: # 工作流的具体内容
           python-version: 3.x
       - run: pip install mkdocs-material # 使用pip包管理工具安装mkdocs-material
       - run: mkdocs gh-deploy --force # 使用mkdocs-material部署gh-pages分支</code>
-————————————————
-
-                            版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
-                        
-原文链接：https://blog.csdn.net/m0_63203517/article/details/129755527cd
