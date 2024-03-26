@@ -2,11 +2,27 @@ site_name: StarDiary
 site_url: https://HappyStarKitty.github.io/
 site_author: HappyStarKitty
 theme: material
+
 nav:
   - Math:
-    - Numerical Methods: Numerical Methods Lab Test.md
+      - Numerical Methods:
+          - Report: Math/Numerical_Methods.md
+          - Lab: Math/Numerical_Methods_Lab_Test.md
   - CS:
-    - C: CS/c_program.md
-    - Assembly language: CS/Assembly_language.md
+      - C: CS/c_program.md
+      - Python: CS/python.md
+      - Assembly language: CS/Assembly_Language.md
+      - Code: CS/code.md
+      - Data Structure: CS/data_structure.md
+      - CSAPP: CS/CSAPP.md
+      - The Missing Semester: CS/The Missing Semester.md
+
   - About:
-    - about: about.md
+      - about: about.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences

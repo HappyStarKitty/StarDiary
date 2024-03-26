@@ -11,7 +11,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://HappyStarKitty.github.io/CS/CSAPP/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://HappyStarKitty.github.io/CS/Numerical%20Methods/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://HappyStarKitty.github.io/CS/The%20Missing%20Semester/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://HappyStarKitty.github.io/CS/c_program/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://HappyStarKitty.github.io/CS/code/</loc>
          <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -21,7 +41,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://HappyStarKitty.github.io/Math/Numerical%20Methods%20Lab%20Test/</loc>
+         <loc>https://HappyStarKitty.github.io/CS/python/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://HappyStarKitty.github.io/Math/Numerical%20Methods/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://HappyStarKitty.github.io/Math/Numerical_Methods_Lab_Test/</loc>
          <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
