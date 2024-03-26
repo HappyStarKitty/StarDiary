@@ -3,3 +3,13 @@ site_url: Https://HappyStarKitty.github.io/mkdocs build
 site_author: HappyStarKitty
 theme:
   name: material
+nav:
+  - Math:
+      - 数值计算: Numerical Methods Lab Test.md
+  - Physics:
+  - CS:
+      - C: CS/c_program.md
+      - 汇编语言: CS/Assembly_language.md
+  - Design:
+  - Live:
+  - 关于: about.md
