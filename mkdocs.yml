@@ -5,11 +5,12 @@ theme:
   name: material
 nav:
   - Math:
-      - 数值计算: Numerical Methods Lab Test.md
+      - Numerical Methods: Numerical Methods Lab Test.md
   - Physics:
   - CS:
       - C: CS/c_program.md
-      - 汇编语言: CS/Assembly_language.md
+      - Assembly language: CS/Assembly_language.md
   - Design:
   - Live:
-  - 关于: about.md
+  - About:
+      - about: about.md
