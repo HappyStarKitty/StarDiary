@@ -1,6 +1,5 @@
 site_name: StarDiary
-site_url: Https://HappyStarKitty.github.io/mkdocs/
+site_url: Https://HappyStarKitty.github.io/
 site_author: HappyStarKitty
 theme:
   name: material
-
