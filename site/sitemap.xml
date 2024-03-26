@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://HappyStarKitty.github.io/mkdocs/</loc>
+         <loc>https://HappyStarKitty.github.io/mkdocs build/</loc>
          <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://HappyStarKitty.github.io/mkdocs/about/</loc>
+         <loc>https://HappyStarKitty.github.io/mkdocs build/about/</loc>
          <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
