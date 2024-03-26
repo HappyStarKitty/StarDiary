@@ -1,16 +1,12 @@
 site_name: StarDiary
-site_url: Https://HappyStarKitty.github.io/mkdocs build
+site_url: https://HappyStarKitty.github.io/
 site_author: HappyStarKitty
-theme:
-  name: material
+theme: material
 nav:
   - Math:
-      - Numerical Methods: Numerical Methods Lab Test.md
-  - Physics:
+    - Numerical Methods: Numerical Methods Lab Test.md
   - CS:
-      - C: CS/c_program.md
-      - Assembly language: CS/Assembly_language.md
-  - Design:
-  - Live:
+    - C: CS/c_program.md
+    - Assembly language: CS/Assembly_language.md
   - About:
-      - about: about.md
+    - about: about.md

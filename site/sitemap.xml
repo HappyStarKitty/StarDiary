@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://HappyStarKitty.github.io/mkdocs build/</loc>
+         <loc>https://HappyStarKitty.github.io/about/</loc>
          <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://HappyStarKitty.github.io/mkdocs build/about/</loc>
+         <loc>https://HappyStarKitty.github.io/CS/Assembly_Language/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://HappyStarKitty.github.io/CS/c_program/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://HappyStarKitty.github.io/CS/data_struture/</loc>
+         <lastmod>2024-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://HappyStarKitty.github.io/Math/Numerical%20Methods%20Lab%20Test/</loc>
          <lastmod>2024-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>

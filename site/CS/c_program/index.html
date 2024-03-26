@@ -1,0 +1,1176 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="HappyStarKitty">
+      
+      
+        <link rel="canonical" href="https://HappyStarKitty.github.io/CS/c_program/">
+      
+      
+      
+        <link rel="next" href="../../about/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
+    
+    
+      
+        <title>C - StarDiary</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.10ba22f1.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-c-programming-language" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="StarDiary" class="md-header__button md-logo" aria-label="StarDiary" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            StarDiary
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              C
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="StarDiary" class="md-nav__button md-logo" aria-label="StarDiary" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    StarDiary
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Numerical Methods Lab Test.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Numerical Methods
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            CS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    C
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    C
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dev-c-error-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dev C++ error list
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本语法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基本语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      易错易忘
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      输入与输出
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="输入与输出">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#printf" class="md-nav__link">
+    <span class="md-ellipsis">
+      printf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcharputchar" class="md-nav__link">
+    <span class="md-ellipsis">
+      getchar/putchar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      循环与判断
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="循环与判断">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      switch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据类型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      常量与变量
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常量与变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      常量
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Assembly_language.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assembly language
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    about
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dev-c-error-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dev C++ error list
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本语法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基本语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      易错易忘
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      输入与输出
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="输入与输出">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#printf" class="md-nav__link">
+    <span class="md-ellipsis">
+      printf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcharputchar" class="md-nav__link">
+    <span class="md-ellipsis">
+      getchar/putchar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      循环与判断
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="循环与判断">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      switch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据类型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      常量与变量
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常量与变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      常量
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="the-c-programming-language">The C Programming Language</h1>
+<h2 id="dev-c-error-list">Dev C++ error list</h2>
+<p><strong><em>[Error] ld returned 1 exit status</em></strong>
++ 程序没有主函数
++ printf/scanf 书写错误
++ 出现主函数前未定义的函数
++ 上一个运行结果未关闭</p>
+<hr />
+<h2 id="_1">基本语法</h2>
+<h3 id="_2">易错易忘</h3>
+<ul>
+<li>复合语句在语法上被认为是一条语句</li>
+<li>整数除法舍位</li>
+<li>;空语句</li>
+<li>函数类型未加显式说明，则函数的隐含类型为int</li>
+</ul>
+<pre><code class="language-c">int x=0, y=0, z=0;
+z = (x==1) &amp;&amp; (y=2);
+printf(&quot;%d &quot;, y);
+
+// &amp;&amp;惰性，当前一个条件为真，执行赋值操作
+&lt;&lt;&lt;0
+</code></pre>
+<pre><code class="language-c">int i=10;
+long long t = sizeof(i++);
+printf(&quot;%d&quot;, i);
+
+// sizeof()只是获取值，不影响实际值
+&lt;&lt;&lt;10
+</code></pre>
+<pre><code class="language-c">int i,x,y;  
+i=x=y=0;
+do {
+    ++i;
+    if ( i%2 ) 
+        x+=i, 
+    i++;
+    y +=i++;
+} while ( i&lt;=7 );
+printf(&quot;%d %d %d&quot;, i, x, y);
+
+// 注意逗号
+&lt;&lt;&lt;9 1 20
+ ```
+ ### 符号优先级
+ &gt; 致谢：[ZhouTimeMachine/Note](https://zhoutimemachine.github.io/note/courses/C-review/#week-3)
+
+ |优先级|运算符|结和性/目数|
+ |:-:|:-:|:-:|
+ 1|[]数组()
+ 1|- &gt; .结构
+ 2|-取负 ++ --自增减|右/单
+ 2|(类型)|右
+ 2|* &amp; 指针/地址|右/单
+ 2|！~ 非/按位反|右/单
+ 2|sizeof|右
+ 3|* / %|/双
+ 4|+ -|/双
+ 5|&lt;&lt; &gt;&gt;|/双
+ 6|&gt;(=) &lt;(=)|/双
+ 7|== ！=|/双
+ 8/9/10|&amp;/^/ \|位|/双
+ 11/12|&amp;&amp; || 逻辑|/双
+ 13|?:|右/三
+ 14|各种赋值|右
+ 15|，
+
+
+&gt;大小比较符 (6) 高于等于比较符 (7)，都处于中游
+第 1 级 yyds：数组 []、结构 .-&gt;、括号 () 可认为与相关操作数一体
+关注第 2 级（除第 1 级外，第 2 级几乎最高，且都有右结合的特殊性）
+赋值没地位，逗号最没地位
+数字计算中最常用的*/% (3) 与+- (4) 符合认知，仅居于 1、2 之下
+
+&gt;以 */% 和 +- 为表格的中心，可见所有的比较符都在其下面
+判断条件中 */%+- 对比较符号间不需要括号
+
+&gt;以 */% 和 +- 为表格的中心，可见几乎所有逻辑和位运算都在其下面
+!~是“反面”例子，居于第 2 级
+
+&gt;逻辑：非 &gt; 与 &gt; 或
+位运算：反 &gt; 与 &gt; 异或 &gt; 或
+特殊的三目运算符：只比最没地位的两个好一点，有右结合的特殊性
+右结合：第 2 级，?: 条件和赋值
+具体例子：第 2 级右结合的体现
+*p++
+(char*)(&amp;n) 等价于 (char*)&amp;n
+### 错题整理
+&gt; **Q1**:如果变量已经正确定义，则执行以下程序段后，x的值不变。
+&gt;```c
+&gt;if (x = 20) {
+&gt;   y = 1;
+&gt;} else {
+&gt;   y = 0;
+&gt;}  
+&gt;```
+&gt; **A1**: 错误
+&gt;x赋值为20，y赋值为1
+
+&gt; **Q2**: 执行以下程序段，输入20，输出20.00。
+&gt;```c
+&gt;double x;   
+&gt;scanf(&quot;%f&quot;, &amp;x);  
+&gt;printf(&quot;%.2f&quot;, x);  
+&gt;```
+&gt;***A2***: 错误
+&gt;double输入用&quot;%.lf&quot;,否则会赋值为0
+
+&gt; ***Q3***: 以下求 n! 的函数可以正确计算21！，正确的选项是（ ）。
+&gt;```c
+&gt;_______ fact(int n)
+&gt;{
+&gt;    int i;
+&gt;    _______ product;
+&gt;
+&gt;    product = 1;
+&gt;    for (i = 1; i &lt;= n; i++){
+&gt;         product = product * i;
+&gt;    }
+&gt;
+&gt;    return  product;
+&gt;}
+&gt;```
+&gt;A: double B: int C: float D: void
+&gt;***A3***: A.double
+&gt;int只有四字节或八字节，21！超出存储范围，而double可以
+
+&gt;***Q4***: 执行以下程序段，并回答下列问题。请注意，直接填数字，前后不要加空格等任何其他字符。
+&gt;```c
+&gt;int fahr;
+&gt;double celsius;   
+&gt;for (fahr = 91 ; fahr &lt;= 100; fahr++)   
+ &gt;   celsius = 5.0 * (fahr - 32) / 9.0;         /* 语句① */
+ &gt;   printf(&quot;%4d%6.1f\n&quot;, fahr, celsius);       /* 语句② */
+ &gt;```
+ &gt;语句1执行了____次，语句2执行了____次
+ &gt;***A4***: 10次，1次
+ &gt;语句2不在循环体内
+
+ &gt;***Q5***: 执行以下程序段，并回答下列问题。请注意，直接填数字，前后不要加空格等任何其他字符。
+ &gt;```c
+ &gt;int fahr;
+&gt;double celsius;   
+&gt;for (fahr = 121 ; fahr &lt;= 125; fahr++) ;  
+&gt;    celsius = 5.0 * (fahr - 32) / 9.0;         /* 语句① */
+ &gt;   printf(&quot;%4d%6.1f\n&quot;, fahr, celsius);       /* 语句② */
+ &gt;```
+ &gt;语句1执行了____次，语句2执行了____次
+ &gt;***A5***: 1次，1次
+ &gt;分号表示语句结束，两条语句均不在循环体内
+#### 代码样例
+***Q1***：华氏度转摄氏度
+```c
+#include &lt;stdio.h&gt;
+int main(){
+    float farh,celsius;
+    int lower,upper,step;
+
+    lower=0;
+    upper=300;
+    step=20;
+
+    farh=lower;
+    while(farh&lt;=upper){
+        celsius=(5.0/9.0)*(farh-32.0);
+        printf(&quot;%3.0f %6.1f\n&quot;,farh,celsius);
+        farh=farh+step;
+    }
+
+    return 0;
+}
+</code></pre>
+<h3 id="_3">输入与输出</h3>
+<h4 id="printf">printf</h4>
+<ul>
+<li>不换行</li>
+<li>%d 十进制整型数 %x 十六进制数 %o 八进制数</li>
+<li>%ld long整型数</li>
+<li>%f float %lf double </li>
+<li>%6.2f 浮点数打印，小数点后有两位小数</li>
+<li>%c 字符 %s 字符串</li>
+<li>八进制的前缀是0，十六进制的前缀是0x</li>
+</ul>
+<h4 id="getcharputchar">getchar/putchar</h4>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+int main(){
+    int c;
+    while ((c=getchar()) != EOF)
+        putchar(c);
+}
+/* 将输入复制到输出 */
+</code></pre>
+<h3 id="_4">循环与判断</h3>
+<h4 id="switch">switch</h4>
+<ul>
+<li>case必须互不相同且与表达式类型一致</li>
+<li>执行case符合以后所有的语句（break以避免不必要结果）</li>
+<li>default可放在任意位置</li>
+</ul>
+<h3 id="_5">数据类型</h3>
+<pre><code class="language-c">unsigned short sht=0;
+sht--;
+printf(&quot;%d&quot;,sht);
+
+&gt;&gt;&gt;65535
+</code></pre>
+<h3 id="_6">常量与变量</h3>
+<h4 id="_7">常量</h4>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+#define IN 1
+#define OUT 0
+
+int main(){
+    int c,nl,nw,nc,state;
+
+    state=OUT;
+    nl=nw=nc=0;
+    while((c=getchar())!=EOF){
+        ++nc;
+        if (c=='\n')
+            ++nl;
+        if (c==' ' || c=='\n' || c=='\t')
+            state=OUT;
+        else if (state==OUT){
+            state==IN;
+            ++nw;
+        }
+    }
+    printf(&quot;%d %d %d\n&quot;,nl,nw,nc);
+    return 0;
+}
+/* 统计输入的行数，单词数与字符数 */
+</code></pre>
+<ul>
+<li>常量名大写，与变量区分</li>
+<li>
+<h1 id="definec99const">define指令行末尾无分号（C99：const）</h1>
+</li>
+</ul>
+<h4 id="_8">变量</h4>
+<ul>
+<li>全局变量和静态变量默认值为0</li>
+<li>局部变量初始值未定义</li>
+</ul>
+<hr />
+<h2 id="_9">类型、运算、表达式</h2>
+<p>++后缀 使用后自增
+++前缀 使用前自增
+函数声明时（）中无参数表示参数未知，并非无参数（无参数：void f(void)）</p>
+<h3 id="_10">二维数组初始化</h3>
+<ul>
+<li>列数必须给出</li>
+<li>每行一个{}，逗号分隔</li>
+<li>如果省略，表示补零</li>
+</ul>
+<h3 id="c99-only">集成初始化（C99 only）</h3>
+<ul>
+<li>用[n]在初始化数据中给出定位</li>
+<li>没有定位的数据接在前面位置数据的后面</li>
+<li>其他位置的值补零</li>
+<li>适用于初始数据稀疏的矩阵</li>
+</ul>
+<h3 id="_11">数组与指针</h3>
+<ul>
+<li>函数参数表中的数组实际是指针</li>
+<li>sizeof(a)==size(int*)</li>
+<li>可以用数组的运算符[]进行运算</li>
+</ul>
+<h3 id="_12">字符与字符串</h3>
+<p>char用%d读返回ascll</p>
+<h2 id="_13">指针</h2>
+<h3 id="_14">用途</h3>
+<ul>
+<li>函数返回多个值  </li>
+<li>传入较大的数据时用作参数</li>
+<li>传入数组后对数组做操作</li>
+<li>用函数修改不止一个变量</li>
+<li>动态申请内存</li>
+</ul>
+<p>例题：
+NMEA-0183协议是为了在不同的GPS（全球定位系统）导航设备中建立统一的BTCM（海事无线电技术委员会）标准，由美国国家海洋电子协会（NMEA-The National Marine Electronics Associa-tion）制定的一套通讯协议。GPS接收机根据NMEA-0183协议的标准规范，将位置、速度等信息通过串口传送到PC机、PDA等设备。</p>
+<p>NMEA-0183协议是GPS接收机应当遵守的标准协议，也是目前GPS接收机上使用最广泛的协议，大多数常见的GPS接收机、GPS数据处理软件、导航软件都遵守或者至少兼容这个协议。</p>
+<p>NMEA-0183协议定义的语句非常多，但是常用的或者说兼容性最广的语句只有$GPGGA、$GPGSA、$GPGSV、$GPRMC、$GPVTG、$GPGLL等。</p>
+<p>其中$GPRMC语句的格式如下：</p>
+<pre><code>$GPRMC,024813.640,A,3158.4608,N,11848.3737,E,10.05,324.27,150706,,,A*50
+</code></pre>
+<p>这里整条语句是一个文本行，行中以逗号“,”隔开各个字段，每个字段的大小（长度）不一，这里的示例只是一种可能，并不能认为字段的大小就如上述例句一样。</p>
+<pre><code>字段0：$GPRMC，语句ID，表明该语句为Recommended Minimum Specific GPS/TRANSIT Data（RMC）推荐最小定位信息
+
+字段1：UTC时间，hhmmss.sss格式
+字段2：状态，A=定位，V=未定位
+字段3：纬度ddmm.mmmm，度分格式（前导位数不足则补0）
+字段4：纬度N（北纬）或S（南纬）
+字段5：经度dddmm.mmmm，度分格式（前导位数不足则补0）
+字段6：经度E（东经）或W（西经）
+字段7：速度，节，Knots
+字段8：方位角，度
+字段9：UTC日期，DDMMYY格式
+字段10：磁偏角，（000 - 180）度（前导位数不足则补0）
+字段11：磁偏角方向，E=东W=西
+字段16：校验值
+</code></pre>
+<p>这里，“*”为校验和识别符，其后面的两位数为校验和，代表了“$”和“*”之间所有字符（不包括这两个字符）的异或值的十六进制值。上面这条例句的校验和是十六进制的50，也就是十进制的80。</p>
+<p>提示：\^运算符的作用是异或。将$和*之间所有的字符做\^运算(第一个字符和第二个字符异或，结果再和第三个字符异或，依此类推)之后的值对65536取余后的结果，应该和*后面的两个十六进制数字的值相等，否则的话说明这条语句在传输中发生了错误。注意这个十六进制值中是会出现A-F的大写字母的。</p>
+<p>现在，你的程序要读入一系列GPS输出，其中包含$GPRMC，也包含其他语句。在数据的最后，有一行单独的</p>
+<pre><code>END
+</code></pre>
+<p>表示数据的结束。</p>
+<p>你的程序要从中找出\$GPRMC语句，计算校验和，找出其中校验正确，并且字段2表示已定位的语句，从中计算出时间，换算成北京时间。一次数据中会包含多条$GPRMC语句，以最后一条语句得到的北京时间作为结果输出。</p>
+<p>你的程序一定会读到一条有效的$GPRMC语句。</p>
+<p>输入格式:</p>
+<p>多条GPS语句，每条均以回车换行结束。最后一行是END三个大写字母。</p>
+<p>输出格式：</p>
+<p>6位数时间，表达为：</p>
+<pre><code>hh:mm:ss
+</code></pre>
+<p>其中，hh是两位数的小时，不足两位时前面补0；mm是两位数的分钟，不足两位时前面补0；ss是两位数的秒，不足两位时前面补0。</p>
+<p>输入样例：</p>
+<p>$GPRMC,024813.640,A,3158.4608,N,11848.3737,E,10.05,324.27,150706,,,A*50</p>
+<p>END</p>
+<p>输出样例：</p>
+<p>10:48:13</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdlib.h&gt;
+
+int calculate_checksum(const char *sentence) {
+    int checksum = 0;
+    // 从$到*之间的字符进行异或运算
+    for (int i = 1; i &lt; strlen(sentence) &amp;&amp; sentence[i] != '*'; i++) {
+        checksum ^= sentence[i];
+    }
+    return checksum;
+}
+
+int main() {
+    char sentence[1000];
+    int valid_checksum = 0;  // 校验和是否有效
+    char time[7];  // 保存时间字符串
+
+    while (1) {
+        fgets(sentence, sizeof(sentence), stdin);
+
+        // 去掉末尾的换行符
+        sentence[strcspn(sentence, &quot;\n&quot;)] = 0;
+
+        if (strcmp(sentence, &quot;END&quot;) == 0) {
+            // 输入结束
+            break;
+        }
+
+        // 判断是否为$GPRMC语句
+        if (strncmp(sentence, &quot;$GPRMC,&quot;, 7) == 0) {
+            // 计算校验和
+            int checksum = calculate_checksum(sentence);
+
+            // 从语句中获取状态字段（字段2）
+            char *status = strtok(sentence, &quot;,&quot;);
+            for (int i = 0; i &lt; 2; i++) {
+                status = strtok(NULL, &quot;,&quot;);
+            }
+
+            // 判断校验和是否有效且状态为定位
+            if (checksum == strtol(strtok(NULL, &quot;*&quot;), NULL, 16) &amp;&amp; strcmp(status, &quot;A&quot;) == 0) {
+                valid_checksum = 1;
+                // 从语句中获取时间字段（字段1）
+                char *utc_time = strtok(NULL, &quot;,&quot;);
+                strncpy(time, utc_time, 6);
+            }
+        }
+    }
+
+    // 输出北京时间
+    if (valid_checksum) {
+        int hour = atoi(strncpy(NULL, time, 2));
+        int minute = atoi(strncpy(NULL, time + 2, 2));
+        int second = atoi(strncpy(NULL, time + 4, 2));
+
+        // 转换成北京时间
+        hour = (hour + 8) % 24;
+
+        printf(&quot;%02d:%02d:%02d\n&quot;, hour, minute, second);
+    }
+
+    return 0;
+}
+
+</code></pre>
+<h2 id="_15">算法</h2>
+<h3 id="_16">辗转相除法</h3>
+<pre><code class="language-c">int gcd(int a, int b) {
+    return b == 0 ? a : gcd(b, a % b);
+}
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      
+    
+  </body>
+</html>
