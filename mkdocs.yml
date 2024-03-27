@@ -38,9 +38,9 @@ nav:
   - CS:
       - C: CS/c_program.md
       - Python: CS/python.md
-      - Assembly language: CS/Assembly_Language.md
+      - Assembly Language: CS/Assembly_Language.md
       - Code: CS/code.md
-      - Data Structure: CS/Data_Structure.md
+      - Data Structure: LCS/Data_Structure.md
       - CSAPP: CS/CSAPP.md
       - The Missing Semester: CS/The Missing Semester.md
 
