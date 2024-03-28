@@ -33,8 +33,10 @@ theme:
 nav:
   - Math:
       - Numerical Methods:
-          - Report: Math/Numerical_Method/Numerical_Methods.md
-          - Lab: Math/Numerical_Method/Numerical_Methods_Lab_Test.md
+          - Index: Math/Numerical_Method/README.md
+          - Note: Math/Numerical_Method/Note.md
+          - Lab: Math/Numerical_Method/Lab.md
+          - Homework: Math/Numerical_Method/Homework.md
   - CS:
       - C: CS/c_program.md
       - Python: CS/python.md

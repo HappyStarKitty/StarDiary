@@ -2,52 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://HappyStarKitty.github.io/about/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://HappyStarKitty.github.io/CS/Assembly_Language/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://HappyStarKitty.github.io/CS/CSAPP/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://HappyStarKitty.github.io/CS/Data_Structure/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://HappyStarKitty.github.io/CS/The%20Missing%20Semester/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://HappyStarKitty.github.io/CS/c_program/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://HappyStarKitty.github.io/CS/code/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://HappyStarKitty.github.io/CS/python/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <lastmod>2024-03-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://HappyStarKitty.github.io/Math/Numerical_Method/Numerical_Methods/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <loc>https://HappyStarKitty.github.io/Math/Numerical_Method/</loc>
+         <lastmod>2024-03-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://HappyStarKitty.github.io/Math/Numerical_Method/Numerical_Methods_Lab_Test/</loc>
-         <lastmod>2024-03-26</lastmod>
+         <loc>https://HappyStarKitty.github.io/Math/Numerical_Method/Homework/</loc>
+         <lastmod>2024-03-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://HappyStarKitty.github.io/Math/Numerical_Method/Lab/</loc>
+         <lastmod>2024-03-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://HappyStarKitty.github.io/Math/Numerical_Method/Note/</loc>
+         <lastmod>2024-03-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

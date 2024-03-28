@@ -14,13 +14,14 @@
 + 下标：\_
 + 上标：^
 + 求和：\sum
++ 小于等于：\leq
 #### 希腊字母
 | lower | tex | upper | tex | diff | tex |
 |:-:|:-:|:-:|:-:|:-:|:-:|
 $\phi$|\$\phi\$|$\Phi$|\$\Phi$|$\varphi$|\$\varphi$
 #### 矩阵和行列式
-```latex
 **代码样例**
+```latex
 \[ 
 \left|\begin{array}{cccc} 
     1 &    6    & 9 \\ 
@@ -39,14 +40,14 @@ $\phi$|\$\phi\$|$\Phi$|\$\Phi$|$\varphi$|\$\varphi$
 \]
 ## Markdown
 ### 表格
+```markdown
 | biatou | biaotou |
 | ---- | ---- |
 | 表头 |  |
 |  |  |
 |  |  |
 footnote[^1]
-
-- [  x ]
+```
 ## Windows
 ### 快捷键
 + Win+D 
