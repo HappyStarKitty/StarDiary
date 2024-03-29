@@ -18,7 +18,9 @@
 #### 希腊字母
 | lower | tex | upper | tex | diff | tex |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-$\phi$|\$\phi\$|$\Phi$|\$\Phi$|$\varphi$|\$\varphi$
+$\phi$|\\phi|$\Phi$|\\Phi|$\varphi$|\\varphi
+$\rho$|\rho|$\Rho$|\Rho|$\varrho$|\varrho
+$\lambda$|\lambda|$\Lambda$|\Lambda
 #### 矩阵和行列式
 **代码样例**
 ```latex

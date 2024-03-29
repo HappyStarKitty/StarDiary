@@ -1,4 +1,4 @@
-# Numerical Methods Lab Test
+# Numerical Methods Lab 
 ## Lab 01
 + 语句加上分号可以隐藏输出
 + matlab可以自动解方程
@@ -100,3 +100,47 @@ end
 ```
 + 原始高斯消去算法即有一定误差
 + 当系数矩阵发生扰动时，解的变化较大，表明该线性方程组为病态
+## Lab04
+**Matlab函数**
++ linspace %生成指定区间等间距数组
++ plot %生成图形
++ legend %标识各条线
++ hold on %将绘图添加到现有图形中
++ figure %打开新的图窗，并将其作为当前图窗
++ clf reset %清空图窗
++ grid on %启用网格线
++ grid off %禁用网格线
+
+**代码样例**
+```matlab
+% 拉格朗日插值函数
+function y=lagrange(f, n, x)
+    x_dot=linspace(-5, 5, n);
+    y_dot=f(x_dot);
+    y=0;
+    for i=1:n
+        term=1;
+        for j=1:n
+            if j ~= i
+                term=term.*(x-x_dot(j))/(x_dot(i)-x_dot(j));
+            end
+        end
+        y=y+y_dot(i)*term;
+    end
+end
+```
+```matlab
+% 分段线性插值函数
+function y=linear(f,n,x)
+    x_dot=linspace(-5,5,n);
+    y_dot=f(x_dot);
+    for i=1:n-1
+        if (x_dot(i)<=x && x<=x_dot(i+1))
+            k=(y_dot(i+1)-y_dot(i))/(x_dot(i+1)-x_dot(i));
+            y=y_dot(i)+k*(x-x_dot(i));
+        end
+    end
+end
+```
++ 总体来看，低次线性插值随节点数目增多拟合效果变好的，这意味着我们总是可以通过增加节点数保证误差要求；不过光滑性较差，不能保证导数连续
++ 对于拉格朗日插值函数，可以看出来n=10近似效果不如更少的节点，表明高次精度也不一定就好
