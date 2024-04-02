@@ -1,33 +1,15 @@
-# Assembly Language
-## Chapter0 速记
-### 快捷键
-#### OllyDbg
-+ F8 ;单步执行
-+ F2 ;设置断点
-### 指令
-#### 无条件跳转
-+ jmp
-#### 条件跳转
-JE - 如果相等（ZF = 1）
-JNE - 如果不相等（ZF = 0）
-JZ - 如果为零（ZF = 1）
-JNZ - 如果不为零（ZF = 0）
-JS - 如果为负（SF = 1）
-JNS - 如果为非负（SF = 0）
-JO - 如果溢出（OF = 1）
-JNO - 如果没有溢出（OF = 0）
-JB、JNAE - 如果低于/不以上溢（CF = 1）
-JNB、JAE - 如果不低于/以上溢（CF = 0）
-JBE、JNA - 如果小于等于/不大于（CF = 1 或 ZF = 1）
-JA、JNBE - 如果大于/不小于等于（CF = 0 且 ZF = 0）
-JCXZ - 如果 CX 寄存器为零（CX = 0）
-JECXZ - 如果 ECX 寄存器为零（ECX = 0）
-JP、JPE - 如果偶校验（PF = 1）
-JNP、JPO - 如果奇校验（PF = 0）
-JG、JNLE - 如果大于（ZF = 0 且 SF = OF）
-JGE、JNL - 如果大于等于（SF = OF）
-JL、JNGE - 如果小于（SF ≠ OF）
-JLE、JNG - 如果小于等于（ZF = 1 或 SF ≠ OF）
+## 一些注意点
+Ascll
+0 - 30h(48) 9-3Ah(58)
+## Chapter5 程序调试
+### Turbo Debugger(TD)
+```bash
+#编译
+tasm /zi hello; #参数/zi表示full debug info
+tlink /v hello; #参数/v表示include full symbolic debug information
+#调试
+td hello.exe
+```
 ## Chapter1 绪论
 ### 代码实例
 ```arm
@@ -65,7 +47,7 @@ hello //运行
 #### 变量类别
 #### 递归
 ### Debug技能
-
+#### 硬件断点
 ## Chapter2 基础知识
 ### 数制
 + 十六进制用H/h做后缀，若最高位为字母加前缀0

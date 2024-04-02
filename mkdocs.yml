@@ -40,11 +40,16 @@ nav:
   - CS:
       - C: CS/c_program.md
       - Python: CS/python.md
-      - Assembly Language: CS/Assembly_Language.md
+      - Assembly Language:
+          - Index: CS/Assembly_Language/README.md
+          - Lesson Note: CS/Assembly_Language/Lesson_Note.md
+          - Textbook Note: CS/Assembly_Language/Textbook_Note.md
       - Code: CS/code.md
       - Data Structure: CS/Data_Structure.md
       - CSAPP: CS/CSAPP.md
-      - The Missing Semester: CS/The Missing Semester.md
+      - The Missing Semester:
+          - Index: CS/The_Missing_Semester/README.md
+          - Git: CS/The_Missing_Semester/Git.md
 
   - About:
       - about: about.md
