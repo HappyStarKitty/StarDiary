@@ -6,50 +6,8 @@
 
 ## Git & Github
 + git init 把当前目录变成git可以管理的仓库
-## Latex
-### 知识速记
-#### 数学公式
-+ 行内公式：\$ \$  
-+ 行间公式：\$\$   \$\$
-+ 下标：\_
-+ 上标：^
-+ 求和：\sum
-+ 小于等于：\leq
-#### 希腊字母
-| lower | tex | upper | tex | diff | tex |
-|:-:|:-:|:-:|:-:|:-:|:-:|
-$\phi$|\\phi|$\Phi$|\\Phi|$\varphi$|\\varphi
-$\rho$|\rho|$\Rho$|\Rho|$\varrho$|\varrho
-$\lambda$|\lambda|$\Lambda$|\Lambda
-#### 矩阵和行列式
-**代码样例**
-```latex
-\[ 
-\left|\begin{array}{cccc} 
-    1 &    6    & 9 \\ 
-    7 &    90   & f(x)\\ 
-    9 & \psi(x) & g(x) 
-\end{array}\right| 
-\]
-```
-**效果预览**
-\[ 
-\left|\begin{array}{cccc} 
-    1 &    6    & 9 \\ 
-    7 &    90   & f(x)\\ 
-    9 & \psi(x) & g(x) 
-\end{array}\right| 
-\]
-## Markdown
-### 表格
-```markdown
-| biatou | biaotou |
-| ---- | ---- |
-| 表头 |  |
-|  |  |
-|  |  |
-footnote[^1]
-```
+
+
 ## Windows
 ### 快捷键
 + Win+D 

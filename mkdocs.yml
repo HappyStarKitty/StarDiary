@@ -31,6 +31,7 @@ theme:
     - content.action.edit
 
 nav:
+  - Index: README.md
   - Math:
       - Numerical Methods:
           - Index: Math/Numerical_Method/README.md
