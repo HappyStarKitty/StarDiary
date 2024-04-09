@@ -6,7 +6,9 @@
 | 表头 |  |
 |  |  |
 |  |  |
-footnote[^1]
+
 ```
+wei[^1]
+[^1]:hi
 ## 高亮
-<mark>高亮<mark>
+<mark>This is a example using mark<mark>

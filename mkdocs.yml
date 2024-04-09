@@ -51,7 +51,10 @@ nav:
       - The Missing Semester:
           - Index: CS/The_Missing_Semester/README.md
           - Git: CS/The_Missing_Semester/Git.md
-
+          - Markdown: CS/The_Missing_Semester/Markdown.md
+          - Latex: CS/The_Missing_Semester/Latex.md
+  - Design:
+      - Index: Design/README.md
   - About:
       - about: about.md
 

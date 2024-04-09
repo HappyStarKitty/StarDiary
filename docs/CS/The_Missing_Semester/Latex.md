@@ -1,14 +1,14 @@
 # Latex
 ## 数学符号
 ### 杂项
-+ 行内公式：\$ \$  
-+ 行间公式：\$\$   \$\$
-+ 下标：\_
-+ 上标：^
-+ 求和：\sum
-+ 拉普拉斯算子：\Delta
-+ 哈密顿算子：\nabla
-+ 尖括号：\langle \rangle
+- 行内公式：\$ \$  
+- 行间公式：\$\$   \$\$
+- 下标：\_
+- 上标：^
+- 求和：\sum
+- 拉普拉斯算子：\Delta
+- 哈密顿算子：\nabla
+- 尖括号：\langle \rangle
 ### 希腊字母
 | lower | tex | upper | tex | diff | tex |
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -45,3 +45,7 @@ $\delta$|\delta|$\Delta$|\delta
 \end{array}\right| 
 \]
 ## 页面布局
+### 常用
+- 分段：\par
+- 分页：\newpage
+- 脚注：\footnote
