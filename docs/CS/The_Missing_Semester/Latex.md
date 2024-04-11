@@ -6,6 +6,7 @@
 - 下标：\_
 - 上标：^
 - 求和：\sum
+- 积分：\int
 - 拉普拉斯算子：\Delta
 - 哈密顿算子：\nabla
 - 尖括号：\langle \rangle
@@ -16,6 +17,7 @@ $\phi$|\\phi|$\Phi$|\\Phi|$\varphi$|\\varphi
 $\rho$|\rho|$\Rho$|\Rho|$\varrho$|\varrho
 $\lambda$|\lambda|$\Lambda$|\Lambda
 $\delta$|\delta|$\Delta$|\delta
+$\xi$|\xi|$\Xi$|\Xi
 ### 二元关系
 | txt | tex | txt | tex |
 | :-: | :-: | :-:| :-:|

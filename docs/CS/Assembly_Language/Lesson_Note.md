@@ -1,5 +1,10 @@
 # Assembly Language
+## Lesson 7 question
+1. 如何控制cpu中的寄存器
+汇编语言主要控制寄存器，内存，外部设备
 ## Lesson 1
+### 概览
+本节课从OllyDBG开始引入讲解汇编语言，可以学一学一些逆向常用的思路方法
 ### 注意事项
 + 文件可以直接拖拽进虚拟机
 + 命令行使用command(cmd字体比较小)
@@ -63,10 +68,41 @@ ptr pointer缩写
 偏移地址用常数
 + 间接寻址
 用寄存器或寄存器+常数来表示变量的偏移地址
-
+## Lesson 7
+在begin和end中定义变量或函数需用jmp绕过，否则会被误当作指令执行
+```asm
+stk segment stack
+db 200h dup('S')
+stk ends
+end main
+```
+堆栈段只能定义一个
+程序刚开始运行时ss=stk,sp=200h
+push一下，sp回到合法位置
 ---
+源程序未定义堆栈段，操作系统如何分配堆栈
+```asm
+;psp 段地址1000:0
+;data段 1010:0;设data段长度=20h字节
+;code段 1012:0;设code段长度=30h字节
+;1015:0
+;当源代码没有定义堆栈段时，操作系统会在程序开始运行时自动把ss赋值为首段的段地址，并把sp赋值为0
+;data+code长度接近FFFFh时，需要定义一个堆栈空间，否则会覆盖到堆栈空间，造成安全隐患
+```
+--- 
+如何定位到数组位置
+在data段定义数组
+mov 时会先找到data，再根据assume的内容找到相应段寄存器
+用eax等32位寄存器，需要加上.386，然后在data段和code段行加上use16
+end main; 用来指定main:作为程序第一条指令的标号，即程序从main开始运行
+---
+cmp和sub的差别
+sub ax, ax; AX=0,ZF=1
+cmp ax, ax; AX不受影响，ZF=1
+奇校验
+偶校验
 ### 中断
-#### int 21
+#### int 21h
 + func1:
 + func2:输出字符
 + func9:显示字符串
@@ -90,7 +126,7 @@ mov ds, seg s ;有语法错误，因为ds作为段寄存器
 + ss
 
 
-#### 偏移地址寄存器
+#### 指针寄存器(表示偏移地址)
 + bx(补充偏移地址寄存器)
 base
 + bp
@@ -106,45 +142,101 @@ instuction pointer
 cs:ip指向当前将要执行的指令
 + sp
 ss:sp用来指向堆栈的顶端
+sp不能放在[]内
+;偏移地址bx,bp,si,di
+
+#### FL标志寄存器
+| 位 | 标志|
+|:-:|:-:|
+11|O
+10|D
+11 10 9 8 7 6 4 2 0
+O D I T S Z A P C
+
++ CF
+进位标志(carry flag)
+加法进位、减法借位 CF=1
+左移、右移 CF一定是最后一次移位
+用jc和jnc跳转指令或adc指令间接知道CF
+
++ ZF
+零标志(zero flag)
+jz/jnz指令
+
++ SF
+符号标志(sign flag)
+运算结果的最高位
+js/jns指令
+
++ OF
+溢出标志(overflow flag)
+正负相加永不溢出
+jo/jno指令
+
++ PF
+奇偶标志(parity flag)
+结果二进制位中1的个数
+
++ AF
+低四位向高四位产生进位或借位
+与BCD(Binary Coded Decimal)码有关
+
 ### 指令
++ daa
+加法的十进制调整(decimal adjust for addition)
+
++ clc
+
++ adc
+add with CF 带进位加
+
++ shl
+左移
+
++ shr
+右移
+
 + lea
 计算地址
+
 + retn/retf
 return near/return far
 近返回/远返回
+
 + call 00401000 
 call 调用函数 
 00401000 main函数地址
+
 + nop 
 no operation 无操作
 在代码窗修改键入nop
 在数据窗修改键入90
+
 + push 
 压入堆栈
 用于传入参数
+
++ out
+
++ in
 #### 运算指令
-+ mov ; 赋值
-+ add ; +=
++ mov 
+赋值
+不干扰任何标志
+
++ add 
++=
+
 #### 无条件跳转
 + jmp
 #### 条件跳转
 JE - 如果相等（ZF = 1）
-JNE - 如果不相等（ZF = 0）
-JZ - 如果为零（ZF = 1）
-JNZ - 如果不为零（ZF = 0）
-JS - 如果为负（SF = 1）
-JNS - 如果为非负（SF = 0）
-JO - 如果溢出（OF = 1）
-JNO - 如果没有溢出（OF = 0）
-JB、JNAE - 如果低于/不以上溢（CF = 1）
-JNB、JAE - 如果不低于/以上溢（CF = 0）
-JBE、JNA - 如果小于等于/不大于（CF = 1 或 ZF = 1）
-JA、JNBE - 如果大于/不小于等于（CF = 0 且 ZF = 0）
-JCXZ - 如果 CX 寄存器为零（CX = 0）
-JECXZ - 如果 ECX 寄存器为零（ECX = 0）
-JP、JPE - 如果偶校验（PF = 1）
-JNP、JPO - 如果奇校验（PF = 0）
-JG、JNLE - 如果大于（ZF = 0 且 SF = OF）
-JGE、JNL - 如果大于等于（SF = OF）
-JL、JNGE - 如果小于（SF ≠ OF）
-JLE、JNG - 如果小于等于（ZF = 1 或 SF ≠ OF）
++ jae/jbe
+大于等于
+
++ jz/jnz
+jmp is_zero/
+ZF==1跳转/ZF==1跳转
+
++ jo/jno
+jmp if overflow/

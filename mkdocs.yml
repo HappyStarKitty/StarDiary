@@ -33,6 +33,9 @@ theme:
 nav:
   - Index: README.md
   - Math:
+      - Discrete Mathmatics:
+          - Index: Math/Discrete_Mathematics/README.md
+          - Note: Math/Discrete_Mathematics/Note.md
       - Numerical Methods:
           - Index: Math/Numerical_Method/README.md
           - Note: Math/Numerical_Method/Note.md

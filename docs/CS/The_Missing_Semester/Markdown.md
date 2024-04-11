@@ -8,7 +8,6 @@
 |  |  |
 
 ```
-wei[^1]
-[^1]:hi
+
 ## 高亮
 <mark>This is a example using mark<mark>
