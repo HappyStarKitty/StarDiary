@@ -194,3 +194,10 @@ def make_anonymous_factorial():
 定义：逻辑结构、存储结构、对数据的操作
 结构形式：链、表、堆、队、树、图
 基本数据结构：线性结构、树状结构、网状结构
+
+---
+## 开发包
+### qiskit
+### pytorch
+### matplotlib
+### numpy

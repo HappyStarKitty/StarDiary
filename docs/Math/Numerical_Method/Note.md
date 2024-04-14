@@ -85,7 +85,8 @@
     + mean %计算数组平均值
     + sum %计算数组元素和
 
-### 矩阵与向量
+### 常用操作
+#### 矩阵与向量
 ```matlab
 % 1.读取所有行与列
 a
@@ -101,8 +102,55 @@ a(i,:)
 a([i1,i2..ip],[j1,j2..jq])
 ```
 
+#### 求解多项式方程
+##### 次数已知
+``` matlab
+% 声明符号变量
+syms a b c x;
+% 定义方程
+eqn = a*x^2 + b*x +c == 0;
+% 求解方程
+solutions = solve(eqn,[a,b,c]);
+```
+##### 次数未知
+```matlab
+syms x;
+n_max = 5; % 最大阶次
+solutions = [];
+
+for n = 1:n_max
+    % 定义方程
+    eqn = poly2sym(sym('a', [1, n+1]), x) == 0;
+    
+    % 求解方程
+    sol = solve(eqn);
+    
+    % 将解添加到结果中
+    solutions = [solutions; sol];
+end
+
+% 显示所有解
+solutions
+```
+
+#### 矩阵乘法
+matlab矩阵乘法分为两种
+times / .*
+##### 语法
+```matlab
+C=A.*B;
+C=times(A,B);
+```
+##### 说明
+- 对应元素的相乘，A和B的大小必须相同和兼容
+- 如果A和B的大小兼容，则两个数组会隐式扩展以相互匹配
+- 如A或B中的一个是标量，则该标量与另一个数组的每个元素相结合
+- 此外，行向量或列向量会隐式扩展以形成矩阵
+
+
 ### Error List
 >**警告: 冒号操作数必须为实数标量**
+**错误使用 * 用于矩阵乘法的维度不正确**
 
 ## Chapter1 绪论
 ### 数学模型
@@ -667,6 +715,11 @@ $$
 ![无法显示](chapter5/chap5_2024_page-0025.jpg)
 
 #### Newton-Cotes积分
+
+- 一组基于等距节点的数值积分方法
+- 形式有梯形规则(Trapezoidal Rule)、辛普森规则(Simpson's Rule)、复合梯形规则(Composite Trapezoidal Rule)
+- 在给定区间的等距离点上估计函数值，然后使用多项式插值来近似积分值
+
 ![无法显示](chapter5/chap5_2024_page-0029.jpg)
 ![无法显示](chapter5/chap5_2024_page-0030.jpg)
 ![无法显示](chapter5/chap5_2024_page-0033.jpg)
@@ -683,6 +736,11 @@ $$
 ![无法显示](chapter5/chap5_2024_page-0055.jpg)
 
 #### Romberg积分
+
+- 一组自适应数值积分方法
+- 通过递归地细分区间并应用Newton-Cotes积分来逼近积分值
+- 通过不断增加节点的数量和细分区间的大小来提高积分的准确度，并最终收敛于所需的精度
+
 ![无法显示](chapter5/chap5_2024_page-0057.jpg)
 ![无法显示](chapter5/chap5_2024_page-0058.jpg)
 ![无法显示](chapter5/chap5_2024_page-0059.jpg)
@@ -691,6 +749,19 @@ $$
 ![无法显示](chapter5/chap5_2024_page-0062.jpg)
 
 #### Gauss求积公式
+##### 概览
+- 一种基于节点和权重的数值积分方法
+- 通过选择合适的节点和权重来最小化积分误差
+- 节点通常是选择为Chebyshev节点或Legendre节点，权重则通过多项式插值和正交性质来确定。
+##### 比较
+代数精度和待定数量的数量相关，待定系数数量为n，代数精度至少为n-1，我们讨论只有两个节点的情况：
+$$
+\int_{-1}^{1}f(x)dx \approx A_{0}f(x_{0})+A_{1}f(x_{1}) 
+$$
+对于Newton-Cotes积分，由于区间等分，故$x_{0}$和$x_{1}$确定，待定系数只有$A_{0}$和$A_{1}$，代数精度至少为1
+
+而Gauss积分由于不等分区间，则$x_{0}$和$x_{1}$也是待定系数，代数精度至少为3
+
 ![无法显示](chapter5/chap5_2024_page-0064.jpg)
 ![无法显示](chapter5/chap5_2024_page-0066.jpg)
 ![无法显示](chapter5/chap5_2024_page-0068.jpg)

@@ -63,6 +63,8 @@ PS：正在施工中，等整理结束后会导出为pdf
 ![无法显示](homework/第五章作业_page-0001.jpg)
 ### Hint
 ### Analysis
+- Newton-Cotes积分，非常友好的算法
+- Gauss求积公式是真的抽象，所以就不能大量援引slides了(bushi)
 ### Solution
 
 ## Large Project
