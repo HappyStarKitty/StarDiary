@@ -63,8 +63,16 @@ PS：正在施工中，等整理结束后会导出为pdf
 ![无法显示](homework/第五章作业_page-0001.jpg)
 ### Hint
 ### Analysis
+#### Newton-Cotes
 - Newton-Cotes积分，非常友好的算法
+#### Guass
 - Gauss求积公式是真的抽象，所以就不能大量援引slides了(bushi)
+- 主要的麻烦是要求节点和权重，我这里是直接用了三点Gauss-Legendre求积公式
+- 不过我有一个困惑，我学习的时候是说$x_0$和$x_1$未知使得代数精度更高，但如果确定了使用某个正交多项式，$x_{0}$和$x_{1}$不就固定了么，所以事实上应该代数精度和Newton-Cotes相同才对啊
+- 发现答案出现了复数，忘了改写方程了
+- 改完之后发现结果达到$e^10$，和我Newton-Cotes差了两个数量级，于是我又试了两点Gauss-Legendre，结果和三点求积公式是一个数量级
+- 为了避免Newton-Cotes误差较大(不过我记得数值积分都是稳定的呀\苦笑)，我又试了Romberg方法，结果自然是和Newton-Cotes算出来差不多，最后发现是我输出的东西输出错了！！！
+- 好好好，战术总结，gauss在计算量较小的情况下保证了较高的精度，非常神奇
 ### Solution
 
 ## Large Project

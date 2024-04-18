@@ -42,7 +42,10 @@ nav:
           - Lab: Math/Numerical_Method/Lab.md
           - Homework: Math/Numerical_Method/Homework.md
   - CS:
-      - C: CS/c_program.md
+      - C:
+          - Index: CS/C_Program/README.md
+          - Note: CS/C_Program/Note.md
+          - Problem: CS/C_Program/Problem.md
       - Python: CS/python.md
       - Assembly Language:
           - Index: CS/Assembly_Language/README.md

@@ -13,6 +13,7 @@
 + Win+D 
 + Win+X
 + Win+E
++ Ctrl+Tab 浏览器切换页面
 ## Software
 ### EditPlus
 + Ctrl+G 行定位
