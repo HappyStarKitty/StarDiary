@@ -116,6 +116,40 @@ int 1h
 反调试加密上一条指令，解密下一条指令，让CPU进入单步模式
 mov两边不能同时都是内存变量，所以使用堆栈
 in out实现CPU和外设的通讯
+## Lesson 9
+### 32位间接寻址方式
+32位比16位多了以下这种寻址方式
+[寄存器+寄存器*n+常数]
+```asm
+mov eax, [ebx+esi*4+6]
+```
+对[]中的两个寄存器几乎不加限制
+都可以放进[]里面，两个寄存器可以任意组合
+### 段覆盖(segment overriding)
+通过在操作数前添加一个段前缀(segment prefix)如CS:、DS:、ES:、SS:来强制改变操作数的段址
+当[]中包含有寄存器bp时，该变量的段地址一定是ss。
+默认的段地址是可以改变的, 例如:
+mov ax, ds:[bp+2]
+这条指令的源操作数段地址从默认的ss改成了ds。
+### 通用数据传送指令：MOV，PUSH，POP，XCHG
+8086中, push不能跟常数, 但80386及以后的cpu允许push一个常数。
+push/pop后面不能跟一个8位的寄存器或变量:
+### lea
+编译时某个值无法求出时，无法通过编译
+lea 可以用来做间接求和
+lea 做乘法比mul快
+les di, video_addr[bx]; 取出32位，分成高16位和低16位，并赋值给es,di
+lds si, video_addr[bx]
+
+## Lesson 10
+## Lesson 11
+## Lesson 12
+## Lesson 13
+## Lesson 13
+
+
+
+
 ### 中断
 #### int 21h
 + func1:

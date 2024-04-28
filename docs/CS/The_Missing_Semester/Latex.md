@@ -1,4 +1,8 @@
 # Latex
+## 常用宏包
+- \usepackage{ctex} %中文宏包
+- \usepackage{graphicx} %插入图片所需宏包
+- \usepackage{listings} %插入图片所需红包
 ## 数学符号
 ### 杂项
 - 行内公式：\$ \$  
@@ -6,6 +10,8 @@
 - 下标：\_
 - 上标：^
 - 约等于：\approx
+- 分数线：\frac
+- 导数：\prime
 - 求和：\sum
 - 积分：\int
 - 拉普拉斯算子：\Delta
@@ -19,6 +25,7 @@ $\rho$|\rho|$\Rho$|\Rho|$\varrho$|\varrho
 $\lambda$|\lambda|$\Lambda$|\Lambda
 $\delta$|\delta|$\Delta$|\delta
 $\xi$|\xi|$\Xi$|\Xi
+$\mu$|\mu
 ### 二元关系
 | txt | tex | txt | tex |
 | :-: | :-: | :-:| :-:|

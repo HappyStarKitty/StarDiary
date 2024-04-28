@@ -1048,6 +1048,30 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#chapter5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter5 程序调试
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter5 程序调试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#turbo-debuggertd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Turbo Debugger(TD)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#chapter1" class="md-nav__link">
     <span class="md-ellipsis">
       Chapter1 绪论
@@ -1854,6 +1878,30 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#chapter5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter5 程序调试
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter5 程序调试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#turbo-debuggertd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Turbo Debugger(TD)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#chapter1" class="md-nav__link">
     <span class="md-ellipsis">
       Chapter1 绪论
@@ -2249,40 +2297,40 @@
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nf">x</span><span class="w"> </span><span class="no">db</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="no">dup</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">; DUP允许嵌套</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nf">y</span><span class="w"> </span><span class="no">db</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="no">dup</span><span class="p">(</span><span class="err">&#39;</span><span class="no">A</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="no">dup</span><span class="p">(</span><span class="err">&#39;</span><span class="no">B</span><span class="err">&#39;</span><span class="p">),</span><span class="w"> </span><span class="err">&#39;</span><span class="no">C</span><span class="err">&#39;</span><span class="p">)</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1">## Chapter5 程序调试</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1">### Turbo Debugger(TD)</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="err">```</span><span class="nf">bash</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1">#编译</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="nf">tasm</span><span class="w"> </span><span class="err">/</span><span class="no">zi</span><span class="w"> </span><span class="no">hello</span><span class="c1">; #参数/zi表示full debug info</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="nf">tlink</span><span class="w"> </span><span class="err">/</span><span class="no">v</span><span class="w"> </span><span class="no">hello</span><span class="c1">; #参数/v表示include full symbolic debug information</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1">#调试</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="nf">td</span><span class="w"> </span><span class="no">hello.exe</span>
 </code></pre></div></p>
+<h2 id="chapter5">Chapter5 程序调试</h2>
+<h3 id="turbo-debuggertd">Turbo Debugger(TD)</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">#编译</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>tasm<span class="w"> </span>/zi<span class="w"> </span>hello<span class="p">;</span><span class="w"> </span><span class="c1">#参数/zi表示full debug info</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>tlink<span class="w"> </span>/v<span class="w"> </span>hello<span class="p">;</span><span class="w"> </span><span class="c1">#参数/v表示include full symbolic debug information</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1">#调试</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>td<span class="w"> </span>hello.exe
+</code></pre></div>
 <h2 id="chapter1">Chapter1 绪论</h2>
 <h3 id="_7">代码实例</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>data segment
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>s db &quot;Hello,world!&quot;, 0Dh, 0Ah, &#39;$&#39;
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>data ends
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>code segment
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>assume cs:code, ds:data
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>main:
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    mov ax, data
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    mov ds, ax
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    mov ah, 9
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    mov dx, offset s
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    int 21h
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    mov ah, 4Ch
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    int 21h
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>code ends
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>end main
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>data segment
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>s db &quot;Hello,world!&quot;, 0Dh, 0Ah, &#39;$&#39;
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>data ends
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>code segment
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>assume cs:code, ds:data
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>main:
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    mov ax, data
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    mov ds, ax
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    mov ah, 9
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    mov dx, offset s
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    int 21h
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    mov ah, 4Ch
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    int 21h
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>code ends
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>end main
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>d: //进入D盘
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>cd \masm //进入目录
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>edit hello.asm //edit编辑源程序
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>masm hello; //编译
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>link hello; //链接
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>hello //运行
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>d: //进入D盘
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>cd \masm //进入目录
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>edit hello.asm //edit编辑源程序
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>masm hello; //编译
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>link hello; //链接
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>hello //运行
 </code></pre></div>
 + edit F1查询 F3+E保存
 + 源程序保存到d:\masm目录下
@@ -2308,9 +2356,9 @@
 <li>可表示[0,255]的非符号数和[-128,127]的符号数</li>
 <li>可存放字符的ASCII码</li>
 <li>关键字db定义字节类型数组或变量,相当于char或unsigned char
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>a db 10,20,30,40 ; 定义一个字节类型的数组a
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>b db 0FFH ; 定义一个字节类型的变量b
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>c db &#39;A&#39; ; 定义一个字节类型的变量c
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>a db 10,20,30,40 ; 定义一个字节类型的数组a
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>b db 0FFH ; 定义一个字节类型的变量b
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>c db &#39;A&#39; ; 定义一个字节类型的变量c
 </code></pre></div></li>
 </ul>
 <h4 id="word">字(word)</h4>

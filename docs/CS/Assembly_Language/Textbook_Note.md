@@ -24,6 +24,7 @@ abc db 100 dup(0)
 x db 3 dup(1,2)
 ; DUP允许嵌套
 y db 2 dup('A', 3 dup('B'), 'C')
+```
 ## Chapter5 程序调试
 ### Turbo Debugger(TD)
 ```bash

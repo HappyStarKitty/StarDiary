@@ -1181,7 +1181,103 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Lesson 8">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson 9
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lesson 9">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      32位间接寻址方式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segment-overriding" class="md-nav__link">
+    <span class="md-ellipsis">
+      段覆盖(segment overriding)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#movpushpopxchg" class="md-nav__link">
+    <span class="md-ellipsis">
+      通用数据传送指令：MOV，PUSH，POP，XCHG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lea" class="md-nav__link">
+    <span class="md-ellipsis">
+      lea
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson 10
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson 11
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson 12
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson 13
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-13_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson 13
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lesson 13">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1935,7 +2031,103 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Lesson 8">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson 9
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lesson 9">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      32位间接寻址方式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segment-overriding" class="md-nav__link">
+    <span class="md-ellipsis">
+      段覆盖(segment overriding)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#movpushpopxchg" class="md-nav__link">
+    <span class="md-ellipsis">
+      通用数据传送指令：MOV，PUSH，POP，XCHG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lea" class="md-nav__link">
+    <span class="md-ellipsis">
+      lea
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson 10
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson 11
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson 12
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson 13
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-13_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson 13
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lesson 13">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2201,6 +2393,34 @@ int 1h
 反调试加密上一条指令，解密下一条指令，让CPU进入单步模式
 mov两边不能同时都是内存变量，所以使用堆栈
 in out实现CPU和外设的通讯</p>
+<h2 id="lesson-9">Lesson 9</h2>
+<h3 id="32">32位间接寻址方式</h3>
+<p>32位比16位多了以下这种寻址方式
+[寄存器+寄存器*n+常数]
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">mov</span><span class="w"> </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">ebx</span><span class="err">+</span><span class="no">esi</span><span class="p">*</span><span class="mi">4</span><span class="err">+</span><span class="mi">6</span><span class="p">]</span>
+</code></pre></div>
+对[]中的两个寄存器几乎不加限制
+都可以放进[]里面，两个寄存器可以任意组合</p>
+<h3 id="segment-overriding">段覆盖(segment overriding)</h3>
+<p>通过在操作数前添加一个段前缀(segment prefix)如CS:、DS:、ES:、SS:来强制改变操作数的段址
+当[]中包含有寄存器bp时，该变量的段地址一定是ss。
+默认的段地址是可以改变的, 例如:
+mov ax, ds:[bp+2]
+这条指令的源操作数段地址从默认的ss改成了ds。</p>
+<h3 id="movpushpopxchg">通用数据传送指令：MOV，PUSH，POP，XCHG</h3>
+<p>8086中, push不能跟常数, 但80386及以后的cpu允许push一个常数。
+push/pop后面不能跟一个8位的寄存器或变量:</p>
+<h3 id="lea">lea</h3>
+<p>编译时某个值无法求出时，无法通过编译
+lea 可以用来做间接求和
+lea 做乘法比mul快
+les di, video_addr[bx]; 取出32位，分成高16位和低16位，并赋值给es,di
+lds si, video_addr[bx]</p>
+<h2 id="lesson-10">Lesson 10</h2>
+<h2 id="lesson-11">Lesson 11</h2>
+<h2 id="lesson-12">Lesson 12</h2>
+<h2 id="lesson-13">Lesson 13</h2>
+<h2 id="lesson-13_1">Lesson 13</h2>
 <h3 id="_7">中断</h3>
 <h4 id="int-21h">int 21h</h4>
 <ul>
@@ -2224,8 +2444,8 @@ Noname(高16位)+AX(AH+AL)</li>
 <li>ds
 段寄存器 data segment
 段首地址的十六进制值各位必须等于0
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ds</span><span class="p">,</span><span class="w"> </span><span class="no">seg</span><span class="w"> </span><span class="no">s</span><span class="w"> </span><span class="c1">;有语法错误，因为ds作为段寄存器</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">              </span><span class="c1">;不能接受常数给它赋值，只能用寄存器或变量赋值         </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ds</span><span class="p">,</span><span class="w"> </span><span class="no">seg</span><span class="w"> </span><span class="no">s</span><span class="w"> </span><span class="c1">;有语法错误，因为ds作为段寄存器</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">              </span><span class="c1">;不能接受常数给它赋值，只能用寄存器或变量赋值         </span>
 </code></pre></div></li>
 <li>ss</li>
 </ul>

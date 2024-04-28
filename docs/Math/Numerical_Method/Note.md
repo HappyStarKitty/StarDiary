@@ -17,11 +17,16 @@
 + ~=不等于
 ### 数学函数
 1. 常用运算
+    + mod %求余
+    + rem %求余，返回的余数与被除数符号相同
+    + mean %计算数组平均值
+    + sum %计算数组元素和
     + exp %指数函数
     + log(x,base) %对数函数
 
 2. 保留小数位数 
-    + roundn(n,-p) %注意负号
+    + floor %向下取整
+    + roundn(n,-p) %注意负号，如果缺省-p则为四舍五入
     + format short %控制显示
     + fprintf %美化输出  
 
@@ -55,7 +60,7 @@
     + ppval %分段多项式估计函数
 
 7. 绘图
-     + plot %生成图形
+    + plot %生成图形
     + legend %标识各条线
     + hold on %将绘图添加到现有图形中
     + figure %打开新的图窗，并将其作为当前图窗
@@ -84,17 +89,17 @@
     + ode15s %刚性微分方程，可变阶
     + desolve %符号解
 
-10. 杂项
+11. 杂项
     + length %获取数组或向量的长度，即元素数量
     + size %返回数组或矩阵的维度信息
     + tic %开始计时
     + toc %结束及时
     + linspace %生成指定区间等间距数组
-    + mean %计算数组平均值
-    + sum %计算数组元素和
-
+    + importdata %导入数据文件
+    + whos %列出工作区中的变量及类型与大小
 ### 常用操作
 #### 矩阵与向量
+matlab的向量化操作非常强大，需要善于利用
 ```matlab
 % 1.读取所有行与列
 a
@@ -111,17 +116,16 @@ a([i1,i2..ip],[j1,j2..jq])
 ```
 
 #### 求解多项式方程
-##### 次数已知
 ``` matlab
+%-----次数已知-----
 % 声明符号变量
 syms a b c x;
 % 定义方程
 eqn = a*x^2 + b*x +c == 0;
 % 求解方程
 solutions = solve(eqn,[a,b,c]);
-```
-##### 次数未知
-```matlab
+
+%-----次数未知-----
 syms x;
 n_max = 5; % 最大阶次
 solutions = [];
@@ -142,8 +146,7 @@ solutions
 ```
 
 #### 矩阵乘法
-matlab矩阵乘法分为两种
-times / .*
+matlab矩阵乘法分为两种，times 和 .*
 ##### 语法
 ```matlab
 C=A.*B;
@@ -160,19 +163,34 @@ C=times(A,B);
 >**警告: 冒号操作数必须为实数标量**
 **错误使用 * 用于矩阵乘法的维度不正确**
 
+---
+
 ## Chapter1 绪论
+### 概览
+根据计算机特点，研究通过计算机求工程问题满足精度要求的近似解。应用数值计算方法解决工程问题的流程如下：
+
+- 建立数学模型
+- 简化成一系列算术运算和逻辑运算
+- 求出问题数值解
+- 对算法的收敛性、稳定性和误差进行分析计算
+
 ### 数学模型
-用数学语言来表达物理系统或过程本质特征的公式或方程。
+用数学语言来表达物理系统或过程本质特征的公式或方程
+
 + 因变量=f(自变量，参数，强制函数) 
 + 因变量：用来刻画系统行为或状态的特征量
 + 自变量：通常为维度，如时间和空间，系统的行为是用自变量来确定的
 + 参数：反映系统的性质或组成
 + 强制函数：外部对系统施加的影响。
+
 ### 数值方法特点
 + 稳定性
 + 准确性与精确性
 + 收敛速度
-### 误差种类的来源
+
+### 误差分析
+#### 误差种类的来源
+
 + 数值误差：包括舍入误差和截断误差
 + 舍入误差：由于计算机只能表示有限位数的量
 + 截断误差：由于数值方法可能运用近似方法表示准确数值运算或数量
@@ -184,16 +202,16 @@ C=times(A,B);
 ![无法显示](chapter1/有效数字与误差的关系.jpg)<br>
 *判断有效数字位数的方法*
 ![无法显示](chapter1/迭代方法的误差估计.jpg)
-### 舍入误差
+#### 舍入误差
 + 数的计算机表示
 + 计算机中的算术运算
-#### 数的计算机表示
+##### 数的计算机表示
 ![无法显示](chapter1/数的表示1.jpg)
 ![无法显示](chapter1/数的表示2.jpg)
 ![无法显示](chapter1/数的表示3.jpg)
 ![无法显示](chapter1/数的表示4.jpg)
-#### 计算机中的算术运算
-##### 造成误差的原因
+##### 计算机运算误差原因
+
 1. 通用算术运算
     + 有效数字丢失
     + 主要体现在尾数的调整
@@ -214,7 +232,7 @@ C=times(A,B);
 #### 截断误差
 + 多项式数值计算的近似
 + 误差与步长的n+1次方成比例
-### 误差传播
+#### 误差传播
 + 函数导数的绝对值较大
 + 初始误差可稳定传播或不稳定传播
 ### 算法的数值稳定性
@@ -223,9 +241,11 @@ C=times(A,B);
 ![无法显示](chapter1/总的数值误差.jpg)
 ![无法显示](chapter1/避免数值误差的原则.jpg)
 
+---
 
 ## Chapter2 非线性方程求根
-### 应用方向
+### 概览
+
 1. 求解代数方程和超越方程的实数根
     + 根的分离(预先给出根的一个粗略位置)
     + 近似根的精确化(向真实根逼近)
@@ -385,38 +405,38 @@ end
 + 对于所有现实情况，试位法通常收敛，割线法可能发散；如果割线法收敛，通常比试位法快
 #### 针对重根的改进
 ![无法显示](chapter2/针对重根的改进.jpg)
-### 总结延伸
-#### 扩展
-+ 方法的改进
-+ 非线性方程组求根
-+ 多项式求根
-#### 总结
+
+### 总结
 ![无法显示](chapter2/总结.jpg)
+
+---
 
 ## Chapter3 线性代数方程组
 ### 系数矩阵类型
+
 + 低阶稠密矩阵
 + 大型稀疏矩阵(矩阵中0元素较多)
 + 三对角矩阵(非0元素集中于主对角线及相邻两对角线上)
 ### 数值解法
 ![无法显示](chapter3_1/chap3_1_2024_page-0005.jpg)
-### 高斯消去法
+### 直接法
+#### 高斯消去法
 ![无法显示](chapter3_1/chap3_1_2024_page-0023.jpg)
-#### 病态方程组判别
+##### 病态方程组判别
 + 行列式的值
 + 矩阵求逆
     + 缩放系数矩阵，使每一行最大元素为1，缩放后的逆矩阵元素值大于1数倍则为病态
     + 将逆矩阵与原矩阵相乘，结果不接近单位阵则为病态
     + 求逆矩阵的逆矩阵，与原系数矩阵对比，不相等则为病态
 + 系数微小改变再求解
-#### 解求精技术
+##### 解求精技术
+
 + 使用扩展精度
 + 选主元
-列主元消去法
-全主元消去法
+列主元消去法或者全主元消去法
 + 缩放
 缩放之后的系数用来确定是否需要交换主元，但实际消去和回代中仍使用原系数值
-#### 消去法
+##### 消去法
 + 顺序消去法条件苛刻，且数值不稳定
 + 全主元消去法工作量偏大，需要比较的元素及行列交换工作较多，算法复杂
 + 高斯约当消去法形式上简单，且无回代求解，但计算量大
@@ -464,7 +484,7 @@ for i=n-1:-1:1
 end
 end
 ```
-### LU分解、特殊矩阵和矩阵求逆
+
 #### 三角分解(LU分解)
 LU分解矩阵求逆可减少计算量
 ##### Doolittle分解
@@ -472,11 +492,13 @@ LU分解矩阵求逆可减少计算量
 ##### Crout分解
 + L为下三角矩阵，U为单位上三角矩阵
 ##### 三角分解和高斯消去的比较
+
 + 计算量相当
 + 三角分解不必计算中间结果，不需要提前知道右端项
 + 解相同系数矩阵方程相当方便
 ##### Cholesky分解
 对称正定矩阵的平方根法
+
 + 由Doolittle分解，A有唯一分解$A=LU$
 + LDR分解：(L、R分别为下、上三角矩阵，D为对角矩阵)
 + 三角分解：$A=LDL^T$
@@ -518,8 +540,7 @@ end
 end
 ```
 ### 误差分析、条件数
-#### 向量和矩阵的范数
-##### 向量范数
+#### 向量范数
 满足条件：正定，齐次，三角不等式
 + "2"范数(欧几里得范数)
 $$
@@ -537,7 +558,7 @@ $$
 $$
 ||x||_p=(\sum\limits_{i=1}^{n}|x_i|^{p})^{1/p}
 $$
-##### 矩阵范数
+#### 矩阵范数
 满足条件：正定，齐次，三角不等式，矩阵乘法不等式(相容性条件)
 + "2"范数(谱范数)
 $$
@@ -584,30 +605,70 @@ $$
 ![无法显示](chapter3_2\chap3_2_2024_page-0034.jpg)
 ![无法显示](chapter3_2\chap3_2_2024_page-0036.jpg)
 
+---
 
 ## Chapter4 插值和拟合
 ### 插值
-#### 概览
-##### 插值函数
-- 代数多项式
-- 有理函数
-    - 有理插值可使区间内插值误差分布均匀，适用于某些被插函数具有无穷间断点的附近
-- 三角函数
-##### 插值函数存在唯一定理
+#### 插值函数
+一般有代数多项式、有理函数、三角函数，其中有理插值可使区间内插值误差分布均匀，适用于某些被插函数具有无穷间断点的附近
+#### 插值函数存在唯一定理
  ![无法显示](chapter4/chap4_2024_page-0009.jpg)
-##### 插值多项式存在唯一性
+#### 插值多项式存在唯一性
  ![无法显示](chapter4/chap4_2024_page-0011.jpg)
- ##### 插值余项
+#### 插值余项
  ![无法显示](chapter4/chap4_2024_page-0012.jpg)
-##### 插值余项误差
-- 插值多项式仅与已知数据有关，与$f(x)$原来形式无关，但余项与$f(x)$
+#### 内插与外推
+- 内插
+插值点位于插值区间内，即$a<x<b$
+- 外推
+插值点位于插值区间外，即$x<a$或$x>b$，但又较接近于插值区间端点时
+#### 插值余项误差
+- 插值多项式仅与已知数据有关，与$f(x)$原来形式无关，但余项与$f(x)$密切相关
 - 若$f(x)$本身是一个不超过n次多项式，则$P_{n}(x)=f(x)$
 - 对于多项式插值，增加阶数不一定能提高精度(一般推荐3j个节点的插值)
 - 插值点$x$不能位于插值区间之外的远处
 #### Lagrange插值多项式
  ![无法显示](chapter4/chap4_2024_page-0016.jpg)
+ ```matlab
+ %拉格朗日插值多项式
+function y_predict=lagrange(x_data,y_data,x_predict,num)
+%num为插值节点数目
+
+volumn_data=length(x_data);
+volumn_predict=length(x_predict);
+y_predict=zeros(1,volumn_predict);
+
+%根据插值节点数目进一步筛选数据
+divide=floor((volumn_data-1)/num);
+x_train=zeros(1,num);
+y_train=zeros(1,num);
+for i=1:num
+    x_train(i)=x_data(1+i*divide);
+    y_train(i)=y_data(1+i*divide);
+end
+
+%计算预测值
+for i=1:volumn_predict
+    for j=1:num
+        term=1;
+        for k=1:num
+            if k~=j
+                term=term*(x_predict(i)-x_train(k))/(x_train(j)-x_train(k));
+            end
+        end
+        y_predict(i)=y_predict(i)+term*y_train(j);
+    end
+end
+
+end
+```
 ##### 缺点
 - 无承袭性：增加一个节点，所有的基函数都要重新计算
+##### 适用场景
+- 均匀分布的数据点
+- 低阶插值
+- 数据点误差较小
+- 用于插值而非外推
 #### Newton插值多项式
  ![无法显示](chapter4/chap4_2024_page-0029.jpg)
  ![无法显示](chapter4/chap4_2024_page-0030.jpg)
@@ -617,14 +678,15 @@ $$
 
 ##### 等距节点的插值
 数据在空间上间距相等
+
 - 步长
 $x_0<...<x_n$,其中$x_i-x_{i-1}=h$,$x_i=x_0+ih$,h被称作步长
 - 有限差分
-    - $\Deltaf(x)=f(x+h)-f(x)$        一阶向前差分
-    - $\nablaf(x)=f(x)-f(x-h)$        一阶向后差分
-    - $\deltaf(x)=f(x+h/2)-f(x-h/2)$  一阶中心差分
+    - $\Delta f(x)=f(x+h)-f(x)$        一阶向前差分
+    - $\nabla f(x)=f(x)-f(x-h)$        一阶向后差分
+    - $\delta f(x)=f(x+h/2)-f(x-h/2)$  一阶中心差分
     - $\Delta$ 前差算子  $\nabla$ 后差算子  $\delta$ 中差算子
-###### Newton向前插值公式
+##### Newton向前插值公式
  ![无法显示](chapter4/chap4_2024_page-0040.jpg)
  ![无法显示](chapter4/chap4_2024_page-0041.jpg)
 
@@ -641,20 +703,176 @@ $x_0<...<x_n$,其中$x_i-x_{i-1}=h$,$x_i=x_0+ih$,h被称作步长
 - 为避免Runge和不稳定，一般限定n<7
 - n较大时采用分段低次插值、样条插值、次数较低的最小二乘逼近
 #### 分段低次插值
+为了避免龙格现象，可以对每个小区间进行低次多项式插值，常见的有分段线性插值和分段抛物插值
+```matlab
+%分段低次插值
+function y_predict=piecewise(x_data,y_data,x_predict)
+
+volumn_data=length(x_data);
+volumn_predict=length(x_predict);
+y_predict=zeros(1,volumn_predict);
+
+%分段线性插值
+
+for i=1:volumn_predict
+    %外推
+    if x_predict(i)<x_data(1)
+        y_predict(i)=y_data(1)+(y_data(2)-y_data(1))/(x_data(2)-x_data(1))*(x_predict(i)-x_data(1));
+    end
+    if x_predict(i)>x_data(volumn_data-1)
+        y_predict(i)=y_data(volumn_data-1)+(y_data(volumn_data)-y_data(volumn_data-1))*(x_data(volumn_data)-x_data(volumn_data-1))*(x_predict(i)-x_data(volumn_data-1));
+    end
+    %内插
+    for j=1:volumn_data-1
+        if x_predict(i)>=x_data(j) && x_predict(i)<=x_data(j+1)
+            y_predict(i)=y_data(j)+(y_data(j+1)-y_data(j))/(x_data(j+1)-x_data(j))*(x_predict(i)-x_data(j));
+        end
+    end
+end
+
+
+%{
+%分段抛物插值
+coefficient=zeros(volumn_data-2,3);%系数矩阵
+for i=1:volumn_data-2
+    k2=(y_data(i+2)-y_data(i+1))/(x_data(i+2)-x_data(i+1));
+    k1=(y_data(i+1)-y_data(i))/(x_data(i+1)-x_data(i));
+    coefficient(i,1)=(k2-k1)/(x_data(i+2)-x_data(i));
+    coefficient(i,2)=k1-coefficient(i,1)*(x_data(i+1)+x_data(i));
+    coefficient(i,3)=y_data(i)-coefficient(i,1)*x_data(i)*x_data(i)-coefficient(i,2)*x_data(i);
+end
+
+for i=1:volumn_predict
+    %外推
+    if x_predict(i)<x_data(1)
+            y_predict(i)=coefficient(1,1)*x_predict(i)*x_predict(i)+coefficient(1,2)*x_predict(i)+coefficient(1,3);
+    end
+    if x_predict(i)>x_data(volumn_data-2)
+            y_predict(i)=coefficient(volumn_data-2,1)*x_predict(i)*x_predict(i)+coefficient(volumn_data-2,2)*x_predict(i)+coefficient(volumn_data-2,3);
+    end
+    %内插
+    for j=1:volumn_data-2
+        if x_predict(i)>=x_data(j) && x_predict(i)<=x_data(j+2)
+            y_predict(i)=coefficient(j,1)*x_predict(i)*x_predict(i)+coefficient(j,2)*x_predict(i)+coefficient(j,3);
+            break;
+        end
+    end
+end
+%}
+
+end
+```
 ##### 优点
 - 公式简单，只要区间充分小，就能保证误差要求
 - 局部性质良好，修改某个节点，只影响相邻的两个区间
 ##### 缺点
 - 不能保证节点处插值函数的导数连续，因而不能满足某些工程曲线光滑性的要求
 #### 样条插值
+##### 概览
+- 样条插值的原理和分段低次插值相同，都是使用分段多项式来逼近数据
+- 在样条插值中，相邻子区间的插值函数除了满足函数值连续，还对一阶连续性和二阶连续性有要求
  ![无法显示](chapter4/chap4_2024_page-0056.jpg)
  ![无法显示](chapter4/chap4_2024_page-0057.jpg)
  ![无法显示](chapter4/chap4_2024_page-0059.jpg)
- ##### 三弯矩法
+##### 三弯矩法
+0. 算法分析
+简单地说就是将二阶导函数用线性函数表示，然后通过积分推导出三次方程的系数
+1. 数据准备
+导入已知的数据点，其中自变量$x_{i}$，因变量$y_{i}$
+2. 计算差分
+计算相邻数据点的差分，得到自变量的差分$h_{i}=x_{i+1}-x_{i}$和因变量的差分$\delta_{i}=(y_{i+1}-y_{i})/h_{i}$
+3. 计算弯矩
+在每个数据点$x_{i}$处，计算插值函数的弯矩$M_{i}$，通常通过以下公式计算$M_{i}=6(\frac{\delta_{i+1}-\delta_{i}}{h_{i+1}}-\frac{\delta_{i}-\delta_{i-1}}{h_{i}})$
+其中$M_{1}$和$M_{n}$通常设定为零
+4. 构建系数矩阵
+根据已知数据点和弯矩值，构建系数矩阵。系数矩阵的每一行对应一个插值段的系数
+5. 求解边界条件
+由以上步骤得到4n-2个条件，我们需要在区间端点加上两个约束条件，称为边界条件。一般有：
+    + 固定边界 (Clamped Spline)
+    已知两端的一阶导数值，即 $S^\prime(x_{0})=y_{0}^\prime,S^\prime(x_{n})=y_{n}^\prime$
+    + 自然边界 (Nature Spline)
+    已知两端的二阶导数值，即 $S^{\prime\prime}(x_{0})=y_{0}^{\prime\prime},S^{\prime\prime}(x_{n})=y_{n}^{\prime\prime}$
+    + 非扭结边界 (Not-A-Knot Spline)
+    已知第一个插值节点的三阶导数值与第二个相等，最后一个插值点的三阶导数值与倒数第二个相等，即 $S_{0}^{\prime\prime\prime}(x_{0})=S_{1}^{\prime\prime\prime}(x_{1}),S_{n-2}^{\prime\prime\prime}(x_{n-1})=S_{n-1}^{\prime\prime\prime}(x_{n})$
+6. 求解插值函数
+解出系数矩阵，得到每个插值段的系数。这些系数就是样条插值函数的参数，用于计算插值函数在任意点的值。
  ![无法显示](chapter4/chap4_2024_page-0060.jpg)
  ![无法显示](chapter4/chap4_2024_page-0061.jpg)
  ![无法显示](chapter4/chap4_2024_page-0062.jpg)
  ![无法显示](chapter4/chap4_2024_page-0063.jpg)
+```matlab
+%三次样条插值
+function y_predict=spline(x_data,y_data,x_predict)
+
+volumn_data=length(x_data);
+volumn_predict=length(x_predict);
+y_predict=zeros(1,volumn_predict);
+
+%计算步长
+h_array=zeros(1,volumn_data-1);
+for i=1:volumn_data-1
+    h_array(i)=x_data(i+1)-x_data(i);
+end
+
+%构造线性方程组
+%构造左侧系数矩阵
+A=zeros(volumn_data,volumn_data);
+for i=1:volumn_data
+    if i==1 || i==volumn_data
+        A(i,i)=1;
+    else
+        A(i,i-1)=h_array(i-1);
+        A(i,i)=2*(h_array(i-1)+h_array(i));
+        A(i,i+1)=h_array(i);
+    end
+end
+%构造右侧向量
+B=zeros(1,volumn_data);
+for i=1:volumn_data
+    if i==1 || i==volumn_data
+        B(i)=0;
+    else
+        B(i)=(y_data(i+1)-y_data(i))/h_array(i)-(y_data(i)-y_data(i-1))/h_array(i-1);
+    end
+end
+
+disp(A)
+disp(B)
+%求解
+X=gauss(A,B);
+
+%计算样条函数的系数
+a_array=zeros(1,volumn_data-1);
+c_array=zeros(1,volumn_data-1);
+b_array=zeros(1,volumn_data-1);
+d_array=zeros(1,volumn_data-1);
+for i=1:volumn_data-1
+    a_array(i)=y_data(i);
+    c_array(i)=X(i)/2;
+    d_array(i)=(X(i+1)-X(i))/6/h_array(i);
+    b_array(i)=(y_data(i+1)-y_data(i))/h_array(i)-h_array(i)/2*X(i)-h_array(i)/6*(X(i+1)-X(i));
+end
+
+%计算预测值
+for i=1:volumn_predict
+    %外推
+    if x_predict(i)<x_data(1)
+        y_predict(i)=a_array(1)+b_array(1)*(x_predict(i)-x_data(1))+c_array(1)*power(x_predict(i)-x_data(1),2)+d_array(1)*power(x_predict(i)-x_data(1),3);
+    end
+    if x_predict(i)>x_data(volumn_data)
+        y_predict(i)=a_array(volumn_data-1)+b_array(volumn_data-1)*(x_predict(i)-x_data(volumn_data))+c_array(volumn_data-1)*power(x_predict(i)-x_data(volumn_data),2)+d_array(volumn_data-1)*power(x_predict(i)-x_data(volumn_data),3);
+    end
+    %内插
+    for j=1:volumn_data-1
+        if x_predict(i)>=x_data(j) && x_predict(i)<=x_data(j+1)
+            y_predict(i)=a_array(j)+b_array(j)*(x_predict(i)-x_data(j))+c_array(j)*power(x_predict(i)-x_data(j),2)+d_array(j)*power(x_predict(i)-x_data(j),3);
+            break;
+        end
+    end
+end
+
+end
+```
 #### 逆插值
 - 交换变量
     - 横坐标在空间分布的不均匀性会导致插值多项式产生振荡(即使是低阶多项式)
@@ -681,6 +899,8 @@ $x_0<...<x_n$,其中$x_i-x_{i-1}=h$,$x_i=x_0+ih$,h被称作步长
     - 插值法根据插值条件选择近似函数
     - 最小二乘法根据“偏差平方和最小”原则选择近似函数
 
+---
+
 ## Chapter5 数值微分和数值积分
 ### 概览
 #### 数值微分
@@ -692,7 +912,7 @@ $$
 $$
 用区间$[a,b]$上一些点$x_{k}$出的函数值$f(x_{k})$的加权平均值，作为平均高度$f(\xi)$的近似值
 $$
-I=\int_{a}^{b}f(x)dx=\sum_{k=0}^{n}A_{k}f(x_{k}}
+I=\int_{a}^{b}f(x)dx=\sum_{k=0}^{n}A_{k}f(x_{k})
 $$
 求积系数$A_{k}=\omega_{k}(b-a)$,$\omega_{k}$是求积节点权系数
 #### 复杂函数
@@ -727,6 +947,19 @@ $$
 - 一组基于等距节点的数值积分方法
 - 形式有梯形规则(Trapezoidal Rule)、辛普森规则(Simpson's Rule)、复合梯形规则(Composite Trapezoidal Rule)
 - 在给定区间的等距离点上估计函数值，然后使用多项式插值来近似积分值
+
+```matlab
+%使用Newton-Cotes积分
+function int_newton=Newton(f,a,b,n)
+%f=求积函数，a=左端点，b=右端点，n=节点数
+array=linspace(a,b,n);
+y_array=zeros(1,n);
+h=(b-a)/(n-1);
+for i=0:n-1
+    y_array(i+1)=f(a+i*h);
+end
+int_newton=h*sum(y_array);
+```
 
 ![无法显示](chapter5/chap5_2024_page-0029.jpg)
 ![无法显示](chapter5/chap5_2024_page-0030.jpg)
@@ -769,7 +1002,31 @@ $$
 对于Newton-Cotes积分，由于区间等分，故$x_{0}$和$x_{1}$确定，待定系数只有$A_{0}$和$A_{1}$，代数精度至少为1
 
 而Gauss积分由于不等分区间，则$x_{0}$和$x_{1}$也是待定系数，代数精度至少为3
+```matlab
+%使用高斯求积公式
+function int_gauss=Gauss(f,a,b)
+a0=(b+a)/2;
+a1=(b-a)/2;
 
+%三点Gauss-Legendre公式
+x1=-sqrt(3/5);
+x2=0;
+x3=sqrt(3/5);
+int_1=f(a0 + a1 * x1) * 5/9;
+int_2=f(a0 + a1 * x2) * 8/9;
+int_3=f(a0 + a1 * x3) * 5/9;
+int_gauss=(int_1+int_2+int_3)*a1;
+end
+
+%{
+%两点Gauss-Legendre公式
+x1=sqrt(3)/3;
+x2=-sqrt(3)/3;
+int_1=fun2(f,a0,a1,x1);
+int_2=fun2(f,a0,a1,x2);
+int_gauss=int_1+int_2;
+%}
+```
 ![无法显示](chapter5/chap5_2024_page-0064.jpg)
 ![无法显示](chapter5/chap5_2024_page-0066.jpg)
 ![无法显示](chapter5/chap5_2024_page-0068.jpg)
@@ -787,6 +1044,78 @@ $$
 ### 总结
 ![无法显示](chapter5/chap5_2024_page-0077.jpg)
 
+---
+
 ## Chapter6 常微分方程的数值解
+### 概览
+定解条件
+
+- 初值问题
+给出积分曲线在初始点的状态(初始条件)
+- 边值问题
+给出积分曲线首尾两端的状态(边界条件)
+![无法显示](chapter6/chap6_2024_page-0004.jpg)
+![无法显示](chapter6/chap6_2024_page-0005.jpg)
+![无法显示](chapter6/chap6_2024_page-0006.jpg)
+![无法显示](chapter6/chap6_2024_page-0007.jpg)
+![无法显示](chapter6/chap6_2024_page-0008.jpg)
+
+### 初值问题
+#### 欧拉(Eular)法
+![无法显示](chapter6/chap6_2024_page-0010.jpg)
+![无法显示](chapter6/chap6_2024_page-0011.jpg)
+![无法显示](chapter6/chap6_2024_page-0012.jpg)
+![无法显示](chapter6/chap6_2024_page-0014.jpg)
+![无法显示](chapter6/chap6_2024_page-0015.jpg)
+![无法显示](chapter6/chap6_2024_page-0016.jpg)
+![无法显示](chapter6/chap6_2024_page-0017.jpg)
+![无法显示](chapter6/chap6_2024_page-0018.jpg)
+
+#### 龙格-库塔(Runge-Kutta)法
+![无法显示](chapter6/chap6_2024_page-0022.jpg)
+![无法显示](chapter6/chap6_2024_page-0023.jpg)
+![无法显示](chapter6/chap6_2024_page-0024.jpg)
+![无法显示](chapter6/chap6_2024_page-0027.jpg)
+![无法显示](chapter6/chap6_2024_page-0028.jpg)
+![无法显示](chapter6/chap6_2024_page-0030.jpg)
+![无法显示](chapter6/chap6_2024_page-0031.jpg)
+
+#### 多步法
+![无法显示](chapter6/chap6_2024_page-0034.jpg)
+![无法显示](chapter6/chap6_2024_page-0035.jpg)
+![无法显示](chapter6/chap6_2024_page-0036.jpg)
+![无法显示](chapter6/chap6_2024_page-0037.jpg)
+![无法显示](chapter6/chap6_2024_page-0038.jpg)
+![无法显示](chapter6/chap6_2024_page-0039.jpg)
+
+#### 稳定性、收敛性和刚性问题
+![无法显示](chapter6/chap6_2024_page-0041.jpg)
+
+##### 稳定性
+![无法显示](chapter6/chap6_2024_page-0043.jpg)
+![无法显示](chapter6/chap6_2024_page-0044.jpg)
+
+##### 收敛性
+![无法显示](chapter6/chap6_2024_page-0045.jpg)
+
+#### 微分方程组和高阶微分方程
+![无法显示](chapter6/chap6_2024_page-0046.jpg)
+![无法显示](chapter6/chap6_2024_page-0047.jpg)
+![无法显示](chapter6/chap6_2024_page-0050.jpg)
+![无法显示](chapter6/chap6_2024_page-0051.jpg)
+![无法显示](chapter6/chap6_2024_page-0053.jpg)
+
+### 边值问题
+![无法显示](chapter6/chap6_2024_page-0056.jpg)
+![无法显示](chapter6/chap6_2024_page-0057.jpg)
+
+#### 打靶法
+![无法显示](chapter6/chap6_2024_page-0059.jpg)
+![无法显示](chapter6/chap6_2024_page-0060.jpg)
+
+#### 差分法
+![无法显示](chapter6/chap6_2024_page-0062.jpg)
+### 总结
+![无法显示](chapter6/chap6_2024_page-0065.jpg)
 
 

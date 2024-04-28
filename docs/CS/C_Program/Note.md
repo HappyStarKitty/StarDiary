@@ -1,5 +1,4 @@
 # The C Programming Language
-
 ## 基本语法
 ### 易错易忘
 + 复合语句在语法上被认为是一条语句
@@ -9,6 +8,8 @@
 + %%可输出百分号
 + 赋值语句的结果是右侧表达式的值
 + 函数分为库函数和自定义函数
++ ,分隔可以在一行执行多条指令
++ 变量交换
 ```c
 int x=0, y=0, z=0;
 z = (x==1) && (y=2);
@@ -235,111 +236,7 @@ memmove(target,source,n); 能正确处理部分重叠
 + 动态申请内存
 ### 注意
 p+n=p+n*sizeof(*p)
->**例题**：
-NMEA-0183协议是为了在不同的GPS（全球定位系统）导航设备中建立统一的BTCM（海事无线电技术委员会）标准，由美国国家海洋电子协会（NMEA-The National Marine Electronics Associa-tion）制定的一套通讯协议。GPS接收机根据NMEA-0183协议的标准规范，将位置、速度等信息通过串口传送到PC机、PDA等设备。
-NMEA-0183协议是GPS接收机应当遵守的标准协议，也是目前GPS接收机上使用最广泛的协议，大多数常见的GPS接收机、GPS数据处理软件、导航软件都遵守或者至少兼容这个协议。
-NMEA-0183协议定义的语句非常多，但是常用的或者说兼容性最广的语句只有\$GPGGA、\$GPGSA、\$GPGSV、\$GPRMC、\$GPVTG、\$GPGLL等。其中\$GPRMC语句的格式如下：
 
-    \$GPRMC,024813.640,A,3158.4608,N,11848.3737,E,10.05,324.27,150706,,,A*50
-这里整条语句是一个文本行，行中以逗号“,”隔开各个字段，每个字段的大小（长度）不一，这里的示例只是一种可能，并不能认为字段的大小就如上述例句一样。
-    字段0：\$GPRMC，语句ID，表明该语句为Recommended Minimum Specific GPS/TRANSIT Data（RMC）推荐最小定位信息
-    字段1：UTC时间，hhmmss.sss格式
-    字段2：状态，A=定位，V=未定位
-    字段3：纬度ddmm.mmmm，度分格式（前导位数不足则补0）
-    字段4：纬度N（北纬）或S（南纬）
-    字段5：经度dddmm.mmmm，度分格式（前导位数不足则补0）
-    字段6：经度E（东经）或W（西经）
-    字段7：速度，节，Knots
-    字段8：方位角，度
-    字段9：UTC日期，DDMMYY格式
-    字段10：磁偏角，（000 - 180）度（前导位数不足则补0）
-    字段11：磁偏角方向，E=东W=西
-    字段16：校验值
-这里，“\*”为校验和识别符，其后面的两位数为校验和，代表了“\$”和“\*”之间所有字符（不包括这两个字符）的异或值的十六进制值。上面这条例句的校验和是十六进制的50，也就是十进制的80。
-提示：\^运算符的作用是异或。将\$和\*之间所有的字符做\^运算(第一个字符和第二个字符异或，结果再和第三个字符异或，依此类推)之后的值对65536取余后的结果，应该和\*后面的两个十六进制数字的值相等，否则的话说明这条语句在传输中发生了错误。注意这个十六进制值中是会出现A-F的大写字母的。
-现在，你的程序要读入一系列GPS输出，其中包含\$GPRMC，也包含其他语句。在数据的最后，有一行单独的
-    END
-表示数据的结束。
-你的程序要从中找出\$GPRMC语句，计算校验和，找出其中校验正确，并且字段2表示已定位的语句，从中计算出时间，换算成北京时间。一次数据中会包含多条\$GPRMC语句，以最后一条语句得到的北京时间作为结果输出。
-你的程序一定会读到一条有效的\$GPRMC语句。
-输入格式:
-多条GPS语句，每条均以回车换行结束。最后一行是END三个大写字母。
-输出格式：
-6位数时间，表达为：
-    hh:mm:ss
-其中，hh是两位数的小时，不足两位时前面补0；mm是两位数的分钟，不足两位时前面补0；ss是两位数的秒，不足两位时前面补0。
-输入样例：
-$GPRMC,024813.640,A,3158.4608,N,11848.3737,E,10.05,324.27,150706,,,A*50
-END
-输出样例：
-10:48:13
-```c
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
-int calculate_checksum(const char *sentence) {
-    int checksum = 0;
-    // 从$到*之间的字符进行异或运算
-    for (int i = 1; i < strlen(sentence) && sentence[i] != '*'; i++) {
-        checksum ^= sentence[i];
-    }
-    return checksum;
-}
-
-int main() {
-    char sentence[1000];
-    int valid_checksum = 0;  // 校验和是否有效
-    char time[7];  // 保存时间字符串
-
-    while (1) {
-        fgets(sentence, sizeof(sentence), stdin);
-
-        // 去掉末尾的换行符
-        sentence[strcspn(sentence, "\n")] = 0;
-
-        if (strcmp(sentence, "END") == 0) {
-            // 输入结束
-            break;
-        }
-
-        // 判断是否为$GPRMC语句
-        if (strncmp(sentence, "$GPRMC,", 7) == 0) {
-            // 计算校验和
-            int checksum = calculate_checksum(sentence);
-
-            // 从语句中获取状态字段（字段2）
-            char *status = strtok(sentence, ",");
-            for (int i = 0; i < 2; i++) {
-                status = strtok(NULL, ",");
-            }
-
-            // 判断校验和是否有效且状态为定位
-            if (checksum == strtol(strtok(NULL, "*"), NULL, 16) && strcmp(status, "A") == 0) {
-                valid_checksum = 1;
-                // 从语句中获取时间字段（字段1）
-                char *utc_time = strtok(NULL, ",");
-                strncpy(time, utc_time, 6);
-            }
-        }
-    }
-
-    // 输出北京时间
-    if (valid_checksum) {
-        int hour = atoi(strncpy(NULL, time, 2));
-        int minute = atoi(strncpy(NULL, time + 2, 2));
-        int second = atoi(strncpy(NULL, time + 4, 2));
-
-        // 转换成北京时间
-        hour = (hour + 8) % 24;
-
-        printf("%02d:%02d:%02d\n", hour, minute, second);
-    }
-
-    return 0;
-}
-
-```
 ## 算法
 ### 辗转相除法
 ```c
@@ -347,3 +244,99 @@ int gcd(int a, int b) {
     return b == 0 ? a : gcd(b, a % b);
 }
 ```
+### 搜索和排序
+#### 冒泡排序（Bubble Sort）：
+通过比较相邻元素的大小，将较大（或较小）的元素交换到右边（或左边），从而实现排序。冒泡排序的时间复杂度为 
+```c
+void bubble_sort(int arr[], int n) {
+    for (int i = 0; i < n-1; i++) {
+        for (int j = 0; j < n-i-1; j++) {
+            if (arr[j] > arr[j+1]) {
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+}
+
+int main() {
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    bubble_sort(arr, n);
+    printf("Sorted array is: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
+```
+#### 选择排序（Selection Sort）：
+在未排序部分中找到最小（或最大）的元素，将其放到已排序部分的末尾，然后递归进行。选择排序的时间复杂度为 
+```c
+void selection_sort(int arr[], int n) {
+    for (int i = 0; i < n-1; i++) {
+        int min_idx = i;
+        for (int j = i+1; j < n; j++) {
+            if (arr[j] < arr[min_idx]) {
+                min_idx = j;
+            }
+        }
+        int temp = arr[i];
+        arr[i] = arr[min_idx];
+        arr[min_idx] = temp;
+    }
+}
+
+int main() {
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    selection_sort(arr, n);
+    printf("Sorted array is: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
+```
+#### 插入排序（Insertion Sort）：
+将未排序的元素插入到已排序的部分中，直到所有元素都排好序。插入排序的时间复杂度也为 ，但是对于小型数据集来说效率较高。
+```c
+void insertion_sort(int arr[], int n) {
+    for (int i = 1; i < n; i++) {
+        int key = arr[i];
+        int j = i - 1;
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
+    }
+}
+
+int main() {
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    insertion_sort(arr, n);
+    printf("Sorted array is: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
+```
+#### 快速排序（Quick Sort）：
+通过选择一个基准值，将数组分为两部分，左边部分的元素都小于基准值，右边部分的元素都大于基准值，然后对左右两部分分别递归进行快速排序。快速排序的平均时间复杂度为 
+O(nlogn)，但最坏情况下可能达到 
+
+归并排序（Merge Sort）：
+将数组分为两个子数组，对每个子数组进行排序，然后合并两个已排序的子数组以产生最终排序结果。归并排序的时间复杂度始终为 
+
+堆排序（Heap Sort）：
+将数组视为二叉树，然后将其转换为最大堆或最小堆，然后依次将堆顶元素与堆的最后一个元素交换，然后对剩余元素进行堆调整。堆排序的时间复杂度为 
+
+计数排序（Counting Sort）：
+首先统计数组中每个元素的出现次数，然后根据元素的值和出现次数将其放置到正确的位置上。计数排序的时间复杂度为 
+
+基数排序（Radix Sort）：
+将整数按照位数进行分桶排序，从低位到高位依次进行排序，直到所有位数都排序完成。基数排序的时间复杂度为 
