@@ -20,7 +20,7 @@
     
     
       
-        <title>Lecture 9 - StarDiary</title>
+        <title>Lecture Note - StarDiary</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lecture-9" class="md-skip">
+        <a href="#lecture-note" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lecture 9
+              Lecture Note
             
           </span>
         </div>
@@ -812,7 +812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/" class="md-nav__link">
+      <a href="../../python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1289,6 +1289,122 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      汇编程序
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="汇编程序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      工作流
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      源程序指令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      指令
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="指令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      伪指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      汇编指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据传送指令
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据传送指令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      通用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      指针寄存器(表示偏移地址)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fl" class="md-nav__link">
+    <span class="md-ellipsis">
+      FL标志寄存器
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1302,176 +1418,525 @@
                   
 
 
-<h1 id="lecture-9">Lecture 9</h1>
-<ol>
-<li>32位间接寻址方式
-(1) 32位比16位多了以下这种寻址方式:
-[寄存器+寄存器<em>n+常数]
-其中n=2、4、8。
-例如:
-mov eax, [ebx + esi</em>4]
-设ebx是数组a的首地址, 下标i用esi表示
-则上述语句相当于C语言的: eax = a[i];</li>
-</ol>
-<p>mov eax, [ebx+esi*4+6]</p>
-<p>VC里面要查看当前C代码对应的机器语言，可以在按F10开始调试后选菜单:
-View-&gt;Debug Windows-&gt;Disassembly
-TC里面要查看当前C代码对应的机器语言:
-先把ary.c(http://cc.zju.edu.cn/bhh/ary.c)拷到dosbox86\tc,
-集成环境中选菜单File-&gt;Dos Shell-&gt;
-cd \tc
-tc
-File-&gt;Load-&gt;ary.c
-Compile-&gt;Compile
-Compile-&gt;Link
-File-&gt;Quit
-td ary.exe
-View-&gt;CPU</p>
-<p>这种寻址方式的应用:
-long a[10]={...};
-int i, n=10, sum=0;
-for(i=0; i&lt;n; i++)
-   sum += a[i];
-设ebx=&amp;a[0], esi=0, eax=0, 则上述C代码可转化
-成以下汇编代码:
-again:
-add eax, [ebx+esi*4]
-add esi, 1
-cmp esi, 10
-jb again</p>
-<p>(2) 32位寻址方式里面，对[]中的两个寄存器几乎不加限制例如:
-ebx, ebp, esi, edi, 
-eax, ecx, edx, esp都可以放到[]里面;
-mov eax, [ebx+ebx*4]; 两个寄存器可以任意组合</p>
-<ol>
-<li>段覆盖(segment overriding)
-通过在操作数前添加一个段前缀(segment prefix)如CS:、DS:、ES:、SS:来强制改变操作数的段址，这就是段覆盖。
-段地址的隐含:
-mov ax, [bx]
-mov ax, [si]
-mov ax, [di+2]
-mov ax, [bx+si]
-mov ax, [bx+di+2]
-mov ax, [1000h]
-上述指令的源操作数都省略了段地址ds。</li>
-</ol>
-<p>[bp], [bp+2], [bp+si+2], [bp+di-1]
-等价于
-ss:[bp], ss:[bp+2], ss:[bp+si+2], ss:[bp+di-1]
-当[]中包含有寄存器bp时，该变量的段地址一定是ss。
-例如:
-mov ax, [bp+2] 相当于
-mov ax, ss:[bp+2]</p>
-<p>默认的段地址是可以改变的, 例如:
-mov ax, ds:[bp+2]
-这条指令的源操作数段地址从默认的ss改成了ds。
-同理,
-mov ax, [bx+si+2]改成mov ax, cs:[bx+si+2]的话,
-默认段地址就从ds变成了cs。</p>
-<p>3．通用数据传送指令：MOV，PUSH，POP，XCHG
-mov byte ptr ds:[bx], byte ptr es:[di]
-错误原因:两个操作数不能同时为内存变量
-以下为正确写法:
-mov al, es:[di]
-mov ds:[bx], al
- push、pop遵循先进后出(FILO)规则,例如:</p>
-<p>32位push、pop过程演示:
-http://cc.zju.edu.cn/bhh/stk1.txt 代码
-http://cc.zju.edu.cn/bhh/stk2.txt 堆栈布局
-push/pop后面也可以跟变量,例如:
-push word ptr ds:[bx+2]
-pop word ptr es:[di]
-8086中, push不能跟常数, 但80386及以后的cpu允许push一个常数。
-push/pop后面不能跟一个8位的寄存器或变量:
-push ah; 语法错误 push byte ptr ds:[bx]
-pop al;语法错误   pop byte ptr es:[di]</p>
-<p>mov ax, 1
-mov bx, 2
-xchg ax, bx; 则ax=2, bx=1
-xchg ax, ds:[bx]</p>
-<ol>
-<li>除法指令: div
-(1) 16位除以8位得8位
-ax / 除数 = AL..AH
-例如: div bh
-设AX=123h, BH=10h
-div bh; AL=12h, AH=03h
-(2) 32位除以16位得16位
-dx:ax / 除数 = ax..dx
-例如: div bx
-设dx=123h, ax=4567h, bx=1000h
-div bx  ; 1234567h/1000h
-        ; AX=1234h, DX=0567h
-(3) 64位除以32位得32位
-edx:eax / 除数 = eax..edx
-例如: div ebx
-假定要把一个32位整数如7FFF FFFFh转化成十进制格式
-则一定要采用(3)这种除法以防止发生除法溢出。
-代码: http://cc.zju.edu.cn/bhh/val2decy.asm
-5．地址传送指令：LEA, LDS, LES
-(1) lea  dest, src<br />
-load effective address=取变量的偏移地址
-lea dx, ds:[1000h] ; DX=1000h
-mov dx, 1000h; 上述lea指令的效果等同于mov指令</li>
-</ol>
-<p>lea dx, abc ; 效果等价于以下指令
-mov dx, offset abc
-设abc的偏移地址=1000h
-则lea dx, abc编译成:
-lea dx, [1000h]
-而mov dx, offset abc编译成:
-mov dx, 1000h</p>
-<p>mov dx, offset ds:[bx+si+3]; 语法错误
-lea dx, ds:[bx+si+3]; dx=bx+si+3
-mov dx, bx+si+3; 错误
-mov dx, 1+2+3; 正确用法,因为右侧是常数表达式
-mov dx, ((1*2+3) shl 2) xor 5; 正确</p>
-<p>mov dx, bx; \
-add dx, si;  | 效果等同于上述lea指令
-add dx, 3 ; /</p>
-<p>lea eax, [eax+eax<em>4]; EAX=EAX</em>5 用lea做乘法
-lea eax, [eax+eax<em>2]; EAX=EAX</em>3</p>
-<p>(2) 远指针(far pointer)
-16位汇编中，远指针是指16位段地址:16位偏移地址;
-32位汇编中，远指针是指16位段地址:32位偏移地址。
-48位的远指针在汇编语言中有一个类型修饰词:
-fword ptr
-近指针(near pointer)：偏移地址就是近指针
-16位汇编中，近指针是指16位的偏移地址；
-32位汇编中，近指针是指32位的偏移地址；</p>
-<p>远指针(far pointer)包括段地址及偏移地址两个部分；
-近指针(near pointer)只包括偏移地址，不包含段地址。
-                 12345678h
-假定把一个远指针1234h:5678h存放到地址1000:0000中，则内存布局如下：  &amp;p=1000:0000
-1000:0000 78h<br />
-1000:0001 56h<br />
-1000:0002 34h<br />
-1000:0003 12h<br />
-设ds=1000h, bx=0
-mov di, ds:[bx]; di=5678h
-mov es, ds:[bx+2]; es=1234h
-les di, dword ptr ds:[bx]
-mov al, es:[di]; AL=byte ptr 1234:[5678]</p>
-<p>假定把一个48位的远指针001B:12345678存放到地址1000:0000中，则内存布局如下：
-1000:0000 78h<br />
-1000:0001 56h<br />
-1000:0002 34h<br />
-1000:0003 12h<br />
-1000:0004 1Bh
-1000:0005 00h
-假定要把1000:0000中存放的48位远指针取出来，存放到es:edi中，则
-mov ax, 1000h
-mov ds, ax
-mov edi, dword ptr ds:[0]
-mov es, word ptr ds:[4]</p>
-<p>les edi, fword ptr ds:[0000h]
-; es=001Bh, edi=12345678h</p>
-<p>远指针的汇编语言例子:
-http://cc.zju.edu.cn/bhh/les.asm
-近指针的汇编语言例子:
-http://cc.zju.edu.cn/bhh/nearptr.asm
-远指针的C语言例子:
-http://cc.zju.edu.cn/bhh/farptr.c</p>
+<h1 id="lecture-note">Lecture Note</h1>
+<h2 id="_1">汇编程序</h2>
+<h3 id="_2">工作流</h3>
+<p>edit(asm) --&gt; masm(obj) --&gt; link(exe) --&gt; run</p>
+<h3 id="_3">源程序指令</h3>
+<p>分为汇编指令（编译为机器指令，CPU执行）和伪指令（编译器执行）</p>
+<h2 id="_4">指令</h2>
+<h4 id="_5">伪指令</h4>
+<ul>
+<li>XXX segment / XXX ends 
+定义一个段，用于存放指令/数据/栈
+ends表示段的结束</li>
+<li>end 
+标记整个程序的结束</li>
+<li>assume 
+将某一段寄存器和和某个具体的段相关联</li>
+</ul>
+<h4 id="_6">汇编指令</h4>
+<ul>
+<li>mov</li>
+<li>movzx</li>
+<li>daa
+加法的十进制调整(decimal adjust for addition)</li>
+<li>clc</li>
+<li>adc
+add with CF 带进位加</li>
+<li>lea
+计算地址</li>
+<li>nop 
+no operation 无操作
+在代码窗修改键入nop
+在数据窗修改键入90</li>
+</ul>
+<h4 id="_7">数据传送指令</h4>
+<h5 id="_8">通用</h5>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>功能</th>
+<th>指令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>push</td>
+<td>压入</td>
+<td>pop</td>
+<td>弹出</td>
+</tr>
+<tr>
+<td>##### 端口</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>指令</td>
+<td>功能</td>
+<td>指令</td>
+<td>功能</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>in</td>
+<td>端口读取</td>
+<td>out</td>
+<td>端口写入</td>
+</tr>
+<tr>
+<td>#### 算数指令</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>##### 加法减法指令</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>指令</td>
+<td>功能</td>
+<td>指令</td>
+<td>功能</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>add</td>
+<td>加法</td>
+<td>sub</td>
+<td>减法</td>
+</tr>
+<tr>
+<td>inc</td>
+<td>自增</td>
+<td>dec</td>
+<td>自减</td>
+</tr>
+<tr>
+<td>##### 乘法除法指令</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>##### 逻辑运算指令</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>指令</td>
+<td>功能</td>
+<td>指令</td>
+<td>功能</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>and</td>
+<td>按位与</td>
+<td>or</td>
+<td>按位或</td>
+</tr>
+<tr>
+<td>xor</td>
+<td>按位异或</td>
+<td>not</td>
+<td>按位取反</td>
+</tr>
+<tr>
+<td>##### 移位指令</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>指令</td>
+<td>功能</td>
+<td>指令</td>
+<td>功能</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>shl</td>
+<td>逻辑左移</td>
+<td>shr</td>
+<td>逻辑右移</td>
+</tr>
+<tr>
+<td>sal</td>
+<td>算数左移</td>
+<td>sar</td>
+<td>算数右移</td>
+</tr>
+<tr>
+<td>#### 转移指令</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>修改IP，或同时修改CS和IP的指令</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>段内转移：只修改IP，又分为短转移和近转移</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>段间转移：同时修改CS和IP</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>##### 循环</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>指令</td>
+<td>功能</td>
+<td>说明</td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td></td>
+</tr>
+<tr>
+<td>loop</td>
+<td>循环</td>
+<td>相当于C语言中的for循环，变量为cx的值</td>
+<td></td>
+</tr>
+<tr>
+<td>##### 无条件转移</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>功能</td>
+<td>语法</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>段内短转移</td>
+<td>jmp short 标号</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>段内近转移</td>
+<td>jmp near ptr 标号</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>段间转移</td>
+<td>jmp far ptr 标号</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>##### 子程序调用</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>指令</td>
+<td>功能</td>
+<td>说明</td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td></td>
+</tr>
+<tr>
+<td>ret</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>call</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>## 寄存器</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>寄存器是CPU内部的全局变量</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>### 通用寄存器</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>+ eax</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>32位寄存器，存储函数返回值</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Noname(高16位)+AX(AH+AL)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>### 段寄存器</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>段：一段内存，编程时需要code segment(存放代码)、data segment(存放数据)、stack segment(存放栈)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>段地址：指示段</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>偏移地址：访问段内的单元</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>#### code段</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>+ cs</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>段寄存器 code segment</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>当前将要执行的指令的段地址</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>#### data段</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>+ ds</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>段寄存器 data segment</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>段首地址的十六进制值各位必须等于0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">mov</span><span class="w"> </span><span class="no">ds</span><span class="p">,</span><span class="w"> </span><span class="no">seg</span><span class="w"> </span><span class="no">s</span><span class="w"> </span><span class="c1">;有语法错误，因为ds作为段寄存器</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">              </span><span class="c1">;不能接受常数给它赋值，只能用寄存器或变量赋值         </span>
+</code></pre></div></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>#### stack段</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>+ ss</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">指针寄存器(表示偏移地址)</h4>
+<ul>
+<li>bx(补充偏移地址寄存器)
+base</li>
+<li>bp
+base pointer</li>
+<li>si 
+source index</li>
+<li>
+<p>di
+destination index</p>
+</li>
+<li>
+<p>ip
+instuction pointer
+当前将要执行的指令的偏移地址
+cs:ip指向当前将要执行的指令</p>
+</li>
+<li>sp
+ss:sp用来指向堆栈的顶端
+sp不能放在[]内
+;偏移地址bx,bp,si,di</li>
+</ul>
+<h4 id="fl">FL标志寄存器</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">位</th>
+<th style="text-align: center;">标志</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">O</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">D</td>
+</tr>
+<tr>
+<td style="text-align: center;">11 10 9 8 7 6 4 2 0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">O D I T S Z A P C</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>CF
+进位标志(carry flag)
+加法进位、减法借位 CF=1
+左移、右移 CF一定是最后一次移位
+用jc和jnc跳转指令或adc指令间接知道CF</p>
+</li>
+<li>
+<p>ZF
+零标志(zero flag)
+jz/jnz指令</p>
+</li>
+<li>
+<p>SF
+符号标志(sign flag)
+运算结果的最高位
+js/jns指令</p>
+</li>
+<li>
+<p>OF
+溢出标志(overflow flag)
+正负相加永不溢出
+jo/jno指令</p>
+</li>
+<li>
+<p>PF
+奇偶标志(parity flag)
+结果二进制位中1的个数</p>
+</li>
+<li>
+<p>AF
+低四位向高四位产生进位或借位
+与BCD(Binary Coded Decimal)码有关</p>
+</li>
+<li>
+<p>DF
+DF=0为正方向
+cld使DF=0，复制按正方向
+std使DF=0，复制按反方向</p>
+</li>
+</ul>
 
 
 

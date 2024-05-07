@@ -34,3 +34,6 @@
 
 [TonyCrane的笔记本](https://note.tonycrane.cc/)
 图灵信安的学长，笔记非常详尽且美观
+
+[杰哥的笔记本](https://note.jiepeng.tech/)
+竺混工高大佬杰哥的笔记

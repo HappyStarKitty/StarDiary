@@ -1241,7 +1241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/" class="md-nav__link">
+      <a href="../../python.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2212,17 +2212,20 @@
 <a id="__codelineno-2-66" name="__codelineno-2-66" href="#__codelineno-2-66"></a>
 <a id="__codelineno-2-67" name="__codelineno-2-67" href="#__codelineno-2-67"></a><span class="cp">### 输入与输出</span>
 <a id="__codelineno-2-68" name="__codelineno-2-68" href="#__codelineno-2-68"></a><span class="cp">#### printf</span>
-<a id="__codelineno-2-69" name="__codelineno-2-69" href="#__codelineno-2-69"></a><span class="o">+</span><span class="w"> </span><span class="n">不换行</span>
-<a id="__codelineno-2-70" name="__codelineno-2-70" href="#__codelineno-2-70"></a><span class="o">+</span><span class="w"> </span><span class="o">%</span><span class="n">d</span><span class="w"> </span><span class="n">十进制整型数</span><span class="w"> </span><span class="o">%</span><span class="n">x</span><span class="w"> </span><span class="n">十六进制数</span><span class="w"> </span><span class="o">%</span><span class="n">o</span><span class="w"> </span><span class="n">八进制数</span>
-<a id="__codelineno-2-71" name="__codelineno-2-71" href="#__codelineno-2-71"></a><span class="o">+</span><span class="w"> </span><span class="o">%</span><span class="n">ld</span><span class="w"> </span><span class="n">long整型数</span>
-<a id="__codelineno-2-72" name="__codelineno-2-72" href="#__codelineno-2-72"></a><span class="o">+</span><span class="w"> </span><span class="o">%</span><span class="n">f</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">%</span><span class="n">lf</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span>
-<a id="__codelineno-2-73" name="__codelineno-2-73" href="#__codelineno-2-73"></a><span class="o">+</span><span class="w"> </span><span class="o">%</span><span class="mf">6.2f</span><span class="w"> </span><span class="n">浮点数打印</span><span class="err">，</span><span class="n">小数点后有两位小数</span>
-<a id="__codelineno-2-74" name="__codelineno-2-74" href="#__codelineno-2-74"></a><span class="o">+</span><span class="w"> </span><span class="o">%</span><span class="n">c</span><span class="w"> </span><span class="n">字符</span><span class="w"> </span><span class="o">%</span><span class="n">s</span><span class="w"> </span><span class="n">字符串</span>
-<a id="__codelineno-2-75" name="__codelineno-2-75" href="#__codelineno-2-75"></a><span class="o">+</span><span class="w"> </span><span class="n">八进制的前缀是0</span><span class="err">，</span><span class="n">十六进制的前缀是0x</span>
-<a id="__codelineno-2-76" name="__codelineno-2-76" href="#__codelineno-2-76"></a><span class="err">```</span><span class="n">c</span>
-<a id="__codelineno-2-77" name="__codelineno-2-77" href="#__codelineno-2-77"></a><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="o">=</span><span class="mi">11</span><span class="p">;</span>
-<a id="__codelineno-2-78" name="__codelineno-2-78" href="#__codelineno-2-78"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;k=%d,k=%o,k=%x</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">k</span><span class="p">);</span>
-<a id="__codelineno-2-79" name="__codelineno-2-79" href="#__codelineno-2-79"></a><span class="o">&gt;&gt;&gt;</span><span class="n">k</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span><span class="n">k</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span><span class="n">k</span><span class="o">=</span><span class="n">b</span>
+<a id="__codelineno-2-69" name="__codelineno-2-69" href="#__codelineno-2-69"></a>
+<a id="__codelineno-2-70" name="__codelineno-2-70" href="#__codelineno-2-70"></a><span class="o">+</span><span class="w"> </span><span class="n">不会自动换行</span>
+<a id="__codelineno-2-71" name="__codelineno-2-71" href="#__codelineno-2-71"></a><span class="o">+</span><span class="w"> </span><span class="o">%</span><span class="n">d</span><span class="w"> </span><span class="n">十进制整型数</span><span class="w"> </span><span class="o">%</span><span class="n">ld</span><span class="w"> </span><span class="n">长整型数</span>
+<a id="__codelineno-2-72" name="__codelineno-2-72" href="#__codelineno-2-72"></a><span class="o">+</span><span class="w"> </span><span class="o">%</span><span class="n">x</span><span class="w"> </span><span class="n">十六进制数</span><span class="w"> </span><span class="o">%</span><span class="n">o</span><span class="w"> </span><span class="n">八进制数</span>
+<a id="__codelineno-2-73" name="__codelineno-2-73" href="#__codelineno-2-73"></a><span class="o">+</span><span class="w"> </span><span class="o">%</span><span class="mi">-4</span><span class="n">d</span><span class="w"> </span><span class="n">整型数打印</span><span class="err">，</span><span class="n">占四位左对齐</span>
+<a id="__codelineno-2-74" name="__codelineno-2-74" href="#__codelineno-2-74"></a><span class="o">+</span><span class="w"> </span><span class="o">%</span><span class="n">ld</span><span class="w"> </span><span class="n">long整型数</span>
+<a id="__codelineno-2-75" name="__codelineno-2-75" href="#__codelineno-2-75"></a><span class="o">+</span><span class="w"> </span><span class="o">%</span><span class="n">f</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">%</span><span class="n">lf</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span>
+<a id="__codelineno-2-76" name="__codelineno-2-76" href="#__codelineno-2-76"></a><span class="o">+</span><span class="w"> </span><span class="o">%</span><span class="mf">6.2f</span><span class="w"> </span><span class="n">浮点数打印</span><span class="err">，</span><span class="n">小数点后有两位小数</span>
+<a id="__codelineno-2-77" name="__codelineno-2-77" href="#__codelineno-2-77"></a><span class="o">+</span><span class="w"> </span><span class="o">%</span><span class="n">c</span><span class="w"> </span><span class="n">字符</span><span class="w"> </span><span class="o">%</span><span class="n">s</span><span class="w"> </span><span class="n">字符串</span>
+<a id="__codelineno-2-78" name="__codelineno-2-78" href="#__codelineno-2-78"></a><span class="o">+</span><span class="w"> </span><span class="n">八进制的前缀是0</span><span class="err">，</span><span class="n">十六进制的前缀是0x</span>
+<a id="__codelineno-2-79" name="__codelineno-2-79" href="#__codelineno-2-79"></a><span class="err">```</span><span class="n">c</span>
+<a id="__codelineno-2-80" name="__codelineno-2-80" href="#__codelineno-2-80"></a><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="o">=</span><span class="mi">11</span><span class="p">;</span>
+<a id="__codelineno-2-81" name="__codelineno-2-81" href="#__codelineno-2-81"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;k=%d,k=%o,k=%x</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">k</span><span class="p">);</span>
+<a id="__codelineno-2-82" name="__codelineno-2-82" href="#__codelineno-2-82"></a><span class="o">&gt;&gt;&gt;</span><span class="n">k</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span><span class="n">k</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span><span class="n">k</span><span class="o">=</span><span class="n">b</span>
 </code></pre></div></li>
 </ul>
 <h4 id="getcharputchar">getchar/putchar</h4>

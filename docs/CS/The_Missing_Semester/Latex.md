@@ -1,8 +1,36 @@
 # Latex
+## 语法基础
+### 注释
+%comment 单行注释
+\iffalse comment \fi 多行注释
 ## 常用宏包
-- \usepackage{ctex} %中文宏包
-- \usepackage{graphicx} %插入图片所需宏包
-- \usepackage{listings} %插入图片所需红包
+### 中文宏包
+```latex
+\usepackage{ctex}
+```
+### 插入图片宏包
+```latex
+\usepackage{graphicx}
+%插入单图
+\begin{figure}[htbp]
+    \centering
+    \includegraphicx{example.eps}
+    \caption{figure example}
+\end{figure}
+```
+### 插入代码宏包
+```latex
+\usepackage{listings}
+\begin{lstlisting}
+\end{lstlisting}
+```
+### 多行注释宏包
+```latex
+\usepackage{verbatim}
+\begin{commet}
+注释内容
+\end{commet}
+```
 ## 数学符号
 ### 杂项
 - 行内公式：\$ \$  
