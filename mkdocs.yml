@@ -61,6 +61,8 @@ nav:
           - Latex: CS/The_Missing_Semester/Latex.md
   - Design:
       - Index: Design/README.md
+  - Study:
+      - Index: Study/README.md
   - About:
       - about: about.md
 

@@ -1,4 +1,20 @@
 # Latex
+无论是水课的读书报告还是专业的毕业论文，一篇符合学术规范的文章需要满足许多格式要求。Word排版体验比较难以评价，而Latex提供了一种优雅简洁的方案。
+## 文章规范
+格式规范是一篇文章的基本要求
+一般可分为五部分：提要、引言、正文、结语、参考文献
+### 语法
+#### 提要
+分为摘要和关键词
+#### 引言、正文、结语
+文章的主体内容
+```latex
+\begin{document}
+text content
+\end{document}
+```
+#### 参考文献
+### 文体
 ## 语法基础
 ### 注释
 %comment 单行注释
@@ -22,13 +38,14 @@
 ```latex
 \usepackage{listings}
 \begin{lstlisting}
+code content
 \end{lstlisting}
 ```
 ### 多行注释宏包
 ```latex
 \usepackage{verbatim}
 \begin{commet}
-注释内容
+comment content
 \end{commet}
 ```
 ## 数学符号

@@ -30,7 +30,7 @@
 详细地列出了众多学长的笔记和个人网站
 ### 个人笔记
 [SAVIA的外装代脑](https://savia7582.github.io/Exterior/)
-工科生狂喜
+工科生狂喜，工程图学和大学物理的Notes非常推荐
 
 [TonyCrane的笔记本](https://note.tonycrane.cc/)
 图灵信安的学长，笔记非常详尽且美观
