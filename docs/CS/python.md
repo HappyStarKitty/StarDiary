@@ -14,9 +14,9 @@
 整数和浮点数混合运算结果为浮点数
 乘幂从右往左
 
-字符串比较大小比字母ASILL码值
-and,or惰性求值或者逻辑短路
-not>and>or
+字符串比较大小比字母 ASILL 码值
+and，or 惰性求值或者逻辑短路
+not > and > or
 
 交互式解释器输出的字符串用单引号包裹
 ```python
@@ -53,13 +53,13 @@ not>and>or
 ```
 ### 纯函数
 divmod() 计算商和余数
-	complex() 创建值为real+imagej的复数
+complex() 创建值为 real+imagej 的复数
 list 根据传入参数创建一个新的列表
 int 可以带另一个参数，表示进制
 bin(),oct(),hex() 返回字符串
 sum 求列表的和
-abs() 对象为复数返回模长
-add,sub,mul ,truediv,floordiv 中缀运算符
+abs() 对象为复数，返回模长
+add，sub，mul，truediv，floordiv 中缀运算符
 
 ```python
 >>>float()
@@ -79,7 +79,7 @@ False
 #bin参数为int
 ```
 
-id（）显示对象的地址
+id() 显示对象的地址
 格式化输入输出
 ```python
 >>>x=3.14159
@@ -91,7 +91,7 @@ id（）显示对象的地址
 #默认右对齐，不能用于字符串
 ```
 ### 非纯函数
-print（）函数缺省执行一次即换行（返回值None）
+print()函数缺省执行一次即换行（返回值 None）
 # 程序结构
 列表推导式
 ```python

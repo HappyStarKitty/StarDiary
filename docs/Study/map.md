@@ -6,12 +6,21 @@
 ## 专业课程地图
 ### 数理基础
 #### 微积分
+微分学和积分学，个人感觉自学看 MIT 的 18.01 和 18.02 对微分和积分的理解会更深入，主要是 zju 的课程进度安排实在难以评价
+##### 答案
+公众号：路老师的 nonsense collection
 #### 线性代数
+非常好玩(且重要)的一门课
 ##### 课程
-MIT的[18.06](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/syllabus/)，Gillbert Strang老师是神！
+MIT的[18.06](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/syllabus/)，Gillbert Strang 老师是神！
 ##### 笔记
-Github收获 star 1w+的[线性代数的艺术](https://github.com/kenjihiranabe/The-Art-of-Linear-Algebra)
-竺院辅学的神作[线性代数：未竟之美](https://ckc-agc.bowling233.top/lalu/)
+Github 收获 star 1w+的 [线性代数的艺术](https://github.com/kenjihiranabe/The-Art-of-Linear-Algebra)
+竺院辅学的神作 [线性代数：未竟之美](https://ckc-agc.bowling233.top/lalu/)
+##### 答案
+#### 常微分方程
+- 
+##### 笔记
+[github 找的学长的笔记](https://github.com/16-39/Mathematics/blob/main/ODE%20review.pdf)
 #### 大学物理
 ### 专业基础
 #### 工程图学
@@ -26,10 +35,35 @@ Github收获 star 1w+的[线性代数的艺术](https://github.com/kenjihiranabe
 98上有预习作业和报告作业的答案
 ##### 线下实践
 数车、WEDM等有课前作业，可在[工训官网](http://etc.zju.edu.cn/cy-zju-home/home)上找到
-#### 常微分方程
 ### 专业必修
 ### 专业选修
 ## 通识课程地图
 ### 思政军体
+#### 史纲
+#### 思修
+#### 形策
 ### 创新创业
+#### 创业启程
+##### 考核标准
+线上学习（40%）+ 讲座（20%）+期末考试（40%）
+- 线上部分
+观看课程视频（30%）
+线上测试（20%）
+讨论（20%）
+线上大作业（30%）商业计划书
+- 讲座部分
+听两场讲座
+完成一篇观后感（不少于2000字）
+- 期末考试
+纸质闭卷
+考试范围是《创业管理》第1-7章
 ### 通识选修
+### 跨专业课
+#### 离散数学
+光电金毅老师开的离散
+##### 考核标准
+作业（40）+ 考试（60）
+无签到，无小测，甚至无期中考试。但金毅老师习惯上课随机抽学生回答问题，没来就会扣分
+#### 微观经济学
+余一帆老师开的微经
+无签到，无小测，无期中考试。只有一次小组调研（或 5000字的读书报告）

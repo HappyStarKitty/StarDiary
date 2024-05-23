@@ -1,18 +1,26 @@
 # Markdown
 ## 基础语法
-### 分点
-如果正文中你有两部分要分点，注意符号不能相同
+### Code
+#### 语法
+行内代码
+```markdown
+行内代码`print("hello world")`
+```
+#### 预览
+行内代码`print("hello world)`
+### Part
+如果正文中你有多部分要分点，注意符号不能相同
 ### Table
 #### 语法
 ```markdown
-| segment1 | segment2 |
+| segment 1 | segment 2 |
 | :-: | :-: |
-| content1 | content2 |
+| content 1 | content 2 |
 ```
 #### 预览
-| segment1 | segment2 |
+| segment 1 | segment 2 |
 | :-: | :-:|
-| content1 | content2 |
+| content 1 | content 2 |
 
 ### Highlight
 #### 语法

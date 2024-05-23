@@ -16,7 +16,7 @@
         <link rel="prev" href="../Note/">
       
       
-        <link rel="next" href="../../Assembly_Language/">
+        <link rel="next" href="../../Python/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -328,7 +328,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../about/" class="md-tabs__link">
+        <a href="../../../About/" class="md-tabs__link">
           
   
     
@@ -1084,7 +1084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python.md" class="md-nav__link">
+      <a href="../../Python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1578,11 +1578,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../about/" class="md-nav__link">
+      <a href="../../../About/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    about
+    About
   </span>
   
 
@@ -1999,6 +1999,20 @@ D.如函数调用时，实参与形参都为变量，则这两个变量不可能
 A. 15 B. 9 C. 6 D. 以上均不是<br />
 <strong><em>A17</em></strong>: C  <br />
 注意--i</p>
+<p><strong><em>Q18</em></strong>: 数组定义后，只能引用单个的数组元素，而不能一次引用整个数组。
+<strong><em>A18</em></strong>: 正确
+C语言中，数组名本质上是数组首元素的指针</p>
+<p><strong><em>Q19</em></strong>: 对于定义 <code>char str[] = "abc\000def\n"</code>（注：其中 0 为数字零），求字符串 str 的长度 len 和数组 str 的大小 size，len 和 size 分别是：
+A.12,13 B.3,11 C.3,9 D.3,4
+<strong><em>A19</em></strong>: C
+对于字符串数组，\0、\00、\000 均视为 \0，且总会在末尾加上 \0，故 size 为 9，而 len 是第一个 \0 前的字符数</p>
+<p><strong><em>Q20</em></strong>: 下列赋值语句或初始化语句中，__是错误的。
+A.<code>char s[]="hello";</code>
+B.<code>char s[10];s="hello";</code>
+C.<code>char *p="hello";</code>
+D.<code>char *p;p="hello";</code>
+<strong><em>A20</em></strong>: B
+数组名是数组首元素指针，无法赋值为一个字符串常量；C 和 D 均将指针 p 指向字符串常量的首地址</p>
 </blockquote>
 <h3 id="_2">程序填空</h3>
 <h4 id="_3">求整数平均值</h4>

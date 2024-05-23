@@ -46,7 +46,7 @@ nav:
           - Index: CS/C_Program/README.md
           - Note: CS/C_Program/Note.md
           - Problem: CS/C_Program/Problem.md
-      - Python: CS/python.md
+      - Python: CS/Python.md
       - Assembly Language:
           - Index: CS/Assembly_Language/README.md
           - Lesson Note: CS/Assembly_Language/Lesson_Note.md
@@ -64,7 +64,7 @@ nav:
   - Study:
       - Index: Study/README.md
   - About:
-      - about: about.md
+      - About: About.md
 
 markdown_extensions:
   - pymdownx.highlight:
