@@ -1,6 +1,9 @@
 # Star Diary
+
 ## Welcome
-快乐星猫的~~赶ddl日志~~学习笔记，正在摸鱼中
+
+快乐星猫的赶ddl日志，正在摸鱼中
+
 ## Content
 
 鉴于专业课已有众多大佬分享自己的笔记，我就不认真施工啦（其实就是菜）
@@ -15,8 +18,11 @@
 我尽量在每一篇笔记贴上学习地图，方便大家入门和应试(\*^_^\*)
 
 ## Resource
+
 以下是学长学姐的资源分享，大家要好好利用哦
+
 ### 资源汇总
+
 [浙江大学课程攻略共享计划](https://github.com/QSCTech/zju-icicles)
 教材、答案、历年卷等
 
@@ -28,7 +34,9 @@
 
 [Isshiki修的ZJUCS笔记索引](https://isshikihugh.github.io/zju-cs-asio/)
 详细地列出了众多学长的笔记和个人网站
+
 ### 个人笔记
+
 [SAVIA的外装代脑](https://savia7582.github.io/Exterior/)
 工科生狂喜，工程图学和大学物理的Notes非常推荐
 

@@ -33,6 +33,9 @@ theme:
 nav:
   - Index: README.md
   - Math:
+      - Calculus:
+          - Index: Math/Calculus/README.md
+          - Note: Math/Calculus/README.md
       - Discrete Mathmatics:
           - Index: Math/Discrete_Mathematics/README.md
           - Note: Math/Discrete_Mathematics/Note.md
@@ -51,6 +54,9 @@ nav:
           - Index: CS/Assembly_Language/README.md
           - Lesson Note: CS/Assembly_Language/Lesson_Note.md
           - Textbook Note: CS/Assembly_Language/Textbook_Note.md
+      - Web Development: 
+          - Index: CS/Web_Development/README.md
+          - Note: CS/Web_Development/Note.md
       - Code: CS/code.md
       - Data Structure: CS/Data_Structure.md
       - CSAPP: CS/CSAPP.md
@@ -59,6 +65,7 @@ nav:
           - Git: CS/The_Missing_Semester/Git.md
           - Markdown: CS/The_Missing_Semester/Markdown.md
           - Latex: CS/The_Missing_Semester/Latex.md
+          - Misc: CS/The_Missing_Semester/Misc.md
   - Design:
       - Index: Design/README.md
   - Study:
@@ -67,8 +74,37 @@ nav:
       - About: About.md
 
 markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
+
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight
   - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

@@ -8,7 +8,7 @@
 
 - 我是在大一下的春学期学的这门课，总体上感觉知识密度相当大，需要投入挺多时间
 - 数值计算方法与计院的数值分析内容差不多，但本课程作业上相对会简单一些
-- 善用搜索，可以在CC98或者学长的笔记中上找到一些资源
+- 报告格式要求！
 - debug不论在哪都是一件很讨厌的事情……
 
 ## resource
@@ -35,16 +35,3 @@ docs/Math/Numerical_Method/solution
 slides在repo如下路径  
 docs/Math/Numerical_Method/slides
 
-[Chap1 绪论](slides/chap1_2024.pdf)
-
-[Chap2 非线性方程求根](slides/chap2_2024.pdf)
-
-[Chap3_1 线性代数方程组](slides/chap3_1_2024.pdf)
-
-[Chap3_2 线性代数方程组](slides/chap3_2_2024.pdf)
-
-[Chap4 插值和拟合](slides/chap4_2024.pdf)
-
-[Chap5 数值微分和数值积分](slides/chap5_2024.pdf)
-
-[Chap6 常微分方程](slides/chap6_2024.pdf)
