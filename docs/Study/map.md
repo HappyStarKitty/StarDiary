@@ -20,7 +20,10 @@ Github 收获 star 1w+的 [线性代数的艺术](https://github.com/kenjihirana
 #### 常微分方程
 - 
 ##### 笔记
-[github 找的学长的笔记](https://github.com/16-39/Mathematics/blob/main/ODE%20review.pdf)
+浙大选课攻略上有，总结得挺好的
+或者看[这篇](https://github.com/16-39/Mathematics/blob/main/ODE%20review.pdf)
+，非常扼要，适合考前补天（x
+本来想好好听的，结果课上就开摆了
 #### 大学物理
 ### 专业基础
 #### 工程图学
