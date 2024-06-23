@@ -12,6 +12,8 @@
 
 参考 [图灵学习指南-汇编语言](https://zju-turing.github.io/TuringCourses/major_mandatory/assemble/)，非常贴心地给出了学习资源和学长笔记
 
+复习时的东西有很多，需要多花时间
+
 ## Note
 
 笔记分为两部分，课程笔记多是零散的知识点和注意点；教材笔记多是知识点的整理汇总

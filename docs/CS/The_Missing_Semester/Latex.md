@@ -192,6 +192,8 @@ code content
 - 行间公式：\$\$   \$\$
 - 下标：\_
 - 上标：^
+- 上划线：\overline
+- 下划线：\underline
 - 约等于：\approx
 - 分数线：\frac
 - 导数：\prime
@@ -200,13 +202,14 @@ code content
 - 拉普拉斯算子：\Delta
 - 哈密顿算子：\nabla
 
-### 括号
+### 括号等
 
 |     txt     |   tex   |     txt     |   tex   |
 | :---------: | :-----: | :----------: | :-----: |
 | $\langle$ | \langle | $ \rangle$ | \rangle |
 | $\lfloor$ | \lfloor | $\rfloor$ | \rfloor |
 | $\lceil$ | \lceil |  $\rceil$  | \rceil |
+
 
 ### 希腊字母
 
@@ -223,20 +226,20 @@ code content
 
 ### 二元关系
 
-|       txt       |     tex     |       txt       |     tex     |
-| :-------------: | :---------: | :-------------: | :---------: |
-|     $\in$     |     \in     |   $\notin$   |   \notin   |
-|   $\subset$   |   \subset   |   $\supset$   |   \supset   |
-| $\subsetneqq$ | \subsetneqq | $\supsetneqq$ | \subsetneqq |
-|  $\subseteq$  |  \subseteq  |  $\supseteq$  |  \supseteq  |
-|    $\leq$    |    \leq    |    $\geq$    |    \geq    |
-|    $\cap$    |    \cap    |    $\cup$    |    \cup    |
-|   $\forall$   |   \forall   |   $\exists$   |   \exists   |
-|    $\vee$    |    \vee    |   $\wedge$   |   \wedge   |
-| $\rightarrow$ | \rightarrow |     $\leftarrow$    |    \leftarrow    |
-|$\leftrightarrow$|\leftrightarrow|$\neg$|\neg|
-|$\prec$|\prec|$\succ$|\succ|
-|$\preceq$|\preceq|$\succeq$|\succeq|
+|         txt         |       tex       |       txt       |     tex     |
+| :-----------------: | :-------------: | :-------------: | :---------: |
+|       $\in$       |       \in       |   $\notin$   |   \notin   |
+|     $\subset$     |     \subset     |   $\supset$   |   \supset   |
+|   $\subsetneqq$   |   \subsetneqq   | $\supsetneqq$ | \subsetneqq |
+|    $\subseteq$    |    \subseteq    |  $\supseteq$  |  \supseteq  |
+|      $\leq$      |      \leq      |    $\geq$    |    \geq    |
+|      $\cap$      |      \cap      |    $\cup$    |    \cup    |
+|     $\forall$     |     \forall     |   $\exists$   |   \exists   |
+|      $\vee$      |      \vee      |   $\wedge$   |   \wedge   |
+|   $\rightarrow$   |   \rightarrow   | $\leftarrow$ | \leftarrow |
+| $\leftrightarrow$ | \leftrightarrow |    $\neg$    |    \neg    |
+|      $\prec$      |      \prec      |    $\succ$    |    \succ    |
+|     $\preceq$     |     \preceq     |   $\succeq$   |   \succeq   |
 
 ### 矩阵和行列式
 
