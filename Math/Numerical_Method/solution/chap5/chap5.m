@@ -1,0 +1,14 @@
+left=0;
+right=60;
+%Newton-Cotes
+int_newton=Newton(@voltage,left,right,1000);
+ave_newton=int_newton/(right-left);
+disp(ave_newton)
+%Gauss
+int_gauss=Gauss(@voltage,left,right);
+ave_gauss=int_gauss/(right-left);
+disp(ave_gauss)
+%Romberg
+int_romberg=Romberg(@voltage,left,right,10);
+ave_romberg=int_romberg/(right-left);
+disp(ave_romberg)

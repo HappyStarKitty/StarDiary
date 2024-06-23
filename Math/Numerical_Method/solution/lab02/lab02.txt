@@ -1,0 +1,22 @@
+lab02_test
+maximum number of iterations exceeded
+fun1: k = 10000 p = Inf
+fun2: k = 20 p = 1.732051
+fun3: k = 6 p = 1.732051
+maximum number of iterations exceeded
+fun1: k = 10000 p = Inf
+fun2: k = 19 p = 1.732051
+fun3: k = 6 p = 1.732051
+maximum number of iterations exceeded
+fun1: k = 10000 p = Inf
+fun2: k = 18 p = 1.732051
+fun3: k = 6 p = 1.732051
+maximum number of iterations exceeded
+fun1: k = 10000 p = Inf
+fun2: k = 19 p = 1.732051
+fun3: k = 6 p = 1.732051
+maximum number of iterations exceeded
+fun1: k = 10000 p = Inf
+fun2: k = 19 p = 1.732051
+fun3: k = 6 p = 1.732051
+diary off

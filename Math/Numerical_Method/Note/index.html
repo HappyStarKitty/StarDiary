@@ -1,0 +1,5357 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="HappyStarKitty">
+      
+      
+        <link rel="canonical" href="https://HappyStarKitty.github.io/Math/Numerical_Method/Note/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../Lab/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+    
+    
+      
+        <title>Note - StarDiary</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#numerical-methods-note" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="StarDiary" class="md-header__button md-logo" aria-label="StarDiary" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            StarDiary
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Note
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Calculus/" class="md-tabs__link">
+          
+  
+    
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../CS/C_Program/" class="md-tabs__link">
+          
+  
+    
+  
+  CS
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Design/" class="md-tabs__link">
+          
+  
+    
+  
+  Design
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Study/" class="md-tabs__link">
+          
+  
+    
+  
+  Study
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../About.md" class="md-tabs__link">
+          
+  
+    
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="StarDiary" class="md-nav__button md-logo" aria-label="StarDiary" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    StarDiary
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Calculus/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Calculus
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Calculus
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Discrete_Mathematics/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Discrete Mathmatics
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Discrete Mathmatics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Discrete_Mathematics/Note/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Note
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Numerical Methods
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Numerical Methods
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Note
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Note
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter0-matlab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter0 Matlab
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter0 Matlab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      官方文档
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件操作
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本语法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      数学函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常用操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      矩阵与向量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      求解多项式方程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      矩阵乘法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="矩阵乘法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      语法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      说明
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error List
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter1 绪论
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter1 绪论">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      概览
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      数学模型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      数值方法特点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      误差分析
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="误差分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      误差种类的来源
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      有效数字
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="有效数字">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      舍入误差
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="舍入误差">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      数的计算机表示
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      计算机运算误差原因
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      截断误差
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      误差传播
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      算法的数值稳定性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter2 非线性方程求根
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter2 非线性方程求根">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      概览
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      收敛阶
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      划界法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="划界法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      二分法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      试位法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      开方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="开方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      不动点迭代
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newton-raphson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Newton-Raphson方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      割线法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      针对重根的改进
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter3 线性代数方程组
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter3 线性代数方程组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      系数矩阵类型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      数值解法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      直接法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="直接法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      高斯消去法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="高斯消去法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      病态方程组判别
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      解求精技术
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      消去法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lu" class="md-nav__link">
+    <span class="md-ellipsis">
+      三角分解(LU分解)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三角分解(LU分解)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#doolittle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Doolittle分解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crout分解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      三角分解和高斯消去的比较
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cholesky" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cholesky分解
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      带状方程组
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thomas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thomas算法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      误差分析、条件数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="误差分析、条件数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      向量范数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      矩阵范数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="矩阵范数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      谱半径
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      病态方程组和矩阵条件数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      迭代方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="迭代方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      迭代法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      雅可比迭代法(同步迭代法)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      高斯-赛德尔方法(异步迭代法)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    <span class="md-ellipsis">
+      收敛性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sor" class="md-nav__link">
+    <span class="md-ellipsis">
+      逐次超松弛迭代法(SOR)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter4 插值和拟合
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter4 插值和拟合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    <span class="md-ellipsis">
+      插值
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="插值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    <span class="md-ellipsis">
+      插值函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    <span class="md-ellipsis">
+      插值函数存在唯一定理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    <span class="md-ellipsis">
+      插值多项式存在唯一性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    <span class="md-ellipsis">
+      插值余项
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    <span class="md-ellipsis">
+      内插与外推
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    <span class="md-ellipsis">
+      插值余项误差
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lagrange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lagrange插值多项式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lagrange插值多项式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    <span class="md-ellipsis">
+      优点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    <span class="md-ellipsis">
+      缺点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    <span class="md-ellipsis">
+      样条插值
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="样条插值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    <span class="md-ellipsis">
+      概览
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_63" class="md-nav__link">
+    <span class="md-ellipsis">
+      三弯矩法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_64" class="md-nav__link">
+    <span class="md-ellipsis">
+      逆插值
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_65" class="md-nav__link">
+    <span class="md-ellipsis">
+      拟合
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="拟合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_66" class="md-nav__link">
+    <span class="md-ellipsis">
+      最小二乘方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="最小二乘方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_67" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本环节
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_68" class="md-nav__link">
+    <span class="md-ellipsis">
+      解法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_69" class="md-nav__link">
+    <span class="md-ellipsis">
+      代数多项式拟合
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_70" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter5 数值微分和数值积分
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter5 数值微分和数值积分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_71" class="md-nav__link">
+    <span class="md-ellipsis">
+      概览
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="概览">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_72" class="md-nav__link">
+    <span class="md-ellipsis">
+      数值微分
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_73" class="md-nav__link">
+    <span class="md-ellipsis">
+      数值积分
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_74" class="md-nav__link">
+    <span class="md-ellipsis">
+      复杂函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_75" class="md-nav__link">
+    <span class="md-ellipsis">
+      稳定性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_76" class="md-nav__link">
+    <span class="md-ellipsis">
+      数值微分
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数值微分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_77" class="md-nav__link">
+    <span class="md-ellipsis">
+      差商近似
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_78" class="md-nav__link">
+    <span class="md-ellipsis">
+      插值型数值微分
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_79" class="md-nav__link">
+    <span class="md-ellipsis">
+      数值积分
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数值积分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#newton-cotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Newton-Cotes积分
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#romberg" class="md-nav__link">
+    <span class="md-ellipsis">
+      Romberg积分
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Romberg积分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_80" class="md-nav__link">
+    <span class="md-ellipsis">
+      数值微分的外推法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gauss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gauss求积公式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gauss求积公式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_81" class="md-nav__link">
+    <span class="md-ellipsis">
+      概览
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_82" class="md-nav__link">
+    <span class="md-ellipsis">
+      比较
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_83" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter6 常微分方程的数值解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter6 常微分方程的数值解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_84" class="md-nav__link">
+    <span class="md-ellipsis">
+      概览
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_85" class="md-nav__link">
+    <span class="md-ellipsis">
+      初值问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="初值问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eular" class="md-nav__link">
+    <span class="md-ellipsis">
+      欧拉(Eular)法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-runge-kutta" class="md-nav__link">
+    <span class="md-ellipsis">
+      龙格-库塔(Runge-Kutta)法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_86" class="md-nav__link">
+    <span class="md-ellipsis">
+      多步法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_87" class="md-nav__link">
+    <span class="md-ellipsis">
+      稳定性、收敛性和刚性问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="稳定性、收敛性和刚性问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_88" class="md-nav__link">
+    <span class="md-ellipsis">
+      稳定性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_89" class="md-nav__link">
+    <span class="md-ellipsis">
+      收敛性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_90" class="md-nav__link">
+    <span class="md-ellipsis">
+      微分方程组和高阶微分方程
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_91" class="md-nav__link">
+    <span class="md-ellipsis">
+      边值问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="边值问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_92" class="md-nav__link">
+    <span class="md-ellipsis">
+      打靶法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_93" class="md-nav__link">
+    <span class="md-ellipsis">
+      差分法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_94" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Homework/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            CS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../CS/C_Program/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    C
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            C
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS/C_Program/Note/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Note
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS/C_Program/Problem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Problem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS/Python.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../CS/Assembly_Language/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Assembly Language
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Assembly Language
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS/Assembly_Language/Lesson_Note/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson Note
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS/Assembly_Language/Textbook_Note/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Textbook Note
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../CS/Web_Development/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Web Development
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Web Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS/Web_Development/Note/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Note
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS/code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS/Data_Structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS/CSAPP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSAPP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../CS/The_Missing_Semester/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    The Missing Semester
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            The Missing Semester
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS/The_Missing_Semester/Git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS/The_Missing_Semester/Markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS/The_Missing_Semester/Latex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Latex
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS/The_Missing_Semester/Misc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Misc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Design/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Design
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Study/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Study
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Study
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../About.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter0-matlab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter0 Matlab
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter0 Matlab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      官方文档
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件操作
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本语法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      数学函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常用操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      矩阵与向量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      求解多项式方程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      矩阵乘法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="矩阵乘法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      语法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      说明
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error List
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter1 绪论
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter1 绪论">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      概览
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      数学模型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      数值方法特点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      误差分析
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="误差分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      误差种类的来源
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      有效数字
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="有效数字">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      舍入误差
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="舍入误差">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      数的计算机表示
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      计算机运算误差原因
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      截断误差
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      误差传播
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      算法的数值稳定性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter2 非线性方程求根
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter2 非线性方程求根">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      概览
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      收敛阶
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      划界法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="划界法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      二分法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      试位法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      开方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="开方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      不动点迭代
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newton-raphson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Newton-Raphson方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      割线法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      针对重根的改进
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter3 线性代数方程组
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter3 线性代数方程组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      系数矩阵类型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      数值解法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      直接法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="直接法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      高斯消去法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="高斯消去法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      病态方程组判别
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      解求精技术
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      消去法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lu" class="md-nav__link">
+    <span class="md-ellipsis">
+      三角分解(LU分解)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三角分解(LU分解)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#doolittle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Doolittle分解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crout分解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      三角分解和高斯消去的比较
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cholesky" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cholesky分解
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      带状方程组
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thomas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thomas算法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      误差分析、条件数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="误差分析、条件数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      向量范数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      矩阵范数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="矩阵范数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      谱半径
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      病态方程组和矩阵条件数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      迭代方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="迭代方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      迭代法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      雅可比迭代法(同步迭代法)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      高斯-赛德尔方法(异步迭代法)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    <span class="md-ellipsis">
+      收敛性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sor" class="md-nav__link">
+    <span class="md-ellipsis">
+      逐次超松弛迭代法(SOR)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter4 插值和拟合
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter4 插值和拟合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    <span class="md-ellipsis">
+      插值
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="插值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    <span class="md-ellipsis">
+      插值函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    <span class="md-ellipsis">
+      插值函数存在唯一定理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    <span class="md-ellipsis">
+      插值多项式存在唯一性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    <span class="md-ellipsis">
+      插值余项
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    <span class="md-ellipsis">
+      内插与外推
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    <span class="md-ellipsis">
+      插值余项误差
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lagrange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lagrange插值多项式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lagrange插值多项式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    <span class="md-ellipsis">
+      优点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    <span class="md-ellipsis">
+      缺点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    <span class="md-ellipsis">
+      样条插值
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="样条插值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    <span class="md-ellipsis">
+      概览
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_63" class="md-nav__link">
+    <span class="md-ellipsis">
+      三弯矩法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_64" class="md-nav__link">
+    <span class="md-ellipsis">
+      逆插值
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_65" class="md-nav__link">
+    <span class="md-ellipsis">
+      拟合
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="拟合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_66" class="md-nav__link">
+    <span class="md-ellipsis">
+      最小二乘方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="最小二乘方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_67" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本环节
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_68" class="md-nav__link">
+    <span class="md-ellipsis">
+      解法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_69" class="md-nav__link">
+    <span class="md-ellipsis">
+      代数多项式拟合
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_70" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter5 数值微分和数值积分
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter5 数值微分和数值积分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_71" class="md-nav__link">
+    <span class="md-ellipsis">
+      概览
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="概览">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_72" class="md-nav__link">
+    <span class="md-ellipsis">
+      数值微分
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_73" class="md-nav__link">
+    <span class="md-ellipsis">
+      数值积分
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_74" class="md-nav__link">
+    <span class="md-ellipsis">
+      复杂函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_75" class="md-nav__link">
+    <span class="md-ellipsis">
+      稳定性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_76" class="md-nav__link">
+    <span class="md-ellipsis">
+      数值微分
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数值微分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_77" class="md-nav__link">
+    <span class="md-ellipsis">
+      差商近似
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_78" class="md-nav__link">
+    <span class="md-ellipsis">
+      插值型数值微分
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_79" class="md-nav__link">
+    <span class="md-ellipsis">
+      数值积分
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数值积分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#newton-cotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Newton-Cotes积分
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#romberg" class="md-nav__link">
+    <span class="md-ellipsis">
+      Romberg积分
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Romberg积分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_80" class="md-nav__link">
+    <span class="md-ellipsis">
+      数值微分的外推法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gauss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gauss求积公式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gauss求积公式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_81" class="md-nav__link">
+    <span class="md-ellipsis">
+      概览
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_82" class="md-nav__link">
+    <span class="md-ellipsis">
+      比较
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_83" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter6 常微分方程的数值解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter6 常微分方程的数值解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_84" class="md-nav__link">
+    <span class="md-ellipsis">
+      概览
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_85" class="md-nav__link">
+    <span class="md-ellipsis">
+      初值问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="初值问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eular" class="md-nav__link">
+    <span class="md-ellipsis">
+      欧拉(Eular)法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-runge-kutta" class="md-nav__link">
+    <span class="md-ellipsis">
+      龙格-库塔(Runge-Kutta)法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_86" class="md-nav__link">
+    <span class="md-ellipsis">
+      多步法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_87" class="md-nav__link">
+    <span class="md-ellipsis">
+      稳定性、收敛性和刚性问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="稳定性、收敛性和刚性问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_88" class="md-nav__link">
+    <span class="md-ellipsis">
+      稳定性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_89" class="md-nav__link">
+    <span class="md-ellipsis">
+      收敛性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_90" class="md-nav__link">
+    <span class="md-ellipsis">
+      微分方程组和高阶微分方程
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_91" class="md-nav__link">
+    <span class="md-ellipsis">
+      边值问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="边值问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_92" class="md-nav__link">
+    <span class="md-ellipsis">
+      打靶法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_93" class="md-nav__link">
+    <span class="md-ellipsis">
+      差分法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_94" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="numerical-methods-note">Numerical Methods Note<a class="headerlink" href="#numerical-methods-note" title="Permanent link">&para;</a></h1>
+<h2 id="chapter0-matlab">Chapter0 Matlab<a class="headerlink" href="#chapter0-matlab" title="Permanent link">&para;</a></h2>
+<h3 id="_1">官方文档<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p><a href="https://ww2.mathworks.cn/help/matlab/index.html?s_tid=CRUX_lftnav"><em>Matlab Manual</em></a></p>
+<h3 id="_2">文件操作<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>开始/结束命令行日志命令：diary lab01.txt / diary off </li>
+<li>清空命令行命令：clc</li>
+<li>删除日志命令：delete("diary.txt")</li>
+<li>切换文件路径：cd D:\workspace\matlab</li>
+<li>一个文件一般只有一个同名函数</li>
+</ul>
+<h3 id="_3">基本语法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>语句加上分号可以隐藏输出</li>
+<li>块注释：%{    %}</li>
+<li>数组的索引从1开始</li>
+<li>函数调用可以使用feval</li>
+<li>:运算符可以创建向量</li>
+<li>~=不等于</li>
+</ul>
+<h3 id="_4">数学函数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>常用运算</p>
+<ul>
+<li>mod %求余</li>
+<li>rem %求余，返回的余数与被除数符号相同</li>
+<li>mean %计算数组平均值</li>
+<li>sum %计算数组元素和</li>
+<li>exp %指数函数</li>
+<li>log(x,base) %对数函数</li>
+</ul>
+</li>
+<li>
+<p>保留小数位数 </p>
+<ul>
+<li>floor %向下取整</li>
+<li>roundn(n,-p) %注意负号，如果缺省-p则为四舍五入</li>
+<li>format short %控制显示</li>
+<li>fprintf %美化输出  </li>
+</ul>
+</li>
+<li>
+<p>求根</p>
+<ul>
+<li>fzero %单函数求根</li>
+<li>roots %求多项式的根</li>
+</ul>
+</li>
+<li>
+<p>多项式</p>
+<ul>
+<li>poly %用已知的根构建多项式</li>
+<li>polyval %求多项式的值</li>
+<li>polyvalm %求带有矩阵变量的多项式的值</li>
+</ul>
+</li>
+<li>
+<p>矩阵</p>
+<ul>
+<li>cond %计算矩阵条件数</li>
+<li>norm %计算矩阵或向量的范数</li>
+<li>inv %矩阵求逆</li>
+<li>pinv %求矩阵伪逆</li>
+<li>det %计算行列式的值</li>
+<li>rank %求秩</li>
+<li>eig eigs %矩阵特征值</li>
+<li>lu %LU分解</li>
+<li>chol %cholesky分解</li>
+</ul>
+</li>
+<li>
+<p>插值与拟合</p>
+<ul>
+<li>polyfit %多项式最小二乘拟合</li>
+<li>interp1 %一维插值(查表)</li>
+<li>interp1q %快速一维线性插值</li>
+<li>interp2 %二维插值</li>
+<li>interpn %n维插值</li>
+<li>spline,csape %三次样条插值</li>
+<li>ppval %分段多项式估计函数</li>
+</ul>
+</li>
+<li>
+<p>绘图</p>
+<ul>
+<li>plot %生成图形</li>
+<li>legend %标识各条线</li>
+<li>hold on %将绘图添加到现有图形中</li>
+<li>figure %打开新的图窗，并将其作为当前图窗</li>
+<li>clf reset %清空图窗</li>
+<li>grid on %启用网格线</li>
+<li>grid off %禁用网格线</li>
+</ul>
+</li>
+<li>
+<p>随机数</p>
+<ul>
+<li>rand %生成均匀分布的随机数</li>
+<li>randi %生成服从离散均匀分布的随机整数</li>
+<li>randn %生成服从标准正态分布的随机数</li>
+<li>randperm %生成包含随机排列的整数序列</li>
+</ul>
+</li>
+<li>
+<p>数值微分和积分</p>
+<ul>
+<li>quad %Simpson公式</li>
+<li>trapz %梯形公式</li>
+<li>diff %数值微分(连续函数求导)</li>
+<li>quadl %Lobatto求积(一种高斯求积公式，取代quad8)</li>
+<li>dblquad %二重积分</li>
+</ul>
+</li>
+<li>
+<p>常微分方程</p>
+<ul>
+<li>ode23 %二阶、三阶R-K方法，求解非刚性微分方程的低阶方法，较低精度</li>
+<li>ode45 %四阶、五阶R-K方法，求解非刚性微分方程的中阶方法，大多数场合的首选算法，中等精度</li>
+<li>ode113 %非刚性微分方程，可变阶</li>
+<li>ode23s %解刚性微分方程的低阶方法</li>
+<li>ode15s %刚性微分方程，可变阶</li>
+<li>desolve %符号解</li>
+</ul>
+</li>
+<li>
+<p>杂项</p>
+<ul>
+<li>length %获取数组或向量的长度，即元素数量</li>
+<li>size %返回数组或矩阵的维度信息</li>
+<li>tic %开始计时</li>
+<li>toc %结束及时</li>
+<li>linspace %生成指定区间等间距数组</li>
+<li>importdata %导入数据文件</li>
+<li>whos %列出工作区中的变量及类型与大小</li>
+</ul>
+</li>
+</ol>
+<h3 id="_5">常用操作<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h4 id="_6">矩阵与向量<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>matlab的向量化操作非常强大，需要善于利用
+<div class="highlight"><pre><span></span><code><span class="c">% 1.读取所有行与列</span>
+<span class="n">a</span>
+<span class="s">a(:,:)</span>
+<span class="c">% 2.读取前i行，前j列</span>
+<span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="nb">i</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="nb">j</span><span class="p">)</span>
+<span class="c">% 3.读取第i行，第j列</span>
+<span class="n">a</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="nb">j</span><span class="p">)</span>
+<span class="c">% 4.读取所有行，第j列；第i行，所有列</span>
+<span class="n">a</span><span class="p">(:,</span><span class="nb">j</span><span class="p">)</span>
+<span class="n">a</span><span class="p">(</span><span class="nb">i</span><span class="p">,:)</span>
+<span class="c">% 5.读取某几行的某几列</span>
+<span class="n">a</span><span class="p">([</span><span class="n">i1</span><span class="p">,</span><span class="n">i2</span><span class="p">..</span><span class="n">ip</span><span class="p">],[</span><span class="n">j1</span><span class="p">,</span><span class="n">j2</span><span class="p">..</span><span class="n">jq</span><span class="p">])</span>
+</code></pre></div></p>
+<h4 id="_7">求解多项式方程<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c">%-----次数已知-----</span>
+<span class="c">% 声明符号变量</span>
+<span class="n">syms</span><span class="w"> </span><span class="s">a</span><span class="w"> </span><span class="s">b</span><span class="w"> </span><span class="s">c</span><span class="w"> </span><span class="s">x</span><span class="p">;</span>
+<span class="c">% 定义方程</span>
+<span class="n">eqn</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a</span><span class="o">*</span><span class="n">x</span>^<span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="c">% 求解方程</span>
+<span class="n">solutions</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">solve</span><span class="p">(</span><span class="n">eqn</span><span class="p">,[</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">]);</span>
+
+<span class="c">%-----次数未知-----</span>
+<span class="n">syms</span><span class="w"> </span><span class="s">x</span><span class="p">;</span>
+<span class="n">n_max</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c">% 最大阶次</span>
+<span class="n">solutions</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[];</span>
+
+<span class="k">for</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">n_max</span>
+<span class="w">    </span><span class="c">% 定义方程</span>
+<span class="w">    </span><span class="n">eqn</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">poly2sym</span><span class="p">(</span><span class="n">sym</span><span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]),</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c">% 求解方程</span>
+<span class="w">    </span><span class="n">sol</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">solve</span><span class="p">(</span><span class="n">eqn</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c">% 将解添加到结果中</span>
+<span class="w">    </span><span class="n">solutions</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">solutions</span><span class="p">;</span><span class="w"> </span><span class="n">sol</span><span class="p">];</span>
+<span class="k">end</span>
+
+<span class="c">% 显示所有解</span>
+<span class="n">solutions</span>
+</code></pre></div>
+<h4 id="_8">矩阵乘法<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<p>matlab矩阵乘法分为两种，times 和 .*</p>
+<h5 id="_9">语法<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><span class="n">C</span><span class="p">=</span><span class="n">A</span><span class="o">.*</span><span class="n">B</span><span class="p">;</span>
+<span class="n">C</span><span class="p">=</span><span class="n">times</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">);</span>
+</code></pre></div>
+<h5 id="_10">说明<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h5>
+<ul>
+<li>对应元素的相乘，A和B的大小必须相同和兼容</li>
+<li>如果A和B的大小兼容，则两个数组会隐式扩展以相互匹配</li>
+<li>如A或B中的一个是标量，则该标量与另一个数组的每个元素相结合</li>
+<li>此外，行向量或列向量会隐式扩展以形成矩阵</li>
+</ul>
+<h3 id="error-list">Error List<a class="headerlink" href="#error-list" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>警告: 冒号操作数必须为实数标量</strong>
+<strong>错误使用 * 用于矩阵乘法的维度不正确</strong></p>
+</blockquote>
+<hr />
+<h2 id="chapter1">Chapter1 绪论<a class="headerlink" href="#chapter1" title="Permanent link">&para;</a></h2>
+<h3 id="_11">概览<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>根据计算机特点，研究通过计算机求工程问题满足精度要求的近似解。应用数值计算方法解决工程问题的流程如下：</p>
+<ul>
+<li>建立数学模型</li>
+<li>简化成一系列算术运算和逻辑运算</li>
+<li>求出问题数值解</li>
+<li>对算法的收敛性、稳定性和误差进行分析计算</li>
+</ul>
+<h3 id="_12">数学模型<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>用数学语言来表达物理系统或过程本质特征的公式或方程</p>
+<ul>
+<li>因变量=f(自变量，参数，强制函数) </li>
+<li>因变量：用来刻画系统行为或状态的特征量</li>
+<li>自变量：通常为维度，如时间和空间，系统的行为是用自变量来确定的</li>
+<li>参数：反映系统的性质或组成</li>
+<li>强制函数：外部对系统施加的影响。</li>
+</ul>
+<h3 id="_13">数值方法特点<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li>稳定性</li>
+<li>准确性与精确性</li>
+<li>收敛速度</li>
+</ul>
+<h3 id="_14">误差分析<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<h4 id="_15">误差种类的来源<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<ul>
+<li>数值误差：包括舍入误差和截断误差</li>
+<li>舍入误差：由于计算机只能表示有限位数的量</li>
+<li>截断误差：由于数值方法可能运用近似方法表示准确数值运算或数量</li>
+<li>不与数值方法直接相关的误差：如粗差、形式化或模型误差、数据不确定性误差</li>
+</ul>
+<p><img alt="无法显示" src="../chapter1/%E8%AF%AF%E5%B7%AE%E7%9A%84%E5%AE%9A%E4%B9%89.jpg" /></p>
+<h3 id="_16">有效数字<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p><em>为了正式规定数值的有效程度</em>
+<img alt="无法显示" src="../chapter1/%E6%9C%89%E6%95%88%E6%95%B0%E5%AD%97%E4%B8%8E%E8%AF%AF%E5%B7%AE%E7%9A%84%E5%85%B3%E7%B3%BB.jpg" /><br>
+<em>判断有效数字位数的方法</em>
+<img alt="无法显示" src="../chapter1/%E8%BF%AD%E4%BB%A3%E6%96%B9%E6%B3%95%E7%9A%84%E8%AF%AF%E5%B7%AE%E4%BC%B0%E8%AE%A1.jpg" /></p>
+<h4 id="_17">舍入误差<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<ul>
+<li>数的计算机表示</li>
+<li>计算机中的算术运算</li>
+</ul>
+<h5 id="_18">数的计算机表示<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h5>
+<p><img alt="无法显示" src="../chapter1/%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA1.jpg" />
+<img alt="无法显示" src="../chapter1/%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA2.jpg" />
+<img alt="无法显示" src="../chapter1/%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA3.jpg" />
+<img alt="无法显示" src="../chapter1/%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA4.jpg" /></p>
+<h5 id="_19">计算机运算误差原因<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h5>
+<ol>
+<li>通用算术运算<ul>
+<li>有效数字丢失</li>
+<li>主要体现在尾数的调整</li>
+</ul>
+</li>
+<li>大规模计算<ul>
+<li>舍入误差的累积效应</li>
+</ul>
+</li>
+<li>大数和小数相加<ul>
+<li>如无穷级数求和</li>
+</ul>
+</li>
+<li>减性抵销<ul>
+<li>两个几乎相等的浮点数所引起的舍入误差</li>
+<li>如二次求根公式</li>
+<li>变换公式或扩展精度</li>
+</ul>
+</li>
+<li>拖尾效应<ul>
+<li>求和过程中，某一项的值大于和值本身</li>
+<li>在符号交替的级数中会出现</li>
+</ul>
+</li>
+<li>内积<ul>
+<li>使用扩展精度</li>
+</ul>
+</li>
+</ol>
+<h4 id="_20">截断误差<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<ul>
+<li>多项式数值计算的近似</li>
+<li>误差与步长的n+1次方成比例</li>
+</ul>
+<h4 id="_21">误差传播<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<ul>
+<li>函数导数的绝对值较大</li>
+<li>初始误差可稳定传播或不稳定传播</li>
+</ul>
+<h3 id="_22">算法的数值稳定性<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<p><img alt="无法显示" src="../chapter1/%E7%A8%B3%E5%AE%9A%E6%80%A7%E4%B8%8E%E6%9D%A1%E4%BB%B6%E6%95%B0.jpg" /></p>
+<h3 id="_23">总结<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<p><img alt="无法显示" src="../chapter1/%E6%80%BB%E7%9A%84%E6%95%B0%E5%80%BC%E8%AF%AF%E5%B7%AE.jpg" />
+<img alt="无法显示" src="../chapter1/%E9%81%BF%E5%85%8D%E6%95%B0%E5%80%BC%E8%AF%AF%E5%B7%AE%E7%9A%84%E5%8E%9F%E5%88%99.jpg" /></p>
+<hr />
+<h2 id="chapter2">Chapter2 非线性方程求根<a class="headerlink" href="#chapter2" title="Permanent link">&para;</a></h2>
+<h3 id="_24">概览<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<ol>
+<li>求解代数方程和超越方程的实数根<ul>
+<li>根的分离(预先给出根的一个粗略位置)</li>
+<li>近似根的精确化(向真实根逼近)</li>
+</ul>
+</li>
+<li>求解多项式的所有实数根和复数根</li>
+</ol>
+<h3 id="_25">收敛阶<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<p><img alt="无法显示" src="../chapter2/%E6%94%B6%E6%95%9B%E9%98%B6.jpg" /></p>
+<h3 id="_26">划界法<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<h4 id="_27">二分法<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
+<p><strong>取左右端点中点</strong>
+<div class="highlight"><pre><span></span><code><span class="c">%二分法</span>
+<span class="k">function</span><span class="w"> </span>[c,err,yc]<span class="p">=</span><span class="nf">bisect</span><span class="p">(</span>f,a,b,delta<span class="p">)</span>
+<span class="n">ya</span><span class="p">=</span><span class="nb">feval</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">a</span><span class="p">);</span>
+<span class="n">yb</span><span class="p">=</span><span class="nb">feval</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">b</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="n">ya</span><span class="o">*</span><span class="n">yb</span><span class="o">&gt;</span><span class="mi">0</span>
+<span class="w">    </span><span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Note: f(a)*f(b)&gt;0&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span>
+<span class="k">end</span>
+<span class="n">max_times</span><span class="p">=</span><span class="mi">1</span><span class="o">+</span><span class="nb">round</span><span class="p">((</span><span class="nb">log</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">-</span><span class="nb">log</span><span class="p">(</span><span class="n">delta</span><span class="p">))</span><span class="o">/</span><span class="nb">log</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+<span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">max_times</span>
+<span class="w">    </span><span class="n">c</span><span class="p">=(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+<span class="w">    </span><span class="n">yc</span><span class="p">=</span><span class="nb">feval</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">c</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">yc</span><span class="o">==</span><span class="mi">0</span>
+<span class="w">        </span><span class="n">a</span><span class="p">=</span><span class="n">c</span><span class="p">;</span>
+<span class="w">        </span><span class="n">b</span><span class="p">=</span><span class="n">c</span><span class="p">;</span>
+<span class="w">    </span><span class="k">elseif</span><span class="w"> </span><span class="n">yb</span><span class="o">*</span><span class="n">yc</span><span class="o">&gt;</span><span class="mi">0</span>
+<span class="w">        </span><span class="n">b</span><span class="p">=</span><span class="n">c</span><span class="p">;</span>
+<span class="w">        </span><span class="n">yb</span><span class="p">=</span><span class="n">yc</span><span class="p">;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="n">a</span><span class="p">=</span><span class="n">c</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ya</span><span class="p">=</span><span class="n">yc</span><span class="p">;</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="o">&lt;</span><span class="n">delta</span>
+<span class="w">        </span><span class="k">break</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">c</span><span class="p">=(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+<span class="n">err</span><span class="p">=</span><span class="nb">abs</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+<span class="n">yc</span><span class="p">=</span><span class="nb">feval</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">c</span><span class="p">);</span>
+</code></pre></div>
+<img alt="无法显示" src="../chapter2/%E4%BA%8C%E5%88%86%E6%B3%95%E8%AF%84%E4%BB%B7.jpg" /></p>
+<h4 id="_28">试位法<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h4>
+<p><strong>取左右端点连成直线与X轴的交点</strong>
+<div class="highlight"><pre><span></span><code><span class="c">%试位法</span>
+<span class="k">function</span><span class="w"> </span>[c,err,yc]<span class="p">=</span><span class="nf">regula</span><span class="p">(</span>f,a,b,delta,epsilon,max1<span class="p">)</span>
+
+<span class="n">ya</span><span class="p">=</span><span class="nb">feval</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">a</span><span class="p">);</span>
+<span class="n">yb</span><span class="p">=</span><span class="nb">feval</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">b</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="n">ya</span><span class="o">*</span><span class="n">yb</span><span class="o">&gt;</span><span class="mi">0</span>
+<span class="w">    </span><span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Note: f(a)*f(b)&gt;0&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span>
+<span class="k">end</span>
+<span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">max1</span>
+<span class="w">    </span><span class="n">dx</span><span class="p">=</span><span class="n">yb</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">yb</span><span class="o">-</span><span class="n">ya</span><span class="p">);</span><span class="w"> </span><span class="c">%dx为c,b之间的距离</span>
+<span class="w">    </span><span class="n">c</span><span class="p">=</span><span class="n">b</span><span class="o">-</span><span class="n">dx</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ac</span><span class="p">=</span><span class="n">c</span><span class="o">-</span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c">%ac为a,c之间的距离</span>
+<span class="w">    </span><span class="n">yc</span><span class="p">=</span><span class="nb">feval</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">c</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">yc</span><span class="o">==</span><span class="mi">0</span>
+<span class="w">        </span><span class="k">break</span>
+<span class="w">    </span><span class="k">elseif</span><span class="w"> </span><span class="n">yb</span><span class="o">*</span><span class="n">yc</span><span class="o">&gt;</span><span class="mi">0</span>
+<span class="w">        </span><span class="n">b</span><span class="p">=</span><span class="n">c</span><span class="p">;</span>
+<span class="w">        </span><span class="n">yb</span><span class="p">=</span><span class="n">yc</span><span class="p">;</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span>
+<span class="w">        </span><span class="n">a</span><span class="p">=</span><span class="n">c</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ya</span><span class="p">=</span><span class="n">yc</span><span class="p">;</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="w">    </span><span class="n">dx</span><span class="p">=</span><span class="nb">min</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">dx</span><span class="p">),</span><span class="n">ac</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">dx</span><span class="p">)</span><span class="o">&lt;</span><span class="n">delta</span>
+<span class="w">        </span><span class="k">break</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">yc</span><span class="p">)</span><span class="o">&lt;</span><span class="n">epsilon</span>
+<span class="w">        </span><span class="k">break</span>
+<span class="w">    </span><span class="k">end</span><span class="w"> </span>
+
+<span class="n">c</span><span class="p">=</span><span class="n">b</span><span class="o">-</span><span class="n">yb</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">yb</span><span class="o">-</span><span class="n">ya</span><span class="p">);</span>
+<span class="n">err</span><span class="p">=</span><span class="nb">abs</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">);</span>
+<span class="n">yc</span><span class="p">=</span><span class="nb">feval</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">c</span><span class="p">);</span>
+<span class="k">end</span>
+</code></pre></div>
+<strong>优势</strong>：一般情况下，试位法比二分法误差减小得快
+<strong>缺陷</strong>：在某些情况下，试位法收敛慢；近似误差小于真实误差；一个划界点不动可能导致很差的收敛性
+<img alt="无法显示" src="../chapter2/%E8%AF%95%E4%BD%8D%E6%B3%95%E6%94%B9%E8%BF%9B1.jpg" />
+<img alt="无法显示" src="../chapter2/%E8%AF%95%E4%BD%8D%E6%94%B9%E8%BF%9B%E6%B3%952.jpg" /></p>
+<h3 id="_29">开方法<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
+<h4 id="_30">不动点迭代<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h4>
+<p><strong>取接近满足f(x)=x不动点的点</strong>
+<div class="highlight"><pre><span></span><code><span class="c">%不动点迭代</span>
+<span class="k">function</span><span class="w"> </span>[k,p,err,P]<span class="p">=</span><span class="nf">fixpt</span><span class="p">(</span>g,p0,delta,max1<span class="p">)</span>
+
+<span class="n">P</span><span class="p">(</span><span class="mi">1</span><span class="p">)=</span><span class="n">p0</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="p">=</span><span class="mi">2</span><span class="p">:</span><span class="n">max1</span>
+<span class="w">    </span><span class="n">P</span><span class="p">(</span><span class="n">k</span><span class="p">)=</span><span class="nb">feval</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">P</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+<span class="w">    </span><span class="n">err</span><span class="p">=</span><span class="nb">abs</span><span class="p">(</span><span class="n">P</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">-</span><span class="n">P</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+<span class="w">    </span><span class="n">relerr</span><span class="p">=</span><span class="n">err</span><span class="o">/</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">P</span><span class="p">(</span><span class="n">k</span><span class="p">))</span><span class="o">+</span><span class="nb">eps</span><span class="p">);</span>
+<span class="w">    </span><span class="n">p</span><span class="p">=</span><span class="n">P</span><span class="p">(</span><span class="n">k</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">err</span><span class="o">&lt;</span><span class="n">delta</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">relerr</span><span class="o">&lt;</span><span class="n">delta</span><span class="p">)</span>
+<span class="w">        </span><span class="k">break</span>
+<span class="w">    </span><span class="k">end</span>
+
+<span class="k">if</span><span class="w"> </span><span class="n">k</span><span class="o">==</span><span class="n">max1</span>
+<span class="w">    </span><span class="nb">disp</span><span class="p">(</span><span class="s">&#39;maximum number of iteration exceeded&#39;</span><span class="p">)</span>
+<span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
++ 导数绝对值大于1，误差增大
++ 导数为正，误差为正，迭代的解单调；导数为负，误差增大
++ 方法收敛时，误差大致与前一次的迭代误差成比例，且小于前一次的迭代误差(线性收敛)</p>
+<h4 id="newton-raphson">Newton-Raphson方法<a class="headerlink" href="#newton-raphson" title="Permanent link">&para;</a></h4>
+<p><strong>取某点切线与x轴的交点(等价于g(x)=x-f(x)/f'(x)不动点)</strong>
+<div class="highlight"><pre><span></span><code><span class="c">%Newton-Raphson方法</span>
+<span class="k">function</span><span class="w"> </span>[p0,err,k,y]<span class="p">=</span><span class="nf">newton</span><span class="p">(</span>f,df,p0,delta,epsilon,max_times<span class="p">)</span>
+
+<span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">max_times</span>
+<span class="w">    </span><span class="n">p1</span><span class="p">=</span><span class="n">p0</span><span class="o">-</span><span class="nb">feval</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">p0</span><span class="p">)</span><span class="o">/</span><span class="nb">feval</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">p0</span><span class="p">);</span>
+<span class="w">    </span><span class="n">err</span><span class="p">=</span><span class="nb">abs</span><span class="p">(</span><span class="n">p1</span><span class="o">-</span><span class="n">p0</span><span class="p">);</span>
+<span class="w">    </span><span class="n">relerr</span><span class="p">=</span><span class="mi">2</span><span class="o">*</span><span class="n">err</span><span class="o">/</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span><span class="o">+</span><span class="n">delta</span><span class="p">);</span>
+<span class="w">    </span><span class="n">p0</span><span class="p">=</span><span class="n">p1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">y</span><span class="p">=</span><span class="nb">feval</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">p0</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">err</span><span class="o">&lt;</span><span class="n">delta</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">relerr</span><span class="o">&lt;</span><span class="n">delta</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">&lt;</span><span class="n">epsilon</span><span class="p">)</span>
+<span class="w">        </span><span class="k">break</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
+<img alt="无法显示" src="../chapter2/%E6%94%B6%E6%95%9B%E9%80%9F%E5%BA%A6.jpg" />
+<img alt="无法显示" src="../chapter2/%E7%BC%BA%E7%82%B9.jpg" />
+<img alt="无法显示" src="../chapter2/%E7%AE%97%E6%B3%95.jpg" /></p>
+<h4 id="_31">割线法<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h4>
+<p><strong>取同侧端点连成直线与x轴交点</strong>
+<div class="highlight"><pre><span></span><code><span class="c">%割线法</span>
+<span class="k">function</span><span class="w"> </span>[p1,err,k,y]<span class="p">=</span><span class="nf">secant</span><span class="p">(</span>f,p0,p1,delta,epsilon,max_times<span class="p">)</span>
+
+<span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">max_times</span>
+<span class="w">    </span><span class="n">p2</span><span class="p">=</span><span class="n">p1</span><span class="o">-</span><span class="nb">feval</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">p1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">p1</span><span class="o">-</span><span class="n">p0</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="nb">feval</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">p1</span><span class="p">)</span><span class="o">-</span><span class="nb">feval</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">p0</span><span class="p">));</span>
+<span class="w">    </span><span class="n">err</span><span class="p">=</span><span class="nb">abs</span><span class="p">(</span><span class="n">p2</span><span class="o">-</span><span class="n">p1</span><span class="p">)</span>
+<span class="w">    </span><span class="n">relerr</span><span class="p">=</span><span class="mi">2</span><span class="o">*</span><span class="n">err</span><span class="o">/</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span><span class="o">+</span><span class="n">delta</span><span class="p">);</span>
+<span class="w">    </span><span class="n">p0</span><span class="p">=</span><span class="n">p1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">p1</span><span class="p">=</span><span class="n">p2</span><span class="p">;</span>
+<span class="w">    </span><span class="n">y</span><span class="p">=</span><span class="nb">feval</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">p1</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">err</span><span class="o">&lt;</span><span class="n">delta</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">relerr</span><span class="o">&lt;</span><span class="n">delta</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">&lt;</span><span class="n">epsilon</span><span class="p">)</span>
+<span class="w">        </span><span class="k">break</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="k">end</span>
+<span class="k">if</span><span class="w"> </span><span class="n">k</span><span class="o">==</span><span class="n">max_times</span>
+<span class="w">    </span><span class="nb">disp</span><span class="p">(</span><span class="s">&#39;maximum number of iteration exceeded&#39;</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div>
++ 类似Newton-Raphson方法，用差商估计斜率
++ 类似试位法，用两个初时估计值计算函数斜率的近似，并将其投射到x轴上获得一个新的估计值
++ 收敛阶，1.618
++ 对于所有现实情况，试位法通常收敛，割线法可能发散；如果割线法收敛，通常比试位法快</p>
+<h4 id="_32">针对重根的改进<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h4>
+<p><img alt="无法显示" src="../chapter2/%E9%92%88%E5%AF%B9%E9%87%8D%E6%A0%B9%E7%9A%84%E6%94%B9%E8%BF%9B.jpg" /></p>
+<h3 id="_33">总结<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h3>
+<p><img alt="无法显示" src="../chapter2/%E6%80%BB%E7%BB%93.jpg" /></p>
+<hr />
+<h2 id="chapter3">Chapter3 线性代数方程组<a class="headerlink" href="#chapter3" title="Permanent link">&para;</a></h2>
+<h3 id="_34">系数矩阵类型<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h3>
+<ul>
+<li>低阶稠密矩阵</li>
+<li>大型稀疏矩阵(矩阵中0元素较多)</li>
+<li>三对角矩阵(非0元素集中于主对角线及相邻两对角线上)</li>
+</ul>
+<h3 id="_35">数值解法<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h3>
+<p><img alt="无法显示" src="../chapter3_1/chap3_1_2024_page-0005.jpg" /></p>
+<h3 id="_36">直接法<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h3>
+<h4 id="_37">高斯消去法<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h4>
+<p><img alt="无法显示" src="../chapter3_1/chap3_1_2024_page-0023.jpg" /></p>
+<h5 id="_38">病态方程组判别<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h5>
+<ul>
+<li>行列式的值</li>
+<li>矩阵求逆<ul>
+<li>缩放系数矩阵，使每一行最大元素为1，缩放后的逆矩阵元素值大于1数倍则为病态</li>
+<li>将逆矩阵与原矩阵相乘，结果不接近单位阵则为病态</li>
+<li>求逆矩阵的逆矩阵，与原系数矩阵对比，不相等则为病态</li>
+</ul>
+</li>
+<li>系数微小改变再求解</li>
+</ul>
+<h5 id="_39">解求精技术<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h5>
+<ul>
+<li>使用扩展精度</li>
+<li>选主元
+列主元消去法或者全主元消去法</li>
+<li>缩放
+缩放之后的系数用来确定是否需要交换主元，但实际消去和回代中仍使用原系数值</li>
+</ul>
+<h5 id="_40">消去法<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h5>
+<ul>
+<li>顺序消去法条件苛刻，且数值不稳定</li>
+<li>全主元消去法工作量偏大，需要比较的元素及行列交换工作较多，算法复杂</li>
+<li>高斯约当消去法形式上简单，且无回代求解，但计算量大</li>
+<li>从算法优化的角度考虑，列主元消去法较好
+<div class="highlight"><pre><span></span><code><span class="k">function</span><span class="w"> </span>X<span class="p">=</span><span class="nf">Gauss</span><span class="p">(</span>A,B<span class="p">)</span>
+<span class="c">%采用高斯消去法</span>
+<span class="n">n</span><span class="p">=</span><span class="nb">length</span><span class="p">(</span><span class="n">B</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span>
+<span class="w">    </span><span class="c">%寻找该列绝对值最大的元素</span>
+<span class="w">    </span><span class="nb">max</span><span class="p">=</span><span class="nb">abs</span><span class="p">(</span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="nb">i</span><span class="p">));</span>
+<span class="w">    </span><span class="n">mark</span><span class="p">=</span><span class="nb">i</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="p">=</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="nb">j</span><span class="p">))</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nb">max</span><span class="p">)</span>
+<span class="w">            </span><span class="nb">max</span><span class="p">=</span><span class="nb">abs</span><span class="p">(</span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="nb">j</span><span class="p">));</span>
+<span class="w">            </span><span class="n">mark</span><span class="p">=</span><span class="nb">j</span><span class="p">;</span>
+<span class="w">        </span><span class="k">end</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="w">    </span><span class="c">%交换行</span>
+<span class="w">    </span><span class="n">l</span><span class="p">=</span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">,:);</span>
+<span class="w">    </span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">,:)=</span><span class="n">A</span><span class="p">(</span><span class="n">mark</span><span class="p">,:);</span>
+<span class="w">    </span><span class="n">A</span><span class="p">(</span><span class="n">mark</span><span class="p">,:)=</span><span class="n">l</span><span class="p">;</span>
+<span class="w">    </span><span class="n">c</span><span class="p">=</span><span class="n">B</span><span class="p">(</span><span class="nb">i</span><span class="p">);</span>
+<span class="w">    </span><span class="n">B</span><span class="p">(</span><span class="nb">i</span><span class="p">)=</span><span class="n">B</span><span class="p">(</span><span class="n">mark</span><span class="p">);</span>
+<span class="w">    </span><span class="n">B</span><span class="p">(</span><span class="n">mark</span><span class="p">)=</span><span class="n">c</span><span class="p">;</span>
+<span class="w">    </span><span class="c">%顺序消元</span>
+<span class="w">    </span><span class="c">%消去</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="p">=</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="w"> </span><span class="c">%对第j行进行操作</span>
+<span class="w">        </span><span class="nb">factor</span><span class="p">=</span><span class="n">A</span><span class="p">(</span><span class="nb">j</span><span class="p">,</span><span class="nb">i</span><span class="p">)</span><span class="o">/</span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="nb">i</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="p">=</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="w"> </span><span class="c">%对第k个进行操作</span>
+<span class="w">            </span><span class="n">A</span><span class="p">(</span><span class="nb">j</span><span class="p">,</span><span class="n">k</span><span class="p">)=</span><span class="n">A</span><span class="p">(</span><span class="nb">j</span><span class="p">,</span><span class="n">k</span><span class="p">)</span><span class="o">-</span><span class="nb">factor</span><span class="o">*</span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="n">k</span><span class="p">);</span>
+<span class="w">        </span><span class="k">end</span>
+<span class="w">        </span><span class="n">B</span><span class="p">(</span><span class="nb">j</span><span class="p">)=</span><span class="n">B</span><span class="p">(</span><span class="nb">j</span><span class="p">)</span><span class="o">-</span><span class="nb">factor</span><span class="o">*</span><span class="n">B</span><span class="p">(</span><span class="nb">i</span><span class="p">);</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c">%回代</span>
+<span class="n">X</span><span class="p">(</span><span class="n">n</span><span class="p">)=</span><span class="n">B</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">/</span><span class="n">A</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span>
+<span class="w">    </span><span class="nb">sum</span><span class="p">=</span><span class="n">B</span><span class="p">(</span><span class="nb">i</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="p">=</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span>
+<span class="w">        </span><span class="nb">sum</span><span class="p">=</span><span class="nb">sum</span><span class="o">-</span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="nb">j</span><span class="p">)</span><span class="o">*</span><span class="n">X</span><span class="p">(</span><span class="nb">j</span><span class="p">);</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="w">    </span><span class="n">X</span><span class="p">(</span><span class="nb">i</span><span class="p">)=</span><span class="nb">sum</span><span class="o">/</span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="nb">i</span><span class="p">);</span>
+<span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></li>
+</ul>
+<h4 id="lu">三角分解(LU分解)<a class="headerlink" href="#lu" title="Permanent link">&para;</a></h4>
+<p>LU分解矩阵求逆可减少计算量</p>
+<h5 id="doolittle">Doolittle分解<a class="headerlink" href="#doolittle" title="Permanent link">&para;</a></h5>
+<ul>
+<li>L为单位下三角矩阵，U为上三角矩阵</li>
+</ul>
+<h5 id="crout">Crout分解<a class="headerlink" href="#crout" title="Permanent link">&para;</a></h5>
+<ul>
+<li>L为下三角矩阵，U为单位上三角矩阵</li>
+</ul>
+<h5 id="_41">三角分解和高斯消去的比较<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h5>
+<ul>
+<li>计算量相当</li>
+<li>三角分解不必计算中间结果，不需要提前知道右端项</li>
+<li>解相同系数矩阵方程相当方便</li>
+</ul>
+<h5 id="cholesky">Cholesky分解<a class="headerlink" href="#cholesky" title="Permanent link">&para;</a></h5>
+<p>对称正定矩阵的平方根法</p>
+<ul>
+<li>由Doolittle分解，A有唯一分解<span class="arithmatex">\(A=LU\)</span></li>
+<li>LDR分解：(L、R分别为下、上三角矩阵，D为对角矩阵)</li>
+<li>三角分解：<span class="arithmatex">\(A=LDL^T\)</span></li>
+<li>优势：存储量小，计算量小，数值稳定</li>
+<li>缺点：存在开方运算，可能会出现根号下复数</li>
+</ul>
+<h4 id="_42">带状方程组<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h4>
+<ul>
+<li>高斯消去或LU分解效率低</li>
+<li>元素满足对角占优条件，可以证明A非奇异，且各阶顺序主子式都采用三对角方程组的追赶法(Thomas算法)</li>
+</ul>
+<h4 id="thomas">Thomas算法<a class="headerlink" href="#thomas" title="Permanent link">&para;</a></h4>
+<ol>
+<li>分解计算公式：<span class="arithmatex">\(A=LU\)</span></li>
+<li>求解方程组 <span class="arithmatex">\(Ly=f\)</span> 的递推算式</li>
+<li>求解方程组 <span class="arithmatex">\(Ux=y\)</span> 的递推算式
+<div class="highlight"><pre><span></span><code><span class="k">function</span><span class="w"> </span>X<span class="p">=</span><span class="nf">Thomas</span><span class="p">(</span>A,B<span class="p">)</span>
+<span class="c">%采用三对角方程组的追赶法</span>
+<span class="n">n</span><span class="p">=</span><span class="nb">length</span><span class="p">(</span><span class="n">B</span><span class="p">);</span>
+<span class="c">%crout分解</span>
+<span class="n">L</span><span class="p">=</span><span class="nb">eye</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<span class="n">U</span><span class="p">=</span><span class="nb">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span>
+<span class="w">    </span><span class="c">%计算U矩阵的第i行</span>
+<span class="w">    </span><span class="n">U</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="nb">i</span><span class="p">:</span><span class="n">n</span><span class="p">)=</span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="nb">i</span><span class="p">:</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="n">L</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="nb">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">U</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="nb">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="nb">i</span><span class="p">:</span><span class="n">n</span><span class="p">);</span><span class="w">        </span>
+<span class="w">    </span><span class="c">%计算L矩阵的第i+1列到第n列</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="p">=</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span>
+<span class="w">        </span><span class="n">L</span><span class="p">(</span><span class="nb">j</span><span class="p">,</span><span class="nb">i</span><span class="p">)=(</span><span class="n">A</span><span class="p">(</span><span class="nb">j</span><span class="p">,</span><span class="nb">i</span><span class="p">)</span><span class="o">-</span><span class="n">L</span><span class="p">(</span><span class="nb">j</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="nb">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">U</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="nb">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="nb">i</span><span class="p">))</span><span class="o">/</span><span class="n">U</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="nb">i</span><span class="p">);</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="k">end</span>
+<span class="c">%求解方程组Ly=f</span>
+<span class="n">Y</span><span class="p">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">);</span>
+<span class="n">Y</span><span class="p">(</span><span class="mi">1</span><span class="p">)=</span><span class="n">B</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">A</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">2</span><span class="p">:</span><span class="n">n</span>
+<span class="w">    </span><span class="n">Y</span><span class="p">(</span><span class="nb">i</span><span class="p">)=(</span><span class="n">B</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">-</span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="nb">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">Y</span><span class="p">(</span><span class="nb">i</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="nb">i</span><span class="p">)</span><span class="o">-</span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="nb">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">U</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="nb">i</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+<span class="k">end</span><span class="w"> </span>
+<span class="c">%求解方程组Ux=y</span>
+<span class="n">X</span><span class="p">(</span><span class="n">n</span><span class="p">)=</span><span class="n">Y</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span>
+<span class="w">    </span><span class="n">X</span><span class="p">(</span><span class="nb">i</span><span class="p">)=</span><span class="n">Y</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">-</span><span class="n">X</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">U</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></li>
+</ol>
+<h3 id="_43">误差分析、条件数<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h3>
+<h4 id="_44">向量范数<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h4>
+<p>满足条件：正定，齐次，三角不等式
++ "2"范数(欧几里得范数)
+$$
+||x||<em i="1">2=(\sum\limits</em><sup 2="2">{n}x_i</sup>
+$$
++ "1"范数
+$$
+||x||})^{&frac12;<em i="1">1=\sum\limits</em>|x_i|
+$$
++ "∞"范数(极大值范数或一致向量范数)
+$$
+||x||}^{n<em 1_leq_i="1\leq{i">∞=\mathop{\max</em>
+$$
++ "p"范数
+$$
+||x||}\leq{n}}^{}}{|x_i|<em i="1">p=(\sum\limits</em><sup p="p">{n}|x_i|</sup>
+$$})^{1/p</p>
+<h4 id="_45">矩阵范数<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h4>
+<p>满足条件：正定，齐次，三角不等式，矩阵乘法不等式(相容性条件)
++ "2"范数(谱范数)
+$$
+||A||<em max="max">2=[\lambda</em>A<sup 1_2="1/2">TA]</sup>
+$$
++ "1"范数(列和范数)
+$$
+||A||<em 1_leq_j="1\leq{j">1=\max\limits</em>|
+$$
++ "∞"范数(行和范数)
+$$
+||A||}\leq{n}}\sum\limits_{i=1}^{n}|a_{ij<em 1_leq_i="1\leq{i">∞=\max</em>|
+$$}\leq{n}}\sum_{j=1}^n|a_{ij</p>
+<h5 id="_46">谱半径<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h5>
+<ul>
+<li>A的所有特征值的集合称为谱</li>
+<li>称<span class="arithmatex">\(\rho(A)=\max\limits_{1\leq{i}\leq{n}}|\lambda_i|\)</span></li>
+<li><span class="arithmatex">\(||A||\)</span>为<span class="arithmatex">\(A\)</span>的任意一种范数，有<span class="arithmatex">\(\rho{(A)}\leq{||A||}\)</span></li>
+</ul>
+<h4 id="_47">病态方程组和矩阵条件数<a class="headerlink" href="#_47" title="Permanent link">&para;</a></h4>
+<p>相对误差直接与A的条件数相关
+<img alt="无法显示" src="chapter3_2\chap3_2_2024_page-0010.jpg" />
+<img alt="无法显示" src="chapter3_2\chap3_2_2024_page-0011.jpg" />
+<img alt="无法显示" src="chapter3_2\chap3_2_2024_page-0012.jpg" />
+<img alt="无法显示" src="chapter3_2\chap3_2_2024_page-0015.jpg" />
+<img alt="无法显示" src="chapter3_2\chap3_2_2024_page-0016.jpg" />
+<img alt="无法显示" src="chapter3_2\chap3_2_2024_page-0017.jpg" />
+<img alt="无法显示" src="chapter3_2\chap3_2_2024_page-0018.jpg" /></p>
+<h3 id="_48">迭代方法<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h3>
+<h4 id="_49">迭代法<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h4>
+<p><img alt="无法显示" src="chapter3_2\chap3_2_2024_page-0021.jpg" />
+<img alt="无法显示" src="chapter3_2\chap3_2_2024_page-0023.jpg" /></p>
+<h4 id="_50">雅可比迭代法(同步迭代法)<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h4>
+<p><img alt="无法显示" src="chapter3_2\chap3_2_2024_page-0024.jpg" /></p>
+<h4 id="-">高斯-赛德尔方法(异步迭代法)<a class="headerlink" href="#-" title="Permanent link">&para;</a></h4>
+<p><img alt="无法显示" src="chapter3_2\chap3_2_2024_page-0025.jpg" /></p>
+<h4 id="_51">收敛性<a class="headerlink" href="#_51" title="Permanent link">&para;</a></h4>
+<p><img alt="无法显示" src="chapter3_2\chap3_2_2024_page-0029.jpg" />
+<img alt="无法显示" src="chapter3_2\chap3_2_2024_page-0030.jpg" />
+<img alt="无法显示" src="chapter3_2\chap3_2_2024_page-0031.jpg" />
+<img alt="无法显示" src="chapter3_2\chap3_2_2024_page-0032.jpg" /></p>
+<h4 id="sor">逐次超松弛迭代法(SOR)<a class="headerlink" href="#sor" title="Permanent link">&para;</a></h4>
+<p><img alt="无法显示" src="chapter3_2\chap3_2_2024_page-0034.jpg" />
+<img alt="无法显示" src="chapter3_2\chap3_2_2024_page-0036.jpg" /></p>
+<hr />
+<h2 id="chapter4">Chapter4 插值和拟合<a class="headerlink" href="#chapter4" title="Permanent link">&para;</a></h2>
+<h3 id="_52">插值<a class="headerlink" href="#_52" title="Permanent link">&para;</a></h3>
+<h4 id="_53">插值函数<a class="headerlink" href="#_53" title="Permanent link">&para;</a></h4>
+<p>一般有代数多项式、有理函数、三角函数，其中有理插值可使区间内插值误差分布均匀，适用于某些被插函数具有无穷间断点的附近</p>
+<h4 id="_54">插值函数存在唯一定理<a class="headerlink" href="#_54" title="Permanent link">&para;</a></h4>
+<p><img alt="无法显示" src="../chapter4/chap4_2024_page-0009.jpg" /></p>
+<h4 id="_55">插值多项式存在唯一性<a class="headerlink" href="#_55" title="Permanent link">&para;</a></h4>
+<p><img alt="无法显示" src="../chapter4/chap4_2024_page-0011.jpg" /></p>
+<h4 id="_56">插值余项<a class="headerlink" href="#_56" title="Permanent link">&para;</a></h4>
+<p><img alt="无法显示" src="../chapter4/chap4_2024_page-0012.jpg" /></p>
+<h4 id="_57">内插与外推<a class="headerlink" href="#_57" title="Permanent link">&para;</a></h4>
+<ul>
+<li>内插
+插值点位于插值区间内，即<span class="arithmatex">\(a&lt;x&lt;b\)</span></li>
+<li>外推
+插值点位于插值区间外，即<span class="arithmatex">\(x&lt;a\)</span>或<span class="arithmatex">\(x&gt;b\)</span>，但又较接近于插值区间端点时</li>
+</ul>
+<h4 id="_58">插值余项误差<a class="headerlink" href="#_58" title="Permanent link">&para;</a></h4>
+<ul>
+<li>插值多项式仅与已知数据有关，与<span class="arithmatex">\(f(x)\)</span>原来形式无关，但余项与<span class="arithmatex">\(f(x)\)</span>密切相关</li>
+<li>若<span class="arithmatex">\(f(x)\)</span>本身是一个不超过n次多项式，则<span class="arithmatex">\(P_{n}(x)=f(x)\)</span></li>
+<li>对于多项式插值，增加阶数不一定能提高精度(一般推荐3j个节点的插值)</li>
+<li>插值点<span class="arithmatex">\(x\)</span>不能位于插值区间之外的远处</li>
+</ul>
+<h4 id="lagrange">Lagrange插值多项式<a class="headerlink" href="#lagrange" title="Permanent link">&para;</a></h4>
+<p><img alt="无法显示" src="../chapter4/chap4_2024_page-0016.jpg" />
+ ```matlab
+ %拉格朗日插值多项式
+function y_predict=lagrange(x_data,y_data,x_predict,num)
+%num为插值节点数目</p>
+<p>volumn_data=length(x_data);
+volumn_predict=length(x_predict);
+y_predict=zeros(1,volumn_predict);</p>
+<p>%根据插值节点数目进一步筛选数据
+divide=floor((volumn_data-1)/num);
+x_train=zeros(1,num);
+y_train=zeros(1,num);
+for i=1:num
+    x_train(i)=x_data(1+i*divide);
+    y_train(i)=y_data(1+i*divide);
+end</p>
+<p>%计算预测值
+for i=1:volumn_predict
+    for j=1:num
+        term=1;
+        for k=1:num
+            if k~=j
+                term=term*(x_predict(i)-x_train(k))/(x_train(j)-x_train(k));
+            end
+        end
+        y_predict(i)=y_predict(i)+term*y_train(j);
+    end
+end</p>
+<p>end
+<div class="highlight"><pre><span></span><code>##### 缺点
+- 无承袭性：增加一个节点，所有的基函数都要重新计算
+##### 适用场景
+- 均匀分布的数据点
+- 低阶插值
+- 数据点误差较小
+- 用于插值而非外推
+#### Newton插值多项式
+ ![无法显示](chapter4/chap4_2024_page-0029.jpg)
+ ![无法显示](chapter4/chap4_2024_page-0030.jpg)
+ ![无法显示](chapter4/chap4_2024_page-0031.jpg)
+ ![无法显示](chapter4/chap4_2024_page-0032.jpg)
+ ![无法显示](chapter4/chap4_2024_page-0033.jpg)
+
+##### 等距节点的插值
+数据在空间上间距相等
+
+- 步长
+$x_0&lt;...&lt;x_n$,其中$x_i-x_{i-1}=h$,$x_i=x_0+ih$,h被称作步长
+- 有限差分
+    - $\Delta f(x)=f(x+h)-f(x)$        一阶向前差分
+    - $\nabla f(x)=f(x)-f(x-h)$        一阶向后差分
+    - $\delta f(x)=f(x+h/2)-f(x-h/2)$  一阶中心差分
+    - $\Delta$ 前差算子  $\nabla$ 后差算子  $\delta$ 中差算子
+##### Newton向前插值公式
+ ![无法显示](chapter4/chap4_2024_page-0040.jpg)
+ ![无法显示](chapter4/chap4_2024_page-0041.jpg)
+
+#### Hermite插值多项式
+ ![无法显示](chapter4/chap4_2024_page-0045.jpg)
+
+#### Runge现象
+插值多项式次数越高：
+1. 计算量大
+2. 在部分区间(两端)激烈振荡，截断误差/计算余项偏大
+#### 插值误差
+- 截断误差是插值的收敛性问题，Runge现象
+- 舍入误差是插值的稳定性稳定
+- 为避免Runge和不稳定，一般限定n&lt;7
+- n较大时采用分段低次插值、样条插值、次数较低的最小二乘逼近
+#### 分段低次插值
+为了避免龙格现象，可以对每个小区间进行低次多项式插值，常见的有分段线性插值和分段抛物插值
+```matlab
+%分段低次插值
+function y_predict=piecewise(x_data,y_data,x_predict)
+
+volumn_data=length(x_data);
+volumn_predict=length(x_predict);
+y_predict=zeros(1,volumn_predict);
+
+%分段线性插值
+
+for i=1:volumn_predict
+    %外推
+    if x_predict(i)&lt;x_data(1)
+        y_predict(i)=y_data(1)+(y_data(2)-y_data(1))/(x_data(2)-x_data(1))*(x_predict(i)-x_data(1));
+    end
+    if x_predict(i)&gt;x_data(volumn_data-1)
+        y_predict(i)=y_data(volumn_data-1)+(y_data(volumn_data)-y_data(volumn_data-1))*(x_data(volumn_data)-x_data(volumn_data-1))*(x_predict(i)-x_data(volumn_data-1));
+    end
+    %内插
+    for j=1:volumn_data-1
+        if x_predict(i)&gt;=x_data(j) &amp;&amp; x_predict(i)&lt;=x_data(j+1)
+            y_predict(i)=y_data(j)+(y_data(j+1)-y_data(j))/(x_data(j+1)-x_data(j))*(x_predict(i)-x_data(j));
+        end
+    end
+end
+
+
+%{
+%分段抛物插值
+coefficient=zeros(volumn_data-2,3);%系数矩阵
+for i=1:volumn_data-2
+    k2=(y_data(i+2)-y_data(i+1))/(x_data(i+2)-x_data(i+1));
+    k1=(y_data(i+1)-y_data(i))/(x_data(i+1)-x_data(i));
+    coefficient(i,1)=(k2-k1)/(x_data(i+2)-x_data(i));
+    coefficient(i,2)=k1-coefficient(i,1)*(x_data(i+1)+x_data(i));
+    coefficient(i,3)=y_data(i)-coefficient(i,1)*x_data(i)*x_data(i)-coefficient(i,2)*x_data(i);
+end
+
+for i=1:volumn_predict
+    %外推
+    if x_predict(i)&lt;x_data(1)
+            y_predict(i)=coefficient(1,1)*x_predict(i)*x_predict(i)+coefficient(1,2)*x_predict(i)+coefficient(1,3);
+    end
+    if x_predict(i)&gt;x_data(volumn_data-2)
+            y_predict(i)=coefficient(volumn_data-2,1)*x_predict(i)*x_predict(i)+coefficient(volumn_data-2,2)*x_predict(i)+coefficient(volumn_data-2,3);
+    end
+    %内插
+    for j=1:volumn_data-2
+        if x_predict(i)&gt;=x_data(j) &amp;&amp; x_predict(i)&lt;=x_data(j+2)
+            y_predict(i)=coefficient(j,1)*x_predict(i)*x_predict(i)+coefficient(j,2)*x_predict(i)+coefficient(j,3);
+            break;
+        end
+    end
+end
+%}
+
+end
+</code></pre></div></p>
+<h5 id="_59">优点<a class="headerlink" href="#_59" title="Permanent link">&para;</a></h5>
+<ul>
+<li>公式简单，只要区间充分小，就能保证误差要求</li>
+<li>局部性质良好，修改某个节点，只影响相邻的两个区间</li>
+</ul>
+<h5 id="_60">缺点<a class="headerlink" href="#_60" title="Permanent link">&para;</a></h5>
+<ul>
+<li>不能保证节点处插值函数的导数连续，因而不能满足某些工程曲线光滑性的要求</li>
+</ul>
+<h4 id="_61">样条插值<a class="headerlink" href="#_61" title="Permanent link">&para;</a></h4>
+<h5 id="_62">概览<a class="headerlink" href="#_62" title="Permanent link">&para;</a></h5>
+<ul>
+<li>样条插值的原理和分段低次插值相同，都是使用分段多项式来逼近数据</li>
+<li>在样条插值中，相邻子区间的插值函数除了满足函数值连续，还对一阶连续性和二阶连续性有要求
+ <img alt="无法显示" src="../chapter4/chap4_2024_page-0056.jpg" />
+ <img alt="无法显示" src="../chapter4/chap4_2024_page-0057.jpg" />
+ <img alt="无法显示" src="../chapter4/chap4_2024_page-0059.jpg" /></li>
+</ul>
+<h5 id="_63">三弯矩法<a class="headerlink" href="#_63" title="Permanent link">&para;</a></h5>
+<ol>
+<li>算法分析
+简单地说就是将二阶导函数用线性函数表示，然后通过积分推导出三次方程的系数</li>
+<li>数据准备
+导入已知的数据点，其中自变量<span class="arithmatex">\(x_{i}\)</span>，因变量<span class="arithmatex">\(y_{i}\)</span></li>
+<li>计算差分
+计算相邻数据点的差分，得到自变量的差分<span class="arithmatex">\(h_{i}=x_{i+1}-x_{i}\)</span>和因变量的差分<span class="arithmatex">\(\delta_{i}=(y_{i+1}-y_{i})/h_{i}\)</span></li>
+<li>计算弯矩
+在每个数据点<span class="arithmatex">\(x_{i}\)</span>处，计算插值函数的弯矩<span class="arithmatex">\(M_{i}\)</span>，通常通过以下公式计算<span class="arithmatex">\(M_{i}=6(\frac{\delta_{i+1}-\delta_{i}}{h_{i+1}}-\frac{\delta_{i}-\delta_{i-1}}{h_{i}})\)</span>
+其中<span class="arithmatex">\(M_{1}\)</span>和<span class="arithmatex">\(M_{n}\)</span>通常设定为零</li>
+<li>构建系数矩阵
+根据已知数据点和弯矩值，构建系数矩阵。系数矩阵的每一行对应一个插值段的系数</li>
+<li>求解边界条件
+由以上步骤得到4n-2个条件，我们需要在区间端点加上两个约束条件，称为边界条件。一般有：<ul>
+<li>固定边界 (Clamped Spline)
+已知两端的一阶导数值，即 <span class="arithmatex">\(S^\prime(x_{0})=y_{0}^\prime,S^\prime(x_{n})=y_{n}^\prime\)</span></li>
+<li>自然边界 (Nature Spline)
+已知两端的二阶导数值，即 <span class="arithmatex">\(S^{\prime\prime}(x_{0})=y_{0}^{\prime\prime},S^{\prime\prime}(x_{n})=y_{n}^{\prime\prime}\)</span></li>
+<li>非扭结边界 (Not-A-Knot Spline)
+已知第一个插值节点的三阶导数值与第二个相等，最后一个插值点的三阶导数值与倒数第二个相等，即 <span class="arithmatex">\(S_{0}^{\prime\prime\prime}(x_{0})=S_{1}^{\prime\prime\prime}(x_{1}),S_{n-2}^{\prime\prime\prime}(x_{n-1})=S_{n-1}^{\prime\prime\prime}(x_{n})\)</span></li>
+</ul>
+</li>
+<li>求解插值函数
+解出系数矩阵，得到每个插值段的系数。这些系数就是样条插值函数的参数，用于计算插值函数在任意点的值。
+ <img alt="无法显示" src="../chapter4/chap4_2024_page-0060.jpg" />
+ <img alt="无法显示" src="../chapter4/chap4_2024_page-0061.jpg" />
+ <img alt="无法显示" src="../chapter4/chap4_2024_page-0062.jpg" />
+ <img alt="无法显示" src="../chapter4/chap4_2024_page-0063.jpg" />
+<div class="highlight"><pre><span></span><code><span class="c">%三次样条插值</span>
+<span class="k">function</span><span class="w"> </span>y_predict<span class="p">=</span><span class="nf">spline</span><span class="p">(</span>x_data,y_data,x_predict<span class="p">)</span>
+
+<span class="n">volumn_data</span><span class="p">=</span><span class="nb">length</span><span class="p">(</span><span class="n">x_data</span><span class="p">);</span>
+<span class="n">volumn_predict</span><span class="p">=</span><span class="nb">length</span><span class="p">(</span><span class="n">x_predict</span><span class="p">);</span>
+<span class="n">y_predict</span><span class="p">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">volumn_predict</span><span class="p">);</span>
+
+<span class="c">%计算步长</span>
+<span class="n">h_array</span><span class="p">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">volumn_data</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">volumn_data</span><span class="o">-</span><span class="mi">1</span>
+<span class="w">    </span><span class="n">h_array</span><span class="p">(</span><span class="nb">i</span><span class="p">)=</span><span class="n">x_data</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">x_data</span><span class="p">(</span><span class="nb">i</span><span class="p">);</span>
+<span class="k">end</span>
+
+<span class="c">%构造线性方程组</span>
+<span class="c">%构造左侧系数矩阵</span>
+<span class="n">A</span><span class="p">=</span><span class="nb">zeros</span><span class="p">(</span><span class="n">volumn_data</span><span class="p">,</span><span class="n">volumn_data</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">volumn_data</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nb">i</span><span class="o">==</span><span class="mi">1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">i</span><span class="o">==</span><span class="n">volumn_data</span>
+<span class="w">        </span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="nb">i</span><span class="p">)=</span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="nb">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)=</span><span class="n">h_array</span><span class="p">(</span><span class="nb">i</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="nb">i</span><span class="p">)=</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">h_array</span><span class="p">(</span><span class="nb">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">h_array</span><span class="p">(</span><span class="nb">i</span><span class="p">));</span>
+<span class="w">        </span><span class="n">A</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)=</span><span class="n">h_array</span><span class="p">(</span><span class="nb">i</span><span class="p">);</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="k">end</span>
+<span class="c">%构造右侧向量</span>
+<span class="n">B</span><span class="p">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">volumn_data</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">volumn_data</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nb">i</span><span class="o">==</span><span class="mi">1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">i</span><span class="o">==</span><span class="n">volumn_data</span>
+<span class="w">        </span><span class="n">B</span><span class="p">(</span><span class="nb">i</span><span class="p">)=</span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="n">B</span><span class="p">(</span><span class="nb">i</span><span class="p">)=(</span><span class="n">y_data</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">y_data</span><span class="p">(</span><span class="nb">i</span><span class="p">))</span><span class="o">/</span><span class="n">h_array</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">y_data</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">-</span><span class="n">y_data</span><span class="p">(</span><span class="nb">i</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="n">h_array</span><span class="p">(</span><span class="nb">i</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="k">end</span>
+
+<span class="nb">disp</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">disp</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+<span class="c">%求解</span>
+<span class="n">X</span><span class="p">=</span><span class="n">gauss</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">);</span>
+
+<span class="c">%计算样条函数的系数</span>
+<span class="n">a_array</span><span class="p">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">volumn_data</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">c_array</span><span class="p">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">volumn_data</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">b_array</span><span class="p">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">volumn_data</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">d_array</span><span class="p">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">volumn_data</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">volumn_data</span><span class="o">-</span><span class="mi">1</span>
+<span class="w">    </span><span class="n">a_array</span><span class="p">(</span><span class="nb">i</span><span class="p">)=</span><span class="n">y_data</span><span class="p">(</span><span class="nb">i</span><span class="p">);</span>
+<span class="w">    </span><span class="n">c_array</span><span class="p">(</span><span class="nb">i</span><span class="p">)=</span><span class="n">X</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+<span class="w">    </span><span class="n">d_array</span><span class="p">(</span><span class="nb">i</span><span class="p">)=(</span><span class="n">X</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">X</span><span class="p">(</span><span class="nb">i</span><span class="p">))</span><span class="o">/</span><span class="mi">6</span><span class="o">/</span><span class="n">h_array</span><span class="p">(</span><span class="nb">i</span><span class="p">);</span>
+<span class="w">    </span><span class="n">b_array</span><span class="p">(</span><span class="nb">i</span><span class="p">)=(</span><span class="n">y_data</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">y_data</span><span class="p">(</span><span class="nb">i</span><span class="p">))</span><span class="o">/</span><span class="n">h_array</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">-</span><span class="n">h_array</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">X</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">-</span><span class="n">h_array</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">/</span><span class="mi">6</span><span class="o">*</span><span class="p">(</span><span class="n">X</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">X</span><span class="p">(</span><span class="nb">i</span><span class="p">));</span>
+<span class="k">end</span>
+
+<span class="c">%计算预测值</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">volumn_predict</span>
+<span class="w">    </span><span class="c">%外推</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">x_predict</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">&lt;</span><span class="n">x_data</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">        </span><span class="n">y_predict</span><span class="p">(</span><span class="nb">i</span><span class="p">)=</span><span class="n">a_array</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">b_array</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x_predict</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">-</span><span class="n">x_data</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">+</span><span class="n">c_array</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">power</span><span class="p">(</span><span class="n">x_predict</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">-</span><span class="n">x_data</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="n">d_array</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">power</span><span class="p">(</span><span class="n">x_predict</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">-</span><span class="n">x_data</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">x_predict</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">&gt;</span><span class="n">x_data</span><span class="p">(</span><span class="n">volumn_data</span><span class="p">)</span>
+<span class="w">        </span><span class="n">y_predict</span><span class="p">(</span><span class="nb">i</span><span class="p">)=</span><span class="n">a_array</span><span class="p">(</span><span class="n">volumn_data</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">b_array</span><span class="p">(</span><span class="n">volumn_data</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x_predict</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">-</span><span class="n">x_data</span><span class="p">(</span><span class="n">volumn_data</span><span class="p">))</span><span class="o">+</span><span class="n">c_array</span><span class="p">(</span><span class="n">volumn_data</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">power</span><span class="p">(</span><span class="n">x_predict</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">-</span><span class="n">x_data</span><span class="p">(</span><span class="n">volumn_data</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="n">d_array</span><span class="p">(</span><span class="n">volumn_data</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">power</span><span class="p">(</span><span class="n">x_predict</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">-</span><span class="n">x_data</span><span class="p">(</span><span class="n">volumn_data</span><span class="p">),</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="w">    </span><span class="c">%内插</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">volumn_data</span><span class="o">-</span><span class="mi">1</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">x_predict</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">x_data</span><span class="p">(</span><span class="nb">j</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">x_predict</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">x_data</span><span class="p">(</span><span class="nb">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">            </span><span class="n">y_predict</span><span class="p">(</span><span class="nb">i</span><span class="p">)=</span><span class="n">a_array</span><span class="p">(</span><span class="nb">j</span><span class="p">)</span><span class="o">+</span><span class="n">b_array</span><span class="p">(</span><span class="nb">j</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x_predict</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">-</span><span class="n">x_data</span><span class="p">(</span><span class="nb">j</span><span class="p">))</span><span class="o">+</span><span class="n">c_array</span><span class="p">(</span><span class="nb">j</span><span class="p">)</span><span class="o">*</span><span class="n">power</span><span class="p">(</span><span class="n">x_predict</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">-</span><span class="n">x_data</span><span class="p">(</span><span class="nb">j</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="n">d_array</span><span class="p">(</span><span class="nb">j</span><span class="p">)</span><span class="o">*</span><span class="n">power</span><span class="p">(</span><span class="n">x_predict</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">-</span><span class="n">x_data</span><span class="p">(</span><span class="nb">j</span><span class="p">),</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="k">end</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">end</span>
+</code></pre></div></li>
+</ol>
+<h4 id="_64">逆插值<a class="headerlink" href="#_64" title="Permanent link">&para;</a></h4>
+<ul>
+<li>交换变量<ul>
+<li>横坐标在空间分布的不均匀性会导致插值多项式产生振荡(即使是低阶多项式)</li>
+</ul>
+</li>
+<li>利用初始数据进行插值，得到插值多项式后，寻找对应的<span class="arithmatex">\(x\)</span>值，相当于方程求根</li>
+</ul>
+<h3 id="_65">拟合<a class="headerlink" href="#_65" title="Permanent link">&para;</a></h3>
+<p>求出一个经验公式，使各数据点从总体上最贴近，而不一定要求构造的函数曲线通过所给数据点</p>
+<h4 id="_66">最小二乘方法<a class="headerlink" href="#_66" title="Permanent link">&para;</a></h4>
+<p><img alt="无法显示" src="../chapter4/chap4_2024_page-0070.jpg" /></p>
+<h5 id="_67">基本环节<a class="headerlink" href="#_67" title="Permanent link">&para;</a></h5>
+<ul>
+<li>确定<span class="arithmatex">\(\varphi(x)\)</span>的形式</li>
+<li>求最小二乘解</li>
+</ul>
+<h5 id="_68">解法<a class="headerlink" href="#_68" title="Permanent link">&para;</a></h5>
+<p><img alt="无法显示" src="../chapter4/chap4_2024_page-0072.jpg" />
+ <img alt="无法显示" src="../chapter4/chap4_2024_page-0073.jpg" />
+ <img alt="无法显示" src="../chapter4/chap4_2024_page-0074.jpg" /></p>
+<h5 id="_69">代数多项式拟合<a class="headerlink" href="#_69" title="Permanent link">&para;</a></h5>
+<p><img alt="无法显示" src="../chapter4/chap4_2024_page-0076.jpg" />
+ <img alt="无法显示" src="../chapter4/chap4_2024_page-0077.jpg" /></p>
+<h3 id="_70">总结<a class="headerlink" href="#_70" title="Permanent link">&para;</a></h3>
+<ul>
+<li>相同点<ul>
+<li>从函数角度看，插值法与最小二乘法都是根据函数表求函数的近似表达式的问题，属于函数逼近问题</li>
+<li>从几何上看，二者都是根据一列数据点求曲线的近似曲线问题，是曲线拟合问题</li>
+</ul>
+</li>
+<li>不同点<ul>
+<li>插值法根据插值条件选择近似函数</li>
+<li>最小二乘法根据“偏差平方和最小”原则选择近似函数</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="chapter5">Chapter5 数值微分和数值积分<a class="headerlink" href="#chapter5" title="Permanent link">&para;</a></h2>
+<h3 id="_71">概览<a class="headerlink" href="#_71" title="Permanent link">&para;</a></h3>
+<h4 id="_72">数值微分<a class="headerlink" href="#_72" title="Permanent link">&para;</a></h4>
+<ul>
+<li>有限差商逼近导数</li>
+<li>数据存在误差，使用曲线拟合技术构造光滑拟合曲线，对拟合曲线微分</li>
+</ul>
+<h4 id="_73">数值积分<a class="headerlink" href="#_73" title="Permanent link">&para;</a></h4>
+<p>$$
+\int_{a}^{b}f(x)dx=f(\xi)(b-a)
+$$
+用区间<span class="arithmatex">\([a,b]\)</span>上一些点<span class="arithmatex">\(x_{k}\)</span>出的函数值<span class="arithmatex">\(f(x_{k})\)</span>的加权平均值，作为平均高度<span class="arithmatex">\(f(\xi)\)</span>的近似值
+$$
+I=\int_{a}<sup n="n">{b}f(x)dx=\sum_{k=0}</sup>)
+$$
+求积系数}A_{k}f(x_{k<span class="arithmatex">\(A_{k}=\omega_{k}(b-a)\)</span>,<span class="arithmatex">\(\omega_{k}\)</span>是求积节点权系数</p>
+<h4 id="_74">复杂函数<a class="headerlink" href="#_74" title="Permanent link">&para;</a></h4>
+<ul>
+<li>由函数表达式生成离散的数据列表</li>
+<li>在离散点的基础上，利用数值方法计算数值微分和积分</li>
+</ul>
+<h4 id="_75">稳定性<a class="headerlink" href="#_75" title="Permanent link">&para;</a></h4>
+<ul>
+<li>一般数值积分过程稳定，解精确度较高(正负随机误差倾向于相互抵消)</li>
+<li>数值微分解不稳定，精度较差(正负随机误差倾向于累积)</li>
+</ul>
+<h3 id="_76">数值微分<a class="headerlink" href="#_76" title="Permanent link">&para;</a></h3>
+<h4 id="_77">差商近似<a class="headerlink" href="#_77" title="Permanent link">&para;</a></h4>
+<p><img alt="无法显示" src="../chapter5/chap5_2024_page-0012.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0013.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0014.jpg" /></p>
+<h4 id="_78">插值型数值微分<a class="headerlink" href="#_78" title="Permanent link">&para;</a></h4>
+<p>用插值函数的导数近似为原函数的导数
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0018.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0019.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0020.jpg" />
+- 用三次样条插值的导数近似被插值函数的导数，效果相当好
+- 实际问题中公式选择视具体问题而定
+给定一个列表函数，对函数中间各点都可使用精度较高的中心差商公式，但起始点只能使用前插公式，终点则使用后插公式
+- 一般情况下，三点公式比两点公式准确，步长越小结果越准确。但当余项中的高阶导数无界或计算过程中的舍入误差超过截断误差是，结论不成立</p>
+<h3 id="_79">数值积分<a class="headerlink" href="#_79" title="Permanent link">&para;</a></h3>
+<p><img alt="无法显示" src="../chapter5/chap5_2024_page-0023.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0024.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0025.jpg" /></p>
+<h4 id="newton-cotes">Newton-Cotes积分<a class="headerlink" href="#newton-cotes" title="Permanent link">&para;</a></h4>
+<ul>
+<li>一组基于等距节点的数值积分方法</li>
+<li>形式有梯形规则(Trapezoidal Rule)、辛普森规则(Simpson's Rule)、复合梯形规则(Composite Trapezoidal Rule)</li>
+<li>在给定区间的等距离点上估计函数值，然后使用多项式插值来近似积分值</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c">%使用Newton-Cotes积分</span>
+<span class="k">function</span><span class="w"> </span>int_newton<span class="p">=</span><span class="nf">Newton</span><span class="p">(</span>f,a,b,n<span class="p">)</span>
+<span class="c">%f=求积函数，a=左端点，b=右端点，n=节点数</span>
+<span class="n">array</span><span class="p">=</span><span class="nb">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">n</span><span class="p">);</span>
+<span class="n">y_array</span><span class="p">=</span><span class="nb">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">);</span>
+<span class="n">h</span><span class="p">=(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">0</span><span class="p">:</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span>
+<span class="w">    </span><span class="n">y_array</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)=</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="nb">i</span><span class="o">*</span><span class="n">h</span><span class="p">);</span>
+<span class="k">end</span>
+<span class="n">int_newton</span><span class="p">=</span><span class="n">h</span><span class="o">*</span><span class="nb">sum</span><span class="p">(</span><span class="n">y_array</span><span class="p">);</span>
+</code></pre></div>
+<p><img alt="无法显示" src="../chapter5/chap5_2024_page-0029.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0030.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0033.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0035.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0039.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0040.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0041.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0042.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0047.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0049.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0051.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0052.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0053.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0055.jpg" /></p>
+<h4 id="romberg">Romberg积分<a class="headerlink" href="#romberg" title="Permanent link">&para;</a></h4>
+<ul>
+<li>一组自适应数值积分方法</li>
+<li>通过递归地细分区间并应用Newton-Cotes积分来逼近积分值</li>
+<li>通过不断增加节点的数量和细分区间的大小来提高积分的准确度，并最终收敛于所需的精度</li>
+</ul>
+<p><img alt="无法显示" src="../chapter5/chap5_2024_page-0057.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0058.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0059.jpg" /></p>
+<h5 id="_80">数值微分的外推法<a class="headerlink" href="#_80" title="Permanent link">&para;</a></h5>
+<p><img alt="无法显示" src="../chapter5/chap5_2024_page-0061.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0062.jpg" /></p>
+<h4 id="gauss">Gauss求积公式<a class="headerlink" href="#gauss" title="Permanent link">&para;</a></h4>
+<h5 id="_81">概览<a class="headerlink" href="#_81" title="Permanent link">&para;</a></h5>
+<ul>
+<li>一种基于节点和权重的数值积分方法</li>
+<li>通过选择合适的节点和权重来最小化积分误差</li>
+<li>节点通常是选择为Chebyshev节点或Legendre节点，权重则通过多项式插值和正交性质来确定。</li>
+</ul>
+<h5 id="_82">比较<a class="headerlink" href="#_82" title="Permanent link">&para;</a></h5>
+<p>代数精度和待定数量的数量相关，待定系数数量为n，代数精度至少为n-1，我们讨论只有两个节点的情况：
+$$
+\int_{-1}^{1}f(x)dx \approx A_{0}f(x_{0})+A_{1}f(x_{1}) 
+$$
+对于Newton-Cotes积分，由于区间等分，故<span class="arithmatex">\(x_{0}\)</span>和<span class="arithmatex">\(x_{1}\)</span>确定，待定系数只有<span class="arithmatex">\(A_{0}\)</span>和<span class="arithmatex">\(A_{1}\)</span>，代数精度至少为1</p>
+<p>而Gauss积分由于不等分区间，则<span class="arithmatex">\(x_{0}\)</span>和<span class="arithmatex">\(x_{1}\)</span>也是待定系数，代数精度至少为3
+<div class="highlight"><pre><span></span><code><span class="c">%使用高斯求积公式</span>
+<span class="k">function</span><span class="w"> </span>int_gauss<span class="p">=</span><span class="nf">Gauss</span><span class="p">(</span>f,a,b<span class="p">)</span>
+<span class="n">a0</span><span class="p">=(</span><span class="n">b</span><span class="o">+</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+<span class="n">a1</span><span class="p">=(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+
+<span class="c">%三点Gauss-Legendre公式</span>
+<span class="n">x1</span><span class="p">=</span><span class="o">-</span><span class="nb">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">5</span><span class="p">);</span>
+<span class="n">x2</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">x3</span><span class="p">=</span><span class="nb">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">5</span><span class="p">);</span>
+<span class="n">int_1</span><span class="p">=</span><span class="n">f</span><span class="p">(</span><span class="n">a0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">5</span><span class="o">/</span><span class="mi">9</span><span class="p">;</span>
+<span class="n">int_2</span><span class="p">=</span><span class="n">f</span><span class="p">(</span><span class="n">a0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">8</span><span class="o">/</span><span class="mi">9</span><span class="p">;</span>
+<span class="n">int_3</span><span class="p">=</span><span class="n">f</span><span class="p">(</span><span class="n">a0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x3</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">5</span><span class="o">/</span><span class="mi">9</span><span class="p">;</span>
+<span class="n">int_gauss</span><span class="p">=(</span><span class="n">int_1</span><span class="o">+</span><span class="n">int_2</span><span class="o">+</span><span class="n">int_3</span><span class="p">)</span><span class="o">*</span><span class="n">a1</span><span class="p">;</span>
+<span class="k">end</span>
+
+<span class="cm">%{</span>
+<span class="cm">%两点Gauss-Legendre公式</span>
+<span class="cm">x1=sqrt(3)/3;</span>
+<span class="cm">x2=-sqrt(3)/3;</span>
+<span class="cm">int_1=fun2(f,a0,a1,x1);</span>
+<span class="cm">int_2=fun2(f,a0,a1,x2);</span>
+<span class="cm">int_gauss=int_1+int_2;</span>
+<span class="cm">%}</span>
+</code></pre></div>
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0064.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0066.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0068.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0069.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0070.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0071.jpg" />
+<img alt="无法显示" src="../chapter5/chap5_2024_page-0072.jpg" />
+- 优点
+    - 计算量小，精度高
+- 缺点
+    - n改变大小时，节点和系数几乎都改变
+    - 利用余项控制精度困难
+    - 需要计算节点处的函数值，不适用于函数表达式未知的情况
+- 较多采用复合求积的方法，将积分区间分成m个等长的小区间，在每个小区间上使用同一低阶Gauss求积公式算出积分的近似值，再相加</p>
+<h3 id="_83">总结<a class="headerlink" href="#_83" title="Permanent link">&para;</a></h3>
+<p><img alt="无法显示" src="../chapter5/chap5_2024_page-0077.jpg" /></p>
+<hr />
+<h2 id="chapter6">Chapter6 常微分方程的数值解<a class="headerlink" href="#chapter6" title="Permanent link">&para;</a></h2>
+<h3 id="_84">概览<a class="headerlink" href="#_84" title="Permanent link">&para;</a></h3>
+<p>定解条件</p>
+<ul>
+<li>初值问题
+给出积分曲线在初始点的状态(初始条件)</li>
+<li>边值问题
+给出积分曲线首尾两端的状态(边界条件)
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0004.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0005.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0006.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0007.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0008.jpg" /></li>
+</ul>
+<h3 id="_85">初值问题<a class="headerlink" href="#_85" title="Permanent link">&para;</a></h3>
+<h4 id="eular">欧拉(Eular)法<a class="headerlink" href="#eular" title="Permanent link">&para;</a></h4>
+<p><img alt="无法显示" src="../chapter6/chap6_2024_page-0010.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0011.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0012.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0014.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0015.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0016.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0017.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0018.jpg" /></p>
+<h4 id="-runge-kutta">龙格-库塔(Runge-Kutta)法<a class="headerlink" href="#-runge-kutta" title="Permanent link">&para;</a></h4>
+<p><img alt="无法显示" src="../chapter6/chap6_2024_page-0022.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0023.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0024.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0027.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0028.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0030.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0031.jpg" /></p>
+<h4 id="_86">多步法<a class="headerlink" href="#_86" title="Permanent link">&para;</a></h4>
+<p><img alt="无法显示" src="../chapter6/chap6_2024_page-0034.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0035.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0036.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0037.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0038.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0039.jpg" /></p>
+<h4 id="_87">稳定性、收敛性和刚性问题<a class="headerlink" href="#_87" title="Permanent link">&para;</a></h4>
+<p><img alt="无法显示" src="../chapter6/chap6_2024_page-0041.jpg" /></p>
+<h5 id="_88">稳定性<a class="headerlink" href="#_88" title="Permanent link">&para;</a></h5>
+<p><img alt="无法显示" src="../chapter6/chap6_2024_page-0043.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0044.jpg" /></p>
+<h5 id="_89">收敛性<a class="headerlink" href="#_89" title="Permanent link">&para;</a></h5>
+<p><img alt="无法显示" src="../chapter6/chap6_2024_page-0045.jpg" /></p>
+<h4 id="_90">微分方程组和高阶微分方程<a class="headerlink" href="#_90" title="Permanent link">&para;</a></h4>
+<p><img alt="无法显示" src="../chapter6/chap6_2024_page-0046.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0047.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0050.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0051.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0053.jpg" /></p>
+<h3 id="_91">边值问题<a class="headerlink" href="#_91" title="Permanent link">&para;</a></h3>
+<p><img alt="无法显示" src="../chapter6/chap6_2024_page-0056.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0057.jpg" /></p>
+<h4 id="_92">打靶法<a class="headerlink" href="#_92" title="Permanent link">&para;</a></h4>
+<p><img alt="无法显示" src="../chapter6/chap6_2024_page-0059.jpg" />
+<img alt="无法显示" src="../chapter6/chap6_2024_page-0060.jpg" /></p>
+<h4 id="_93">差分法<a class="headerlink" href="#_93" title="Permanent link">&para;</a></h4>
+<p><img alt="无法显示" src="../chapter6/chap6_2024_page-0062.jpg" /></p>
+<h3 id="_94">总结<a class="headerlink" href="#_94" title="Permanent link">&para;</a></h3>
+<p><img alt="无法显示" src="../chapter6/chap6_2024_page-0065.jpg" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+        <script src="../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
