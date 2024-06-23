@@ -208,7 +208,7 @@ rcr 带进位循环右移
 sal 算术左移
 sar 算术右移
 字符串传送指令
-movsb movsw movsd
+movsb 传送字节 movsw 传送字 movsd 传送双字
 rep mpvsb;准备工作
 ；ds:si执行源字符串
 ；es:di指向目标字符串
@@ -223,6 +223,10 @@ cmpsb cmpsw cmpsd
 scasb scasw scasd
 字符串操作指令
 stosb stosw stosd
+lods
+lodsb lodsw lodsd
+stos 存储
+scas 比较
 ## Lesson 13
 控制转移指令
 ## Lesson 14
