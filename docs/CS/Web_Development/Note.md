@@ -1,4 +1,39 @@
 # 全栈技术路线
+## React
+### quick start
+react 
+JS library
+与别的包配合以构建一个完整的reactyingyong
+react 框架
+create-react-app
+next.js
+vite
+#### 创建和嵌套组件
+组件名称以大写字母开头
+以use开头的函数称为Hook
+export 使该函数可以在此文件之外访问
+default 告诉其他文件它是main函数
+要从多个子组件中收集数据，或者让两个子组件相互通信请在其父组件中声明共享状态。父组件可以通过props将该状态传递会子组件，使得子组件之间以及
+#### UI实现
+step1:将UI分解为组件层次结构
+step2:再REACT中构建静态版本
+step3：找到UI状态的最小但完整的表示
+step4:确定组件负责更改的状态
+单项数据流，将数据沿着组件层次结构从父组件传递到子组件
+step5:添加逆向数据流
+#### 将REACT用于现有页面的一部分
+1. 是遏制JS环境，使用JSX语法，使用import/export语法将代码拆分为模块，并使用npm中的包注册表
+2. 将react组件渲染到页面上您希望看到的位置
+#### Hooks示例
+useState
+useReducer
+useContext
+useMemo 创建/重新访问函数调用中存储的值
+useCallback 
+### 描述用户界面
+### 增加互动性
+### 管理状态
+### 逃生舱口
 
 前后端交互的入门技术路线通常包括以下几个方面：前端开发、后端开发、API设计与实现、数据库管理、以及前后端的集成。下面是详细的技术路线和推荐的学习资源：
 

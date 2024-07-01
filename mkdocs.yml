@@ -1,5 +1,5 @@
 site_name: StarDiary
-site_url: ''
+site_url: https://happystarkitty.github.io/StarDiary
 site_author: HappyStarKitty
 theme:
   name: material
@@ -66,8 +66,10 @@ nav:
           - Markdown: CS/The_Missing_Semester/Markdown.md
           - Latex: CS/The_Missing_Semester/Latex.md
           - Misc: CS/The_Missing_Semester/Misc.md
-  - Design:
-      - Index: Design/README.md
+  - Physics:
+      - Index: Physics/README.md
+  - Engineering:
+      - Index: Engineering/README.md
   - Study:
       - Index: Study/README.md
   - About:
