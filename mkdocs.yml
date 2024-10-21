@@ -36,30 +36,42 @@ nav:
       - Calculus:
           - Index: Math/Calculus/README.md
           - Note: Math/Calculus/README.md
+      - Linear Algebra:
+          - Index: Math/Linear_Algebra/README.md
+          - Note: Math/Linear_Algebra/Note.md
       - Discrete Mathmatics:
           - Index: Math/Discrete_Mathematics/README.md
           - Note: Math/Discrete_Mathematics/Note.md
+      - Differential_Equation:
+          - Index: Math/Differential_Equation/README.md
       - Numerical Methods:
           - Index: Math/Numerical_Method/README.md
           - Note: Math/Numerical_Method/Note.md
           - Lab: Math/Numerical_Method/Lab.md
           - Homework: Math/Numerical_Method/Homework.md
+      - Complex Function:
+          - Index: Math/Complex_Function/README.md
   - CS:
-      - C:
-          - Index: CS/C_Program/README.md
-          - Note: CS/C_Program/Note.md
-          - Problem: CS/C_Program/Problem.md
-      - Python: CS/Python.md
-      - Assembly Language:
-          - Index: CS/Assembly_Language/README.md
-          - Lesson Note: CS/Assembly_Language/Lesson_Note.md
-          - Textbook Note: CS/Assembly_Language/Textbook_Note.md
+      - Language:
+          - C:
+              - Index: CS/Language/C_Program/README.md
+              - Note: CS/Language/C_Program/Note.md
+              - Problem: CS/Language/C_Program/Problem.md
+          - Python: CS/Language/Python.md
+          - Assembly Language:
+              - Index: CS/Language/Assembly_Language/README.md
+              - Lesson Note: CS/Language/Assembly_Language/Lesson_Note.md
+              - Textbook Note: CS/Language/Assembly_Language/Textbook_Note.md
+          - Matlab: CS/Language/Matlab.md
       - Web Development: 
           - Index: CS/Web_Development/README.md
-          - Note: CS/Web_Development/Note.md
-      - Code: CS/code.md
-      - Data Structure: CS/Data_Structure.md
-      - CSAPP: CS/CSAPP.md
+          - Frontend: CS/Web_Development/Frontend/README.md
+          - Backend: CS/Web_Development/Backend/README.md
+      - Artificial Intelligence:
+          - Index: CS/Artificial_Intelligence/README.md
+      - Data Structure: CS/Data_Structure/README.md
+      - Computer System: CS/Computer_System/README.md
+      - Object-oriented Programming: CS/Object-oriented_Programming/README.md
       - The Missing Semester:
           - Index: CS/The_Missing_Semester/README.md
           - Git: CS/The_Missing_Semester/Git.md
@@ -72,6 +84,9 @@ nav:
       - Index: Engineering/README.md
   - Study:
       - Index: Study/README.md
+  - Skill:
+      - Index: Skill/README.md
+      - PS: Skill/PS.md
   - About:
       - About: About.md
 

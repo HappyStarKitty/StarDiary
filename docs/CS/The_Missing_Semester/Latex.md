@@ -163,7 +163,7 @@ comment content
 \usepackage{graphicx}
 \begin{figure}[htbp]
     \centering
-    \includegraphicx[scale=0.8]{figures/example.eps} %scale 调整图片大小
+    \includegraphics[scale=0.8]{figures/example.eps} %scale 调整图片大小
     \caption{figure example} %图片标题
                              %标题过长换行使用 \protect\\
                              %caption* 可取消图片编号
