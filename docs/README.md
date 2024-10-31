@@ -1,45 +1,26 @@
-# Star Diary
+<h1>o(〃'▽'〃)o Hi！</h1>
+欢迎来到 DakiMoon 的笔记本！
 
-## Welcome
 
-DakiMoon的赶ddl日志，超绝摸鱼中
+!!! notification 阅前须知
+     因为本人有严重的拖延症，所以笔记不定期更新。
 
-## Resource
+!!! hint 关于作者
+    ZJU 本科 23级 飞设er
 
-一些学长学姐的资源分享
+    对 CS 非常感兴趣，未来可能会软硬兼修
 
-### 资源汇总
+    平时喜欢阅读、长跑、打游戏
 
-[浙江大学课程攻略共享计划](https://github.com/QSCTech/zju-icicles)
-教材、答案、历年卷等
+    一起来玩耍吧
+    
+!!! todo 更新计划
+    <li>复变函数与积分变换</li>
+    <li>概率论与数理统计</li>
+    <li>理论力学</li>
+    <li>人工智能基础（A）</li>
 
-[咸鱼肆|知识生活分享圈](https://www.yuque.com/xianyuxuan/saltfish_shop)
-知识笔记、思维导图等
 
-[竺院辅学计划站点](https://ckc-agc.bowling233.top/)
-强推“线性代数：未竟之美”和实用技能拾遗
 
-[Isshiki修佬的All-Sum-In-One](https://isshikihugh.github.io/zju-cs-asio/)
-详细地列出了众多学长的笔记和个人网站
 
-### 学习网站
-[ZJU-EEC](https://zju-eec.github.io/EEC-Courses/)
-工科试验班学长组资料
-
-[力速双A-ZJUSAA](https://fsaa.pages.zjusct.io/fsaa/)
-浙大航院的学习网站
-
-[图灵班学习指南](https://zju-turing.github.io/TuringCourses/)
-图灵班的学习指南
-
-### 个人笔记
-
-[SAVIA的外装代脑](https://savia7582.github.io/Exterior/)
-工科生狂喜，工程图学和大学物理的Notes非常推荐
-
-[TonyCrane的笔记本](https://note.tonycrane.cc/)
-图灵信安的学长，笔记非常详尽且美观
-
-[咸鱼暄的代码空间](https://xuan-insr.github.io/)
-高质量的大物实验报告
 

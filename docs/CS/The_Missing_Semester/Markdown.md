@@ -44,3 +44,21 @@
 text content
 </details>
 
+## 扩展语法
+### 提示框
+#### 语法
+```markdown
+!!! note ""
+    note content
+```
+#### 预览
+!!! note
+    note content
+### 内部引用
+#### 语法
+```markdown
+[内部引用](#内部引用)
+```
+#### 预览
+[内部引用](#内部引用)
+

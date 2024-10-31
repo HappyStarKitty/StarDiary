@@ -31,27 +31,27 @@ theme:
     - content.action.edit
 
 nav:
-  - Index: README.md
-  - Math:
-      - Calculus:
+  - 主页: README.md
+  - 数学:
+      - 微积分:
           - Index: Math/Calculus/README.md
           - Note: Math/Calculus/README.md
-      - Linear Algebra:
+      - 线性代数:
           - Index: Math/Linear_Algebra/README.md
           - Note: Math/Linear_Algebra/Note.md
-      - Discrete Mathmatics:
+      - 离散数学:
           - Index: Math/Discrete_Mathematics/README.md
           - Note: Math/Discrete_Mathematics/Note.md
-      - Differential_Equation:
+      - 常微分方程:
           - Index: Math/Differential_Equation/README.md
-      - Numerical Methods:
+      - 数值计算方法:
           - Index: Math/Numerical_Method/README.md
           - Note: Math/Numerical_Method/Note.md
           - Lab: Math/Numerical_Method/Lab.md
           - Homework: Math/Numerical_Method/Homework.md
-      - Complex Function:
+      - 复变函数与积分变换:
           - Index: Math/Complex_Function/README.md
-  - CS:
+  - 计科:
       - Language:
           - C:
               - Index: CS/Language/C_Program/README.md
@@ -78,17 +78,17 @@ nav:
           - Markdown: CS/The_Missing_Semester/Markdown.md
           - Latex: CS/The_Missing_Semester/Latex.md
           - Misc: CS/The_Missing_Semester/Misc.md
-  - Physics:
+  - 物理:
       - Index: Physics/README.md
-  - Engineering:
+  - 工程:
       - Index: Engineering/README.md
-  - Study:
-      - Index: Study/README.md
-  - Skill:
-      - Index: Skill/README.md
-      - PS: Skill/PS.md
-  - About:
-      - About: About.md
+  - 技能:
+      - Index: Skills/README.md
+      - PS: Skills/PS.md
+  - 工具:
+      - 计科入门: Tools/CSbegin.md
+      - 相关资源: Tools/resource.md
+      - 实用工具: Tools/tools.md
 
 markdown_extensions:
 
@@ -121,7 +121,52 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
+
+plugins:
+  - changelog
+  - search
+  - heti:
+      disable_serve: true
+  - statistics: # 需要在 markdown_extensions 里面加一句 md_in_html 才能显示 icon
+      page_template: "stylesheet/template.html"
+      words_per_minute: 200
+      page_check_metadata: counter
+  - git-revision-date-localized:
+      type: datetime
+      timezone: Asia/Shanghai
+      locale: zh
+      enable_creation_date: true
+      exclude:
+        - index.md
+        - changelog.md
+        - links.md
+      # fallback_to_build_date: true
+  # - termynal:
+  #     prompt_literal_start:
+  #       - "$"
+  #       - ">"
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/noughtq
+    - icon: fontawesome/solid/blog
+      link: https://blog.noughtq.top
+    - icon: material/email
+      link: mailto:noughtq666@gmail.com
+
+extra_css:
+  - stylesheet/custom.css
+  - stylesheet/extra_changelog.css
+  - https://unpkg.com/katex@0/dist/katex.min.css
+  - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
+  - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
+  - https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap
+
 extra_javascript:
-  - javascripts/config.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - js/katex.js
+  - js/toc.js
+  - js/anchor.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+  # - https://polyfill.io/v3/polyfill.min.js?features=es6
