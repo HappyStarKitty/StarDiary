@@ -3,6 +3,7 @@ site_url: https://happystarkitty.github.io/StarDiary
 site_author: HappyStarKitty
 theme:
   name: material
+  custom_dir: overrides
   palette:
     # 日间模式
     - scheme: default
@@ -149,11 +150,11 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/noughtq
+      link: https://github.com/HappyStarKitty
     - icon: fontawesome/solid/blog
-      link: https://blog.noughtq.top
+      link: https://happystarkitty.github.io
     - icon: material/email
-      link: mailto:noughtq666@gmail.com
+      link: happystarkitty@outlook.com
 
 extra_css:
   - stylesheet/custom.css
