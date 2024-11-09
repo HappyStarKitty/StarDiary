@@ -183,7 +183,7 @@ code content
 
 ## 数学符号
 
-[完整版](https://blog.csdn.net/Ying_Xu/article/details/51240291)
+[数学公式和符号表](https://zhuanlan.zhihu.com/p/450465546)
 以下是整理出的常用数学符号
 
 ### 杂项
@@ -199,8 +199,15 @@ code content
 - 导数：\prime
 - 求和：\sum
 - 积分：\int
+- 环路积分：\oint
 - 拉普拉斯算子：\Delta
 - 哈密顿算子：\nabla
+- 点乘：\cdot
+- 叉乘：\times
+- 花体：\mathscr
+- 粗体：\bm
+- 无穷：\infty
+- 正负号：\pm
 
 ### 括号等
 
@@ -222,8 +229,12 @@ code content
 |   $\xi$   |   \xi   |   $\Xi$   |   \Xi   |              |          |
 |   $\mu$   |   \mu   |            |        |              |          |
 | $\kappa$ | \kappa |            |        | $\varkappa$ | \varkappa |
-|  $\chi$  |        |            |        |              |          |
-
+|  $\chi$  |   \chi     |            |        |              |          |
+|$\epsilon$|\epsilon|$\varepsilon$|\varepsilon|
+|$\alpha$|\alpha||
+|$\beta$|\beta|
+|$\gamma$|\gamma|$\Gamma$|\Gamma
+|$\psi$|\psi|$\Psi$|\Psi
 ### 二元关系
 
 |         txt         |       tex       |       txt       |     tex     |
@@ -240,6 +251,7 @@ code content
 | $\leftrightarrow$ | \leftrightarrow |    $\neg$    |    \neg    |
 |      $\prec$      |      \prec      |    $\succ$    |    \succ    |
 |     $\preceq$     |     \preceq     |   $\succeq$   |   \succeq   |
+|$\gg$|\gg|$\ll$|\ll
 
 ### 矩阵和行列式
 

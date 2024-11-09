@@ -4,7 +4,9 @@ comments: true
 # Python
 ## 基础工具
 
-python3.12 + IDE（Pycharm or VSCode）+ Anaconda
+python3.X + IDE（Pycharm or VSCode）+ Anaconda（包管理器）
+
+Python 经常面临的问题是版本环境和包依赖。我们使用 Anaconda包管理器管理依赖和使用虚拟环境。
 ### Anaconda
 
 创建虚拟环境
