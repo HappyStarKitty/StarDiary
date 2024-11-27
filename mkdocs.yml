@@ -36,7 +36,7 @@ nav:
   - 数学:
       - 微积分:
           - Index: Math/Calculus/README.md
-          - Note: Math/Calculus/README.md
+          - Note: Math/Calculus/Note.md
       - 线性代数:
           - Index: Math/Linear_Algebra/README.md
           - Note: Math/Linear_Algebra/Note.md
@@ -48,18 +48,27 @@ nav:
       - 数值计算方法:
           - Index: Math/Numerical_Method/README.md
           - Note: Math/Numerical_Method/Note.md
-          - Lab: Math/Numerical_Method/Lab.md
           - Homework: Math/Numerical_Method/Homework.md
       - 复变函数与积分变换:
           - Index: Math/Complex_Function/README.md
           - Note: Math/Complex_Function/Note.md
+      - 概率论与数理统计:
+          - Index: Math/Probability_Theory/README.md
+          - Note: Math/Probability_Theory/Note.md
+      - 偏微分方程:
+          - Index: Math/Partial_Differential_Equation/README.md
+          - Note: Math/Partial_Differential_Equation/Note.md
   - 计科:
+      - Index: CS/README.md
       - Language:
           - C:
               - Index: CS/Language/C_Program/README.md
               - Note: CS/Language/C_Program/Note.md
               - Problem: CS/Language/C_Program/Problem.md
-          - Python: CS/Language/Python.md
+          - Python: 
+              - Index: CS/Language/Python/README.md
+              - Introduction: CS/Language/Python/introduction.md
+              - Data Analysis: CS/Language/Python/data_analysis.md
           - Assembly Language:
               - Index: CS/Language/Assembly_Language/README.md
               - Lesson Note: CS/Language/Assembly_Language/Lesson_Note.md
@@ -71,23 +80,37 @@ nav:
           - Backend: CS/Web_Development/Backend/README.md
       - Artificial Intelligence:
           - Index: CS/Artificial_Intelligence/README.md
-          - Basic: CS/Artificial_Intelligence/basic.md
-          - Network: CS/Artificial_Intelligence/network.md
+          - Basic: 
+              - Index: CS/Artificial_Intelligence/Basic/basic.md
+              - Part1: CS/Artificial_Intelligence/Basic/part1.md    
+              - Part2: CS/Artificial_Intelligence/Basic/part2.md
+              - Part3: CS/Artificial_Intelligence/Basic/part3.md
+              - Part4: CS/Artificial_Intelligence/Basic/part4.md
+              - Part5: CS/Artificial_Intelligence/Basic/part5.md
+              - Part6: CS/Artificial_Intelligence/Basic/part6.md
+          - Network: CS/Artificial_Intelligence/Network/network.md
       - Data Structure: CS/Data_Structure/README.md
       - Computer System: CS/Computer_System/README.md
       - Object-oriented Programming: CS/Object-oriented_Programming/README.md
+      - Quantum Computation:
+          - Index: CS/Quantum_Computation/README.md
       - The Missing Semester:
           - Index: CS/The_Missing_Semester/README.md
           - Git: CS/The_Missing_Semester/Git.md
           - Markdown: CS/The_Missing_Semester/Markdown.md
           - Latex: CS/The_Missing_Semester/Latex.md
           - Typst: CS/The_Missing_Semester/Typst.md
+          - Linux: CS/The_Missing_Semester/Linux.md
           - Misc: CS/The_Missing_Semester/Misc.md
+      - Misc:
+          - Code: CS/Misc/code.md
   - 物理:
       - Index: Physics/README.md
       - 大学物理（甲）: 
         - Index: Physics/College_Physics/README.md
         - 电磁学: Physics/College_Physics/electromagnetism.md
+        - 光学: Physics/College_Physics/optics.md
+        - 量子物理学: Physics/College_Physics/quantum.md
       - 理论力学（甲）:
         - Index: Physics/Theoretical_Mechanics/README.md
         - 绪论: Physics/Theoretical_Mechanics/introduction.md

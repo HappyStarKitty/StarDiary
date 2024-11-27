@@ -194,20 +194,24 @@ code content
 - 上标：^
 - 上划线：\overline
 - 下划线：\underline
-- 约等于：\approx
 - 分数线：\frac
 - 导数：\prime
-- 求和：\sum
-- 积分：\int
-- 环路积分：\oint
-- 拉普拉斯算子：\Delta
-- 哈密顿算子：\nabla
-- 点乘：\cdot
-- 叉乘：\times
 - 花体：\mathscr
 - 粗体：\bm
 - 无穷：\infty
-- 正负号：\pm
+- 空心圆：\circ
+
+### 数学符号
+
+|symbol|txt|tex|symbol|tex|tex|
+| :--:|:-:|:-|:-:|:-:|:-:
+|积分|\int|$\int$|环路积分|\oint|$\oint$|
+|点乘|\cdot|$\cdot$|叉乘|\times|$\times$|
+|正负|\pm|$\pm$|负正|\mp|$\mp$|
+|求和|\sum|$\sum$|连乘|\prod|$\prod$
+|拉普拉斯算子|\Delta|$\Delta$|哈密顿算子|\nabla|$\nabla$|
+|约等于|\approx|$\approx$|恒等于|\equiv|$\equiv$|
+波浪号|\sim|$\sim$|
 
 ### 括号等
 
@@ -230,11 +234,13 @@ code content
 |   $\mu$   |   \mu   |            |        |              |          |
 | $\kappa$ | \kappa |            |        | $\varkappa$ | \varkappa |
 |  $\chi$  |   \chi     |            |        |              |          |
-|$\epsilon$|\epsilon|$\varepsilon$|\varepsilon|
+|$\epsilon$|\epsilon|||$\varepsilon$|\varepsilon|
 |$\alpha$|\alpha||
 |$\beta$|\beta|
 |$\gamma$|\gamma|$\Gamma$|\Gamma
 |$\psi$|\psi|$\Psi$|\Psi
+|$\tau$|\tau|
+|$\eta$|\eta|
 ### 二元关系
 
 |         txt         |       tex       |       txt       |     tex     |
