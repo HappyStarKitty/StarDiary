@@ -236,6 +236,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://happystarkitty.github.io/StarDiary/Math/Differential_Equation/Note/</loc>
+         <lastmod>2024-11-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://happystarkitty.github.io/StarDiary/Math/Discrete_Mathematics/</loc>
          <lastmod>2024-11-27</lastmod>
          <changefreq>daily</changefreq>
@@ -257,11 +262,6 @@
     </url>
     <url>
          <loc>https://happystarkitty.github.io/StarDiary/Math/Numerical_Method/</loc>
-         <lastmod>2024-11-27</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://happystarkitty.github.io/StarDiary/Math/Numerical_Method/Homework/</loc>
          <lastmod>2024-11-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
