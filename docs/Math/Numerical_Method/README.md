@@ -1,10 +1,10 @@
 # Numerical Methods
 
-!!! note
+!!! abstract 概要
+    时间：2023-2024 春学期
+    教师：赵豫红
     学分：2.0
-    任课教师：赵豫红
     教材：/
-    分数构成：
 
 
 以下简称：NA(或者 NM)
@@ -24,19 +24,7 @@
 
 [知乎文章：数值计算方法](https://zhuanlan.zhihu.com/p/114297823)
 
-## report
-
-+ [学习笔记](Note.md)
-+ [上机作业](Lab.md)
-+ [课程作业](Homework.md)
-
 ## assignment
 
 总计4次上机作业，5次课程作业，1次大作业。如果有时间的话我尽量给出每道题的多种方法，不过暂时应该是没时间了(悲)
 
-## solution
-
-如有问题，请issue提出
-
-code在repo如下路径
-docs/Math/Numerical_Method/solution

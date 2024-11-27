@@ -41,20 +41,23 @@ $$\bm{E}_1=\bm{E}_{12}+\bm{E}_{13}+...+\bm{E}_{1n}=\sum_{i=2}^{n}\bm{E}_{1i}=\su
 $$\bm{E}=\int d\bm{E}=\frac{1}{4\pi\varepsilon_{0}}\int_V \frac{dq}{r^2}\bm{e}_r$$
 
 !!! hint 电偶极子
-    一对等量异号点电荷$+q$和$-q$，相距为$l$。当从观察点到两电荷连线的距离$x \gg l$时，则这一对点电荷称**电偶极子**。
-    定义**电偶极矩**$\bm{p}_e=q\bm{l}$，$\bm{l}$的方向由负电荷只想正电荷。则电偶极子中垂线上一点$P$的场强$\bm{E}=-\frac{1}{4\pi\varepsilon_{0}}\frac{\bm{p}_e}{x^3}$。
+    一对等量异号点电荷$+q$和$-q$，相距为$l$。当从观察点到两电荷连线的距离$x \gg l$时，则这一对点电荷称  **电偶极子** 。
+    定义 **电偶极矩** $\bm{p}_e=q\bm{l}$，$\bm{l}$的方向由负电荷只想正电荷。则电偶极子中垂线上一点$P$的场强$\bm{E}=-\frac{1}{4\pi\varepsilon_{0}}\frac{\bm{p}_e}{x^3}$。
 
 **均匀带电圆环**
 
 $$E=\frac{q}{4\pi\varepsilon_0z^2}$$ 
+
 $z$为圆环轴线上一点$P$与环心的距离。
 
 **均匀带电薄圆盘**
 
 若$z \ll R$，圆盘可视为无限大均匀带电平面
+
 $$E=\frac{\sigma}{2\varepsilon_0}$$
 
 若$z\gg R$，近似等于点电荷的电场
+
 $$E=\frac{\sigma R^2}{4\varepsilon_0z^2}=\frac{q}{4\pi\varepsilon_0z^2}$$
 
 **均匀带电细直线**
@@ -66,6 +69,7 @@ $$E_y=\frac{\lambda}{4\pi\varepsilon_0a}(cos\theta_1-cos\theta_2)$$
 $a$为线外一点$P$到直线的垂直距离
 
 若$L \gg a$，可视为无限长，则有
+
 $$E_x=0, E_y=\frac{\lambda}{2\pi\varepsilon_0a}$$
 
 ### 电场线 电通量
@@ -83,17 +87,21 @@ $$\Phi_c=\oint\bm{E}\cdot d\bm{S}=\frac{1}{\varepsilon_0}\sum_iq_i$$
 **均匀带电球面**
 
 $r>R$
+
 $$\bm{E}=\frac{Q}{4\pi\varepsilon_0 r^2}\bm{e}_r$$
 
 $r<R$
+
 $$E=0$$
 
 **均匀带电球体**
 
 $r>R$
+
 $$E=\frac{Q}{4\pi\varepsilon_0 r^2}$$
 
 $r>R$
+
 $$E=\frac{Qr}{4\pi\epsilon_0 R^3}$$
 
 ### 静电场的环路定理
@@ -141,9 +149,11 @@ $$C=\frac{4\pi\varepsilon_0R_AR_B}{R_B-R_A}$$
 **极化强度**
 
 $$\bm{P}=\varepsilon_0\chi_e\bm{E}$$
+
 $\bm{P}$：极化强度 $\chi_e$：电极化率
 
 ### 电介质中静电场的基本定理
+
 !!! abstract 解题步骤
     1. 利用介质中的高斯定理求出D
     2. 利用P、D、E的关系求出E
@@ -155,8 +165,11 @@ $\bm{P}$：极化强度 $\chi_e$：电极化率
 $$\bm{E}=\bm{E_0}+\bm{E}^\prime$$
 
 $\bm{E}_0$和$\bm{E}^\prime$方向相反
+
 $$\sigma^\prime=\sigma_0(1-\frac{1}{\varepsilon_r})$$
-$\sigma^\prime$：电介质表面极化电荷面密度 $\sigma_0$：电容器极板自由电荷面密度
+
+$\sigma^\prime$：电介质表面极化电荷面密度 
+$\sigma_0$：电容器极板自由电荷面密度
 
 **电位移**
 
@@ -167,7 +180,9 @@ $$\bm{D}=\varepsilon_0\bm{E}+\bm{P}$$
 $$\oint\bm{D}\cdot d\bm{S}=\sum q_0$$
 
 **$\bm{P}$、$\bm{D}$、$\bm{E}$的关系**
+
 $$\bm{D}=\varepsilon_0\bm{E}+\bm{P}=(1+\chi_e)\varepsilon_0\bm{E}=\varepsilon_r \varepsilon_e\bm{E}=\varepsilon \bm{E}$$
+
 $\varepsilon$：介电常数/电容率
 
 ### 静电场的能量
@@ -253,6 +268,7 @@ $$\bm{F}=q\bm{E}+\bm{qv}\times \bm{B}$$
 **毕奥-萨伐尔定律**
 
 $$d\bm{B}=\frac{\mu_0}{4\pi}\frac{Id\bm{l}\times\bm{r}}{r^3}$$
+
 $$\bm{B}=\int dB=\frac{\mu_0}{4\pi}\int \frac{Id\bm{l}\times \bm{r}}{r^3}$$
 
 **长直载流导线**
@@ -270,6 +286,7 @@ $$B=\frac{\mu_0 I}{4\pi a}$$
 **载流圆线圈**
 
 $$B=\frac{\mu_0 I R^2}{2(R^2+x^2)^{3/2}}$$
+
 圆电流圆心处
 
 $$B=\frac{\mu_0NI}{2R}$$
@@ -349,6 +366,7 @@ $$\bm{M}=\bm{p}_m \times \bm{B}$$
 $\bm{p}_m=NIS\bm{e}_n$：载流线圈的磁矩
 
 **磁力所做功**
+
 载流导线在磁场中运动
 
 $$A=F aa\prime=IBlaa\prime=IB\Delta S=I\Delta\Phi$$
@@ -371,6 +389,7 @@ $$R_H=\frac{1}{nq}$$
 **磁场强度**
 
 $$\bm{H}=\frac{\bm{B}}{\mu_0}-\bm{M}$$
+
 $\bm{H}$：磁场强度 $\bm{B}$：磁感应强度 $\bm{M}$：磁化强度
 
 **有磁介质时的安培环路定理**
@@ -384,9 +403,13 @@ $$\oint_s\bm{B}\cdot d\bm{S}=\oint_s(\bm{B}_0+\bm{B}^{\prime})\cdot d\bm{S}$$
 **$\bm{B}、\bm{M}、\bm{H}$之间的关系**
 
 $$\bm{M}=\chi_m\bm{H}$$
+
 $$\mu_r=1+\chi_m$$
+
 $$\mu_0\mu_r=\mu$$
+
 $$\bm{B}=\mu_0\mu_r=\mu\bm{H}$$
+
 $\mu_0$：真空中的磁导率 $\mu_r$：相对磁导率 $\mu$：磁导率
 
 ## Chap14 电磁感应
@@ -426,7 +449,9 @@ $$\mathscr{E}_L=-\frac{d\Psi}{dt}=-L\frac{dI}{dt}$$
 **互感**
 
 $$\Psi_{21}=MI_1$$ 
+
 $$\Psi_{12}=MI_2$$
+
 $$\mathscr{E}=-\frac{d\Psi}{dt}=-M\frac{dI}{dt}$$
 
 ### 磁场的能量
@@ -463,15 +488,21 @@ $$\oint_{L}\bm{H}\cdot{d\bm{l}}=\sum I+\frac{d\Phi_D}{dt}=\sum I+\int_s\frac{\pa
 **麦克斯韦方程组积分形式**
 
 $$\oint_S \bm{D}\cdot d\bm{S}=\int_{V}\rho dV=\sum q$$
+
 $$\oint_L\bm{E}\cdot d\bm{l}=-\frac{d\Phi_m}{dt}=-\int\frac{\partial \bm{B}}{\partial t}\cdot d\bm{S}$$
+
 $$\oint_S\bm{B}\cdot d\bm{S}=0$$
+
 $$\oint_L\bm{H}\cdot d\bm{l}=\sum I+\frac{d\Phi_D}{dt}=\int_S\bm{j}\cdot dS+\int_S \frac{\partial D}{\partial t}\cdot d\bm{S}$$
 
 **麦克斯韦方程组微分形式**
 
 $$\nabla\cdot\bm{D}=\rho$$
+
 $$\nabla \times\bm{E}=-\frac{\partial \bm{B}}{\partial t}$$
+
 $$\nabla \cdot \bm{B}=0$$
+
 $$\nabla\times\bm{H}=\bm{j}+\frac{\partial \bm{D}}{\partial t}$$
 
 ### 电磁波

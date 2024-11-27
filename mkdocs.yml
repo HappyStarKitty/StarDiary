@@ -45,10 +45,10 @@ nav:
           - Note: Math/Discrete_Mathematics/Note.md
       - 常微分方程:
           - Index: Math/Differential_Equation/README.md
+          - Note: Math/Differential_Equation/Note.md
       - 数值计算方法:
           - Index: Math/Numerical_Method/README.md
           - Note: Math/Numerical_Method/Note.md
-          - Homework: Math/Numerical_Method/Homework.md
       - 复变函数与积分变换:
           - Index: Math/Complex_Function/README.md
           - Note: Math/Complex_Function/Note.md

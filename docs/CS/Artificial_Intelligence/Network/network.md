@@ -1,8 +1,10 @@
-!!! abstract 模糊控制和人工神经网络
-    - 学分：2
-    - 任课教师：马志鹏
+# 模糊控制和人工神经网络
+
+!!! abstract 摘要
+    - 时间：2024-2025 冬学期
+    - 教师：马志鹏
+    - 学分：2.0
     - 教材：/
-    - 分数构成：
 
 ## Chap1 Control challenges in robotics and automation
 

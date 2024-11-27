@@ -43,7 +43,7 @@ FTP 传输
 
 ## 快捷键
 
-- Win+R
+Win+R
   + cmd 命令行
   + sysdm.cpl 系统设置（配置环境变量常用）
   + regedit 注册表

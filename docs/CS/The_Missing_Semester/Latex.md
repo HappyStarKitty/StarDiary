@@ -241,6 +241,7 @@ code content
 |$\psi$|\psi|$\Psi$|\Psi
 |$\tau$|\tau|
 |$\eta$|\eta|
+
 ### 二元关系
 
 |         txt         |       tex       |       txt       |     tex     |
@@ -274,6 +275,7 @@ code content
 ```
 
 **效果预览**
+
 \[
 \left|\begin{array}{cccc}
     1 &    6    & 9 \\

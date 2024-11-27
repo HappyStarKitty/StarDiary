@@ -198,6 +198,7 @@ $$
 $$
 F_X(x) = F(x, + \infty)
 $$
+
 $$
 F_Y(y) = F(+\infty ,y)
 $$
@@ -233,6 +234,7 @@ $$
 $$
 f_X(x)=\int_{- \infty}^{+\infty}f(x,y)dy
 $$
+
 $$
 f_Y(y)=\int_{- \infty}^{+ \infty}f(x,y)dx
 $$
