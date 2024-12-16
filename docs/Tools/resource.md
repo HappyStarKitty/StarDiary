@@ -38,4 +38,4 @@
 高质量的大物实验报告
 
 [NoughtQ的笔记本](https://note.noughtq.top/changelog)
-高中同学CSer，笔记做得非常认真
+强推，爱好是做笔记的大神

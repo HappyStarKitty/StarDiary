@@ -2,7 +2,7 @@
 
 ## Chap1 概率论的基本概念
 
-概率的加法公式
+**概率的加法公式**
 
 $$
 P(A \cup B)=P(A)+P(B)-P(AB)
@@ -16,10 +16,16 @@ $$
 P( \cup_{j=1}^{n} A_j)= \sum_{j=1}^{n} P(A_j) -\sum_{i<j}P(A_i A_j) + \sum_{i<j<k} P(A_i A_j A_k)-...+(-1)^{n-1}P(A_iA_2...A_n), \quad n \ge 1 
 $$
 
-全概率公式
+**全概率公式**
 
 $$
 P(A)=\sum_{j=1}^{n}P(B_j)P(A|B_j)
+$$
+
+**贝叶斯公式**
+
+$$
+P(B_k|A)=\frac{P(B_kA)}{P(A)}=\frac{P(B_k)P(A|B_k)}{\sum_{j=1}^n P(B_j)P(A|B_j)}
 $$
 
 ## Chap2 随机变量及其概率分布
@@ -114,7 +120,7 @@ $$
 **正态分布**
 
 $$
-f(x)= \frac{1}{\sqrt{2\pi \sigma}} e^{-(x-\mu)^2/ (2 \sigma^2)}, \quad |x|< + \infty
+f(x)= \frac{1}{\sqrt{2\pi}\sigma} e^{-(x-\mu)^2/ (2 \sigma^2)}, \quad |x|< + \infty
 $$
 
 记为$X \sim N(\mu, \sigma^2)$
@@ -255,7 +261,7 @@ $$
 
 即$F(x,y)=F_X(x)\cdot F_Y(y)$时，$X$，$Y$相互独立
 
-$f(x,y)=f_X(x)\cdot f_Y(y)$几乎处处相等为连续型随机变量X，Y相互独立的等价定义
+$f(x,y)=f_X(x)\cdot f_Y(y)$几乎处处相等为连续型随机变量为X，Y相互独立的等价定义
 
 ### 二元随机变量函数的分布
 
@@ -301,14 +307,27 @@ $$
 标准正态分布：$Var(X)=1$
 二项分布：$Var(X)=np(1-p)$
 正态分布：$Var(X)=\sigma^2$
+均匀分布：$Var(X)=\frac{(b-a)^2}{12}$
 
 ### 协方差与相关系数
 
 **协方差**
 
 $$
-Cov(X,Y)=E[(X-E(X))(Y-E(Y))]=E(XY)-E(X)E(Y)
+\begin{aligned}
+&Cov(X,Y)=E[(X-E(X))(Y-E(Y))] \\
+&=E(XY)-E(X)E(Y)
+\end{aligned}
 $$
+
+满足以下性质：
+
+$$Var(\sum_{i=1}^{n}X_i)=\sum_{i=1}^{n} Var(X_i)+2\sum_{1\le i< j \le n}Cov(X_i,X_j)$$
+
+$Cov(X,Y)=Cov(Y,X)$
+$Cov(X,X)=Var(X)$
+$Cov(aX,bY)=abCov(X,Y)$
+$Cov(X_1+X_2,Y)=Cov(X_1,Y)+Cov(X_2,Y)$
 
 **相关系数**
 
@@ -323,6 +342,37 @@ $Cov(X,Y)=0$
 $E(XY)=E(X)E(Y)$
 $Var(X+Y)=Var(X)+Var(Y)$
 
+!!! note 独立和不相关
+    独立可以推出不相关，不相关无法推出独立，因为相关是“线性相关性”。
+
+### 其他数字特征
+
+**矩**
+
+k阶（原点）矩
+
+$$
+\mu_k=E(X^k)
+$$
+
+k阶中心矩
+
+$$
+v_k=E[(X-E(X))^k]
+$$
+
+k+l阶混合（原点）矩
+
+$$
+E(X^kY^l)
+$$
+
+k+l阶混合中心矩
+
+$$
+E[(X-E(X))^k(Y-E(Y))^l]
+$$
+
 ## Chap5 大数定律及中心极限定理
 
 ### 大数定律
@@ -336,6 +386,10 @@ $$
 
 $$
 P\{ |X-\mu| \ge \varepsilon\}\le \frac{\sigma^2}{\varepsilon^2}
+$$
+
+$$
+P\{|X-E(X)| \ge \varepsilon \} \le \frac{Var(X)}{\varepsilon^2}
 $$
 
 **伯努利大数定律**
@@ -357,6 +411,8 @@ $$
 $$
 \lim_{n \rightarrow +\infty}P\{{\frac{\sum_{i=1}^n X_i - E(\sum_{i=1}^n X_i)}{\sqrt{Var(\sum_{i=1}^n X_i)}}\le x}\}=\lim_{n \rightarrow +\infty}P\{\frac{\sum_{i=1}^{n} X_i-n\mu}{\sigma\sqrt{n}}\le x\}=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{x}e^{-\frac{t^2}{2}}dt=\Phi(x)
 $$
+
+也称为独立同分布的中心极限定理
 
 **棣莫弗-拉普拉斯中心极限定理**
 
@@ -402,25 +458,24 @@ $$
 
 **$\chi^2$分布**
 
-记为$Y \sim\chi^2(n)$
+$$Y=X_1^2+X_2^2+...X_n^2 \sim\chi^2(n)
+$$
+
+其中$X_1,X_2...X_n$为独立同分布的随机变量，且都服从$N(0,1)$
 
 **$t$分布**
 
 $$
-t=\frac{X}{\sqrt{Y/n}}
+t=\frac{X}{\sqrt{Y/n}}\sim t(n)
 $$
-
-记为$t\sim t(n)$
 
 其中$X\sim N(0,1)$，$Y\sim \chi^2(n)$
 
 **$F$分布**
 
 $$
-F=\frac{U/n_1}{V/n_2}
+F=\frac{U/n_1}{V/n_2}\sim F(n_1,n_2)
 $$
-
-记为$F\sim F(n_1,n_2)$
 
 其中$U\sim \chi^2(n_1)$，$V\sim \chi^2(n_2)$
 
@@ -440,4 +495,54 @@ $$
 
 ## Chap7 参数估计
 
+### 点估计
+
+**矩法**
+
+本质是用样本矩作为总体矩的估计
+
+**极大似然法**
+
+!!! note 解题步骤
+    1. 写出样本似然函数
+    2. 取对数
+    3. 求驻点
+
+### 估计量的评价准则
+
+**无偏性**
+
+无偏估计量
+
+$$
+E(\bar{\theta})=\theta
+$$
+
+**有效性**
+
+### 区间估计
+
+**置信区间的定义**
+
+**枢轴量法**
+
+### 正态总体参数的区间估计
+
+!!! note 解题步骤
+    1. 提出假设
+    2. 选检验统计量
+    3. 得拒绝域
+
+### 非正态总体参数的区间估计
+
 ## Chap8 假设检验
+
+### 假设检验的基本思想
+
+### 单个正态总体参数的假设检验
+
+### 两个正态总体参数的假设检验
+
+### 假设检验与区间估计
+
+### 拟合优度检验

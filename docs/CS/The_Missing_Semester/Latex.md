@@ -211,7 +211,7 @@ code content
 |求和|\sum|$\sum$|连乘|\prod|$\prod$
 |拉普拉斯算子|\Delta|$\Delta$|哈密顿算子|\nabla|$\nabla$|
 |约等于|\approx|$\approx$|恒等于|\equiv|$\equiv$|
-波浪号|\sim|$\sim$|
+波浪号|\sim|$\sim$|成正比|\varpropto|$\varpropto$|
 
 ### 括号等
 
@@ -241,6 +241,7 @@ code content
 |$\psi$|\psi|$\Psi$|\Psi
 |$\tau$|\tau|
 |$\eta$|\eta|
+|$\theta$|\theta|$\Theta$|\Theta|$\vartheta$|\vartheta
 
 ### 二元关系
 
@@ -273,6 +274,10 @@ code content
 \end{array}\right| 
 \]
 ```
+
+**公式对齐与换行**
+
+使用aligned，&进行左对齐
 
 **效果预览**
 

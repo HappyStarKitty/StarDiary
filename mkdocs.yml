@@ -57,7 +57,11 @@ nav:
           - Note: Math/Probability_Theory/Note.md
       - 偏微分方程:
           - Index: Math/Partial_Differential_Equation/README.md
-          - Note: Math/Partial_Differential_Equation/Note.md
+          - Chap1: Math/Partial_Differential_Equation/chap1.md
+          - Chap2: Math/Partial_Differential_Equation/chap2.md
+          - Chap3: Math/Partial_Differential_Equation/chap3.md
+          - Chap4: Math/Partial_Differential_Equation/chap4.md
+          - Chap5: Math/Partial_Differential_Equation/chap5.md
   - 计科:
       - Index: CS/README.md
       - Language:
@@ -68,7 +72,8 @@ nav:
           - Python: 
               - Index: CS/Language/Python/README.md
               - Introduction: CS/Language/Python/introduction.md
-              - Data Analysis: CS/Language/Python/data_analysis.md
+              - Data Analysis: CS/Language/Python/data_analysis/README.md
+              - Package: CS/Language/Python/package.md
           - Assembly Language:
               - Index: CS/Language/Assembly_Language/README.md
               - Lesson Note: CS/Language/Assembly_Language/Lesson_Note.md
@@ -88,7 +93,17 @@ nav:
               - Part4: CS/Artificial_Intelligence/Basic/part4.md
               - Part5: CS/Artificial_Intelligence/Basic/part5.md
               - Part6: CS/Artificial_Intelligence/Basic/part6.md
-          - Network: CS/Artificial_Intelligence/Network/network.md
+          - Network: 
+              - Index: CS/Artificial_Intelligence/Network/README.md
+              - Chap1: CS/Artificial_Intelligence/Network/chap1.md
+              - Chap2: CS/Artificial_Intelligence/Network/chap2.md
+              - Chap3: CS/Artificial_Intelligence/Network/chap3.md
+              - Chap4: CS/Artificial_Intelligence/Network/chap4.md
+              - Chap5: CS/Artificial_Intelligence/Network/chap5.md
+              - Chap6: CS/Artificial_Intelligence/Network/chap6.md
+              - Chap7: CS/Artificial_Intelligence/Network/chap7.md
+              - Chap8: CS/Artificial_Intelligence/Network/chap8.md
+              - Chap9: CS/Artificial_Intelligence/Network/chap9.md
       - Data Structure: CS/Data_Structure/README.md
       - Computer System: CS/Computer_System/README.md
       - Object-oriented Programming: CS/Object-oriented_Programming/README.md
