@@ -4,41 +4,38 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="HappyStarKitty" name="author"/>
-<link href="https://happystarkitty.github.io/StarDiary/CS/Artificial_Intelligence/Network/network/" rel="canonical"/>
-<link href="../../Basic/part6/" rel="prev"/>
-<link href="../../../Data_Structure/" rel="next"/>
-<link href="../../../../assets/images/favicon.png" rel="icon"/>
+<link href="https://happystarkitty.github.io/StarDiary/Math/Partial_Differential_Equation/chap5/" rel="canonical"/>
+<link href="../chap4/" rel="prev"/>
+<link href="../../../CS/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.14" name="generator"/>
-<title>Network - StarDiary</title>
-<link href="../../../../assets/stylesheets/main.10ba22f1.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<title>Chap5 - StarDiary</title>
+<link href="../../../assets/stylesheets/main.10ba22f1.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../../../../css/heti.css" rel="stylesheet"/>
-<link href="../../../../css/timeline.css" rel="stylesheet"/>
-<link href="../../../../stylesheet/custom.css" rel="stylesheet"/>
-<link href="../../../../stylesheet/extra_changelog.css" rel="stylesheet"/>
+<link href="../../../css/heti.css" rel="stylesheet"/>
+<link href="../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../stylesheet/custom.css" rel="stylesheet"/>
+<link href="../../../stylesheet/extra_changelog.css" rel="stylesheet"/>
 <link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
-<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body data-md-color-accent="orange" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
-          Skip to content
-        </a>
 </div>
 <div data-md-component="announce">
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="StarDiary" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="StarDiary">
+<a aria-label="StarDiary" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="StarDiary">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -54,7 +51,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Network
+              Chap5
             
           </span>
 </div>
@@ -109,7 +106,7 @@
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../..">
+<a class="md-tabs__link" href="../../..">
         
   
     
@@ -118,8 +115,8 @@
 
       </a>
 </li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../Math/Calculus/">
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../Calculus/">
           
   
     
@@ -128,8 +125,8 @@
 
         </a>
 </li>
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../../../">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../CS/">
           
   
     
@@ -139,7 +136,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../Physics/">
+<a class="md-tabs__link" href="../../../Physics/">
           
   
     
@@ -149,7 +146,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../Engineering/">
+<a class="md-tabs__link" href="../../../Engineering/">
           
   
     
@@ -159,7 +156,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../Skills/">
+<a class="md-tabs__link" href="../../../Skills/">
           
   
     
@@ -169,7 +166,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../Tools/CSbegin/">
+<a class="md-tabs__link" href="../../../Tools/CSbegin/">
           
   
     
@@ -188,28 +185,28 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="StarDiary" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="StarDiary">
+<a aria-label="StarDiary" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="StarDiary">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
     StarDiary
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../..">
+<a class="md-nav__link" href="../../..">
 <span class="md-ellipsis">
     主页
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
 <span class="md-ellipsis">
     数学
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
             数学
@@ -218,7 +215,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_1" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../../Math/Calculus/">
+<a class="md-nav__link" href="../../Calculus/">
 <span class="md-ellipsis">
     微积分
   </span>
@@ -234,7 +231,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/Calculus/Note/">
+<a class="md-nav__link" href="../../Calculus/Note/">
 <span class="md-ellipsis">
     Note
   </span>
@@ -246,7 +243,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../../Math/Linear_Algebra/">
+<a class="md-nav__link" href="../../Linear_Algebra/">
 <span class="md-ellipsis">
     线性代数
   </span>
@@ -262,7 +259,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/Linear_Algebra/Note/">
+<a class="md-nav__link" href="../../Linear_Algebra/Note/">
 <span class="md-ellipsis">
     Note
   </span>
@@ -274,7 +271,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../../Math/Discrete_Mathematics/">
+<a class="md-nav__link" href="../../Discrete_Mathematics/">
 <span class="md-ellipsis">
     离散数学
   </span>
@@ -290,7 +287,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/Discrete_Mathematics/Note/">
+<a class="md-nav__link" href="../../Discrete_Mathematics/Note/">
 <span class="md-ellipsis">
     Note
   </span>
@@ -302,7 +299,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../../Math/Differential_Equation/">
+<a class="md-nav__link" href="../../Differential_Equation/">
 <span class="md-ellipsis">
     常微分方程
   </span>
@@ -318,7 +315,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/Differential_Equation/Note/">
+<a class="md-nav__link" href="../../Differential_Equation/Note/">
 <span class="md-ellipsis">
     Note
   </span>
@@ -330,7 +327,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../../Math/Numerical_Method/">
+<a class="md-nav__link" href="../../Numerical_Method/">
 <span class="md-ellipsis">
     数值计算方法
   </span>
@@ -346,7 +343,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/Numerical_Method/Note/">
+<a class="md-nav__link" href="../../Numerical_Method/Note/">
 <span class="md-ellipsis">
     Note
   </span>
@@ -358,7 +355,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_6" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../../Math/Complex_Function/">
+<a class="md-nav__link" href="../../Complex_Function/">
 <span class="md-ellipsis">
     复变函数与积分变换
   </span>
@@ -374,7 +371,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/Complex_Function/Note/">
+<a class="md-nav__link" href="../../Complex_Function/Note/">
 <span class="md-ellipsis">
     Note
   </span>
@@ -386,7 +383,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_7" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../../Math/Probability_Theory/">
+<a class="md-nav__link" href="../../Probability_Theory/">
 <span class="md-ellipsis">
     概率论与数理统计
   </span>
@@ -402,7 +399,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/Probability_Theory/Note/">
+<a class="md-nav__link" href="../../Probability_Theory/Note/">
 <span class="md-ellipsis">
     Note
   </span>
@@ -411,10 +408,10 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_8" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_8" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../../Math/Partial_Differential_Equation/">
+<a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     偏微分方程
   </span>
@@ -423,16 +420,45 @@
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_2_8_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_2_8_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_8">
 <span class="md-nav__icon md-icon"></span>
             偏微分方程
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/Partial_Differential_Equation/Note/">
+<a class="md-nav__link" href="../chap1/">
 <span class="md-ellipsis">
-    Note
+    Chap1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap2/">
+<span class="md-ellipsis">
+    Chap2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap3/">
+<span class="md-ellipsis">
+    Chap3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap4/">
+<span class="md-ellipsis">
+    Chap4
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Chap5
   </span>
 </a>
 </li>
@@ -442,19 +468,19 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../">
+<a class="md-nav__link" href="../../../CS/">
 <span class="md-ellipsis">
     计科
   </span>
 </a>
-<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             计科
@@ -477,7 +503,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_2_1" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../Language/C_Program/">
+<a class="md-nav__link" href="../../../CS/Language/C_Program/">
 <span class="md-ellipsis">
     C
   </span>
@@ -493,14 +519,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Language/C_Program/Note/">
+<a class="md-nav__link" href="../../../CS/Language/C_Program/Note/">
 <span class="md-ellipsis">
     Note
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Language/C_Program/Problem/">
+<a class="md-nav__link" href="../../../CS/Language/C_Program/Problem/">
 <span class="md-ellipsis">
     Problem
   </span>
@@ -512,7 +538,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../Language/Python/">
+<a class="md-nav__link" href="../../../CS/Language/Python/">
 <span class="md-ellipsis">
     Python
   </span>
@@ -528,16 +554,23 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Language/Python/introduction/">
+<a class="md-nav__link" href="../../../CS/Language/Python/introduction/">
 <span class="md-ellipsis">
     Introduction
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Language/Python/data_analysis/">
+<a class="md-nav__link" href="../../../CS/Language/Python/data_analysis/">
 <span class="md-ellipsis">
     Data Analysis
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../CS/Language/Python/package/">
+<span class="md-ellipsis">
+    Package
   </span>
 </a>
 </li>
@@ -547,7 +580,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_2_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../Language/Assembly_Language/">
+<a class="md-nav__link" href="../../../CS/Language/Assembly_Language/">
 <span class="md-ellipsis">
     Assembly Language
   </span>
@@ -563,14 +596,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Language/Assembly_Language/Lesson_Note/">
+<a class="md-nav__link" href="../../../CS/Language/Assembly_Language/Lesson_Note/">
 <span class="md-ellipsis">
     Lesson Note
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Language/Assembly_Language/Textbook_Note/">
+<a class="md-nav__link" href="../../../CS/Language/Assembly_Language/Textbook_Note/">
 <span class="md-ellipsis">
     Textbook Note
   </span>
@@ -580,7 +613,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Language/Matlab/">
+<a class="md-nav__link" href="../../../CS/Language/Matlab/">
 <span class="md-ellipsis">
     Matlab
   </span>
@@ -592,7 +625,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../Web_Development/">
+<a class="md-nav__link" href="../../../CS/Web_Development/">
 <span class="md-ellipsis">
     Web Development
   </span>
@@ -608,14 +641,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Web_Development/Frontend/">
+<a class="md-nav__link" href="../../../CS/Web_Development/Frontend/">
 <span class="md-ellipsis">
     Frontend
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Web_Development/Backend/">
+<a class="md-nav__link" href="../../../CS/Web_Development/Backend/">
 <span class="md-ellipsis">
     Backend
   </span>
@@ -624,10 +657,10 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../">
+<a class="md-nav__link" href="../../../CS/Artificial_Intelligence/">
 <span class="md-ellipsis">
     Artificial Intelligence
   </span>
@@ -636,7 +669,7 @@
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_4">
 <span class="md-nav__icon md-icon"></span>
             Artificial Intelligence
@@ -657,49 +690,49 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Basic/basic/">
+<a class="md-nav__link" href="../../../CS/Artificial_Intelligence/Basic/basic/">
 <span class="md-ellipsis">
     Index
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Basic/part1/">
+<a class="md-nav__link" href="../../../CS/Artificial_Intelligence/Basic/part1/">
 <span class="md-ellipsis">
     Part1
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Basic/part2/">
+<a class="md-nav__link" href="../../../CS/Artificial_Intelligence/Basic/part2/">
 <span class="md-ellipsis">
     Part2
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Basic/part3/">
+<a class="md-nav__link" href="../../../CS/Artificial_Intelligence/Basic/part3/">
 <span class="md-ellipsis">
     Part3
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Basic/part4/">
+<a class="md-nav__link" href="../../../CS/Artificial_Intelligence/Basic/part4/">
 <span class="md-ellipsis">
     Part4
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Basic/part5/">
+<a class="md-nav__link" href="../../../CS/Artificial_Intelligence/Basic/part5/">
 <span class="md-ellipsis">
     Part5
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Basic/part6/">
+<a class="md-nav__link" href="../../../CS/Artificial_Intelligence/Basic/part6/">
 <span class="md-ellipsis">
     Part6
   </span>
@@ -708,105 +741,85 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_4_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../CS/Artificial_Intelligence/Network/">
 <span class="md-ellipsis">
     Network
   </span>
+</a>
+<label class="md-nav__link" for="__nav_3_4_3" id="__nav_3_4_3_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
-<a class="md-nav__link md-nav__link--active" href="./">
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_3_4_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_4_3">
+<span class="md-nav__icon md-icon"></span>
+            Network
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../CS/Artificial_Intelligence/Network/chap1/">
 <span class="md-ellipsis">
-    Network
+    Chap1
   </span>
 </a>
-<nav aria-label="toc.title" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      toc.title
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#chap1-control-challenges-in-robotics-and-automation">
+<a class="md-nav__link" href="../../../CS/Artificial_Intelligence/Network/chap2/">
 <span class="md-ellipsis">
-      Chap1 Control challenges in robotics and automation
-    </span>
-</a>
-<nav aria-label="Chap1 Control challenges in robotics and automation" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#system-model">
-<span class="md-ellipsis">
-      System &amp; Model
-    </span>
+    Chap2
+  </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#introduction-automation">
+<a class="md-nav__link" href="../../../CS/Artificial_Intelligence/Network/chap3/">
 <span class="md-ellipsis">
-      Introduction: Automation
-    </span>
+    Chap3
+  </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#introduction-robotics">
+<a class="md-nav__link" href="../../../CS/Artificial_Intelligence/Network/chap4/">
 <span class="md-ellipsis">
-      Introduction: Robotics
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#chap2a-fuzzy-logic-introduction">
-<span class="md-ellipsis">
-      Chap2a Fuzzy Logic: Introduction
-    </span>
+    Chap4
+  </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#chap2b-neural-networks-introduction">
+<a class="md-nav__link" href="../../../CS/Artificial_Intelligence/Network/chap5/">
 <span class="md-ellipsis">
-      Chap2b Neural Networks: Introduction
-    </span>
+    Chap5
+  </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#chap3-mathematical-basics-of-fuzzy-logic">
+<a class="md-nav__link" href="../../../CS/Artificial_Intelligence/Network/chap6/">
 <span class="md-ellipsis">
-      Chap3 Mathematical basics of fuzzy logic
-    </span>
+    Chap6
+  </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#chap4-fuzzy-control">
+<a class="md-nav__link" href="../../../CS/Artificial_Intelligence/Network/chap7/">
 <span class="md-ellipsis">
-      Chap4 Fuzzy control
-    </span>
+    Chap7
+  </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#chap5-neuron-models">
+<a class="md-nav__link" href="../../../CS/Artificial_Intelligence/Network/chap8/">
 <span class="md-ellipsis">
-      Chap5 Neuron models
-    </span>
-</a>
-<nav aria-label="Chap5 Neuron models" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mcculloch-pitts-model">
-<span class="md-ellipsis">
-      Mcculloch-Pitts model
-    </span>
+    Chap8
+  </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#perceptron">
+<a class="md-nav__link" href="../../../CS/Artificial_Intelligence/Network/chap9/">
 <span class="md-ellipsis">
-      Perceptron
-    </span>
+    Chap9
+  </span>
 </a>
 </li>
 </ul>
@@ -815,25 +828,22 @@
 </ul>
 </nav>
 </li>
-</ul>
-</nav>
-</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Data_Structure/">
+<a class="md-nav__link" href="../../../CS/Data_Structure/">
 <span class="md-ellipsis">
     Data Structure
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Computer_System/">
+<a class="md-nav__link" href="../../../CS/Computer_System/">
 <span class="md-ellipsis">
     Computer System
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Object-oriented_Programming/">
+<a class="md-nav__link" href="../../../CS/Object-oriented_Programming/">
 <span class="md-ellipsis">
     Object-oriented Programming
   </span>
@@ -842,7 +852,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_8" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../Quantum_Computation/">
+<a class="md-nav__link" href="../../../CS/Quantum_Computation/">
 <span class="md-ellipsis">
     Quantum Computation
   </span>
@@ -860,7 +870,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_9" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../The_Missing_Semester/">
+<a class="md-nav__link" href="../../../CS/The_Missing_Semester/">
 <span class="md-ellipsis">
     The Missing Semester
   </span>
@@ -876,42 +886,42 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../The_Missing_Semester/Git/">
+<a class="md-nav__link" href="../../../CS/The_Missing_Semester/Git/">
 <span class="md-ellipsis">
     Git
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../The_Missing_Semester/Markdown/">
+<a class="md-nav__link" href="../../../CS/The_Missing_Semester/Markdown/">
 <span class="md-ellipsis">
     Markdown
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../The_Missing_Semester/Latex/">
+<a class="md-nav__link" href="../../../CS/The_Missing_Semester/Latex/">
 <span class="md-ellipsis">
     Latex
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../The_Missing_Semester/Typst/">
+<a class="md-nav__link" href="../../../CS/The_Missing_Semester/Typst/">
 <span class="md-ellipsis">
     Typst
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../The_Missing_Semester/Linux/">
+<a class="md-nav__link" href="../../../CS/The_Missing_Semester/Linux/">
 <span class="md-ellipsis">
     Linux
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../The_Missing_Semester/Misc/">
+<a class="md-nav__link" href="../../../CS/The_Missing_Semester/Misc/">
 <span class="md-ellipsis">
     Misc
   </span>
@@ -935,7 +945,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Misc/code/">
+<a class="md-nav__link" href="../../../CS/Misc/code/">
 <span class="md-ellipsis">
     Code
   </span>
@@ -950,7 +960,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../../Physics/">
+<a class="md-nav__link" href="../../../Physics/">
 <span class="md-ellipsis">
     物理
   </span>
@@ -968,7 +978,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../../Physics/College_Physics/">
+<a class="md-nav__link" href="../../../Physics/College_Physics/">
 <span class="md-ellipsis">
     大学物理（甲）
   </span>
@@ -984,21 +994,21 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Physics/College_Physics/electromagnetism/">
+<a class="md-nav__link" href="../../../Physics/College_Physics/electromagnetism/">
 <span class="md-ellipsis">
     电磁学
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Physics/College_Physics/optics/">
+<a class="md-nav__link" href="../../../Physics/College_Physics/optics/">
 <span class="md-ellipsis">
     光学
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Physics/College_Physics/quantum/">
+<a class="md-nav__link" href="../../../Physics/College_Physics/quantum/">
 <span class="md-ellipsis">
     量子物理学
   </span>
@@ -1010,7 +1020,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../../Physics/Theoretical_Mechanics/">
+<a class="md-nav__link" href="../../../Physics/Theoretical_Mechanics/">
 <span class="md-ellipsis">
     理论力学（甲）
   </span>
@@ -1026,21 +1036,21 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Physics/Theoretical_Mechanics/introduction/">
+<a class="md-nav__link" href="../../../Physics/Theoretical_Mechanics/introduction/">
 <span class="md-ellipsis">
     绪论
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Physics/Theoretical_Mechanics/motion/">
+<a class="md-nav__link" href="../../../Physics/Theoretical_Mechanics/motion/">
 <span class="md-ellipsis">
     运动
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Physics/Theoretical_Mechanics/force/">
+<a class="md-nav__link" href="../../../Physics/Theoretical_Mechanics/force/">
 <span class="md-ellipsis">
     力系
   </span>
@@ -1055,7 +1065,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../../Engineering/">
+<a class="md-nav__link" href="../../../Engineering/">
 <span class="md-ellipsis">
     工程
   </span>
@@ -1073,7 +1083,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../../Skills/">
+<a class="md-nav__link" href="../../../Skills/">
 <span class="md-ellipsis">
     技能
   </span>
@@ -1089,7 +1099,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Skills/PS/">
+<a class="md-nav__link" href="../../../Skills/PS/">
 <span class="md-ellipsis">
     PS
   </span>
@@ -1113,21 +1123,21 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Tools/CSbegin/">
+<a class="md-nav__link" href="../../../Tools/CSbegin/">
 <span class="md-ellipsis">
     计科入门
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Tools/resource/">
+<a class="md-nav__link" href="../../../Tools/resource/">
 <span class="md-ellipsis">
     相关资源
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Tools/tools/">
+<a class="md-nav__link" href="../../../Tools/tools/">
 <span class="md-ellipsis">
     实用工具
   </span>
@@ -1145,224 +1155,25 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="toc.title" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      toc.title
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#chap1-control-challenges-in-robotics-and-automation">
-<span class="md-ellipsis">
-      Chap1 Control challenges in robotics and automation
-    </span>
-</a>
-<nav aria-label="Chap1 Control challenges in robotics and automation" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#system-model">
-<span class="md-ellipsis">
-      System &amp; Model
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#introduction-automation">
-<span class="md-ellipsis">
-      Introduction: Automation
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#introduction-robotics">
-<span class="md-ellipsis">
-      Introduction: Robotics
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#chap2a-fuzzy-logic-introduction">
-<span class="md-ellipsis">
-      Chap2a Fuzzy Logic: Introduction
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#chap2b-neural-networks-introduction">
-<span class="md-ellipsis">
-      Chap2b Neural Networks: Introduction
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#chap3-mathematical-basics-of-fuzzy-logic">
-<span class="md-ellipsis">
-      Chap3 Mathematical basics of fuzzy logic
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#chap4-fuzzy-control">
-<span class="md-ellipsis">
-      Chap4 Fuzzy control
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#chap5-neuron-models">
-<span class="md-ellipsis">
-      Chap5 Neuron models
-    </span>
-</a>
-<nav aria-label="Chap5 Neuron models" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mcculloch-pitts-model">
-<span class="md-ellipsis">
-      Mcculloch-Pitts model
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#perceptron">
-<span class="md-ellipsis">
-      Perceptron
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="_1">模糊控制和人工神经网络<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
-<div class="admonition abstract 摘要">
-<p class="admonition-title">Abstract</p>
-<ul>
-<li>时间：<span>2024-2025<span class="heti-spacing"> </span></span>冬学期</li>
-<li>教师：马志鹏</li>
-<li>学分：2.0</li>
-<li>教材：/</li>
-</ul>
-</div>
-<h2 id="chap1-control-challenges-in-robotics-and-automation">Chap1 Control challenges in robotics and automation<a class="headerlink" href="#chap1-control-challenges-in-robotics-and-automation" title="Permanent link">¶</a></h2>
-<h3 id="system-model">System &amp; Model<a class="headerlink" href="#system-model" title="Permanent link">¶</a></h3>
-<h3 id="introduction-automation">Introduction: Automation<a class="headerlink" href="#introduction-automation" title="Permanent link">¶</a></h3>
-<p>Closed-loop control</p>
-<p>Open-loop control(non-feedback control)</p>
-<h3 id="introduction-robotics">Introduction: Robotics<a class="headerlink" href="#introduction-robotics" title="Permanent link">¶</a></h3>
-<p>mechanical subsystems</p>
-<ul>
-<li>Vehicle or platform(coarse positioning)</li>
-<li>Manipulator(fine positioning)</li>
-<li>Endeffector</li>
-</ul>
-<p>characterized by</p>
-<ul>
-<li><span>Kinematics/Dynamics(<span class="heti-spacing"> </span></span>运动学与动力学<span><span class="heti-spacing"> </span>)</span></li>
-<li><span>Actuators/Sensors(<span class="heti-spacing"> </span></span>驱动器与传感器<span><span class="heti-spacing"> </span>)</span></li>
-<li>Control system</li>
-<li>SW/User interface</li>
-</ul>
-<h2 id="chap2a-fuzzy-logic-introduction">Chap2a Fuzzy Logic: Introduction<a class="headerlink" href="#chap2a-fuzzy-logic-introduction" title="Permanent link">¶</a></h2>
-<p><span>The fuzzy logic(FL) is an extension of the binary logic(<span class="heti-spacing"> </span></span>二元逻辑<span><span class="heti-spacing"> </span>).</span></p>
-<p>The crucial step towards the application of fuzzy logic to technical systems: to allow variables with linguistic(qualitative, fuzzy) values, to map them onto a numerical(quatitative) range and to process them at the numberical level automatically.</p>
-<p><span>The major premise of fuzzy theory is the(for a human natural) incompatibility of high complexity and high precision(<span class="heti-spacing"> </span></span>高复杂性和高精度的不可兼容性<span><span class="heti-spacing"> </span>).</span></p>
-<p>FL describes logical systems in the mathmatical sense, with the aim of implementing models representing human decision making(IF-THEN rule base)</p>
-<p><span>In a fuzzy set, a so-called membership function(<span class="heti-spacing"> </span></span>隶属度函数<span><span class="heti-spacing"> </span>) assigns a numerical value to each element to the set, which is the degree of belonging to the set.</span></p>
-<p>Membership degree and probablity are different in nature and have absolutely no correlation.</p>
-<h2 id="chap2b-neural-networks-introduction">Chap2b Neural Networks: Introduction<a class="headerlink" href="#chap2b-neural-networks-introduction" title="Permanent link">¶</a></h2>
-<p><span>In associative learning, which provides a learning model for the supervised trained(<span class="heti-spacing"> </span></span>有监督训练<span><span class="heti-spacing"> </span>) artificial NN, a new response becomes associated with a particular stimulus</span></p>
-<ul>
-<li>instrumental conditioning
-  learning the relationship between a stimulus(event) and a reaction </li>
-<li>classical conditioning
-  learning the relationships between two different events </li>
-</ul>
-<p>Structure and connnetion strengths(weights) of an ANN determine its behavior and represent the degrees of freedom during optimization.</p>
-<h2 id="chap3-mathematical-basics-of-fuzzy-logic">Chap3 Mathematical basics of fuzzy logic<a class="headerlink" href="#chap3-mathematical-basics-of-fuzzy-logic" title="Permanent link">¶</a></h2>
-<p>Given μ is a fuzzy set in G, then 
-{x| x∈G,μ(x)&gt;0} is called support of fuzzy set μ
-{x| x∈G,μ(x)=1} is called kernel of fuzzy set μ</p>
-<p>fuzzy-similar: have the same kernal
-strongly fuzzy-similar: have the same kernal and the same support</p>
-<p>And link(intersection)</p>
-<div class="arithmatex">\[
-\mu_1 \cap \mu_2:G \rightarrow[0,1], with (\mu_1 \cap \mu_2)(x) = MIN\{\mu_1 (x) + \mu_2(x)\}
-\]</div>
-<p>Or link(union)</p>
-<div class="arithmatex">\[
-\mu_1 \cup \mu_2 : G\rightarrow[0,1] mit (\mu_1 \cap \mu_2)(x) = MAX \{\mu_1 (x), \mu_2(x)\}
-\]</div>
-<p>Special operators: Modifiers
-- Concentration operator CON
-- Dilatation operator DIL</p>
-<p>fuzzy relations
-$$
-R: G_1 \times G_2 \rightarrow [0,1]
-$$</p>
-<div class="arithmatex">\[
-(\mu_1 \times \mu_2)(x,y)= MIN\{ \mu_1(x), \mu_2(y)\}, with (x,y) \in G_1 \times G_2
-\]</div>
-<div class="arithmatex">\[
-\mu_1 \times \mu_2 =\mu_1^T \circ \mu_2
-\]</div>
-<p>product calculation is replaced by the MIN opertor and the addition is replaced by the MAX operatior</p>
-<div class="arithmatex">\[
-\mu_{R \circ S}(x, z)= MAX_{y \in G_2} {MIN \{\mu_R(x,y), \mu_S(y,z)}\}, with (x,z) \in G_1 \times G_3
-\]</div>
-<p>fuzzy inference</p>
-<div class="arithmatex">\[
-\mu_2(y) = MAX_{x \in G_1} \{ MIN{\mu_1 (x), \mu_R(x,y)}\} = \mu_1 \circ R, y\in G_2
-\]</div>
-<p>inference with several rules</p>
-<ol>
-<li>Construct implication relation for each rule i</li>
-</ol>
-<div class="arithmatex">\[
-\mu_{R_i}(x,y) = I(\mu_{A_i}(x), \mu_{B_i}(y))
-\]</div>
-<ol>
-<li>Aggregate relations <span class="arithmatex">\(R_i\)</span> into one</li>
-</ol>
-<div class="arithmatex">\[
-\mu_R(x,y) = aggr(\mu_{R_i}(x,y))
-\]</div>
-<p>The aggr operator is the minimum for implications and the maximum for junctions</p>
-<ol>
-<li>Use relational composition to derive B' from A'</li>
-</ol>
-<div class="arithmatex">\[
-B^\prime = A^\prime \circ R
-\]</div>
-<h2 id="chap4-fuzzy-control">Chap4 Fuzzy control<a class="headerlink" href="#chap4-fuzzy-control" title="Permanent link">¶</a></h2>
-<p><img alt="" src="../figures/chap4_fc.png"/></p>
-<p>A fuzzified signal is an n tuple of membership degrees; n is the number of linguistic </p>
-<h2 id="chap5-neuron-models">Chap5 Neuron models<a class="headerlink" href="#chap5-neuron-models" title="Permanent link">¶</a></h2>
-<h3 id="mcculloch-pitts-model">Mcculloch-Pitts model<a class="headerlink" href="#mcculloch-pitts-model" title="Permanent link">¶</a></h3>
-<p>MCP network is a directed graph that contains a set of neurons.</p>
-<h3 id="perceptron">Perceptron<a class="headerlink" href="#perceptron" title="Permanent link">¶</a></h3>
-<p>XOR and identity can not be computed by a singel perceptron.</p>
-<p>A perceptron can only compute linearly separable functions of n binary arguments.</p>
+<h1>Chap5</h1>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年11月28日 00:10:51</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年12月16日 21:03:02</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年11月28日 00:10:51</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年12月16日 21:03:03</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>
@@ -1445,11 +1256,11 @@ B^\prime = A^\prime \circ R
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../../../assets/javascripts/bundle.bd41221c.min.js"></script>
-<script src="../../../../js/katex.js"></script>
-<script src="../../../../js/toc.js"></script>
-<script src="../../../../js/anchor.js"></script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.bd41221c.min.js"></script>
+<script src="../../../js/katex.js"></script>
+<script src="../../../js/toc.js"></script>
+<script src="../../../js/anchor.js"></script>
 <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
 <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
 </body>
