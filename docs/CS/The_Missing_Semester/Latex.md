@@ -175,8 +175,33 @@ comment content
 ### 插入代码
 
 ```latex
-\usepackage{listings}
-\begin{lstlisting}
+\usepackage{listings}[language=python]
+\usepackage{color}
+
+%代码高亮设置
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+%插入python代码
+\begin{lstlisting}[language=python]
 code content
 \end{lstlisting}
 ```
@@ -194,6 +219,8 @@ code content
 - 上标：^
 - 上划线：\overline
 - 下划线：\underline
+- 横线上标：\bar
+- 尖角上标：\hat
 - 分数线：\frac
 - 导数：\prime
 - 花体：\mathscr
@@ -211,7 +238,8 @@ code content
 |求和|\sum|$\sum$|连乘|\prod|$\prod$
 |拉普拉斯算子|\Delta|$\Delta$|哈密顿算子|\nabla|$\nabla$|
 |约等于|\approx|$\approx$|恒等于|\equiv|$\equiv$|
-波浪号|\sim|$\sim$|成正比|\varpropto|$\varpropto$|
+波浪号|\sim|$\sim$|成正比|不等于|\ne|$\ne$
+|正比于|\varpropto|$\varpropto$|
 
 ### 括号等
 
@@ -242,6 +270,7 @@ code content
 |$\tau$|\tau|
 |$\eta$|\eta|
 |$\theta$|\theta|$\Theta$|\Theta|$\vartheta$|\vartheta
+|$\upsilon$|\upsilon
 
 ### 二元关系
 
@@ -255,8 +284,10 @@ code content
 |      $\cap$      |      \cap      |    $\cup$    |    \cup    |
 |     $\forall$     |     \forall     |   $\exists$   |   \exists   |
 |      $\vee$      |      \vee      |   $\wedge$   |   \wedge   |
-|   $\rightarrow$   |   \rightarrow   | $\leftarrow$ | \leftarrow |
-| $\leftrightarrow$ | \leftrightarrow |    $\neg$    |    \neg    |
+|   $\rightarrow$   |   \rightarrow   | $\Rightarrow$ | \Rightarrow |
+|$\leftarrow$|\leftarrow|$\Leftarrow$|\Leftarrow
+| $\leftrightarrow$ | \leftrightarrow|$\Leftrightarrow$|\Leftrightarrow|
+ |    $\neg$    |    \neg    |$\approx$|\approx|
 |      $\prec$      |      \prec      |    $\succ$    |    \succ    |
 |     $\preceq$     |     \preceq     |   $\succeq$   |   \succeq   |
 |$\gg$|\gg|$\ll$|\ll

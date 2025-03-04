@@ -4,21 +4,26 @@
 
 ## 常用软件
 
-### CS相关
-
-#### VScode
+### VScode
 
 功能强大的代码编辑器
 记得设置自动保存
 分屏预览很方便
 
-##### 插件
+#### 插件
 
 - Markdown Preview
   Markdown 预览
 - Live Server Preview
   HTML 预览
 - Office Viewer
+
+#### 快捷键
+
+- Ctrl+]
+行前添加空格
+- Ctrl+Shift+`
+打开终端
 
 ### 工具软件
 - Obsidian

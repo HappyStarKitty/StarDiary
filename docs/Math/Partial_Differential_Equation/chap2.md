@@ -77,6 +77,7 @@ $$
 u(x,t)=\frac{1}{2}[\varphi(x+at) +\varphi(x-at)] +\frac{1}{2a}\int_{x-at}^{x+at}\varphi(\xi)d \xi + \frac{1}{2a}\iint_G f(\xi,\tau)d\xi d\tau
 $$
 
+其中区域G为$(\xi,\tau)$平面上过点$(x,t)$的两条特征线与$\xi$轴所围成的三角形区域
 ## 二维与三维波动方程的初值问题
 
 ### 球对称情况

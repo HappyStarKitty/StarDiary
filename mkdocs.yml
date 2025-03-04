@@ -4,6 +4,7 @@ site_author: HappyStarKitty
 theme:
   name: material
   custom_dir: overrides
+  favicon: https://happystarkitty.github.io/avatar/avatar.jpg
   palette:
     # 日间模式
     - scheme: default
@@ -32,8 +33,8 @@ theme:
     - content.action.edit
 
 nav:
-  - 主页: README.md
-  - 数学:
+  - Home: README.md
+  - Math:
       - 微积分:
           - Index: Math/Calculus/README.md
           - Note: Math/Calculus/Note.md
@@ -42,13 +43,28 @@ nav:
           - Note: Math/Linear_Algebra/Note.md
       - 离散数学:
           - Index: Math/Discrete_Mathematics/README.md
-          - Note: Math/Discrete_Mathematics/Note.md
+          - Chap1: Math/Discrete_Mathematics/chap1.md
+          - Chap2: Math/Discrete_Mathematics/chap2.md
+          - Chap3: Math/Discrete_Mathematics/chap3.md
+          - Chap4: Math/Discrete_Mathematics/chap4.md
+          - Chap5: Math/Discrete_Mathematics/chap5.md
+          - Chap6: Math/Discrete_Mathematics/chap6.md
+          - Chap7: Math/Discrete_Mathematics/chap7.md
+          - Chap8: Math/Discrete_Mathematics/chap8.md
+          - Chap9: Math/Discrete_Mathematics/chap9.md
+          - Chap10: Math/Discrete_Mathematics/chap10.md
       - 常微分方程:
           - Index: Math/Differential_Equation/README.md
           - Note: Math/Differential_Equation/Note.md
       - 数值计算方法:
           - Index: Math/Numerical_Method/README.md
-          - Note: Math/Numerical_Method/Note.md
+          - Chap0: Math/Numerical_Method/chap0.md
+          - Chap1: Math/Numerical_Method/chap1.md
+          - Chap2: Math/Numerical_Method/chap2.md
+          - Chap3: Math/Numerical_Method/chap3.md
+          - Chap4: Math/Numerical_Method/chap4.md
+          - Chap5: Math/Numerical_Method/chap5.md
+          - Chap6: Math/Numerical_Method/chap6.md
       - 复变函数与积分变换:
           - Index: Math/Complex_Function/README.md
           - Note: Math/Complex_Function/Note.md
@@ -62,7 +78,7 @@ nav:
           - Chap3: Math/Partial_Differential_Equation/chap3.md
           - Chap4: Math/Partial_Differential_Equation/chap4.md
           - Chap5: Math/Partial_Differential_Equation/chap5.md
-  - 计科:
+  - CS:
       - Index: CS/README.md
       - Language:
           - C:
@@ -104,7 +120,12 @@ nav:
               - Chap7: CS/Artificial_Intelligence/Network/chap7.md
               - Chap8: CS/Artificial_Intelligence/Network/chap8.md
               - Chap9: CS/Artificial_Intelligence/Network/chap9.md
-      - Data Structure: CS/Data_Structure/README.md
+              - Addition: CS/Artificial_Intelligence/Network/addition.md
+      - Data Structure: 
+          - Index: CS/Data_Structure/README.md
+          - Chap1: CS/Data_structure/chap1.md
+          - Chap2: CS/Data_Structure/chap2.md
+          - Chap3: CS/Data_Structure/chap3.md
       - Computer System: CS/Computer_System/README.md
       - Object-oriented Programming: CS/Object-oriented_Programming/README.md
       - Quantum Computation:
@@ -119,7 +140,7 @@ nav:
           - Misc: CS/The_Missing_Semester/Misc.md
       - Misc:
           - Code: CS/Misc/code.md
-  - 物理:
+  - Phy:
       - Index: Physics/README.md
       - 大学物理（甲）: 
         - Index: Physics/College_Physics/README.md
@@ -131,12 +152,24 @@ nav:
         - 绪论: Physics/Theoretical_Mechanics/introduction.md
         - 运动: Physics/Theoretical_Mechanics/motion.md
         - 力系: Physics/Theoretical_Mechanics/force.md
-  - 工程:
+      - 材料力学（乙）:
+        - Chap1: Physics/Mechnics_Of_Materials/chap1.md
+  - EE:
       - Index: Engineering/README.md
-  - 技能:
+      - 电工电子学: 
+        - Chap1 电路和电路元件: Engineering/Electrical_And_Electronics/chap1.md
+      - 信号分析与处理:
+        - Chap1 绪论: Engineering/Signal_Analysis_And_Processing/chap1.md
+        - Chap2 连续信号的分析: Engineering/Signal_Analysis_And_Processing/chap2.md
+        - Chap3 离散信号的分析: Engineering/Signal_Analysis_And_Processing/chap3.md
+        - Chap4 信号处理基础: Engineering/Signal_Analysis_And_Processing/chap4.md
+        - Chap5 滤波器: Engineering/Signal_Analysis_And_Processing/chap5.md
+  - AA:
+      - Index: AA/README.md
+  - Skills:
       - Index: Skills/README.md
-      - PS: Skills/PS.md
-  - 工具:
+
+  - Tools:
       - 计科入门: Tools/CSbegin.md
       - 相关资源: Tools/resource.md
       - 实用工具: Tools/tools.md

@@ -6,6 +6,10 @@
     - Fuzzy relations
     - Linguistic variables
 
+## Basics of fuzzy logic
+
+### Fuzzy information and Fuzzy sets
+
 Given μ is a fuzzy set in G, then 
 {x| x∈G,μ(x)>0} is called support of fuzzy set μ
 {x| x∈G,μ(x)=1} is called kernel of fuzzy set μ
