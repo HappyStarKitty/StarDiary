@@ -1970,12 +1970,10 @@
 <article class="md-content__inner md-typeset">
 <h1 id="chap1"><span>Chap1<span class="heti-spacing"> </span></span>自动控制的一般概念<a class="headerlink" href="#chap1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <h2 id="_1">自动控制的基本原理与方式<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<div class="admonition note 反馈">
-<p class="admonition-title">Note</p>
-<p>反馈：取出输出量送回输入端，并与输入信号相比较产生偏差信号；反馈信号与输入信号相减，使得产生偏差越来越小，称为负反馈，反之则为正反馈</p>
-</div>
-<div class="admonition note 反馈控制系统基本组成">
-<p class="admonition-title">Note</p>
+<p>反馈：取出输出量送回输入端，并与输入信号相比较产生偏差信号</p>
+<p>反馈信号与输入信号相减，使得产生偏差越来越小，称为负反馈，反之则为正反馈</p>
+<div class="admonition note">
+<p class="admonition-title">反馈控制系统基本组成</p>
 <ul>
 <li>测量元件：检测被控制的物理量，非电量一般转化为电量</li>
 <li>给定元件：给出与期望的被控量相对应的系统输入量</li>
@@ -1986,8 +1984,8 @@
 <img alt="无法显示" src="../figures/chap1/fankui.png"/></li>
 </ul>
 </div>
-<div class="admonition note 基本概念">
-<p class="admonition-title">Note</p>
+<div class="admonition note">
+<p class="admonition-title">基本概念</p>
 <ul>
 <li>前向通路：信号从输入端沿箭头方向到达输出端的传输通路</li>
 <li>主反馈通路：系统输出量经测量元件反馈到输入端的传输通路</li>
@@ -1997,13 +1995,15 @@
 </ul>
 </div>
 <p>加到反馈控制系统上的外作用：有用输入，扰动</p>
-<div class="admonition note 基本控制方式">
-<p class="admonition-title">Note</p>
+<div class="admonition note">
+<p class="admonition-title">基本控制方式</p>
 <ul>
 <li>反馈控制方式</li>
-<li>开环控制方式</li>
+<li>开环控制方式<ul>
 <li>按给定量控制的开环控制</li>
 <li>按扰动控制的开环控制，又称顺馈控制</li>
+</ul>
+</li>
 <li>复合控制方式</li>
 </ul>
 </div>
@@ -2013,16 +2013,24 @@
 <div class="arithmatex">\[a_0\frac{d^n}{dt^n}c(t)+a_1\frac{d^{n-1}}{dt^{n-1}}c(t)+...+a_{n-1}\frac{d}{dt}c(t)+a_nc(t)=b_0\frac{d^n}{dt^n}r(t)+b_1\frac{d^{n-1}}{dt^{n-1}}r(t)+...+b_{n-1}\frac{d}{dt}r(t)+b_nr(t)\]</div>
 <p>其中，<span>c(t)<span class="heti-spacing"> </span></span>为被控量，<span>r(t)<span class="heti-spacing"> </span></span>为系统输入量</p>
 <p>系数为常数时，为定常系统；系统随时间变化，为时变系统</p>
-<div class="admonition note 线性定常连续系统">
-<p class="admonition-title">Note</p>
-<p>根据输入量的变化规律分类
-- 恒值控制系统
-  + 输入量为常值，要求被控量等于一个常值，又称为调节器
-- 随动系统
-  + 输入量为预先未知的时变函数，要求被控量以尽可能小的误差跟随，又称跟踪系统
-  + 如果被控量为机械位置或其导数，又称伺服系统
-- 程序控制系统
-  + 输入量为预先已知的时变函数，要求被控量跟随</p>
+<div class="admonition note">
+<p class="admonition-title">线性定常连续系统</p>
+<p>根据输入量的变化规律分类</p>
+<ul>
+<li>恒值控制系统<ul>
+<li>输入量为常值，要求被控量等于一个常值，又称为调节器</li>
+</ul>
+</li>
+<li>随动系统<ul>
+<li>输入量为预先未知的时变函数，要求被控量以尽可能小的误差跟随，又称跟踪系统</li>
+<li>如果被控量为机械位置或其导数，又称伺服系统</li>
+</ul>
+</li>
+<li>程序控制系统<ul>
+<li>输入量为预先已知的时变函数，要求被控量跟随</li>
+</ul>
+</li>
+</ul>
 </div>
 <h3 id="_4">线性定常离散控制系统<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>用差分方程描述</p>
@@ -2034,13 +2042,13 @@
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月13日 17:06:55</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月14日 15:14:33</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月13日 17:06:55</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月14日 15:14:33</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>
@@ -2125,10 +2133,9 @@
 </div>
 <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
 <script src="../../../assets/javascripts/bundle.bd41221c.min.js"></script>
-<script src="../../../js/katex.js"></script>
+<script src="../../../js/mathjax.js"></script>
 <script src="../../../js/toc.js"></script>
 <script src="../../../js/anchor.js"></script>
-<script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
-<script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+<script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>

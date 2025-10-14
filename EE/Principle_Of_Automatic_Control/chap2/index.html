@@ -1947,8 +1947,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="chap2"><span>Chap2<span class="heti-spacing"> </span></span>控制系统的数学模型<a class="headerlink" href="#chap2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
-<div class="admonition note 数学模型">
-<p class="admonition-title">Note</p>
+<div class="admonition note">
+<p class="admonition-title">数学模型</p>
 <ul>
 <li>时域模型：微分方程</li>
 <li>复域模型：传递函数</li>
@@ -1957,8 +1957,8 @@
 <p><img alt="无法显示" src="../figures/chap2/models.png"/></p>
 </div>
 <h2 id="_1">控制系统的时域数学模型<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<div class="admonition note 非线性特性">
-<p class="admonition-title">Note</p>
+<div class="admonition note">
+<p class="admonition-title">非线性特性</p>
 <table>
 <thead>
 <tr>
@@ -1976,15 +1976,15 @@
 </tbody>
 </table>
 </div>
-<div class="admonition note 线性化方法">
-<p class="admonition-title">Note</p>
+<div class="admonition note">
+<p class="admonition-title">线性化方法</p>
 <ol>
 <li>忽略弱非线性因素</li>
 <li>小偏差法（切线法，增量线性化法）</li>
 </ol>
 </div>
-<div class="admonition note 小偏差法">
-<p class="admonition-title">Note</p>
+<div class="admonition note">
+<p class="admonition-title">小偏差法</p>
 <p>假设：控制系统调节过程中，各个元件输入量和输出量只是在平衡点附近作微小变化</p>
 <p><img alt="无法显示" src="../figures/chap2/xiao_pian_cha.png"/></p>
 <p>在平衡点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((x_0,y_0)\)</span><span class="heti-spacing"> </span></span>处连续可微，则可将函数在平衡点附近展开成泰勒级数</p>
@@ -1995,9 +1995,53 @@
 <p>略去增量符号，<span>y=kx<span class="heti-spacing"> </span></span>即为非线性元件的线性化数学模型</p>
 </div>
 <h2 id="_2">控制系统的复数域数学模型<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<div class="admonition note 传递函数">
-<p class="admonition-title">Note</p>
-<p>线性定常系统的传递函数，定义在零初始条件下，系统输出量的拉氏变换与输入量的拉氏变换之比</p>
+<div class="admonition info">
+<p class="admonition-title">传递函数</p>
+<p><strong>线性定常系统的传递函数，定义在零初始条件下，系统输出量的拉氏变换与输入量的拉氏变换之比</strong></p>
+<p>零初始条件：在零时刻，系统的输入、输出及其各阶导数均为零</p>
+<p>设线性定常系统由下列<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>阶线性常微分方程描述</p>
+<div class="arithmatex">\[a_0\frac{d^n}{dt^n}c(t)+a_1\frac{d^{n-1}}{dt^{n-1}}c(t)+...+a_{n-1}\frac{d}{dt}c(t)+a_nc(t)=b_0\frac{d^n}{dt^n}r(t)+b_1\frac{d^{n-1}}{dt^{n-1}}r(t)+...+b_{n-1}\frac{d}{dt}r(t)+b_nr(t)\]</div>
+<p>对上式分别求拉氏变换，令<span><span class="heti-spacing"> </span><span class="arithmatex">\(C(s)=L[c(t)],R(s)=L[r(t)]\)</span></span></p>
+<div class="arithmatex">\[[a_0s^n+a_a s^{n-1}+...+a_{n-1}s+a_n]C(s)=[b_0s^m+b_1 s^{m-1}+...+b_{m-1}s+b_m]R(s)\]</div>
+<p>系统传递函数为</p>
+<div class="arithmatex">\[\frac{C(s)}{R(s)}=\frac{b_0s^m+b_1s^{m-1}+...+b_m}{a_ss^n+a_1s^{n-1}+...+a_n}=\frac{M(s)}{N(s)}\]</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">首<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>标准型</p>
+<div class="arithmatex">\[G(s)=\frac{b_0(s-z_1)(s-z_2)...(s-z_m)}{a_0(s-p_1)(s-p_2)...(s-p_n)}=K^*\frac{\prod_{i=1}^m (s-z_i)}{\prod_{j=1}^n(s-p_j)}\]</div>
+<ul>
+<li><span><span class="arithmatex">\(z_i(i=1,2,...m)\)</span><span class="heti-spacing"> </span></span>为分子多项式的零点，称为传递函数的零点</li>
+<li><span><span class="arithmatex">\(p_j(j=1,2...n)\)</span><span class="heti-spacing"> </span></span>为分母多项式的零点，称为传递函数的极点</li>
+<li><span><span class="arithmatex">\(K^*\)</span><span class="heti-spacing"> </span></span>称为传递系数或根轨迹增益</li>
+<li>上式使用零点和极点表示传递函数，称为首<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>标准型，多用于根轨迹法</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">尾<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>标准型</p>
+<div class="arithmatex">\[G(s)=\frac{b_m (\tau_1s+1)(\tau_2^2 s^2+2\xi \tau_2 s+1)...(\tau_i s+1)}{a_n(T_1s+1)(T_2^2 s^2+2\xi T_2s+1)...(T_j s+1)}\]</div>
+<ul>
+<li>一次因子对应实数零极点，二次因子对应共轭复数零极点</li>
+<li><span><span class="arithmatex">\(\tau_i\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(T_j\)</span><span class="heti-spacing"> </span></span>称为时间常数</li>
+<li><span><span class="arithmatex">\(k=b_m/a_n=K^*\prod_{i=1}^m(-z_i)/\prod_{j=1}^n (-p_j)\)</span><span class="heti-spacing"> </span></span>称为增益或传递系数<span><span class="heti-spacing"> </span>S</span></li>
+<li>上式称为尾<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>标准型，多用于频率法</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">性质</p>
+<ol>
+<li>传递函数与微分方程一一对应</li>
+<li>传递函数表征系统本身的动态特性；传递函数只取决于系统本身的结构和参数，而与输入和初始条件等外部因素无关</li>
+<li>实际系统<span><span class="heti-spacing"> </span><span class="arithmatex">\(m\le n\)</span></span>，分子分母多项式系数均为实数</li>
+<li>有确定的零、极点分布图与传递函数对应</li>
+</ol>
+</div>
+<div class="admonition note">
+<p class="admonition-title">零点、极点与系统相应的关系</p>
+<ol>
+<li>极点决定了系统自由运动的固有属性</li>
+<li>极点位置决定了自由运动模态的收敛性，从而决定了模态的稳定性，并影响了系统响应的快速性</li>
+<li>零点决定了运动模态的比例</li>
+</ol>
 </div>
 <h2 id="_3">控制系统的结构图与信号流图<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h2 id="_4">控制系统建模实例<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
@@ -2006,13 +2050,13 @@
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月13日 17:06:55</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月14日 15:14:33</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月13日 17:06:55</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月14日 15:14:33</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>
@@ -2097,10 +2141,9 @@
 </div>
 <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
 <script src="../../../assets/javascripts/bundle.bd41221c.min.js"></script>
-<script src="../../../js/katex.js"></script>
+<script src="../../../js/mathjax.js"></script>
 <script src="../../../js/toc.js"></script>
 <script src="../../../js/anchor.js"></script>
-<script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
-<script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+<script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>

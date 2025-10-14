@@ -628,6 +628,13 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_13">
 <span class="md-ellipsis">
+      拉氏变换的应用
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+<span class="md-ellipsis">
       重要的拉氏变换
     </span>
 </a>
@@ -2085,6 +2092,13 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_13">
 <span class="md-ellipsis">
+      拉氏变换的应用
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+<span class="md-ellipsis">
       重要的拉氏变换
     </span>
 </a>
@@ -2107,82 +2121,121 @@
 <div class="arithmatex">\[f(t)=L^{-1}[F(s)]\]</div>
 <h2 id="_3">拉氏变换的基本性质<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_4">线性性质<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition note 线性性质">
-<p class="admonition-title">Note</p>
+<div class="admonition info">
+<p class="admonition-title">线性性质</p>
 <div class="arithmatex">\[L[\alpha_1f_1(t)+\alpha_2f_2(t)]=\alpha_1F_1(s)+\alpha_2F_2(s)\]</div>
 <div class="arithmatex">\[L^{-1}[\alpha_1F_1(s)+\alpha_2F_s(s)]=\alpha_1f_1(t)+\alpha_2f_2(t)\]</div>
 </div>
 <h3 id="_5">平移性质<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition note 时移性质">
-<p class="admonition-title">Note</p>
+<div class="admonition info">
+<p class="admonition-title">时移性质</p>
 <div class="arithmatex">\[L(f(t-t_0))=e^{-st_0}F(s)\]</div>
 <div class="arithmatex">\[L^{-1}[e^{-st_0}F(s)]=f(t-t_0) \quad(t_0&gt;0)\]</div>
 <div class="arithmatex">\[L^{-1}[e^{-st_0}]F(s)=f(t-t_0)u(t-t_0) \quad(t_0&lt;0)\]</div>
 </div>
-<div class="admonition note 频移性质">
-<p class="admonition-title">Note</p>
+<div class="admonition info">
+<p class="admonition-title">频移性质</p>
 <div class="arithmatex">\[L[e^{s_0 t f(t)}]=F(s-s_0)\]</div>
 </div>
 <h3 id="_6">微分性质<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition note 象原函数的微分性质">
-<p class="admonition-title">Note</p>
+<div class="admonition info">
+<p class="admonition-title">象原函数的微分性质</p>
 <p>若<span><span class="heti-spacing"> </span><span class="arithmatex">\(L[f(t)]=F(s)\)</span></span>，且<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f^{\prime}(t)\)</span><span class="heti-spacing"> </span></span>也是原函数，则</p>
 <div class="arithmatex">\[L[f'(t)]=sF(s)-f(0^{+})\]</div>
+<p>可类推到原函数<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>阶导数拉氏变换</p>
+<div class="arithmatex">\[L[f^{(n)}(t)]=s^nF(s)-s^{n-1}f(0)-s^{n-2}f^\prime(0)-...-f^{(n-1)}(0)\]</div>
+<p>若<span class="heti-skip"><span class="heti-spacing"> </span>f(t)<span class="heti-spacing"> </span></span>及其各阶导数的初始值都为零，则</p>
+<div class="arithmatex">\[L[f^{(n)}(t)]=s^nF(s)\]</div>
 </div>
-<div class="admonition note 象函数的微分性质">
-<p class="admonition-title">Note</p>
+<div class="admonition info">
+<p class="admonition-title">象函数的微分性质</p>
 <div class="arithmatex">\[L[(-t)^n f(t)]=F^{(n)}(s), \quad n=0,1,2,...\]</div>
 </div>
 <h3 id="_7">积分性质<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition note 象原函数的积分性质">
-<p class="admonition-title">Note</p>
+<div class="admonition note">
+<p class="admonition-title">象原函数的积分性质</p>
 <p>若<span><span class="heti-spacing"> </span><span class="arithmatex">\(L[f(t)]=F(s)\)</span></span>，则</p>
 <div class="arithmatex">\[L[\int_0^t f(\tau)\mathrm{d}\tau]=\frac{1}{s}F(s)\]</div>
+<p>若原函数<span class="heti-skip"><span class="heti-spacing"> </span>f(t)<span class="heti-spacing"> </span></span>及其各重积分初始值都为零，则</p>
+<div class="arithmatex">\[L[\int\int ... \int f(t)\mathrm{d}t^n]=\frac{1}{s^n}F(s)\]</div>
 </div>
-<div class="admonition note 象函数的积分性质">
-<p class="admonition-title">Note</p>
+<div class="admonition note">
+<p class="admonition-title">象函数的积分性质</p>
 <p>若<span><span class="heti-spacing"> </span><span class="arithmatex">\(L[f(t)]=F(s)\)</span></span>，积分<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\int_s^\infty F(u)\mathrm{d}u\)</span><span class="heti-spacing"> </span></span>收敛，且<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{f(t)}{t}\)</span><span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>LT<span class="heti-spacing"> </span></span>存在，且</p>
 <div class="arithmatex">\[L[\frac{f(t)}{t}]=\int_s^\infty F(u)\mathrm{d}u\]</div>
 </div>
 <h3 id="_8">极限性质<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition note 初值关系">
-<p class="admonition-title">Note</p>
+<div class="admonition note">
+<p class="admonition-title">初值关系</p>
 <p>若<span><span class="heti-spacing"> </span><span class="arithmatex">\(L[f(t)]=F(s)\)</span></span>，则</p>
 <div class="arithmatex">\[f(0^+)=\lim_{s\rightarrow \infty}sF(s)\]</div>
 </div>
-<div class="admonition note 终值关系">
-<p class="admonition-title">Note</p>
+<div class="admonition note">
+<p class="admonition-title">终值关系</p>
 <p>若<span><span class="heti-spacing"> </span><span class="arithmatex">\(L[f(t)]=F(s)\)</span></span>，且<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(+\infty)\)</span><span class="heti-spacing"> </span></span>存在，<span><span class="arithmatex">\(sF(s)\)</span><span class="heti-spacing"> </span></span>的所有奇点在半平面<span><span class="heti-spacing"> </span><span class="arithmatex">\(Re(s)&lt;\sigma_0\)</span></span>，则</p>
 <div class="arithmatex">\[f(+\infty)=\lim_{s\rightarrow 0}sF(s)\]</div>
 </div>
 <h3 id="_9">卷积性质<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition note 卷积概念">
-<p class="admonition-title">Note</p>
+<div class="admonition note">
+<p class="admonition-title">卷积概念</p>
 <p>如果</p>
 <div class="arithmatex">\[\int_{-\infty}^{+\infty}f_1(\tau)f_2(t-\tau)\mathrm{d}\tau\]</div>
 <p>存在，则称为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f_1(t)\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f_2(t)\)</span><span class="heti-spacing"> </span></span>的卷积，记为
 <span class="arithmatex">\(f_1(t)*f_2(t)\)</span></p>
 </div>
-<div class="admonition note 卷积定理">
-<p class="admonition-title">Note</p>
+<div class="admonition info">
+<p class="admonition-title">卷积定理</p>
 <p>设<span><span class="heti-spacing"> </span><span class="arithmatex">\(L[f(t)]=F(s),L[g(t)]=G(s)\)</span></span>，则</p>
 <div class="arithmatex">\[L[f(t)*g(t)]=F(s)\cdot G(s)\]</div>
 <div class="arithmatex">\[L^{-1}[F(s)G(s)]=f(t)*g(t)\]</div>
 </div>
 <h2 id="_10">拉式逆变换<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_11">拉氏变换的反演公式<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition info 定理">
-<p class="admonition-title">Info</p>
+<div class="admonition info">
+<p class="admonition-title">定理</p>
 <p>若复值函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(t)\)</span><span class="heti-spacing"> </span></span>满足<span class="heti-skip"><span class="heti-spacing"> </span>LT<span class="heti-spacing"> </span></span>存在定理条件，则在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(t)\)</span><span class="heti-spacing"> </span></span>的任意连续点处</p>
 <div class="arithmatex">\[f(t)=\frac{1}{2\pi i}\int_{\sigma-i\infty}^{\sigma+i\infty}F(s)e^{st}ds\]</div>
 </div>
 <h3 id="_12">利用留数理论计算象原函数<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition info 定理">
-<p class="admonition-title">Info</p>
+<div class="admonition info">
+<p class="admonition-title">定理</p>
 <p>若<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F(s)\)</span><span class="heti-spacing"> </span></span>的全部奇点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(s_1,s_2,...s_n\)</span><span class="heti-spacing"> </span></span>都在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Re(s)&lt;\sigma\)</span><span class="heti-spacing"> </span></span>内，且当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(s\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Re(s)\le \sigma\)</span><span class="heti-spacing"> </span></span>上趋于无穷时，<span><span class="arithmatex">\(F(s)\)</span><span class="heti-spacing"> </span></span>趋于零，则</p>
 <div class="arithmatex">\[f(t)=L^{-1}[F(s)]=\sum_{k=1}^n Res[F(s)e^{st};s_k], t&gt;0\]</div>
 </div>
-<h2 id="_13">重要的拉氏变换<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_13">拉氏变换的应用<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition note">
+<p class="admonition-title">拉氏变换求解微分方程</p>
+<ol>
+<li>对微分方程进行拉氏变换</li>
+<li>根据得出的代数方程求出输出的拉氏变换表达式</li>
+<li>将输出的拉氏变换表达式展开成部分分式，求出各项系数</li>
+<li>查拉氏变换表，求得原函数</li>
+</ol>
+</div>
+<div class="arithmatex">\[F(s)=\frac{M(s)}{D(s)}=\frac{b_0s^m+b_1s^{m-1}+...b_{m-1}s+b_m}{a_0s^n+a_1s^{n-1}+...a_{n-1}s+a_n}, (m&lt;n)\]</div>
+<ol>
+<li><span><span class="arithmatex">\(F(s)\)</span><span class="heti-spacing"> </span></span>有不同实数极点</li>
+</ol>
+<div class="arithmatex">\[F(s)=\frac{c_1}{s-p_1}+\frac{c_2}{s-p_2}+...+\frac{c_n}{s-p_n}\]</div>
+<div class="arithmatex">\[c_i=[F(s)(s-p_i)]_{s=p_i}\]</div>
+<ol>
+<li><span><span class="arithmatex">\(F(s)\)</span><span class="heti-spacing"> </span></span>有共轭复数极点</li>
+</ol>
+<div class="admonition example 例题">
+<p class="admonition-title">Example</p>
+<p>求拉氏反变换<span><span class="heti-spacing"> </span><span class="arithmatex">\(F(s)=\frac{s-3}{s^2+2s+2}\)</span></span></p>
+<div class="arithmatex">\[F(s)=\frac{s-3}{(s+1)^2+1}=\frac{s+1}{(s+1)^2+1}-\frac{4}{(s+1)^2+1}\]</div>
+<p>查表得<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(t)=e^{-t}(\cos t-4\sin t)\)</span></span></p>
+</div>
+<ol>
+<li><span><span class="arithmatex">\(F(s)\)</span><span class="heti-spacing"> </span></span>有重实数极点</li>
+</ol>
+<p>假设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F(s)\)</span><span class="heti-spacing"> </span></span>有<span class="heti-skip"><span class="heti-spacing"> </span>L<span class="heti-spacing"> </span></span>重极点<span><span class="heti-spacing"> </span><span class="arithmatex">\(p_1\)</span></span>，其余极点均不相同，则</p>
+<div class="arithmatex">\[F(s)=\frac{M(s)}{D(s)}=\frac{c_1}{(s-p_1)^l}+\frac{c_2}{(s-p_2)^{l-1}}+...+\frac{c_1}{s-p_1}+\frac{c_{l+1}}{s-p_{l+1}}+...+\frac{c_n}{s-p_n}\]</div>
+<p>其中</p>
+<div class="arithmatex">\[c_l=[F(s)\cdot (s-p_1)^l]_{s=p_1}\]</div>
+<div class="arithmatex">\[c_{l-i}=\frac{1}{i!}\{\frac{\mathrm{d}^i}{\mathrm{d}s}[F(s)(s-p_1)^l]\}_{s=p_1}\]</div>
+<h2 id="_14">重要的拉氏变换<a class="headerlink" href="#_14" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <table>
 <thead>
 <tr>
@@ -2224,13 +2277,13 @@
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月13日 17:06:57</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月14日 15:14:36</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月13日 17:06:58</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月14日 15:14:36</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>
@@ -2315,10 +2368,9 @@
 </div>
 <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
 <script src="../../../assets/javascripts/bundle.bd41221c.min.js"></script>
-<script src="../../../js/katex.js"></script>
+<script src="../../../js/mathjax.js"></script>
 <script src="../../../js/toc.js"></script>
 <script src="../../../js/anchor.js"></script>
-<script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
-<script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+<script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>
