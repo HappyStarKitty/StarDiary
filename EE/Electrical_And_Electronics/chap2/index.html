@@ -2131,8 +2131,11 @@
 <li>网孔：电路中最简单的单孔回路</li>
 </ul>
 </div>
+<div class="admonition info">
+<p class="admonition-title">基尔霍夫定律</p>
 <p>基尔霍夫电流定律（KCL<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：任何节点上的所有支路电流的代数和在任何时刻都等于零</p>
 <p>基尔霍夫电压定律（KVL<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：形成任何一个回路的所有支路沿同一循行方向电压的代数和在任何时刻都等于零</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">支路电流法</p>
 <ol>
@@ -2192,12 +2195,15 @@
 <li>负载实验法</li>
 </ol>
 </div>
-<p>PS：当有源二段网络中含有受控源时，除去独立电源后，受控源仍保留在网络中，应用外施电压法和开路法计算等效电阻，而不能使用串并联化简法</p>
+<div class="admonition caution">
+<p class="admonition-title">注意</p>
+<p>当有源二段网络中含有受控源时，除去独立电源后，受控源仍保留在网络中，应用外施电压法和开路法计算等效电阻，而不能使用串并联化简法</p>
+</div>
 <h2 id="_5">正弦交流电路<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_6">正弦量的三要素<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>三要素：最大值、角频率、初相位</p>
-<div class="admonition note 相位差">
-<p class="admonition-title">Note</p>
+<div class="admonition note">
+<p class="admonition-title">相位差</p>
 <ul>
 <li><span class="arithmatex">\(\varphi=\varphi_u-\varphi_i\)</span></li>
 <li><span class="arithmatex">\(\varphi=0\)</span>，<span><span class="arithmatex">\(u\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(i\)</span><span class="heti-spacing"> </span></span>同相</li>
@@ -2209,14 +2215,14 @@
 <h3 id="_7">正弦量的相量表示法<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition note">
 <p class="admonition-title">相量法</p>
+<p>相量法：用复数表述正弦量</p>
 <ul>
-<li>相量法：用复数表述正弦量</li>
 <li>代数表达式：<span class="arithmatex">\(A=a+jb\)</span></li>
 <li>指数表达式：<span class="arithmatex">\(A=|A|e^{j\varphi}\)</span></li>
 <li>极坐标表达式：<span class="arithmatex">\(A=|A|\angle \varphi\)</span></li>
 </ul>
-</div>
 <p>正弦量变换为向量<span class="heti-skip"><span class="heti-spacing"> </span>:<span class="heti-spacing"> </span></span>有效值<span class="heti-skip"><span class="heti-spacing"> </span>-&gt;<span class="heti-spacing"> </span></span>复数的模，初相位<span class="heti-skip"><span class="heti-spacing"> </span>-&gt;<span class="heti-spacing"> </span></span>复数的幅角</p>
+</div>
 <h3 id="_8">电阻、电感、电容元件上电压与电流关系的相量形式<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition note">
 <p class="admonition-title">电阻</p>
@@ -2332,7 +2338,7 @@
 <div class="arithmatex">\[P=3P_P=3U_PI_P\cos \varphi\]</div>
 <p>三相电路中测量线电压和线电流比较方便，记线电压为<span><span class="heti-spacing"> </span><span class="arithmatex">\(U_L\)</span></span>，线电流为<span><span class="heti-spacing"> </span><span class="arithmatex">\(I_L\)</span></span></p>
 <p>负载为星形联结时，<span class="arithmatex">\(U_P=\frac{U_L}{\sqrt{3}}\)</span>，<span class="arithmatex">\(I_P=I_L\)</span>；三角形联结时，<span class="arithmatex">\(U_P=U_L\)</span>，<span class="arithmatex">\(I_P=\frac{I_L}{\sqrt{3}}\)</span>，即</p>
-<div class="arithmatex">\[P=3U_PI_P\cos \varphi=\sqrt{3}U_LI_L\cos \varphi\]</div>
+<div class="arithmatex">\[\boxed{P=3U_PI_P\cos \varphi=\sqrt{3}U_LI_L\cos \varphi}\]</div>
 </div>
 <div class="admonition caution">
 <p class="admonition-title">注意</p>
