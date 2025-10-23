@@ -17,6 +17,7 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../stylesheet/counter.css" rel="stylesheet"/>
 <link href="../../../stylesheet/custom.css" rel="stylesheet"/>
 <link href="../../../stylesheet/extra_changelog.css" rel="stylesheet"/>
 <link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet"/>
@@ -1733,14 +1734,28 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_6">
 <span class="md-ellipsis">
-      平移
+      线变形
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_7">
 <span class="md-ellipsis">
-      线变形
+      角变形和旋转
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+<span class="md-ellipsis">
+      流体速度的梯度、散度和旋度
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+<span class="md-ellipsis">
+      亥姆霍兹速度分解定理
     </span>
 </a>
 </li>
@@ -1748,80 +1763,66 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-<span class="md-ellipsis">
-      连续方程
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-<span class="md-ellipsis">
-      动量方程
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#_10">
 <span class="md-ellipsis">
-      能量方程
+      基本方程
     </span>
 </a>
-</li>
+<nav aria-label="基本方程" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_11">
 <span class="md-ellipsis">
-      流动的分类
+      控制体
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_12">
 <span class="md-ellipsis">
-      流线、迹线、脉线
+      雷诺输送定理
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_13">
 <span class="md-ellipsis">
-      环量与涡
+      流体力学方程组
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_14">
 <span class="md-ellipsis">
-      引言
+      连续性方程
     </span>
 </a>
-<nav aria-label="引言" class="md-nav">
-<ul class="md-nav__list">
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_15">
 <span class="md-ellipsis">
-      动力学任务与基本原则
+      本构方程
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_16">
 <span class="md-ellipsis">
-      系统（流体微团）与控制体（微元体）
+      动量方程
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_17">
 <span class="md-ellipsis">
-      积分形式和微分形式的基本方程
+      能量方程
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_18">
 <span class="md-ellipsis">
-      雷诺输送定理
+      内能方程
     </span>
 </a>
 </li>
@@ -1831,384 +1832,29 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_19">
 <span class="md-ellipsis">
-      质量方程
+      流动的分类
     </span>
 </a>
-<nav aria-label="质量方程" class="md-nav">
-<ul class="md-nav__list">
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_20">
 <span class="md-ellipsis">
-      微分形式的质量方程（连续方程）
+      流体运动相关概念
     </span>
 </a>
-</li>
+<nav aria-label="流体运动相关概念" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_21">
 <span class="md-ellipsis">
-      积分形式的质量方程
+      流线、迹线、脉线
     </span>
 </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_22">
 <span class="md-ellipsis">
-      运动微分方程
-    </span>
-</a>
-<nav aria-label="运动微分方程" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_23">
-<span class="md-ellipsis">
-      应力形式的运动微分方程
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_24">
-<span class="md-ellipsis">
-      牛顿流体的应力与应变率关系
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#-">
-<span class="md-ellipsis">
-      纳维-斯托克斯方程
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_25">
-<span class="md-ellipsis">
-      积分形式的动量方程
-    </span>
-</a>
-<nav aria-label="积分形式的动量方程" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_26">
-<span class="md-ellipsis">
-      积分形式动量方程的推导
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_27">
-<span class="md-ellipsis">
-      积分形式动量方程的应用
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_28">
-<span class="md-ellipsis">
-      积分形式的动量矩方程及应用
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_29">
-<span class="md-ellipsis">
-      理想流体的欧拉方程及其积分
-    </span>
-</a>
-<nav aria-label="理想流体的欧拉方程及其积分" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_30">
-<span class="md-ellipsis">
-      理想流体的欧拉方程
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#-_1">
-<span class="md-ellipsis">
-      兰姆-葛罗米柯方程
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_31">
-<span class="md-ellipsis">
-      欧拉方程的积分
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_32">
-<span class="md-ellipsis">
-      应用举例
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_33">
-<span class="md-ellipsis">
-      理想流体的旋涡定理
-    </span>
-</a>
-<nav aria-label="理想流体的旋涡定理" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_34">
-<span class="md-ellipsis">
-      亥姆霍兹方程
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_35">
-<span class="md-ellipsis">
-      开尔文环量守恒定理
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_36">
-<span class="md-ellipsis">
-      亥姆霍兹旋涡定理
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_37">
-<span class="md-ellipsis">
-      理想流体的能量方程
-    </span>
-</a>
-<nav aria-label="理想流体的能量方程" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_38">
-<span class="md-ellipsis">
-      微分形式的总能方程
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_39">
-<span class="md-ellipsis">
-      微分形式能量方程的其他形式
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_40">
-<span class="md-ellipsis">
-      积分形式的能量方程
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_41">
-<span class="md-ellipsis">
-      流体动力学方程组的封闭性和定解条件
-    </span>
-</a>
-<nav aria-label="流体动力学方程组的封闭性和定解条件" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_42">
-<span class="md-ellipsis">
-      方程组的封闭性
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_43">
-<span class="md-ellipsis">
-      定解条件
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_44">
-<span class="md-ellipsis">
-      流动相似与相似参数
-    </span>
-</a>
-<nav aria-label="流动相似与相似参数" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_45">
-<span class="md-ellipsis">
-      流动控制方程和定解条件的无量纲化
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_46">
-<span class="md-ellipsis">
-      相似律和相似参数
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_47">
-<span class="md-ellipsis">
-      流场
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_48">
-<span class="md-ellipsis">
-      随体导数
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_49">
-<span class="md-ellipsis">
-      流体运动的几何描述
-    </span>
-</a>
-<nav aria-label="流体运动的几何描述" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_50">
-<span class="md-ellipsis">
-      迹线
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_51">
-<span class="md-ellipsis">
-      流线
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_52">
-<span class="md-ellipsis">
-      流管和流面
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_53">
-<span class="md-ellipsis">
-      脉线
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_54">
-<span class="md-ellipsis">
-      流体微团的运动分析
-    </span>
-</a>
-<nav aria-label="流体微团的运动分析" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_55">
-<span class="md-ellipsis">
-      流体微团运动过程中形状变化特点
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_56">
-<span class="md-ellipsis">
-      流体微团的基本运动形式
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_57">
-<span class="md-ellipsis">
-      流体微团中毗邻点的速度关系
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_58">
-<span class="md-ellipsis">
-      流体微团基本运动形式的分析
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_59">
-<span class="md-ellipsis">
-      亥姆霍兹速度分解定理
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_60">
-<span class="md-ellipsis">
-      流动实例分析
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_61">
-<span class="md-ellipsis">
-      有旋流动
-    </span>
-</a>
-<nav aria-label="有旋流动" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_62">
-<span class="md-ellipsis">
-      有旋流动的一般概念、涡线和涡管
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_63">
-<span class="md-ellipsis">
-      速度环量及其与涡通量的关系
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_64">
-<span class="md-ellipsis">
-      涡管强度守恒定理及推论
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_65">
-<span class="md-ellipsis">
-      旋涡的诱导速度
+      环量与涡
     </span>
 </a>
 </li>
@@ -2361,14 +2007,28 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_6">
 <span class="md-ellipsis">
-      平移
+      线变形
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_7">
 <span class="md-ellipsis">
-      线变形
+      角变形和旋转
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+<span class="md-ellipsis">
+      流体速度的梯度、散度和旋度
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+<span class="md-ellipsis">
+      亥姆霍兹速度分解定理
     </span>
 </a>
 </li>
@@ -2376,80 +2036,66 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-<span class="md-ellipsis">
-      连续方程
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-<span class="md-ellipsis">
-      动量方程
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#_10">
 <span class="md-ellipsis">
-      能量方程
+      基本方程
     </span>
 </a>
-</li>
+<nav aria-label="基本方程" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_11">
 <span class="md-ellipsis">
-      流动的分类
+      控制体
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_12">
 <span class="md-ellipsis">
-      流线、迹线、脉线
+      雷诺输送定理
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_13">
 <span class="md-ellipsis">
-      环量与涡
+      流体力学方程组
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_14">
 <span class="md-ellipsis">
-      引言
+      连续性方程
     </span>
 </a>
-<nav aria-label="引言" class="md-nav">
-<ul class="md-nav__list">
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_15">
 <span class="md-ellipsis">
-      动力学任务与基本原则
+      本构方程
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_16">
 <span class="md-ellipsis">
-      系统（流体微团）与控制体（微元体）
+      动量方程
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_17">
 <span class="md-ellipsis">
-      积分形式和微分形式的基本方程
+      能量方程
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_18">
 <span class="md-ellipsis">
-      雷诺输送定理
+      内能方程
     </span>
 </a>
 </li>
@@ -2459,384 +2105,29 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_19">
 <span class="md-ellipsis">
-      质量方程
+      流动的分类
     </span>
 </a>
-<nav aria-label="质量方程" class="md-nav">
-<ul class="md-nav__list">
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_20">
 <span class="md-ellipsis">
-      微分形式的质量方程（连续方程）
+      流体运动相关概念
     </span>
 </a>
-</li>
+<nav aria-label="流体运动相关概念" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_21">
 <span class="md-ellipsis">
-      积分形式的质量方程
+      流线、迹线、脉线
     </span>
 </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_22">
 <span class="md-ellipsis">
-      运动微分方程
-    </span>
-</a>
-<nav aria-label="运动微分方程" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_23">
-<span class="md-ellipsis">
-      应力形式的运动微分方程
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_24">
-<span class="md-ellipsis">
-      牛顿流体的应力与应变率关系
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#-">
-<span class="md-ellipsis">
-      纳维-斯托克斯方程
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_25">
-<span class="md-ellipsis">
-      积分形式的动量方程
-    </span>
-</a>
-<nav aria-label="积分形式的动量方程" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_26">
-<span class="md-ellipsis">
-      积分形式动量方程的推导
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_27">
-<span class="md-ellipsis">
-      积分形式动量方程的应用
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_28">
-<span class="md-ellipsis">
-      积分形式的动量矩方程及应用
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_29">
-<span class="md-ellipsis">
-      理想流体的欧拉方程及其积分
-    </span>
-</a>
-<nav aria-label="理想流体的欧拉方程及其积分" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_30">
-<span class="md-ellipsis">
-      理想流体的欧拉方程
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#-_1">
-<span class="md-ellipsis">
-      兰姆-葛罗米柯方程
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_31">
-<span class="md-ellipsis">
-      欧拉方程的积分
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_32">
-<span class="md-ellipsis">
-      应用举例
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_33">
-<span class="md-ellipsis">
-      理想流体的旋涡定理
-    </span>
-</a>
-<nav aria-label="理想流体的旋涡定理" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_34">
-<span class="md-ellipsis">
-      亥姆霍兹方程
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_35">
-<span class="md-ellipsis">
-      开尔文环量守恒定理
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_36">
-<span class="md-ellipsis">
-      亥姆霍兹旋涡定理
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_37">
-<span class="md-ellipsis">
-      理想流体的能量方程
-    </span>
-</a>
-<nav aria-label="理想流体的能量方程" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_38">
-<span class="md-ellipsis">
-      微分形式的总能方程
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_39">
-<span class="md-ellipsis">
-      微分形式能量方程的其他形式
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_40">
-<span class="md-ellipsis">
-      积分形式的能量方程
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_41">
-<span class="md-ellipsis">
-      流体动力学方程组的封闭性和定解条件
-    </span>
-</a>
-<nav aria-label="流体动力学方程组的封闭性和定解条件" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_42">
-<span class="md-ellipsis">
-      方程组的封闭性
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_43">
-<span class="md-ellipsis">
-      定解条件
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_44">
-<span class="md-ellipsis">
-      流动相似与相似参数
-    </span>
-</a>
-<nav aria-label="流动相似与相似参数" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_45">
-<span class="md-ellipsis">
-      流动控制方程和定解条件的无量纲化
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_46">
-<span class="md-ellipsis">
-      相似律和相似参数
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_47">
-<span class="md-ellipsis">
-      流场
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_48">
-<span class="md-ellipsis">
-      随体导数
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_49">
-<span class="md-ellipsis">
-      流体运动的几何描述
-    </span>
-</a>
-<nav aria-label="流体运动的几何描述" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_50">
-<span class="md-ellipsis">
-      迹线
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_51">
-<span class="md-ellipsis">
-      流线
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_52">
-<span class="md-ellipsis">
-      流管和流面
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_53">
-<span class="md-ellipsis">
-      脉线
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_54">
-<span class="md-ellipsis">
-      流体微团的运动分析
-    </span>
-</a>
-<nav aria-label="流体微团的运动分析" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_55">
-<span class="md-ellipsis">
-      流体微团运动过程中形状变化特点
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_56">
-<span class="md-ellipsis">
-      流体微团的基本运动形式
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_57">
-<span class="md-ellipsis">
-      流体微团中毗邻点的速度关系
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_58">
-<span class="md-ellipsis">
-      流体微团基本运动形式的分析
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_59">
-<span class="md-ellipsis">
-      亥姆霍兹速度分解定理
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_60">
-<span class="md-ellipsis">
-      流动实例分析
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_61">
-<span class="md-ellipsis">
-      有旋流动
-    </span>
-</a>
-<nav aria-label="有旋流动" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_62">
-<span class="md-ellipsis">
-      有旋流动的一般概念、涡线和涡管
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_63">
-<span class="md-ellipsis">
-      速度环量及其与涡通量的关系
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_64">
-<span class="md-ellipsis">
-      涡管强度守恒定理及推论
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_65">
-<span class="md-ellipsis">
-      旋涡的诱导速度
+      环量与涡
     </span>
 </a>
 </li>
@@ -2852,191 +2143,349 @@
 <article class="md-content__inner md-typeset">
 <h1 id="chap2"><span>Chap2<span class="heti-spacing"> </span></span>流体力学基本方程<a class="headerlink" href="#chap2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <h2 id="_1">流体运动的描述方法<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>拉格朗日方法着眼于流体质点；欧拉法着眼于空间位置</p>
-<h3 id="_2">拉格朗日法<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>流体质点轨迹方程</p>
-<div class="arithmatex">\[\bm{r}=\bm{r}(a,b,c,t)\]</div>
-<p>a、b、c、<span>t<span class="heti-spacing"> </span></span>称为拉格朗日坐标或拉格朗日变数</p>
-<div class="arithmatex">\[\bm{V}=\frac{\partial \bm{r}(a,b,c,t)}{\partial t}
-\]</div>
-<div class="arithmatex">\[\bm{a}=\frac{\partial^2 \bm{r}(a,b,c,t)}{\partial t^2}\]</div>
-<h3 id="_3">欧拉法<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>空间点速度函数</p>
-<div class="arithmatex">\[\bm{V}=\bm{V}(x,y,z,t)\]</div>
-<p>x、y、z、<span>t<span class="heti-spacing"> </span></span>称为欧拉坐标或欧拉变数</p>
-<h3 id="_4">拉格朗日法和欧拉法的转换<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h2 id="_5">流体微元运动和变形<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p><img alt="无法显示" src="../figures/chap2/yun_dong_bian_xing.png"/></p>
-<h3 id="_6">平移<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><img alt="无法显示" src="../figures/chap2/ping_yi.png"/></p>
-<p>经过<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}t\)</span><span class="heti-spacing"> </span></span>时间，微元<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(ABCD\)</span><span class="heti-spacing"> </span></span>平移到<span><span class="heti-spacing"> </span><span class="arithmatex">\(A^\prime B^\prime C^\prime D^\prime\)</span></span>，微元形状不变</p>
-<h3 id="_7">线变形<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h2 id="_8">连续方程<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h2 id="_9">动量方程<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h2 id="_10">能量方程<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h2 id="_11">流动的分类<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h2 id="_12">流线、迹线、脉线<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h2 id="_13">环量与涡<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h2 id="_14">引言<a class="headerlink" href="#_14" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<div class="admonition note">
-<p class="admonition-title">基本控制方程</p>
-<p>连续方程、动量方程、能量方程</p>
-<ol>
-<li>能量方程对于可压缩流才是必要的</li>
-<li>能量方程额外引入两个变量：内能<span><span class="heti-spacing"> </span>e</span>、温度<span><span class="heti-spacing"> </span>T</span>，额外需要两个辅助方程
-<span class="arithmatex">\(e=C_vT\)</span> (热力学状态关系式)
-<span class="arithmatex">\(p=\rho RT\)</span>（理想气体状态方程）</li>
-<li>无粘流体的动量方程，称为<span class="heti-skip"><span class="heti-spacing"> </span>Euler<span class="heti-spacing"> </span></span>方程；粘性流动的动量方程，称为<span class="heti-skip"><span class="heti-spacing"> </span>N-S<span class="heti-spacing"> </span></span>方程</li>
-</ol>
+<div class="admonition info">
+<p class="admonition-title">描述方法</p>
+<ul>
+<li>拉格朗日方法（质点系法<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：着眼于流体质点，跟踪流体质点在空间中的运动</li>
+<li>欧拉法（空间点法，流场法<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：着眼于空间位置，记录不同流体质点通过空间固定点的运动</li>
+</ul>
 </div>
-<h3 id="_15">动力学任务与基本原则<a class="headerlink" href="#_15" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_16">系统（流体微团）与控制体（微元体）<a class="headerlink" href="#_16" title="Permanent link">¶</a></h3>
+<h3 id="_2">拉格朗日法<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition info">
+<p class="admonition-title">拉格朗日法</p>
+<p>流体质点轨迹方程</p>
+<div class="arithmatex">\[\mathbf{r}=\mathbf{r}(a,b,c,t)\]</div>
+<p>a、b、c、<span>t<span class="heti-spacing"> </span></span>称为拉格朗日坐标或拉格朗日变数</p>
+</div>
+<div class="arithmatex">\[\mathbf{V}=\frac{\partial \mathbf{r}(a,b,c,t)}{\partial t}
+\]</div>
+<div class="arithmatex">\[\mathbf{a}=\frac{\partial^2 \mathbf{r}(a,b,c,t)}{\partial t^2}\]</div>
+<div class="admonition definition">
+<p class="admonition-title">迹线</p>
+<p>流体质点的迹线：同一质点在不同时刻的轨迹曲线，迹线方程为</p>
+<div class="arithmatex">\[\frac{\mathrm{d}x}{u}=\frac{\mathrm{d}y}{v}=\frac{\mathrm{d}z}{w}=\mathrm{d}t\]</div>
+</div>
+<h3 id="_3">欧拉法<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition info">
+<p class="admonition-title">欧拉法</p>
+<p>空间点速度函数</p>
+<div class="arithmatex">\[\mathbf{V}=\mathbf{V}(x,y,z,t)\]</div>
+<p>x、y、z、<span>t<span class="heti-spacing"> </span></span>称为欧拉坐标或欧拉变数</p>
+</div>
+<h3 id="_4">拉格朗日法和欧拉法的转换<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>一般情况下，引起质点速度的变化来自于两方面的贡献：流场的不均匀性，流场的非定常性</p>
+<p>下面我们考察流体质点的速度和加速度</p>
+<div class="admonition proof">
+<p class="admonition-title">推导过程</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span>t<span class="heti-spacing"> </span></span>时刻质点位于<span><span class="heti-spacing"> </span>M(x,y,z)</span>，<span>t+dt<span class="heti-spacing"> </span></span>时刻质点到达点<span><span class="heti-spacing"> </span>N(x+dx,y+dy,z+dz)</span></p>
+<p>流体质点的加速度是经过<span class="heti-skip"><span class="heti-spacing"> </span>dt<span class="heti-spacing"> </span></span>这段时间的变化除以时间<span><span class="heti-spacing"> </span>dt</span></p>
+<div class="arithmatex">\[\mathbf{a}=\frac{\mathrm{D}\mathbf{V}}{\mathrm{D}t}=\frac{\mathbf{V}_{N,t+\mathrm{d}t}-V_{M,t}}{\mathrm{d}t}\]</div>
+<p>在欧拉法中，流体速度是空间和时间的函数</p>
+<div class="arithmatex">\[\mathbf{V}_{M,t}=\mathbf{V}(x,y,z,t)\]</div>
+<div class="arithmatex">\[\mathbf{V}_{N,t+\mathrm{d}t}=\mathbf{V}(x+\mathrm{d}x,y+\mathrm{d}y,z+\mathrm{d}z,t+\mathrm{d}t)\]</div>
+<div class="arithmatex">\[\mathrm{D}\mathbf{V}=\mathbf{V}_{N,t+\mathrm{d}t}-\mathbf{V}_{M,t}=\frac{\partial \mathbf{V}}{\partial t}\mathrm{d}t+\frac{\partial \mathbf{V}}{\partial x}\mathrm{d}x+\frac{\partial \mathbf{V}}{\partial y}\mathrm{d}y+\frac{\partial \mathbf{V}}{\partial z}\mathrm{d}z\]</div>
+<p>质点的位置变化是沿着质点运动轨迹的变化</p>
+<div class="arithmatex">\[\mathrm{d}x=u\mathrm{d}t,\mathrm{d}y=v\mathrm{d}t,\mathrm{d}z=w\mathrm{d}t\]</div>
+<div class="arithmatex">\[\mathrm{D}\mathbf{V}=\frac{\partial \mathbf{V}}{\partial t}\mathrm{d}t+\frac{\partial \mathbf{V}}{\partial x}u\mathrm{d}t+\frac{\partial \mathbf{V}}{\partial y}v\mathrm{d}t+\frac{\partial \mathbf{V}}{\partial z}w\mathrm{d}t\]</div>
+<p>加速度为</p>
+<div class="arithmatex">\[\frac{\mathrm{D}\mathbf{V}}{\mathrm{D}t}=\frac{\partial \mathbf{V}}{\partial t}+u\frac{\partial \mathbf{V}}{\partial x}+v\frac{\partial \mathbf{V}}{\partial y}+w\frac{\partial \mathbf{V}}{\partial z}=\frac{\partial \mathbf{V}}{\partial t}+(\mathbf{V}\cdot \nabla)\mathbf{V}\]</div>
+</div>
 <div class="admonition note">
+<p class="admonition-title">哈密顿算子</p>
+<div class="arithmatex">\[\nabla=\frac{\partial }{\partial x}\mathbf{i}+\frac{\partial }{\partial y}\mathbf{j}+\frac{\partial }{\partial z}\mathbf{k}\]</div>
+<p>哈密顿算子是具有矢量和微分双重性质的符号可进行矢量运算，也可进行微分运算</p>
+<div class="arithmatex">\[\mathbf{V\dot \nabla}=(u\mathbf{i}+v\mathbf{j}+w\mathbf{k})\cdot (\frac{\partial }{\partial x}\mathbf{i}+\frac{\partial }{\partial y}\mathbf{j}+\frac{\partial }{\partial z}\mathbf{k})=u\frac{\partial }{\partial x}+v\frac{\partial }{\partial y}+w\frac{\partial }{\partial z}\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">随体导数公式的理解</p>
+<ul>
+<li>
+<p><span><span class="arithmatex">\(\partial \mathbf{V}/\partial t\)</span><span class="heti-spacing"> </span></span>称为当地导数（局部导数<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，反映流场的非定常性</p>
+</li>
+<li>
+<p><span><span class="arithmatex">\((\mathbf{V}\cdot \nabla)\mathbf{V}\)</span><span class="heti-spacing"> </span></span>称为迁移导数（对流导数<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，反映流场的不均匀性</p>
+</li>
+</ul>
+</div>
+<h2 id="_5">流体微元运动和变形<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>基本运动形式：平动、转动、线变形运动、角变形运动</p>
+<h3 id="_6">线变形<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition proof">
+<p class="admonition-title">推导过程</p>
+<p><img alt="无法显示" src="../figures/chap2/lashen.png"/></p>
+<p>边界线<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\bar{A}\bar{B}\)</span><span class="heti-spacing"> </span></span>伸长到<span><span class="heti-spacing"> </span><span class="arithmatex">\(AB^\prime\)</span></span>，方位未变</p>
+<p><span class="arithmatex">\(v_{\bar{B}}=v_{\bar{A}}\)</span>，即<span><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{\partial v}{\partial x}=0\)</span></span></p>
+<p>同理，<span><span class="arithmatex">\(\bar{A}\bar{D}\)</span><span class="heti-spacing"> </span></span>伸长到<span><span class="heti-spacing"> </span><span class="arithmatex">\(AD^\prime\)</span></span>，方位未变</p>
+<p><span class="arithmatex">\(u_{\bar{D}}=u_{\bar{A}}\)</span>，即<span><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{\partial u}{\partial y}=0\)</span></span></p>
+<p>故只有线变形的情况是异名偏导数为零的情况</p>
+<p>考察变形量，<span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>方向的变形是由<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\bar{A}\bar{B}\)</span><span class="heti-spacing"> </span></span>伸长到<span><span class="heti-spacing"> </span><span class="arithmatex">\(AB^\prime\)</span></span>，这是因为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\bar{B}\)</span><span class="heti-spacing"> </span></span>点沿<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>方向的速度比<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\bar{A}\)</span><span class="heti-spacing"> </span></span>大。伸长量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(BB^\prime\)</span><span class="heti-spacing"> </span></span>为</p>
+<p><span class="arithmatex">\((u_{\bar{B}}-u_{\bar{A}})\cdot \mathrm{d}t=\frac{\partial u}{\partial x}\cdot \mathrm{d}x\cdot \mathrm{d}t\)</span></p>
+<p>单位长度上的线变形量，即线应变为</p>
+<p><span class="arithmatex">\(\frac{\partial u}{\partial x}\cdot \mathrm{d}t\)</span></p>
+<p>单位时间的线应变即线应变率，记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varepsilon_x=\frac{\partial u}{\partial x}\)</span></span></p>
+</div>
+<div class="admonition formula">
+<p class="admonition-title">线变形公式</p>
+<p>线变形率</p>
+<div class="arithmatex">\[\boxed{\varepsilon_x=\frac{\partial u}{\partial x},\varepsilon_y=\frac{\partial v}{\partial y},\varepsilon_z=\frac{\partial w}{\partial z}}\]</div>
+<p>体积膨胀率（速度<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{V}\)</span><span class="heti-spacing"> </span></span>的散度）</p>
+<div class="arithmatex">\[\boxed{\frac{1}{\delta V}\frac{\mathrm{d}(\delta y)}{\mathrm{d}t}=\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial w}{\partial z}}\]</div>
+</div>
+<h3 id="_7">角变形和旋转<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition proof">
+<p class="admonition-title">推导过程</p>
+<p><img alt="无法显示" src="../figures/chap2/jiao_bian_xing.png"/></p>
+<p>对于旋转，微团的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(AB\)</span><span class="heti-spacing"> </span></span>边、<span><span class="arithmatex">\(AD\)</span><span class="heti-spacing"> </span></span>边、<span><span class="arithmatex">\(\angle DAB\)</span><span class="heti-spacing"> </span></span>的角平分线，均绕<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>点旋转<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}\alpha\)</span></span></p>
+<p>对于角变形，<span><span class="arithmatex">\(AE\)</span><span class="heti-spacing"> </span></span>方位不变，<span><span class="arithmatex">\(AB\)</span><span class="heti-spacing"> </span></span>边和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(AD\)</span><span class="heti-spacing"> </span></span>边均向<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(AE\)</span><span class="heti-spacing"> </span></span>旋转<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}\beta\)</span></span></p>
+<p>下考察旋转和角变形和合效果</p>
+<p><img alt="无法显示" src="../figures/chap2/he_xiao_guo.png"/></p>
+<p><span><span class="arithmatex">\(AB\)</span><span class="heti-spacing"> </span></span>到达<span><span class="heti-spacing"> </span><span class="arithmatex">\(A\bar{B}\)</span></span>，转过角度微量<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}\alpha+\mathrm{d}\beta\)</span></span>，小角度情况下有</p>
+<div class="arithmatex">\[\mathrm{d}\alpha+\mathrm{d}\beta=\frac{B\bar{B}}{AB}=\frac{(v_B-v_A)\cdot \mathrm{d}t}{\mathrm{d}x}=\frac{\partial v}{\partial x}\mathrm{d}t\]</div>
+<p><span><span class="arithmatex">\(AD\)</span><span class="heti-spacing"> </span></span>到达<span><span class="heti-spacing"> </span><span class="arithmatex">\(A\bar{D}\)</span></span>，转过的角度<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}\alpha-\mathrm{d}\beta\)</span></span></p>
+<div class="arithmatex">\[\mathrm{d}\alpha-\mathrm{d}\beta=-\frac{D\bar{D}}{AD}=-\frac{(u_D-u_A)\cdot \mathrm{d}t}{\mathrm{d}y}=-\frac{\partial u}{\partial y}\mathrm{d}t\]</div>
+<p>微团的角速度可由上述两式之和除以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(2\mathrm{d}t\)</span><span class="heti-spacing"> </span></span>得到，为</p>
+<div class="arithmatex">\[\omega_z=\frac{\mathrm{d}\alpha}{\mathrm{d}t}=\frac{1}{2}(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y})\]</div>
+<p>此即为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(xy\)</span><span class="heti-spacing"> </span></span>平面上微团的角速度</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">角速度</p>
+<p>角速度矢量记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(\vec{\omega}\)</span></span></p>
+<div class="arithmatex">\[\vec{\omega}=\frac{1}{2}(\frac{\partial w}{\partial y}-\frac{\partial v}{\partial z})\vec{i}+\frac{1}{2}(\frac{\partial u}{\partial z}-\frac{\partial w}{\partial x})\vec{j}+\frac{1}{2}(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y})\vec{k}\]</div>
+<p>可见微团的角速度可由异名偏导数的差表示</p>
+<p>另外，角速度其实就是速度旋度的一半</p>
+<div class="arithmatex">\[\vec{\omega}=\frac{1}{2} \text{rot}\mathbf{V}=\frac{1}{2}\nabla \times \mathbf{V}\]</div>
+<p>角速度矢量的方向按右手定则确定，即涡量在某一方向的分量为正时，代表绕该方向轴线逆时针旋转</p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">涡量与速度旋度</p>
+<div class="arithmatex">\[\boxed{\Omega=\text{rot} \mathbf{V}=\nabla \times \mathbf{V}=\left|\begin{array}{cccc}i &amp; j &amp; k \\
+\frac{\partial}{\partial x} &amp; \frac{\partial}{\partial y} &amp; \frac{\partial}{\partial z} \\
+u &amp; v &amp; w\end{array}\right|=(\frac{\partial w}{\partial y}-\frac{\partial v}{\partial z})\vec{i}+(\frac{\partial u}{\partial z}-\frac{\partial w}{\partial x})\vec{j}+(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y})\vec{k}}\]</div>
+</div>
+<div class="admonition formula">
+<p class="admonition-title">角变形公式</p>
+<p>角变形率</p>
+<div class="arithmatex">\[\boxed{\gamma_x=\frac{1}{2}(\frac{\partial w}{\partial y}+\frac{\partial v}{\partial z}),\gamma_y=\frac{1}{2}(\frac{\partial w}{\partial x}+\frac{\partial u}{\partial z}),\gamma_z=\frac{1}{2}(\frac{\partial v}{\partial x}+\frac{\partial u}{\partial y})}\]</div>
+</div>
+<h3 id="_8">流体速度的梯度、散度和旋度<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition note">
+<p class="admonition-title">速度梯度</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">速度散度</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">速度旋度</p>
+</div>
+<h3 id="_9">亥姆霍兹速度分解定理<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition theorem">
+<p class="admonition-title">刚体速度分解定理</p>
+<p>刚体的一般运动可分解为两种基本运动：一是整个刚体以基点<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>的速度作平动；二是绕通过基点<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>的某瞬时轴作转动</p>
+<p>因此，刚体上任一点<span class="heti-skip"><span class="heti-spacing"> </span>E<span class="heti-spacing"> </span></span>的速度<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(V_E\)</span><span class="heti-spacing"> </span></span>与基点<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>速度<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(V_A\)</span><span class="heti-spacing"> </span></span>关系为</p>
+<div class="arithmatex">\[V_E=V_A+\vec{\omega}\times (\mathbf{r}_E-\mathbf{r}_A)\]</div>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">流体速度分解定理</p>
+<div class="arithmatex">\[\boxed{\frac{\partial \mathbf{V}}{\partial \mathbf{x}}=\frac{\partial u_i}{\partial x_j}=\frac{1}{2}(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i})+\frac{1}{2}(\frac{\partial u_i}{\partial x_j}-\frac{\partial u_j}{\partial x_i})=\mathbf{\varepsilon}_{ij}-\mathbf{a}_{ij}}\]</div>
+</div>
+<div class="admonition formula">
+<p>应变率张量</p>
+<div class="arithmatex">\[\varepsilon_{ij}=\frac{1}{2}(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i})\]</div>
+<p>转动角速度矢量</p>
+<div class="arithmatex">\[\vec{\omega}=\frac{1}{2}\nabla \times \mathbf{V}=\frac{1}{2}e_{ijk}\frac{\partial u_k}{\partial x_j}\mathbf{e}_i\]</div>
+<div class="arithmatex"><span>\[e_{ijk}=\left\{\begin{aligned}1 ,\text{i,j,k<span class="heti-spacing"> </span></span>正序排列<span class="heti-skip"><span class="heti-spacing"> </span>} \\ -1 , \text{i,j,k<span class="heti-spacing"> </span></span>逆序排列<span class="heti-skip"><span class="heti-spacing"> </span>} \\ 0,\text{i,j,k<span class="heti-spacing"> </span></span>有两个指标值相同<span><span class="heti-spacing"> </span>}\end{aligned}\right.\]</span></div>
+<div class="arithmatex">\[\boxed{\mathbf{V}(M)=\mathbf{V}(M_0)+\mathbf{\varepsilon}\cdot \delta \mathbf{r}+\mathbf{\omega}\times \delta \mathbf{r}}\]</div>
+</div>
+<h2 id="_10">基本方程<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_11">控制体<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition definition">
 <p class="admonition-title">系统（流体微团）</p>
 <p>定义：某个有确定质量的流体团。系统以外的一切，统称为外界。无限小的流体系统称为流体微团。随体观点模型，对应拉格朗日方法。</p>
 <p>特点：系统体积和界面积随流体流动而随时变化；系统界面上，只有能量交换，没有质量交换；系统边界上，系统受到外界对其作用的表面力。</p>
 </div>
-<div class="admonition note">
+<div class="admonition definition">
 <p class="admonition-title">控制体（微元体）</p>
 <p>定义：流体空间一个固定的控制面所包围的区域。无限小的流体控制点称为微元体。当地观点模型，对应欧拉方法。</p>
 <p>特点：控制体的体积和界面积是固定不变的；在控制体的界面上，既有能量交换，又有质量交换；在控制体的界面上，控制体内流体受到控制体以外的流体对其作用的表面力。</p>
 </div>
-<h3 id="_17">积分形式和微分形式的基本方程<a class="headerlink" href="#_17" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_18">雷诺输送定理<a class="headerlink" href="#_18" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h2 id="_19">质量方程<a class="headerlink" href="#_19" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>连续方程</p>
-<p>质量守恒定律</p>
-<p>控制面流出质量<span class="heti-skip"><span class="heti-spacing"> </span>=<span class="heti-spacing"> </span></span>控制体减少质量</p>
-<p>积分形式</p>
-<div class="arithmatex">\[\frac{\partial }{\partial t}\oiiint \rho dV+\oiint_S \rho V \cdot dS=0\]</div>
-<p>微分形式</p>
-<div class="arithmatex">\[\frac{\partial \rho}{\partial t}+\nabla \cdot(\rho V)=0\]</div>
-<p>实质导数形式</p>
-<div class="arithmatex">\[\frac{D \rho}{D t}+\rho \nabla\cdot V=0\]</div>
-<p>质量流量：单位时间内流过面积<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>的质量</p>
-<div class="arithmatex">\[\dot{m}=\rho V \cdot dS=\rho V_n A\]</div>
-<p>质量通量：单位时间内通过单位面积的质量</p>
-<div class="arithmatex">\[Mass flux=\frac{\dot{m}}{A}=\rho V_n\]</div>
-<h3 id="_20">微分形式的质量方程（连续方程）<a class="headerlink" href="#_20" title="Permanent link">¶</a></h3>
-<h3 id="_21">积分形式的质量方程<a class="headerlink" href="#_21" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h2 id="_22">运动微分方程<a class="headerlink" href="#_22" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_23">应力形式的运动微分方程<a class="headerlink" href="#_23" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_24">牛顿流体的应力与应变率关系<a class="headerlink" href="#_24" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="-">纳维<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>斯托克斯方程<a class="headerlink" href="#-" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h2 id="_25">积分形式的动量方程<a class="headerlink" href="#_25" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>动量方程</p>
-<p>积分形式</p>
-<div class="arithmatex">\[\frac{\partial}{\partial t}\oiiint_V \rho V \cdot dV+\oiint_S(\rho V \cdot dS)V=\oiiint_V \rho f \cdot dV-\oiint_S pdS+F_{viscous}\]</div>
-<p>微分形式</p>
-<div class="arithmatex">\[\frac{\partial (\rho u)}{\partial t}+\nabla \cdot (\rho u V)=\rho f_x-\frac{\partial p}{\partial x}+F_{x_{viscous}}\]</div>
-<p>实质导数形式</p>
-<div class="arithmatex">\[\rho \frac{Du}{Dt}=\rho f_x-\frac{\partial p}{\partial x}+F_{x_{viscous}}\]</div>
-<p><span><span class="arithmatex">\(\rho f\cdot dV\)</span><span class="heti-spacing"> </span></span>控制体微元<span class="heti-skip"><span class="heti-spacing"> </span>dV<span class="heti-spacing"> </span></span>所受体积力</p>
-<p><span><span class="arithmatex">\(-pdS\)</span><span class="heti-spacing"> </span></span>控制面微元<span class="heti-skip"><span class="heti-spacing"> </span>dS<span class="heti-spacing"> </span></span>所受表面压力</p>
-<p><span><span class="arithmatex">\(F_{viscous}\)</span><span class="heti-spacing"> </span></span>控制面<span class="heti-skip"><span class="heti-spacing"> </span>S<span class="heti-spacing"> </span></span>所受粘性力</p>
-<p><img alt="无法显示" src="../figures/chap3/assumption.png"/></p>
-<p>对如图控制体假设，在定常无粘不可压缩流动中</p>
-<div class="arithmatex">\[D=\rho \int_{h}^b u_2(u_1-u_2)dy\]</div>
-<h3 id="_26">积分形式动量方程的推导<a class="headerlink" href="#_26" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_27">积分形式动量方程的应用<a class="headerlink" href="#_27" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_28">积分形式的动量矩方程及应用<a class="headerlink" href="#_28" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h2 id="_29">理想流体的欧拉方程及其积分<a class="headerlink" href="#_29" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_30">理想流体的欧拉方程<a class="headerlink" href="#_30" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="-_1">兰姆<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>葛罗米柯方程<a class="headerlink" href="#-_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_31">欧拉方程的积分<a class="headerlink" href="#_31" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_32">应用举例<a class="headerlink" href="#_32" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h2 id="_33">理想流体的旋涡定理<a class="headerlink" href="#_33" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_34">亥姆霍兹方程<a class="headerlink" href="#_34" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_35">开尔文环量守恒定理<a class="headerlink" href="#_35" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_36">亥姆霍兹旋涡定理<a class="headerlink" href="#_36" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h2 id="_37">理想流体的能量方程<a class="headerlink" href="#_37" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>能量方程</p>
-<p>方程原理：热力学第一定律</p>
-<p>积分形式</p>
-<div class="arithmatex">\[\oiiint_V \dot{q}\rho dV+\dot{Q}_{viscous}-\oiint_S   (pfd\mathcal{V})V+\dot{W}_{viscous}=\frac{\partial }{\partial t}\oiiint_V \rho (e+\frac{V^2}{2})d\mathcal{V}\cdot dS\]</div>
-<p>微分形式</p>
-<div class="arithmatex">\[\dot{q}\rho +\dot{Q}_{viscous}-\nabla \cdot {\rho V}+\rho f\cdot V+\dot{W}_{viscous}=\frac{\partial}{\partial t}[p(e+\frac{V^2}{2})]+\nabla \cdot [\rho (e+\frac{V^2}{2})V]\]</div>
-<p>实质导数形式</p>
-<div class="arithmatex">\[\dot{q}\rho+\dot{Q}_{viscous}-\nabla \cdot \rho V+\rho f\cdot V+\dot{W}_{viscous}=\rho \frac{D(e+\frac{V^2}{2})}{Dt}\]</div>
-<p>传热率（控制体单位时间吸收的热量）<span>=<span class="heti-spacing"> </span></span>控制体的加热率<span class="heti-skip"><span class="heti-spacing"> </span>+<span class="heti-spacing"> </span></span>粘性效应引起热量传递</p>
-<div class="arithmatex">\[B_1 = \oiiint_V \dot{q}\rho d\mathcal{V}+\dot{Q}_{viscous}\]</div>
-<p>做功率（外界对控制体单位时间内所做功）<span>=<span class="heti-spacing"> </span></span>控制体表面压力功率<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>控制体体积力功率<span class="heti-skip"><span class="heti-spacing"> </span>+<span class="heti-spacing"> </span></span>粘性力功率</p>
-<div class="arithmatex">\[B_2 = pdS\cdot dV + \dot{W}_{viscous}\]</div>
-<p>能量增加率<span class="heti-skip"><span class="heti-spacing"> </span>=<span class="heti-spacing"> </span></span>质量经控制面流入<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>流出带来的能量变化率<span class="heti-skip"><span class="heti-spacing"> </span>+<span class="heti-spacing"> </span></span>控制体内的流体因流场变化（非定常）导致的能量变化率</p>
-<div class="arithmatex">\[B_3=\oiint_S \rho (e+\frac{V^2}{2})V \cdot dS+ \frac{\partial}{\partial t}\oiiint_V \rho(e+\frac{V^2}{2})d\mathcal{V}\]</div>
-<p>系统吸热<span class="heti-skip"><span class="heti-spacing"> </span>Q+<span class="heti-spacing"> </span></span>外界做功<span class="heti-skip"><span class="heti-spacing"> </span>W=<span class="heti-spacing"> </span></span>内能改变<span><span class="heti-spacing"> </span><span class="arithmatex">\(\Delta E\)</span></span></p>
-<div class="arithmatex">\[B_1+B_2=B_3\]</div>
-<h3 id="_38">微分形式的总能方程<a class="headerlink" href="#_38" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_39">微分形式能量方程的其他形式<a class="headerlink" href="#_39" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_40">积分形式的能量方程<a class="headerlink" href="#_40" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h2 id="_41">流体动力学方程组的封闭性和定解条件<a class="headerlink" href="#_41" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_42">方程组的封闭性<a class="headerlink" href="#_42" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_43">定解条件<a class="headerlink" href="#_43" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h2 id="_44">流动相似与相似参数<a class="headerlink" href="#_44" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_45">流动控制方程和定解条件的无量纲化<a class="headerlink" href="#_45" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_46">相似律和相似参数<a class="headerlink" href="#_46" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_47">流场<a class="headerlink" href="#_47" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>流场：流体运动所处空间，也即流体质点布满或流动参数布满空间</p>
-<p>速度场：流动空间各坐标点上的速度矢量构成的场</p>
-<p>定常流场：流场任意点流动参数都不随时间变化</p>
-<h3 id="_48">随体导数<a class="headerlink" href="#_48" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="arithmatex">\[\frac{D}{Dt}=\frac{\partial }{\partial t}+(V\cdot \nabla)=\frac{\partial}{\partial t}+u\frac{\partial}{\partial x}+v\frac{\partial}{\partial y}+w\frac{\partial }{\partial z}\]</div>
-<p>随体导数：<span class="arithmatex">\(\frac{D}{Dt}\)</span></p>
-<p>当地导数：<span class="arithmatex">\(\frac{\partial}{\partial t}\)</span></p>
-<p>迁移导数：<span class="arithmatex">\(u\frac{\partial}{\partial x}+v\frac{\partial}{\partial y}+w\frac{\partial }{\partial z}\)</span></p>
-<h2 id="_49">流体运动的几何描述<a class="headerlink" href="#_49" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>流体微元的运动和变形：平移、线变形、旋转、角变形</p>
-<p>对于定常流动，流线、迹线、脉线是重合的</p>
-<h3 id="_50">迹线<a class="headerlink" href="#_50" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>迹线：流体质点的运动轨迹</p>
-<h3 id="_51">流线<a class="headerlink" href="#_51" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>流线：流场中各点速度矢量的连线</p>
-<p>流线上各点处，微元速度方向与流线相切</p>
-<h3 id="_52">流管和流面<a class="headerlink" href="#_52" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>流管：定常流动中，若干流线在空间中形成的管。流体不会穿越流管。</p>
-<h3 id="_53">脉线<a class="headerlink" href="#_53" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>脉线：一段时间内相继通过空间某固定点的很多流体质点连成的线，又称染色线</p>
-<h2 id="_54">流体微团的运动分析<a class="headerlink" href="#_54" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_55">流体微团运动过程中形状变化特点<a class="headerlink" href="#_55" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_56">流体微团的基本运动形式<a class="headerlink" href="#_56" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_57">流体微团中毗邻点的速度关系<a class="headerlink" href="#_57" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_58">流体微团基本运动形式的分析<a class="headerlink" href="#_58" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_59">亥姆霍兹速度分解定理<a class="headerlink" href="#_59" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_60">流动实例分析<a class="headerlink" href="#_60" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h2 id="_61">有旋流动<a class="headerlink" href="#_61" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>角速度</p>
-<div class="arithmatex">\[\vec{\omega}=\frac{1}{2}(\frac{\partial w}{\partial y}-\frac{\partial v}{\partial z})\vec{i}+\frac{1}{2}(\frac{\partial u}{\partial z}-\frac{\partial w}{\partial x})\vec{j}+\frac{1}{2}(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y})\vec{k}\]</div>
-<p>涡量（速度旋度）</p>
-<div class="arithmatex">\[\vec{\xi}=2\vec{\omega}=\nabla \times V\]</div>
-<p>应变率</p>
-<div class="arithmatex">\[\varepsilon_{xy}=\frac{\partial v}{\partial x}+\frac{\partial u}{\partial y}\]</div>
-<div class="arithmatex">\[\varepsilon_{yz}=\frac{\partial w}{\partial y}+\frac{\partial v}{\partial z}\]</div>
-<div class="arithmatex">\[\varepsilon_{xz}=\frac{\partial u}{\partial z}+\frac{\partial w}{\partial x}\]</div>
-<p>体积膨胀（速度散度）</p>
-<div class="arithmatex">\[\frac{1}{\delta \mathcal{V}}\frac{D(\delta \mathcal{V})}{Dt}=\nabla \cdot V\]</div>
-<p>简记方法</p>
-<p><img alt="无法显示" src="../figures/chap2/jianji.png"/></p>
-<div class="admonition note 流体是否有旋的判定">
-<p class="admonition-title">Note</p>
-<p><span><span class="arithmatex">\(\nabla \times V\)</span><span class="heti-spacing"> </span></span>在全流场中是否处处为<span><span class="heti-spacing"> </span>0</span></p>
+<h3 id="_12">雷诺输送定理<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition theorem">
+<p class="admonition-title">雷诺输送定理</p>
+<p>某一瞬间，控制体内的流体所构成的体系，它所具有的物理量总量的随体导数，等于同一瞬间控制体系中所含同一物理量的增加率与该物理量通过控制面的净流出率之和</p>
+<div class="arithmatex">\[\frac{\mathrm{D}}{\mathrm{D}t}\int_{V} B \mathrm{d}V=\frac{\partial}{\partial t}\int B \mathrm{d}V+\int_{S} B(\mathbf{v}\cdot \mathbf{n})\mathrm{d}S=\int_V (\frac{\partial }{\partial t}B+\nabla cdot (B\mathbf{v}))\mathrm{d}V \]</div>
+<p><span>B<span class="heti-spacing"> </span></span>可以是质量、动量、能量等</p>
 </div>
-<p>粘性流动一般是有旋流，上下表面的粘性力会使微团旋转</p>
-<h3 id="_62">有旋流动的一般概念、涡线和涡管<a class="headerlink" href="#_62" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_63">速度环量及其与涡通量的关系<a class="headerlink" href="#_63" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_64">涡管强度守恒定理及推论<a class="headerlink" href="#_64" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_65">旋涡的诱导速度<a class="headerlink" href="#_65" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="_13">流体力学方程组<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition note">
+<p class="admonition-title">基本控制方程</p>
+<ul>
+<li>质量守恒定律——连续性方程</li>
+<li>动量守恒定律——动量方程</li>
+<li>
+<p>能量守恒定律——能量方程</p>
+</li>
+<li>
+<p>能量方程对于可压缩流才是必要的</p>
+</li>
+<li>能量方程额外引入两个变量：内能<span><span class="heti-spacing"> </span>e</span>、温度<span><span class="heti-spacing"> </span>T</span>，额外需要两个辅助方程
+<span class="arithmatex">\(e=C_vT\)</span> (热力学状态关系式)
+<span class="arithmatex">\(p=\rho RT\)</span>（理想气体状态方程）</li>
+<li>无粘流体的动量方程，称为<span class="heti-skip"><span class="heti-spacing"> </span>Euler<span class="heti-spacing"> </span></span>方程；粘性流动的动量方程，称为<span class="heti-skip"><span class="heti-spacing"> </span>N-S<span class="heti-spacing"> </span></span>方程</li>
+</ul>
+</div>
+<div class="admonition summary">
+<p class="admonition-title">控制方程组</p>
+<ul>
+<li>
+<p>连续方程<span><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{\partial }{\partial t}\rho+\nabla \cdot (\rho \mathbf{v})=0\)</span></span></p>
+</li>
+<li>
+<p>动量方程<span><span class="heti-spacing"> </span><span class="arithmatex">\(\rho \frac{\mathrm{D}}{\mathrm{D}t} \mathbf{V}=\rho \mathbf{f}+\nabla \cdot \tau\)</span></span></p>
+</li>
+<li>
+<p>能量方程<span><span class="heti-spacing"> </span><span class="arithmatex">\(\rho \frac{\mathrm{D}}{\mathrm{D}t}e=\rho q+\nabla \cdot (k\Delta T)+\tau:\varepsilon\)</span></span></p>
+</li>
+<li>
+<p>本构方程<span><span class="heti-spacing"> </span><span class="arithmatex">\(\tau=-p\mathbf{I}+2\mu\varepsilon -\frac{2}{3}\mu (\nabla \cdot \mathbf{V})\mathbf{I}\)</span></span></p>
+</li>
+<li>
+<p>状态方程<span><span class="heti-spacing"> </span><span class="arithmatex">\(\rho=\rho(p,T)\)</span></span></p>
+</li>
+</ul>
+</div>
+<h3 id="_14">连续性方程<a class="headerlink" href="#_14" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition formula">
+<p class="admonition-title">连续性方程</p>
+<p>质量守恒定律<span><span class="heti-spacing"> </span><span class="arithmatex">\(B=\rho\)</span></span></p>
+<div class="arithmatex">\[\boxed{\frac{\mathrm{D}}{\mathrm{D}t}\int_V \rho \mathrm{d}V=0}\]</div>
+<p>积分形式</p>
+<div class="arithmatex">\[\int_V (\frac{\partial }{\partial t}\rho +\nabla \cdot(\rho \mathbf{v}))\mathrm{d}V=0\]</div>
+<p>微分形式</p>
+<div class="arithmatex">\[\frac{\partial}{\partial t}\rho +\nabla \cdot (\rho \mathrm{v})=0\]</div>
+</div>
+<div class="admonition formula">
+<p class="admonition-title">定常流动的连续方程</p>
+<p>定常流动流场任何空间点密度均不随时间变化</p>
+<div class="arithmatex">\[\int_V \frac{\partial \rho}{\partial t}\mathrm{d}V=0\]</div>
+<p>在定常流动中，从控制体流出的质量流量永远等于流入控制体的质量流量</p>
+<p>定常流动的连续方程式</p>
+<div class="arithmatex">\[\int_V \nabla \cdot (\rho \mathbf{v})\mathrm{d}V=0\]</div>
+<p>可简化为</p>
+<div class="arithmatex">\[\frac{\partial (\rho v_x)}{\partial x}+\frac{\partial (\rho v_y)}{\partial y}+\frac{\partial (\rho v_z)}{\partial z}=0\]</div>
+</div>
+<div class="admonition formula">
+<p class="admonition-title">不可压缩流动的连续方程</p>
+<p>流体密度不随时间变化，也不随空间变化</p>
+<div class="arithmatex">\[\nabla \cdot \mathbf{v}=0\]</div>
+<p>在不可压缩流体流动时，任何瞬时从控制体流出的质量等于流入控制体的质量</p>
+<div class="arithmatex">\[\frac{\partial v_x}{\partial x}+\frac{\partial v_y}{\partial y}+\frac{\partial v_z}{\partial z}=0\]</div>
+</div>
+<h3 id="_15">本构方程<a class="headerlink" href="#_15" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition note">
+<p class="admonition-title">本构关系</p>
+<p>本构方程：确定应力和应变速度关系的方程式</p>
+<p>对于牛顿流体</p>
+<ul>
+<li>应力张量与应变率张量成线性关系</li>
+<li>这种线性关系在流体各向同性</li>
+<li>流体静止的时候，应变率为零，流体中的偏应力为零，正应力就是各项等值的静压强</li>
+</ul>
+<div class="arithmatex">\[\tau=-p \mathbf{I}+2\mu \varepsilon -\frac{2}{3}\mu (\nabla \cdot \mathbf{V})\mathbf{I}\]</div>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">斯托克斯假设</p>
+<ol>
+<li>流体是连续的，其应力矩阵与变形率矩阵成线性关系，与流体的平动和转动无关</li>
+<li>流体是各向同性的，其应力与变形率的关系与坐标系的选择和位置无关</li>
+<li>当流体静止时，变形率为零，流体中的应力为流体静压强</li>
+</ol>
+</div>
+<h3 id="_16">动量方程<a class="headerlink" href="#_16" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition formula">
+<p class="admonition-title">动量方程</p>
+<p>动量守恒定律，<span class="arithmatex">\(B=\rho \mathbf{V}\)</span></p>
+<div class="arithmatex">\[\boxed{\frac{\mathrm{D}}{\mathrm{D}t}\int_V \rho \mathbf{V}\mathrm{d}V=\mathbf{F}_{\text{body}}+\mathbf{F}_{\text{surface}}}\]</div>
+<div class="arithmatex">\[\int_V (\rho \frac{\mathrm{D}}{\mathrm{D}t}\mathbf{V}-\rho \mathbf{v}-\nabla \cdot \tau)\mathrm{d}V=0\]</div>
+<p>微分形式</p>
+<div class="arithmatex">\[\rho \frac{\mathrm{D}}{\mathrm{D}t}\mathbf{V}=\rho \mathbf{f}+\nabla \cdot \tau\]</div>
+</div>
+<div class="admonition formula">
+<p class="admonition-title">动量方程特例</p>
+<p>定常流动</p>
+<div class="arithmatex">\[\mathbf{V}\frac{\partial (\rho \mathbf{V})}{\partial \mathbf{X}}=\rho \mathbf{v}+\nabla \cdot \tau\]</div>
+<p>无粘流体</p>
+<div class="arithmatex">\[\rho \frac{\mathrm{D}}{\mathrm{D}t}\mathbf{V}=\rho \mathbf{f}-\nabla \cdot \rho\]</div>
+</div>
+<h3 id="_17">能量方程<a class="headerlink" href="#_17" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition formula">
+<p class="admonition-title">能量方程</p>
+</div>
+<h3 id="_18">内能方程<a class="headerlink" href="#_18" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition formula">
+<p class="admonition-title">内能方程</p>
+</div>
+<h2 id="_19">流动的分类<a class="headerlink" href="#_19" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_20">流体运动相关概念<a class="headerlink" href="#_20" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_21">流线、迹线、脉线<a class="headerlink" href="#_21" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition defintion">
+<p class="admonition-title">流线、迹线、脉线</p>
+<ul>
+<li>
+<p>迹线：流体质点在流场中运动的轨迹</p>
+<div class="arithmatex">\[\mathrm{d}\mathbf{r}=\mathbf{V}\mathrm{d}t\]</div>
+</li>
+<li>
+<p>流线：某时刻，该曲线所有点的运动（速度）方向都与这条曲线相切</p>
+<div class="arithmatex">\[\mathrm{d}\mathbf{v}\times \mathbf{V}=0\]</div>
+</li>
+<li>
+<p>脉线：一段时间内相继通过空间某固定点的很多流体质点连成的线，又称染色线</p>
+</li>
+</ul>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">流管与流面</p>
+<p>流管：在三维流动里，经过一条有流量穿过的封闭曲线的所有流线围成封闭管状曲面</p>
+<p>流面：由许多相邻的流线连成的一个曲面</p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">流量</p>
+<p>流量：单位时间穿过指定截面的流体量</p>
+<p>体积流量</p>
+<div class="arithmatex">\[Q=\int_A (\vec{V}\cdot \vec{n})\mathrm{d}A\]</div>
+<p>质量流量</p>
+<div class="arithmatex">\[\dot{m}=\int_A \rho (\vec{V}\cdot \vec{n})\mathrm{d}A\]</div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>一般情况下，流线、迹线、脉线并不重合；定常情况下，三者重合</p>
+</div>
+<h3 id="_22">环量与涡<a class="headerlink" href="#_22" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition definiton">
+<p class="admonition-title">涡</p>
+<ul>
+<li>涡量：旋转角速度的两倍，速度场的旋度</li>
+<li>涡线：在同一瞬时，该线上每一点的涡轴线都与曲线相切</li>
+<li>涡面：在同一瞬时，通过某一曲线（本身不是涡线）的所有涡线构成的曲面</li>
+<li>涡管：在同一瞬时，通过某一封闭围线的所有涡线所组成的涡面</li>
+</ul>
+</div>
+<div class="admonition defintion">
+<p class="admonition-title">涡通量</p>
+<p>涡通量：涡量在一个截面上的面积分，也称涡强</p>
+</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月19日 16:50:12</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月23日 09:39:38</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月19日 16:50:13</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月23日 09:39:38</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>

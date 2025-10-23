@@ -17,6 +17,7 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../stylesheet/counter.css" rel="stylesheet"/>
 <link href="../../../stylesheet/custom.css" rel="stylesheet"/>
 <link href="../../../stylesheet/extra_changelog.css" rel="stylesheet"/>
 <link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet"/>
@@ -1546,30 +1547,12 @@
       RLC电路中的谐振
     </span>
 </a>
-<nav aria-label="RLC电路中的谐振" class="md-nav">
-<ul class="md-nav__list">
+</li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_11">
-<span class="md-ellipsis">
-      串联谐振
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_12">
-<span class="md-ellipsis">
-      并联谐振
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_13">
 <span class="md-ellipsis">
       三相交流电路
     </span>
@@ -1577,14 +1560,14 @@
 <nav aria-label="三相交流电路" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_14">
+<a class="md-nav__link" href="#_12">
 <span class="md-ellipsis">
       三相交流电源
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_15">
+<a class="md-nav__link" href="#_13">
 <span class="md-ellipsis">
       三相电路的计算
     </span>
@@ -1594,7 +1577,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_16">
+<a class="md-nav__link" href="#_14">
 <span class="md-ellipsis">
       一阶电路的瞬态分析
     </span>
@@ -1602,7 +1585,7 @@
 <nav aria-label="一阶电路的瞬态分析" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_17">
+<a class="md-nav__link" href="#_15">
 <span class="md-ellipsis">
       换路定律
     </span>
@@ -2034,30 +2017,12 @@
       RLC电路中的谐振
     </span>
 </a>
-<nav aria-label="RLC电路中的谐振" class="md-nav">
-<ul class="md-nav__list">
+</li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_11">
-<span class="md-ellipsis">
-      串联谐振
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_12">
-<span class="md-ellipsis">
-      并联谐振
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_13">
 <span class="md-ellipsis">
       三相交流电路
     </span>
@@ -2065,14 +2030,14 @@
 <nav aria-label="三相交流电路" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_14">
+<a class="md-nav__link" href="#_12">
 <span class="md-ellipsis">
       三相交流电源
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_15">
+<a class="md-nav__link" href="#_13">
 <span class="md-ellipsis">
       三相电路的计算
     </span>
@@ -2082,7 +2047,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_16">
+<a class="md-nav__link" href="#_14">
 <span class="md-ellipsis">
       一阶电路的瞬态分析
     </span>
@@ -2090,7 +2055,7 @@
 <nav aria-label="一阶电路的瞬态分析" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_17">
+<a class="md-nav__link" href="#_15">
 <span class="md-ellipsis">
       换路定律
     </span>
@@ -2122,7 +2087,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="chap2"><span>Chap2<span class="heti-spacing"> </span></span>电路分析基础<a class="headerlink" href="#chap2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <h2 id="_1">基尔霍夫定律<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<div class="admonition note">
+<div class="admonition definition">
 <p class="admonition-title">基本概念</p>
 <ul>
 <li>节点：三个或三个以上电路元件的连接点</li>
@@ -2131,12 +2096,18 @@
 <li>网孔：电路中最简单的单孔回路</li>
 </ul>
 </div>
-<div class="admonition info">
+<div class="admonition theorem">
 <p class="admonition-title">基尔霍夫定律</p>
+<ul>
+<li>
 <p>基尔霍夫电流定律（KCL<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：任何节点上的所有支路电流的代数和在任何时刻都等于零</p>
+</li>
+<li>
 <p>基尔霍夫电压定律（KVL<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：形成任何一个回路的所有支路沿同一循行方向电压的代数和在任何时刻都等于零</p>
+</li>
+</ul>
 </div>
-<div class="admonition note">
+<div class="admonition info">
 <p class="admonition-title">支路电流法</p>
 <ol>
 <li>标出各支路电流的参考方向，设支路数为<span><span class="heti-spacing"> </span>b</span>，则有<span class="heti-skip"><span class="heti-spacing"> </span>b<span class="heti-spacing"> </span></span>个支路电流，有<span class="heti-skip"><span class="heti-spacing"> </span>b<span class="heti-spacing"> </span></span>个独立方程式</li>
@@ -2147,12 +2118,12 @@
 </div>
 <h2 id="_2">叠加定理与等效源定理<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_3">叠加定理<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition info">
+<div class="admonition theorem">
 <p class="admonition-title">叠加原理</p>
 <p>对于一个线性电路，由几个独立电源共同作用所产生的电流或电压，等于各个独立电源单独作用时分别在该支路所产生的电流或电压的代数和</p>
 <p><img alt="无法显示" src="../figures/chap2/diejia.png"/></p>
 </div>
-<div class="admonition caution">
+<div class="admonition attention">
 <p class="admonition-title">注意</p>
 <ul>
 <li>只限于线性电路</li>
@@ -2163,7 +2134,11 @@
 </ul>
 </div>
 <h3 id="_4">等效电源定理<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition info">
+<div class="admonition definition">
+<p class="admonition-title">二端网络</p>
+<p>凡是具有两个接线端的部分电路，就称为二端网络；视其内部是否包含电源，分为有源二端网络和无源二端网络</p>
+</div>
+<div class="admonition theorem">
 <p class="admonition-title">戴维宁定理</p>
 <ol>
 <li>一个线性有源二端网络可用一个电压源和一个电阻的串联电路等效</li>
@@ -2171,7 +2146,7 @@
 <li>串联电阻等于除去独立电源后在其端口处等效电阻</li>
 </ol>
 </div>
-<div class="admonition info">
+<div class="admonition theorem">
 <p class="admonition-title">诺顿定理</p>
 <ol>
 <li>一个线性有源二端网络可用一个电流源和一个电阻的并联电路等效</li>
@@ -2179,7 +2154,7 @@
 <li>并联电阻等于除去独立电源后在其端口处等效电阻</li>
 </ol>
 </div>
-<div class="admonition caution">
+<div class="admonition attention">
 <p class="admonition-title">注意</p>
 <ol>
 <li>被等效的二端网络必须是线性的</li>
@@ -2195,17 +2170,33 @@
 <li>负载实验法</li>
 </ol>
 </div>
-<div class="admonition caution">
+<div class="admonition attention">
 <p class="admonition-title">注意</p>
 <p>当有源二段网络中含有受控源时，除去独立电源后，受控源仍保留在网络中，应用外施电压法和开路法计算等效电阻，而不能使用串并联化简法</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">习题<span><span class="heti-spacing"> </span>2.2.8</span></p>
+<p>如图所示以<span><span class="heti-spacing"> </span>a</span>、<span>b<span class="heti-spacing"> </span></span>为端点的二端网络中，含有电流控制源电流源<span><span class="heti-spacing"> </span>20<span class="arithmatex">\(I_2\)</span></span>。试求：<span>(1)<span class="heti-spacing"> </span></span>当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(R_3=10k\Omega\)</span><span class="heti-spacing"> </span></span>时的开路电压<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(U_{OC}\)</span><span class="heti-spacing"> </span></span>和等效电阻<span><span class="heti-spacing"> </span><span class="arithmatex">\(R_0\)</span></span></p>
+<p><img alt="无法显示" src="../figures/chap2/q1.png"/> </p>
+<p>由图可得</p>
+<div class="arithmatex">\[\left\{\begin{aligned}I_1=I_2+I_3 \\ I_3=20I_2+I_4 \\ R_1I_1+R_2I_2=U_1 \\ R_3I_3+R_4I_4-R_2I_2=0\end{aligned}\right.\]</div>
+<p>开路电压</p>
+<div class="arithmatex">\[U_{OC}=R_4I_4=-0.6861V\]</div>
+<p>电路中含有受控源，将独立电源<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(U_1\)</span><span class="heti-spacing"> </span></span>短接，并在端口接外施电压<span><span class="heti-spacing"> </span>U</span></p>
+<p><img alt="无法显示" src="../figures/chap2/a1.png"/></p>
+<div class="arithmatex">\[I_3^\prime =\frac{U}{(R_1 \parallel R_2)+R_3}\]</div>
+<div class="arithmatex">\[I_2^\prime=\frac{R_1}{R_1+R_2}I^\prime_3\]</div>
+<div class="arithmatex">\[I^\prime=I_3^\prime +20I_2^\prime\]</div>
+<div class="arithmatex">\[R_0^\prime = \frac{U}{I^\prime}\]</div>
+<div class="arithmatex">\[R_0=R_4 \parallel R_0^\prime=0.7241\Omega\]</div>
 </div>
 <h2 id="_5">正弦交流电路<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_6">正弦量的三要素<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>三要素：最大值、角频率、初相位</p>
 <div class="admonition note">
 <p class="admonition-title">相位差</p>
+<p><span class="arithmatex">\(\varphi=\varphi_u-\varphi_i\)</span></p>
 <ul>
-<li><span class="arithmatex">\(\varphi=\varphi_u-\varphi_i\)</span></li>
 <li><span class="arithmatex">\(\varphi=0\)</span>，<span><span class="arithmatex">\(u\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(i\)</span><span class="heti-spacing"> </span></span>同相</li>
 <li><span class="arithmatex">\(\varphi&gt;0\)</span>，<span><span class="arithmatex">\(u\)</span><span class="heti-spacing"> </span></span>超前于<span><span class="heti-spacing"> </span><span class="arithmatex">\(i\)</span></span>，<span><span class="arithmatex">\(i\)</span><span class="heti-spacing"> </span></span>滞后于<span><span class="heti-spacing"> </span><span class="arithmatex">\(u\)</span></span></li>
 <li><span class="arithmatex">\(\varphi=180\degree\)</span>，<span><span class="arithmatex">\(u\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(i\)</span><span class="heti-spacing"> </span></span>反相</li>
@@ -2213,7 +2204,7 @@
 </ul>
 </div>
 <h3 id="_7">正弦量的相量表示法<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition note">
+<div class="admonition info">
 <p class="admonition-title">相量法</p>
 <p>相量法：用复数表述正弦量</p>
 <ul>
@@ -2221,7 +2212,7 @@
 <li>指数表达式：<span class="arithmatex">\(A=|A|e^{j\varphi}\)</span></li>
 <li>极坐标表达式：<span class="arithmatex">\(A=|A|\angle \varphi\)</span></li>
 </ul>
-<p>正弦量变换为向量<span class="heti-skip"><span class="heti-spacing"> </span>:<span class="heti-spacing"> </span></span>有效值<span class="heti-skip"><span class="heti-spacing"> </span>-&gt;<span class="heti-spacing"> </span></span>复数的模，初相位<span class="heti-skip"><span class="heti-spacing"> </span>-&gt;<span class="heti-spacing"> </span></span>复数的幅角</p>
+<p>正弦量变换为相量<span class="heti-skip"><span class="heti-spacing"> </span>:<span class="heti-spacing"> </span></span>有效值<span class="heti-skip"><span class="heti-spacing"> </span>-&gt;<span class="heti-spacing"> </span></span>复数的模，初相位<span class="heti-skip"><span class="heti-spacing"> </span>-&gt;<span class="heti-spacing"> </span></span>复数的幅角</p>
 </div>
 <h3 id="_8">电阻、电感、电容元件上电压与电流关系的相量形式<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition note">
@@ -2235,30 +2226,36 @@
 <div class="admonition note">
 <p class="admonition-title">电感</p>
 <ul>
-<li><span>u<span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>是同频率正弦量</li>
-<li><span>i<span class="heti-spacing"> </span></span>滞后于<span><span class="heti-spacing"> </span>u90°</span></li>
+<li><span>u<span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>是同频率正弦量，<span>i<span class="heti-spacing"> </span></span>滞后于<span><span class="heti-spacing"> </span>u90°</span></li>
 <li>电感电压有效值等于电流有效值乘以<span><span class="heti-spacing"> </span><span class="arithmatex">\(\omega L\)</span></span></li>
 <li>相量形式的欧姆定律<span><span class="heti-spacing"> </span><span class="arithmatex">\(\dot{U}=jX_L\dot{I}\)</span></span></li>
 <li><span><span class="arithmatex">\(X_L=\omega L=2\pi fL\)</span><span class="heti-spacing"> </span></span>称为感抗</li>
-<li>电感在直流稳态时相当于短路</li>
+<li><strong>电感在直流稳态时相当于短路</strong></li>
 </ul>
 </div>
 <div class="admonition note">
 <p class="admonition-title">电容</p>
 <ul>
-<li><span>u<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>是同频率正弦量</li>
-<li><span>i<span class="heti-spacing"> </span></span>超前于<span><span class="heti-spacing"> </span>u90°</span></li>
+<li><span>u<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>i<span class="heti-spacing"> </span></span>是同频率正弦量，<span>i<span class="heti-spacing"> </span></span>超前于<span><span class="heti-spacing"> </span>u90°</span></li>
 <li>相量形式的欧姆定律<span><span class="heti-spacing"> </span><span class="arithmatex">\(\dot{U}=-jX_C\dot{I}\)</span></span></li>
 <li><span><span class="arithmatex">\(X_C=\frac{1}{\omega C}=\frac{1}{2\pi fC}\)</span><span class="heti-spacing"> </span></span>称为容抗</li>
 <li>高频电流容易通过电容</li>
-<li>电容在直流电路处于稳定状态时相当于开路</li>
+<li><strong>电容在直流电路处于稳定状态时相当于开路</strong></li>
 </ul>
 </div>
 <h3 id="_9">简单正弦交流电路的计算<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p><span>RLC<span class="heti-spacing"> </span></span>串联电路中</p>
 <div class="arithmatex">\[\dot{U}=\dot{U}_R+\dot{U}_L+\dot{U}_C\]</div>
 <div class="arithmatex">\[\dot{U}=R\dot{I}+jX_L\dot{I}-jX_C\dot{I}=[R+j(X_L-X_C)]\dot{I}=(R+jX)\dot{I}=Z\dot{I}\]</div>
-<p>复阻抗：<span class="arithmatex">\(Z=R+jX\)</span>，电抗：<span class="arithmatex">\(X=X_L-X_C\)</span>，阻抗：<span class="arithmatex">\(|Z|\)</span>，阻抗角：<span class="arithmatex">\(\varphi=arctan\frac{X}{R}\)</span></p>
+<div class="admonition definition">
+<p class="admonition-title">定义</p>
+<ul>
+<li>复阻抗：<span class="arithmatex">\(Z=R+jX\)</span></li>
+<li>电抗：<span class="arithmatex">\(X=X_L-X_C\)</span></li>
+<li>阻抗：<span class="arithmatex">\(|Z|\)</span></li>
+<li>阻抗角：<span class="arithmatex">\(\varphi=\arctan\frac{X}{R}\)</span></li>
+</ul>
+</div>
 <p><strong>电压与电流的有效值之比等于阻抗模，电压与电流的之间的相位差等于阻抗角</strong></p>
 <div class="admonition note">
 <p class="admonition-title">复阻抗的进一步讨论</p>
@@ -2269,24 +2266,69 @@
 </ul>
 </div>
 <h3 id="_10">交流电路的功率<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition definition">
+<p class="admonition-title">定义</p>
+<ul>
+<li>
 <p>瞬时功率：<span class="arithmatex">\(p=ui\)</span></p>
+</li>
+<li>
 <p>平均功率<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>有功功率：<span class="arithmatex">\(P=\frac{1}{T}\int_0^T pdt=UI\cos \varphi=UI\lambda\)</span></p>
-<p><span><span class="arithmatex">\(\lambda=cos\varphi\)</span><span class="heti-spacing"> </span></span>为功率因数，<span><span class="arithmatex">\(\varphi\)</span><span class="heti-spacing"> </span></span>为功率因数角</p>
+</li>
+<li>
+<p>无功功率：<span class="arithmatex">\(Q=UI\sin \varphi\)</span></p>
+</li>
+<li>
+<p>视在功率：<span class="arithmatex">\(S=UI=\sqrt{P^2+Q^2}\)</span></p>
+</li>
+<li>
+<p><span><span class="arithmatex">\(\lambda=cos\varphi\)</span><span class="heti-spacing"> </span></span>为功率因数</p>
+</li>
+<li>
+<p><span><span class="arithmatex">\(\varphi\)</span><span class="heti-spacing"> </span></span>为功率因数角</p>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">功率因数的提高</p>
+<p>电源设备的容量<span><span class="heti-spacing"> </span><span class="arithmatex">\(S=UI\)</span></span></p>
+<p>负载消耗的有功功率<span><span class="heti-spacing"> </span><span class="arithmatex">\(P=UI\cos \varphi=UI\lambda\)</span></span></p>
+<p>要提高电源设备的利用率，就要求提高功率因数<span><span class="heti-spacing"> </span><span class="arithmatex">\(\lambda\)</span></span></p>
+<p>当负载的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(P\)</span><span class="heti-spacing"> </span></span>和电压<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(U\)</span><span class="heti-spacing"> </span></span>一定时，<span class="arithmatex">\(\lambda \uparrow \rightarrow I\downarrow\)</span>，因此消耗在输电线路上的功率<span><span class="heti-spacing"> </span><span class="arithmatex">\(\Delta p=R_LI^2 \downarrow\)</span></span></p>
+<p>工业设备多为感性，常用并联<span><span class="heti-spacing"> </span><span class="arithmatex">\(C\)</span></span>，使得<span><span class="heti-spacing"> </span><span class="arithmatex">\(\lambda \uparrow\)</span></span></p>
+</div>
 <h3 id="rlc"><span>RLC<span class="heti-spacing"> </span></span>电路中的谐振<a class="headerlink" href="#rlc" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h4 id="_11">串联谐振<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<div class="admonition definition">
+<p class="admonition-title">串联谐振</p>
+<p>在<span class="heti-skip"><span class="heti-spacing"> </span>RLC<span class="heti-spacing"> </span></span>串联电路中，当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X_L=X_C\)</span><span class="heti-spacing"> </span></span>时，<span><span class="arithmatex">\(\dot{I}\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\dot{U}\)</span><span class="heti-spacing"> </span></span>同相，电路呈电阻性，这种工作状态称为串联谐振，又称为电压谐振</p>
+<p><img alt="无法显示" src="../figures/chap2/chuan_lian.png"/></p>
 <p>谐振频率</p>
 <div class="arithmatex">\[f_0=\frac{1}{2\pi\sqrt{LC}}\]</div>
 <p>特性阻抗</p>
 <div class="arithmatex">\[\rho=\omega_0 L =\frac{1}{\omega_0C}=\sqrt{\frac{L}{C}}\]</div>
 <p>品质因数</p>
 <div class="arithmatex">\[Q=\frac{U_L}{U}=\frac{U_C}{U}=\frac{2\pi f_0L}{R}=\frac{1}{2\pi f_0CR}\]</div>
-<p>谐振曲线</p>
-<p><img alt="无法显示" src="../figures/chap2/xiezhen.png"/></p>
-<h4 id="_12">并联谐振<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<div class="arithmatex">\[f_0=\frac{1}{2\pi\sqrt{LC}}\sqrt{1-\frac{C}{L}R^2}\approx\frac{1}{2\pi\sqrt{LC}}\]</div>
-<h2 id="_13">三相交流电路<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_14">三相交流电源<a class="headerlink" href="#_14" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+</div>
 <div class="admonition note">
+<p class="admonition-title">谐振曲线</p>
+<p><img alt="无法显示" src="../figures/chap2/xiezhen.png"/></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">并联谐振</p>
+<p><img alt="无法显示" src="../figures/chap2/bing_lian.png"/></p>
+<div class="arithmatex">\[f_0=\frac{1}{2\pi\sqrt{LC}}\sqrt{1-\frac{C}{L}R^2}\approx\frac{1}{2\pi\sqrt{LC}}\]</div>
+<p>并联谐振具有以下特点：</p>
+<ol>
+<li>并联谐振电路的等效阻抗较大且具有纯电阻性质，其等效阻抗</li>
+</ol>
+<div class="arithmatex">\[Z_0=R_0=\frac{R^2+(2\pi f_0L)^2}{R}=\frac{L}{RC}\]</div>
+<ol>
+<li>电路中的总电流较小，故并联谐振又称为电流谐振</li>
+</ol>
+</div>
+<h2 id="_11">三相交流电路<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_12">三相交流电源<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition definition">
 <p class="admonition-title">三相交流电源</p>
 <p>三相电源：由三个幅值相等、频率相同、相位互差<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(120\degree\)</span><span class="heti-spacing"> </span></span>单相交流电源所构成的电源</p>
 <p><img alt="无法显示" src="../figures/chap2/sanxiang.png"/></p>
@@ -2298,13 +2340,18 @@
 <li>各相线与中性线之间的电压称为相电压，相线与相线之间的电压称为线电压</li>
 </ul>
 </div>
+<div class="admonition note">
+<p class="admonition-title">相电压与线电压</p>
 <p>三相电源相电压的相量表达式为</p>
 <div class="arithmatex">\[\left.\begin{aligned}\dot{U}_U=U_P \angle 0\degree \\ \dot{U}_V=U_P \angle -120 \degree \\ \dot{U}_W=U_P \angle -240\degree \end{aligned}\right\}\]</div>
 <p>线电压和相电压之间的关系为</p>
 <div class="arithmatex">\[\left.\begin{aligned}\dot{U}_{UV}=\dot{U}_U-\dot{U}_V=\sqrt{3}U_P \angle 30\degree \\ \dot{U}_{VW}=\dot{U}_V-\dot{U}_W=\sqrt{3}U_P \angle -90\degree \\ \dot{U}_{WU}=\dot{U}_W-\dot{U}_U=\sqrt{3}U_P \angle -210\degree\end{aligned}\right\}\]</div>
-<h3 id="_15">三相电路的计算<a class="headerlink" href="#_15" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p><img alt="无法显示" src="../figures/chap2/xiang_xian.png"/></p>
+</div>
+<h3 id="_13">三相电路的计算<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition note">
 <p class="admonition-title">负载星形联结</p>
+<p>星形联结：各相负载的额定电压等于电源的相电压，又称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Y\)</span><span class="heti-spacing"> </span></span>形联结</p>
 <p><img alt="无法显示" src="../figures/chap2/xingxing.png"/></p>
 <p><strong>相电流等于线电流</strong></p>
 <p>各项负载电流为</p>
@@ -2314,6 +2361,7 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">负载三角形联结</p>
+<p>三角形联结：各相负载的额定电压等于电源的线电压</p>
 <p><img alt="无法显示" src="../figures/chap2/sanjiao.png"/></p>
 <p><strong>相电压等于线电压</strong></p>
 <p>各相负载电流为</p>
@@ -2327,7 +2375,14 @@
 </div>
 <div class="admonition caution">
 <p class="admonition-title">注意</p>
-<p>星型不对称负载必须要有中性线，且中性线上不允许装熔断器</p>
+<ol>
+<li>
+<p>星形联结，三相负载相同，可以省去中性线</p>
+</li>
+<li>
+<p>星形不对称负载必须要有中性线，且中性线上不允许装熔断器</p>
+</li>
+</ol>
 </div>
 <div class="admonition note">
 <p class="admonition-title">三相电路的功率</p>
@@ -2345,8 +2400,23 @@
 <p>式中的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi\)</span><span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>相电压与相电流的相位差<span><span class="heti-spacing"> </span>**</span>，而非线电压与线电流的相位差</p>
 <p>只取决于负载的性质（阻抗角<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，而与负载的连接方式无关</p>
 </div>
-<h2 id="_16">一阶电路的瞬态分析<a class="headerlink" href="#_16" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<div class="admonition note">
+<div class="admonition question">
+<p class="admonition-title">习题<span><span class="heti-spacing"> </span>2.4.4</span></p>
+<p>把三角形联结的三相对称负载，不改变元件参数但改接为星形联结，接在同一三相交流电源上。设三相电源的线电压为<span><span class="heti-spacing"> </span><span class="arithmatex">\(U_L\)</span></span>，每相负载阻抗为<span><span class="heti-spacing"> </span><span class="arithmatex">\(Z=|Z|\angle \varphi\)</span></span>。试问<heti-adjacent class="heti-adjacent-half">：</heti-adjacent>（1）两种接法的电流有效值之比<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I_\Delta/I_Y\)</span><span class="heti-spacing"> </span></span>是多少<heti-adjacent class="heti-adjacent-half">？</heti-adjacent>（2）两种接法供给的有功功率之比<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(P_\Delta/P_Y\)</span><span class="heti-spacing"> </span></span>是多少</p>
+<p><img alt="无法显示" src="../figures/chap2/q2.png"/></p>
+<p><span>(1)<span class="heti-spacing"> </span></span>三角形联结时，相电流<span><span class="heti-spacing"> </span><span class="arithmatex">\(I_{P\Delta}=\frac{U_L}{|Z|}\)</span></span>，线电流</p>
+<div class="arithmatex">\[I_\Delta =\sqrt{3}I_{P\Delta}=\sqrt{3}\frac{U_L}{|Z|}\]</div>
+<p>星形联结时，相电流<span><span class="heti-spacing"> </span><span class="arithmatex">\(I_{PY}=\frac{U_P}{|Z|}=\frac{U_L}{\sqrt{3}|Z|}\)</span></span>，线电流</p>
+<div class="arithmatex">\[I_Y=I_{PY}=\frac{U_L}{\sqrt{3}|Z|}\]</div>
+<div class="arithmatex">\[I_{\Delta}/I_{Y}=3\]</div>
+<p><span>(2)<span class="heti-spacing"> </span></span>三角形联结时，</p>
+<div class="arithmatex">\[P_{\Delta}=\sqrt{3}U_LI_L\cos \varphi=\sqrt{3}U_LI_\Delta \cos \varphi\]</div>
+<p>星形联结时，</p>
+<div class="arithmatex">\[P_Y=\sqrt{3}U_LI_L\cos \varphi=\sqrt{3}U_LI_Y \cos \varphi\]</div>
+<div class="arithmatex">\[P_\Delta/P_Y=3\]</div>
+</div>
+<h2 id="_14">一阶电路的瞬态分析<a class="headerlink" href="#_14" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition definition">
 <p class="admonition-title">稳态和瞬态</p>
 <ul>
 <li>稳态：电路中的激励和响应均是恒定量或按某种周期规律变化，电路的这种工作状态称为稳态</li>
@@ -2363,8 +2433,8 @@
 </ol>
 <p>时，电路从一种稳定状态变化到另一种稳定状态，这个变化不能瞬时完成，需要经历一个过渡状态，常称为暂态</p>
 </div>
-<h3 id="_17">换路定律<a class="headerlink" href="#_17" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition info">
+<h3 id="_15">换路定律<a class="headerlink" href="#_15" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition theorem">
 <p class="admonition-title">换路定律</p>
 <ol>
 <li>换路前后，电容上的电压不能突变，即</li>
@@ -2389,7 +2459,7 @@
 </ul>
 </div>
 <h3 id="rc"><span>RC<span class="heti-spacing"> </span></span>电路的瞬态分析<a class="headerlink" href="#rc" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition note">
+<div class="admonition proof">
 <p class="admonition-title"><span>RC<span class="heti-spacing"> </span></span>电路瞬态分析</p>
 <p><img alt="无法显示" src="../figures/chap2/rc.png"/></p>
 <p>回路电压方程</p>
@@ -2417,7 +2487,7 @@
 <p><span>RC<span class="heti-spacing"> </span></span>耦合电路：隔断信号中的直流分量，传输其交流分量；常应用在交流放大电路中</p>
 </div>
 <h3 id="rl"><span>RL<span class="heti-spacing"> </span></span>电路的瞬态分析<a class="headerlink" href="#rl" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition note">
+<div class="admonition proof">
 <p class="admonition-title"><span>RL<span class="heti-spacing"> </span></span>电路瞬态分析</p>
 <p><img alt="无法显示" src="../figures/chap2/rl.png"/></p>
 <p>节点电流方程</p>

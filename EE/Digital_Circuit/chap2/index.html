@@ -17,6 +17,7 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../stylesheet/counter.css" rel="stylesheet"/>
 <link href="../../../stylesheet/custom.css" rel="stylesheet"/>
 <link href="../../../stylesheet/extra_changelog.css" rel="stylesheet"/>
 <link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet"/>
@@ -1899,9 +1900,10 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="chap2-boolean-algebra-and-logic-gates">Chap2 Boolean Algebra and Logic Gates<a class="headerlink" href="#chap2-boolean-algebra-and-logic-gates" title="Permanent link">¶</a></h1>
+<p>逻辑函数表示方法：真值表、逻辑式、逻辑图、波形图、卡诺图、硬件描述语言</p>
 <h2 id="axiomatic-definition-of-boolean-algebra">Axiomatic Definition of Boolean Algebra<a class="headerlink" href="#axiomatic-definition-of-boolean-algebra" title="Permanent link">¶</a></h2>
 <h2 id="basic-theorems-and-properties-of-boolean-algebra">Basic Theorems and Properties of Boolean Algebra<a class="headerlink" href="#basic-theorems-and-properties-of-boolean-algebra" title="Permanent link">¶</a></h2>
-<div class="admonition info">
+<div class="admonition theorem">
 <p class="admonition-title">Postulates and Theorems of Boolean Algebra</p>
 <ul>
 <li>Postulate2 (a) <span class="arithmatex">\(x+0=x\)</span> (b) <span class="arithmatex">\(x\cdot 1=x\)</span></li>
@@ -1916,12 +1918,44 @@
 <li>Theorem6, absorption (a) <span class="arithmatex">\(x+xy=x\)</span> (b) <span class="arithmatex">\(x(x+y)=x\)</span></li>
 </ul>
 </div>
+<div class="admonition formula">
+<p class="admonition-title">常用公式</p>
+<ul>
+<li><span class="arithmatex">\(A+AB=A\)</span></li>
+<li><span class="arithmatex">\(A+A^\prime B=A+B\)</span></li>
+<li><span class="arithmatex">\(AB+AB^\prime =A\)</span></li>
+<li><span class="arithmatex">\(A(A+B)=A\)</span></li>
+<li><span class="arithmatex">\(AB+A^\prime C+BC=AB+A^\prime C\)</span></li>
+<li><span class="arithmatex">\(AB+A^\prime C+BCD=AB+A^\prime C\)</span></li>
+<li><span class="arithmatex">\(A(AB)^\prime=AB^\prime\)</span></li>
+<li><span class="arithmatex">\(A^\prime (AB)^\prime=A^\prime\)</span></li>
+</ul>
+</div>
 <h2 id="boolean-functions">Boolean Functions<a class="headerlink" href="#boolean-functions" title="Permanent link">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Boolean Functions</p>
 <p><img alt="无法显示" src="../figures/chap2/functions.png"/></p>
 </div>
+<div class="admonition theorem">
+<p class="admonition-title">代入定理</p>
+<p>在任何一个包含<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>的逻辑等式中，若以另一个逻辑式代入式中<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>的位置，则等式依然成立</p>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">反演定理</p>
+<p>对于任意一个逻辑式<span><span class="heti-spacing"> </span>Y</span>，若将所有的“与”换成“或”<heti-adjacent class="heti-adjacent-quarter">，</heti-adjacent>“或”换成“与”，<span>0<span class="heti-spacing"> </span></span>换成<span><span class="heti-spacing"> </span>1</span>，<span>1<span class="heti-spacing"> </span></span>换成<span><span class="heti-spacing"> </span>0</span>，原变量变成反变量，反变量变成原变量，得到的一个新的逻辑式即为逻辑式<span class="heti-skip"><span class="heti-spacing"> </span>Y<span class="heti-spacing"> </span></span>的非</p>
+<div class="admonition example">
+<p class="admonition-title">示例</p>
+<div class="arithmatex">\[Y=A(B+C)+CD\]</div>
+<div class="arithmatex">\[Y^\prime=(A^\prime+B^\prime C^\prime)(C^\prime+D^\prime)\]</div>
+</div>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">对偶定理</p>
+<p>若两逻辑式相等，则其对偶式也相等</p>
+</div>
 <h2 id="canonical-and-standard-forms">Canonical and Standard Forms<a class="headerlink" href="#canonical-and-standard-forms" title="Permanent link">¶</a></h2>
+<p>标准形式：最小项之和，最大项之积木
+最大项编号要反一下</p>
 <h2 id="other-logic-operations">Other Logic Operations<a class="headerlink" href="#other-logic-operations" title="Permanent link">¶</a></h2>
 <h2 id="digital-logic-gates">Digital Logic Gates<a class="headerlink" href="#digital-logic-gates" title="Permanent link">¶</a></h2>
 <div class="admonition note">
@@ -1934,13 +1968,13 @@
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月19日 16:50:22</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月23日 09:39:49</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月19日 16:50:22</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月23日 09:39:49</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>

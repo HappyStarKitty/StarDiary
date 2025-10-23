@@ -17,6 +17,7 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../../css/heti.css" rel="stylesheet"/>
 <link href="../../../css/timeline.css" rel="stylesheet"/>
+<link href="../../../stylesheet/counter.css" rel="stylesheet"/>
 <link href="../../../stylesheet/custom.css" rel="stylesheet"/>
 <link href="../../../stylesheet/extra_changelog.css" rel="stylesheet"/>
 <link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet"/>
@@ -2354,19 +2355,30 @@
 <p>可以这样记忆，P（positive）型半导体空穴多（正电<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，N（negative）型半导体电子多（负电<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；<span>PN<span class="heti-spacing"> </span></span>结内电场阻碍多子扩散和推动少子漂移，方向由<span class="heti-skip"><span class="heti-spacing"> </span>N<span class="heti-spacing"> </span></span>指向<span><span class="heti-spacing"> </span>P</span>。</p>
 </div>
 <p><img alt="无法显示" src="../figures/chap1/PNjunction.png"/></p>
-<p><span>!!! note :<span class="heti-spacing"> </span></span>单向导电性<span><span class="heti-spacing"> </span>"</span>
-    - 正向偏置
-        + P区一侧接外电源正极，N区一侧接外电源负极
-        + 空间电荷区变窄
-        + 形成较大的正向电流
-        + PN结处于导通状态
-        + 正向电阻数值很小</p>
-<div class="highlight"><pre><span></span><code>- 反向偏置
-    + 空间电荷区变宽
-    + 形成很小的反向电流
-    + PN结处于截止状态
-    + 反向电阻数值很大
-</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">单向导电性</p>
+<ul>
+<li>
+<p>正向偏置</p>
+<ul>
+<li><span>P<span class="heti-spacing"> </span></span>区一侧接外电源正极，<span>N<span class="heti-spacing"> </span></span>区一侧接外电源负极</li>
+<li>空间电荷区变窄</li>
+<li>形成较大的正向电流</li>
+<li><span>PN<span class="heti-spacing"> </span></span>结处于导通状态</li>
+<li>正向电阻数值很小</li>
+</ul>
+</li>
+<li>
+<p>反向偏置</p>
+<ul>
+<li>空间电荷区变宽</li>
+<li>形成很小的反向电流</li>
+<li><span>PN<span class="heti-spacing"> </span></span>结处于截止状态</li>
+<li>反向电阻数值很大</li>
+</ul>
+</li>
+</ul>
+</div>
 <h3 id="_10">二极管的特性和主要参数<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition note">
 <p class="admonition-title">概念</p>
@@ -2406,8 +2418,8 @@
 <p><img alt="无法显示" src="../figures/chap1/dynamic_resistance.png"/></p>
 <p>理想特性：分为考虑导通压降和忽略导通压降</p>
 <p><img alt="无法显示" src="../figures/chap1/diode_ideal.png"/></p>
-<div class="admonition note 二极管电路分析">
-<p class="admonition-title">Note</p>
+<div class="admonition note">
+<p class="admonition-title">二极管电路分析</p>
 <ul>
 <li>单个：阳极电位高于阴极电位足够大小</li>
 <li>多个：<ul>
@@ -2577,9 +2589,9 @@ PS：电压越大，越容易导通</li>
 <h3 id="_24">特性曲线和主要参数<a class="headerlink" href="#_24" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h4 id="_25">特性曲线<a class="headerlink" href="#_25" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p>输出特性：以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{cs}\)</span><span class="heti-spacing"> </span></span>为参变量时，<span><span class="arithmatex">\(i_D\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{DS}\)</span><span class="heti-spacing"> </span></span>之间的关系，即</p>
-<div class="arithmatex"><span>\[i_D=f(u_{DS})|u_{CS=<span class="heti-spacing"> </span></span>常数<span><span class="heti-spacing"> </span>}\]</span></div>
+<div class="arithmatex">\[i_D=f(u_{DS})|u_{CS=const.}\]</div>
 <p>转移特性：以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{DS}\)</span><span class="heti-spacing"> </span></span>为参变量时，<span><span class="arithmatex">\(i_D\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{CS}\)</span><span class="heti-spacing"> </span></span>之间的关系，即</p>
-<div class="arithmatex"><span>\[i_D=f(u_{CS})|u_{DS=<span class="heti-spacing"> </span></span>常数<span><span class="heti-spacing"> </span>}\]</span></div>
+<div class="arithmatex">\[i_D=f(u_{CS})|u_{DS=const.}\]</div>
 <p>可近似表示为</p>
 <div class="arithmatex">\[I_D=I_{DSS}(1-\frac{U_{GS}}{U_{GS_{(off)}}})^2\]</div>
 <p><img alt="无法显示" src="../figures/chap1/depletion_type.png"/></p>
