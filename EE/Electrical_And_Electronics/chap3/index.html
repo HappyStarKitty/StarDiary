@@ -1818,6 +1818,20 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../AA/Aerodynamics/chap5/">
+<span class="md-ellipsis">
+    Chap5 绕翼型不可压缩流动
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../AA/Aerodynamics/chap6/">
+<span class="md-ellipsis">
+    Chap6 量纲分析和相似理论
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -2024,9 +2038,69 @@
 <h1 id="chap3"><span>Chap3<span class="heti-spacing"> </span></span>分立元件基本电路<a class="headerlink" href="#chap3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <h2 id="_1">共发射极放大电路<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_2">电路组成<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition note">
+<p class="admonition-title">共发射极放大电路</p>
 <p><img alt="无法显示" src="../figures/chap3/gfsj.png"/></p>
+<ul>
+<li>晶体管：电流放大作用，发射结正偏，集电结反偏</li>
+<li>直流电源<span><span class="heti-spacing"> </span><span class="arithmatex">\(U_{CC}\)</span></span>：提供放大所需能量</li>
+<li>偏置电阻<span><span class="heti-spacing"> </span><span class="arithmatex">\(R_B\)</span></span>：调节偏置电阻，可调节基极电流</li>
+<li>集电极负载电阻<span><span class="heti-spacing"> </span><span class="arithmatex">\(R_C\)</span></span>：将集电极电流的变化转换成电压的变化送到输出端</li>
+<li>耦合电容<span><span class="heti-spacing"> </span><span class="arithmatex">\(C_1\)</span></span>、<span class="arithmatex">\(C_2\)</span>：隔直，不适用于低频电路</li>
+</ul>
+</div>
 <h3 id="_3">静态分析<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition info">
+<p class="admonition-title">静态分析</p>
+<p>静态：放大器没有输入信号（<span class="arithmatex">\(u_i=0\)</span>）时，电路中各处的电压电流都是直流恒定值，亦称为直流工作状态</p>
+<ul>
+<li>目的：<ul>
+<li>确定三极管工作状态</li>
+<li>确定三极管静态工作点的合理性</li>
+</ul>
+</li>
+<li>内容：在直流电源作用下，确定三极管<ul>
+<li>基极电流<span><span class="heti-spacing"> </span><span class="arithmatex">\(I_B\)</span></span></li>
+<li>集电极电流<span><span class="heti-spacing"> </span><span class="arithmatex">\(I_C\)</span></span></li>
+<li>集电极与发射极之间的电压值<span><span class="heti-spacing"> </span><span class="arithmatex">\(U_{CE}\)</span></span></li>
+</ul>
+</li>
+<li>方法：<ul>
+<li>图解法</li>
+<li>估算法</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">静态工作点</p>
+<p><img alt="无法显示" src="../figures/chap3/zltl.png"/></p>
+<p>对于输入电路，其电压方程为</p>
+<div class="arithmatex">\[U_{BE}=U_{CC}-R_BI_B\]</div>
+<p><span><span class="arithmatex">\(I_B\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(U_{BE}\)</span><span class="heti-spacing"> </span></span>的关系为一条直线，称为偏置线；偏置线与输入特性曲线的交点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Q_B\)</span><span class="heti-spacing"> </span></span>称为输入电路的静态工作点</p>
+<p>对于输出电路，其电压方程为</p>
+<div class="arithmatex">\[U_{CE}=U_{CC}-R_CI_C\]</div>
+<p><span><span class="arithmatex">\(I_C\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(U_{CE}\)</span><span class="heti-spacing"> </span></span>的关系也是一条直线，称为负载线；负载线与输出特性曲线的交点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Q_C\)</span><span class="heti-spacing"> </span></span>称为输出电路的静态工作点</p>
+<p><img alt="无法显示" src="../figures/chap3/jtgzd.png"/></p>
+</div>
 <h3 id="_4">动态分析<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition info">
+<p class="admonition-title">动态分析</p>
+<p>动态：放大电路有输入信号时，电路中各处的电压电流都处于工作变动状态</p>
+<ul>
+<li>内容：输入信号变化时，电路中各种变化量的变动情况和相互关系<ul>
+<li>电压放大倍数<span><span class="heti-spacing"> </span><span class="arithmatex">\(A_U\)</span></span></li>
+<li>输入电阻<span><span class="heti-spacing"> </span><span class="arithmatex">\(r_{i}\)</span></span></li>
+<li>输出电阻<span><span class="heti-spacing"> </span><span class="arithmatex">\(r_o\)</span></span></li>
+</ul>
+</li>
+<li>方法：<ul>
+<li>图解法</li>
+<li>微变等效电路分析方法</li>
+</ul>
+</li>
+</ul>
+</div>
 <h3 id="_5">静态工作点的稳定<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h3 id="_6">频率特性<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h2 id="_7">共集电极放大电路<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
@@ -2042,13 +2116,13 @@
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月23日 09:39:49</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月28日 17:37:50</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月23日 09:39:49</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月28日 17:37:51</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>
