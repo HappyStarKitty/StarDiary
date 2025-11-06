@@ -5,7 +5,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="HappyStarKitty" name="author"/>
 <link href="https://happystarkitty.github.io/StarDiary/EE/Digital_Circuit/chap1/" rel="canonical"/>
-<link href="../../Embedded_Computing_Technology/chap1/" rel="prev"/>
+<link href="../" rel="prev"/>
 <link href="../chap2/" rel="next"/>
 <link href="https://happystarkitty.github.io/avatar/avatar.jpg" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.14" name="generator"/>
@@ -1570,12 +1570,16 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../Embedded_Computing_Technology/">
 <span class="md-ellipsis">
     嵌入式计算技术
   </span>
+</a>
+<label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
+</div>
 <nav aria-expanded="false" aria-labelledby="__nav_5_5_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_5_5">
 <span class="md-nav__icon md-icon"></span>
@@ -1585,7 +1589,56 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../Embedded_Computing_Technology/chap1/">
 <span class="md-ellipsis">
-    Chap1 绪论
+    Chap1 Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Embedded_Computing_Technology/chap.2md">
+<span class="md-ellipsis">
+    Chap2 Embedded Processors
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Embedded_Computing_Technology/chap3/">
+<span class="md-ellipsis">
+    Chap3 Memory Architectures
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Embedded_Computing_Technology/chap4/">
+<span class="md-ellipsis">
+    Chap4 Input, Output and Interrupts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Embedded_Computing_Technology/chap4/">
+<span class="md-ellipsis">
+    Chap5 Sensors and Actuators
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Embedded_Computing_Technology/chap6/">
+<span class="md-ellipsis">
+    Chap6 Embedded Operation System and Process/Thread Management
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Embedded_Computing_Technology/chap7/">
+<span class="md-ellipsis">
+    Chap7 Mulit-task Framework and Real-time Scheduling
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Embedded_Computing_Technology/addition/">
+<span class="md-ellipsis">
+    Addition
   </span>
 </a>
 </li>
@@ -1594,12 +1647,16 @@
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_5_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     数字电路
   </span>
+</a>
+<label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
+</div>
 <nav aria-expanded="true" aria-labelledby="__nav_5_6_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_5_6">
 <span class="md-nav__icon md-icon"></span>
@@ -1796,6 +1853,13 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../AA/Aerodynamics/chap7/">
+<span class="md-ellipsis">
+    Chap7 粘性流体基础
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1986,8 +2050,36 @@
 <h2 id="complements-of-numbers">Complements of numbers<a class="headerlink" href="#complements-of-numbers" title="Permanent link">¶</a></h2>
 <div class="admonition definition">
 <p class="admonition-title">radix complement</p>
-<p>Dimished radix complement: Given a number N in base r having n digits, the (r-1)'s complement of N, i.e., its dimished radix complements, is defined as (r^n - 1) - N</p>
+<p>Diminished radix complement: Given a number N in base r having n digits, the (r-1)'s complement of N, i.e., its dimished radix complements, is defined as (r^n - 1) - N</p>
 <p>Radix complement: The r's complement of an n-digit number N in base r is defined as r^n - N</p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">反码、补码</p>
+<p>对于有效数字（不包括符号位）为<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>位的二进制数<span><span class="heti-spacing"> </span>N</span>，其补码为</p>
+<div class="arithmatex">\[(N)_{COMP}=\left\{\begin{aligned}N, when \quad N \quad is \quad positive \\ 2^n-N , when \quad N \quad is\quad negative \end{aligned}\right.\]</div>
+<p>其原码为</p>
+<div class="arithmatex">\[(N)_{INV}=\left\{\begin{aligned}N, when \quad N \quad is \quad positive \\ (2^n-1)-N , when \quad N \quad is\quad negative \end{aligned}\right.\]</div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">教材差异</p>
+<p>补码对应英文教材的<span><span class="heti-spacing"> </span>"radix complement"</span>，而反码对应英文教材的<span><span class="heti-spacing"> </span>"diminished radix complement"</span></p>
+<p>二进制补码对应英文教材中的<span><span class="heti-spacing"> </span>"2's Complement"</span>，而反码对应<span><span class="heti-spacing"> </span>"1's Complement"</span></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">补码的减法</p>
+<p>考虑两个有<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>位数字的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(r\)</span><span class="heti-spacing"> </span></span>进制无符号数做减法<span><span class="heti-spacing"> </span><span class="arithmatex">\(M-N\)</span></span></p>
+<ol>
+<li>将被减数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(M\)</span><span class="heti-spacing"> </span></span>加上减数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(N\)</span><span class="heti-spacing"> </span></span>的补码，即<span><span class="heti-spacing"> </span><span class="arithmatex">\(M+(r^n-N)=M-N+r^n\)</span></span></li>
+<li>如果<span><span class="heti-spacing"> </span><span class="arithmatex">\(M\ge N\)</span></span>，结果的和将产生可被丢弃的进位<span><span class="heti-spacing"> </span><span class="arithmatex">\(r^n\)</span></span>，剩下的就是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(M-N\)</span><span class="heti-spacing"> </span></span>的结果</li>
+<li>如果<span><span class="heti-spacing"> </span><span class="arithmatex">\(M&lt;N\)</span></span>，那么和就不会产生进位，等于<span><span class="heti-spacing"> </span><span class="arithmatex">\((r^n-(N-M))\)</span></span>，即<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((N-M)\)</span><span class="heti-spacing"> </span></span>得补码，计算结果即取和的补码添上符号</li>
+</ol>
+</div>
+<div class="admonition attetion">
+<p class="admonition-title">注意</p>
+<ul>
+<li>补码的扩展：前置位全为符号数</li>
+<li>小数的补码：取补时末尾<span><span class="heti-spacing"> </span>+1</span>，不是数值<span><span class="heti-spacing"> </span>+1</span></li>
+</ul>
 </div>
 <h2 id="signed-binary-numbers">Signed Binary Numbers<a class="headerlink" href="#signed-binary-numbers" title="Permanent link">¶</a></h2>
 <p>ways to represent negetive numbers: signed-magnitude &amp; signed-complement</p>
@@ -2006,30 +2098,12 @@
 <p>进行减法运算时，使用原码需要比较两数的绝对值，需要使用数值比较电路和减法运算电路，操作过程比较麻烦。我们引入补码简化运算</p>
 <p>在舍弃进位的条件下，减去某数相当于加上其补码</p>
 </div>
-<div class="admonition definition">
-<p class="admonition-title">反码、补码</p>
-<p>对于有效数字（不包括符号位）为<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>位的二进制数<span><span class="heti-spacing"> </span>N</span>，其补码为</p>
-<div class="arithmatex">\[(N)_{COMP}=\left\{\begin{aligned}N, when \quad N \quad is \quad positive \\ 2^n-N , when \quad N \quad is\quad negative \end{aligned}\right.\]</div>
-<p>其原码为</p>
-<div class="arithmatex">\[(N)_{INV}=\left\{\begin{aligned}N, when \quad N \quad is \quad positive \\ (2^n-1)-N , when \quad N \quad is\quad negative \end{aligned}\right.\]</div>
-</div>
-<div class="admonition attention">
-<p class="admonition-title">教材差异</p>
-<p>补码对应英文教材中的<span><span class="heti-spacing"> </span>"2's Complement"</span>，而反码对应<span><span class="heti-spacing"> </span>"1's Complement"</span></p>
-</div>
 <div class="admonition info">
 <p class="admonition-title">记忆方法</p>
 <ul>
 <li>正数的补码和原码相同</li>
 <li>负数的反码<span class="heti-skip"><span class="heti-spacing"> </span>=<span class="heti-spacing"> </span></span>诸位求反</li>
 <li>负数的补码<span class="heti-skip"><span class="heti-spacing"> </span>=<span class="heti-spacing"> </span></span>诸位求反<span><span class="heti-spacing"> </span>+ 1</span></li>
-</ul>
-</div>
-<div class="admonition attetion">
-<p class="admonition-title">注意</p>
-<ul>
-<li>补码的扩展：前置位全为符号数</li>
-<li>小数的补码：取补时末尾<span><span class="heti-spacing"> </span>+1</span>，不是数值<span><span class="heti-spacing"> </span>+1</span></li>
 </ul>
 </div>
 <h2 id="binary-codes">Binary Codes<a class="headerlink" href="#binary-codes" title="Permanent link">¶</a></h2>
@@ -2084,13 +2158,13 @@
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月30日 11:48:50</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年11月6日 20:41:37</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月30日 11:48:50</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年11月6日 20:41:37</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>

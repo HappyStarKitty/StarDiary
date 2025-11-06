@@ -7,7 +7,7 @@
 <link href="https://happystarkitty.github.io/StarDiary/EE/Embedded_Computing_Technology/chap2/" rel="canonical"/>
 <link href="https://happystarkitty.github.io/avatar/avatar.jpg" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.14" name="generator"/>
-<title>Chap2 指令集 - StarDiary</title>
+<title>Chap2 Embedded Processors - StarDiary</title>
 <link href="../../../assets/stylesheets/main.10ba22f1.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -29,7 +29,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#chap2">
+<a class="md-skip" href="#chap2-embedded-processors">
           Skip to content
         </a>
 </div>
@@ -53,7 +53,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Chap2 指令集
+              Chap2 Embedded Processors
             
           </span>
 </div>
@@ -1568,12 +1568,16 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     嵌入式计算技术
   </span>
+</a>
+<label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
+</div>
 <nav aria-expanded="false" aria-labelledby="__nav_5_5_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_5_5">
 <span class="md-nav__icon md-icon"></span>
@@ -1583,7 +1587,56 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../chap1/">
 <span class="md-ellipsis">
-    Chap1 绪论
+    Chap1 Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap.2md">
+<span class="md-ellipsis">
+    Chap2 Embedded Processors
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap3/">
+<span class="md-ellipsis">
+    Chap3 Memory Architectures
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap4/">
+<span class="md-ellipsis">
+    Chap4 Input, Output and Interrupts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap4/">
+<span class="md-ellipsis">
+    Chap5 Sensors and Actuators
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap6/">
+<span class="md-ellipsis">
+    Chap6 Embedded Operation System and Process/Thread Management
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap7/">
+<span class="md-ellipsis">
+    Chap7 Mulit-task Framework and Real-time Scheduling
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../addition/">
+<span class="md-ellipsis">
+    Addition
   </span>
 </a>
 </li>
@@ -1592,12 +1645,16 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../Digital_Circuit/">
 <span class="md-ellipsis">
     数字电路
   </span>
+</a>
+<label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
+</div>
 <nav aria-expanded="false" aria-labelledby="__nav_5_6_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_5_6">
 <span class="md-nav__icon md-icon"></span>
@@ -1719,6 +1776,13 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../AA/Aerodynamics/chap7/">
+<span class="md-ellipsis">
+    Chap7 粘性流体基础
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1800,53 +1864,195 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="toc.title" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      toc.title
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#classification-of-embedded-processors">
+<span class="md-ellipsis">
+      Classification of embedded processors
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#instrucition-set-architecture">
+<span class="md-ellipsis">
+      Instrucition Set Architecture
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#processor-architecture">
+<span class="md-ellipsis">
+      Processor Architecture
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#storage-format">
+<span class="md-ellipsis">
+      Storage Format
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#instruction-level-parallelism">
+<span class="md-ellipsis">
+      Instruction-level Parallelism
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="chap2"><span>Chap2<span class="heti-spacing"> </span></span>指令集<a class="headerlink" href="#chap2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
-<div class="admonition note 指令架构">
-<p class="admonition-title">Note</p>
+<h1 id="chap2-embedded-processors">Chap2 Embedded Processors<a class="headerlink" href="#chap2-embedded-processors" title="Permanent link">¶</a></h1>
+<h2 id="classification-of-embedded-processors">Classification of embedded processors<a class="headerlink" href="#classification-of-embedded-processors" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">嵌入式处理器</p>
 <ul>
-<li>RISC：精简指令集计算机，如<span><span class="heti-spacing"> </span>ARM</span></li>
-<li>CISC：复杂指令集计算机，如<span class="heti-skip"><span class="heti-spacing"> </span>Intel/AMD<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>X86</span></li>
+<li>嵌入式微处理器（Embedded Microprocessor Unit, EMPU）<ul>
+<li>与通用计算机中的<span class="heti-skip"><span class="heti-spacing"> </span>CPU<span class="heti-spacing"> </span></span>不同，只保留和嵌入式应用相关的功能</li>
+<li>如<span class="heti-skip"><span class="heti-spacing"> </span>Inter<span class="heti-spacing"> </span></span>系列、<span>PowerPC<span class="heti-spacing"> </span></span>系列、<span>ARM<span class="heti-spacing"> </span></span>系列（<span>Broadcom, Qualcomn, STM<span class="heti-spacing"> </span></span>等）</li>
+</ul>
+</li>
+<li>嵌入式微控制器（Microcontroller Unit, MCU）<ul>
+<li>内部集成<span><span class="heti-spacing"> </span>ROM</span>、RAM、总线、定时<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>计数器、WatchDog、I/O、串口、PWM、A/D、D/A、<span>Flash<span class="heti-spacing"> </span></span>等</li>
+<li>单片化，体积大大减小，从而使功耗和成本下降、可靠性提高</li>
+<li><strong>相对低端的<span class="heti-skip"><span class="heti-spacing"> </span>MCU<span class="heti-spacing"> </span></span>又称单片机</strong></li>
+<li>如<span><span class="heti-spacing"> </span>Inter8051</span>、<span>MicroChip<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>PIC<span class="heti-spacing"> </span></span>系列、<span>ATMEL<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>AVR ATMEGA<span class="heti-spacing"> </span></span>系列</li>
+<li>应用在涡喷发动机的<span class="heti-skip"><span class="heti-spacing"> </span>ECU<span class="heti-spacing"> </span></span>等</li>
+</ul>
+</li>
+<li>嵌入式<span class="heti-skip"><span class="heti-spacing"> </span>DSP<span class="heti-spacing"> </span></span>处理器（Embedded Digital Signal Processor, EDSP<ul>
+<li>专门用于处理数字信号的处理器</li>
+<li>内部集成多种数字信号处理的算法和硬件加速器</li>
+<li>如<span class="heti-skip"><span class="heti-spacing"> </span>TI<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>TMS320</span>、<span>Motorola<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>DSP56000<span class="heti-spacing"> </span></span>系列</li>
+</ul>
+</li>
+<li>嵌入式片上系统（System On Chip, SoC）<ul>
+<li>分为通用和专用两类</li>
+<li>通用系列如<span class="heti-skip"><span class="heti-spacing"> </span>Infineon<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>TriCore</span>、<span>Motorola<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>M-core</span></li>
+<li>专用系列如<span class="heti-skip"><span class="heti-spacing"> </span>Philips<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>Smart XA</span></li>
+</ul>
+</li>
 </ul>
 </div>
-<div class="admonition note 处理器架构">
-<p class="admonition-title">Note</p>
+<div class="admonition example">
+<p class="admonition-title">示例</p>
 <ul>
-<li>冯诺依曼架构：程序和数据存储在相同的存储空间</li>
-<li>哈佛架构：程序和数据存储在不同的存储空间</li>
+<li><span>Arduino<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>MCU</span>：<span>ATMEGA328<span class="heti-spacing"> </span></span>是一款<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>位<span><span class="heti-spacing"> </span>MCU</span>，常用于<span class="heti-skip"><span class="heti-spacing"> </span>Arduino Uno<span class="heti-spacing"> </span></span>等开发板</li>
+<li><span>Raspberry<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>MPU</span>：<span>BCM2837<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>BCM2711<span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span>Raspberry Pi<span class="heti-spacing"> </span></span>的处理器，都是<span class="heti-skip"><span class="heti-spacing"> </span>ARM<span class="heti-spacing"> </span></span>架构的<span><span class="heti-spacing"> </span>MPU</span></li>
+<li><span>Pixhawk<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>MCU</span>：<span>STM32F427<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>STM32F765<span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span>Pixhawk<span class="heti-spacing"> </span></span>飞行控制器使用的<span><span class="heti-spacing"> </span>MCU</span>，具有强大的处理和控制能力</li>
 </ul>
 </div>
-<div class="admonition note 存储模式">
-<p class="admonition-title">Note</p>
+<p>嵌入式处理器技术指标：功能、字长、工作温度、功耗、寻址能力、电磁兼容性、平均故障间隔时间<span class="heti-skip"><span class="heti-spacing"> </span>MTBF<span class="heti-spacing"> </span></span>等</p>
+<p>处理速度指标<span class="heti-skip"><span class="heti-spacing"> </span>:<span class="heti-spacing"> </span></span>主频<span><span class="heti-spacing"> </span>(Clock Speed)</span>、CPI(Clock Cycles per Instruction)、MIPS(Million Instructions Per Second)、FLOPS(Floating-Point Instructions per Second)</p>
+<h2 id="instrucition-set-architecture">Instrucition Set Architecture<a class="headerlink" href="#instrucition-set-architecture" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">指令架构</p>
 <ul>
-<li>大端模式：低字节在高地址</li>
-<li>小端模式：低字节在低地址</li>
-<li>缺省情况下，ARM、<span>Inter<span class="heti-spacing"> </span></span>是小端模式，<span>PowerPC<span class="heti-spacing"> </span></span>是大端模式</li>
+<li>ISA(Instruction Set Architecture)：指令架构</li>
+<li>RISC(Reduced Instruction Set Computer)：精简指令集计算机，如<span><span class="heti-spacing"> </span>ARM</span></li>
+<li>CISC(Complex Instruction Set Computer)：复杂指令集计算机，如<span class="heti-skip"><span class="heti-spacing"> </span>Intel/AMD<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>X86</span></li>
 </ul>
 </div>
-<div class="admonition note 多核">
-<p class="admonition-title">Note</p>
-<p>多核：在单块芯片上集成多个处理器的结构
-同构多核：多处理器核心架构、性能完全相同
-异构多核：多处理器核心架构、性能存在差异</p>
+<details class="note">
+<summary><span>RISC<span class="heti-spacing"> </span></span>指令集的特点</summary>
+<ol>
+<li>选取使用频率高、有用且不复杂的简单指令；指令长度固定，指令格式</li>
+<li>指令长度固定，指令格式种类少，寻址方式种类少</li>
+<li>只有<span class="heti-skip"><span class="heti-spacing"> </span>load/store<span class="heti-spacing"> </span></span>指令会访问内存，其余指令执行都在寄存器之间进行，即限制内存访问</li>
+<li><span>CPU<span class="heti-spacing"> </span></span>中通用寄存器数量相当多</li>
+<li>大部分指令在一个机器周期内完成</li>
+<li>采用流水线组织</li>
+<li>以硬布线控制逻辑为主，不用或少用微程序控制</li>
+<li>重视编译工作，以简单有效的方式支持高级语言，减少程序运行时间</li>
+</ol>
+</details>
+<div class="admonition note">
+<p class="admonition-title"><span>ARM<span class="heti-spacing"> </span></span>架构</p>
+<ul>
+<li><span>ARM<span class="heti-spacing"> </span></span>架构发展到<span><span class="heti-spacing"> </span>V9(2021)</span>，<span>V8<span class="heti-spacing"> </span></span>开始<span class="heti-skip"><span class="heti-spacing"> </span>64<span class="heti-spacing"> </span></span>位总线，<span>V9<span class="heti-spacing"> </span></span>加入<span class="heti-skip"><span class="heti-spacing"> </span>machine learning<span class="heti-spacing"> </span></span>部件</li>
+<li>基于<span class="heti-skip"><span class="heti-spacing"> </span>ARMV7<span class="heti-spacing"> </span></span>结构的处理器，冠上<span class="heti-skip"><span class="heti-spacing"> </span>Cortex<span class="heti-spacing"> </span></span>的代号，如基于<span class="heti-skip"><span class="heti-spacing"> </span>V7A<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>Cortex-A</span>，基于<span class="heti-skip"><span class="heti-spacing"> </span>V7R<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>Cortex-R</span>，基于<span class="heti-skip"><span class="heti-spacing"> </span>V7M<span class="heti-spacing"> </span></span>的<span><span class="heti-spacing"> </span>Cortex-M3(A-Application, M-Microcontroller, R-Real-time)</span></li>
+<li>华为<span class="heti-skip"><span class="heti-spacing"> </span>Kirn 9000/Kunpeng 920<span class="heti-spacing"> </span></span>采用<span class="heti-skip"><span class="heti-spacing"> </span>V8<span class="heti-spacing"> </span></span>指令集，苹果<span class="heti-skip"><span class="heti-spacing"> </span>A15/A16<span class="heti-spacing"> </span></span>采用<span class="heti-skip"><span class="heti-spacing"> </span>V9<span class="heti-spacing"> </span></span>指令集</li>
+<li>低功耗、高扩展性、高性能与低功耗平衡、多核支持、生态系统丰富</li>
+</ul>
 </div>
+<h2 id="processor-architecture">Processor Architecture<a class="headerlink" href="#processor-architecture" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">处理器架构</p>
+<ul>
+<li>冯诺依曼架构：程序和数据存储在相同的存储空间，传统架构</li>
+<li>哈佛架构：程序和数据存储在不同的存储空间，增加存取带宽，提高并行性</li>
+</ul>
+</div>
+<p>一般而言，<span>RISC<span class="heti-spacing"> </span></span>指令集处理器常采用哈佛架构，如<span class="heti-skip"><span class="heti-spacing"> </span>ARM<span class="heti-spacing"> </span></span>处理器<span class="heti-skip"><span class="heti-spacing"> </span>V9<span class="heti-spacing"> </span></span>系列；<span>CISC<span class="heti-spacing"> </span></span>指令集处理器常采用冯诺依曼架构，如<span><span class="heti-spacing"> </span>X86</span></p>
+<h2 id="storage-format">Storage Format<a class="headerlink" href="#storage-format" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">存储模式</p>
+<ul>
+<li>大端模式（Big-endian<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：低字节在高地址</li>
+<li>小端模式（Little-endian<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：低字节在低地址</li>
+<li><span>Arm<span class="heti-spacing"> </span></span>支持大端和小端，缺省情况下是小端</li>
+<li><span>Inter<span class="heti-spacing"> </span></span>是小端模式，<span>PowerPC<span class="heti-spacing"> </span></span>是大端模式</li>
+</ul>
+<p><img alt="无法显示" src="../figures/chap2/endian.png"/></p>
+</div>
+<p>判断处理器的存储模式</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">union</span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)];</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="w">    </span><span class="n">x</span><span class="p">.</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">"小端模式</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">"大端模式</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">c</span><span class="p">)</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">"小端模式</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">"大端模式</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="instruction-level-parallelism">Instruction-level Parallelism<a class="headerlink" href="#instruction-level-parallelism" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">指令集并行</p>
+<ul>
+<li>Pipelining：将指令的执行分解为多个阶段，使得在每个时钟周期中，不同的指令可以同时处于不同的执行阶段</li>
+<li><span>Superscalar(<span class="heti-spacing"> </span></span>超标量<span><span class="heti-spacing"> </span>)</span>：超标量处理器有多个执行单元，如整数单元、浮点单元、加载<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>存储单元等，让它们能同时工作</li>
+<li><span>Subword parallelism(<span class="heti-spacing"> </span></span>子字并行<span><span class="heti-spacing"> </span>)</span>：将一个宽运算器（ALU）划分为多个较窄的运算单元，从而能够对较短的字长数据同时执行算术或逻辑运算。如<span class="heti-skip"><span class="heti-spacing"> </span>Intel Pentium<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>MMX<span class="heti-spacing"> </span></span>技术，让具有<span class="heti-skip"><span class="heti-spacing"> </span>64<span class="heti-spacing"> </span></span>位数据处理能力的<span class="heti-skip"><span class="heti-spacing"> </span>CPU<span class="heti-spacing"> </span></span>拆分为多个处理<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>位数据的单元，同时工作；是<span class="heti-skip"><span class="heti-spacing"> </span>vector processing<span class="heti-spacing"> </span></span>的一种形式</li>
+<li><span>VLIW(Very Long Instruction Word,<span class="heti-spacing"> </span></span>超长指令字<span><span class="heti-spacing"> </span>)</span>：依赖于编译器，多个指令并在一起，同时执行相应的操作，比<span class="heti-skip"><span class="heti-spacing"> </span>superscalar<span class="heti-spacing"> </span></span>易于预测执行时间</li>
+<li><span>Multicore(<span class="heti-spacing"> </span></span>多核<span><span class="heti-spacing"> </span>)</span>：在单块芯片上集成多个处理器的结构，可以是同构（homogenous）或异构（heterogeneous）的</li>
+</ul>
+</div>
+<p>homogenous multicore（同构多核<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：指芯片上集成的多个处理器核心架构、性能完全相同，例如常见的桌面级<span><span class="heti-spacing"> </span>CPU</span>（如<span class="heti-skip"><span class="heti-spacing"> </span>Intel Core i7<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>8<span class="heti-spacing"> </span></span>个核心<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，适合处理可均匀分配的并行任务（如多线程程序、数据计算）</p>
+<p>heterogeneous multicore（异构多核<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：指芯片上集成的多个处理器核心架构、性能存在差异，各自负责不同类型的任务，例如智能手机的<span><span class="heti-spacing"> </span>SoC</span>（系统级芯片）常同时包含高性能核心（如<span class="heti-skip"><span class="heti-spacing"> </span>ARM Cortex-X<span class="heti-spacing"> </span></span>系列，负责复杂计算）和低功耗核心（如<span class="heti-skip"><span class="heti-spacing"> </span>ARM Cortex-A<span class="heti-spacing"> </span></span>系列，负责日常轻量任务<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，可在性能与能耗之间实现平衡，广泛应用于移动设备、物联网终端等对功耗敏感的场景</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月30日 11:48:51</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年11月6日 20:41:39</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月30日 11:48:51</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年11月6日 20:41:39</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>

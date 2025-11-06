@@ -5,9 +5,11 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="HappyStarKitty" name="author"/>
 <link href="https://happystarkitty.github.io/StarDiary/EE/Embedded_Computing_Technology/chap3/" rel="canonical"/>
+<link href="../chap1/" rel="prev"/>
+<link href="../chap4/" rel="next"/>
 <link href="https://happystarkitty.github.io/avatar/avatar.jpg" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.14" name="generator"/>
-<title>Chap3 - StarDiary</title>
+<title>Chap3 Memory Architectures - StarDiary</title>
 <link href="../../../assets/stylesheets/main.10ba22f1.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -29,6 +31,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#chap3-memory-architectures">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -50,7 +55,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Chap3
+              Chap3 Memory Architectures
             
           </span>
 </div>
@@ -144,7 +149,7 @@
 
         </a>
 </li>
-<li class="md-tabs__item">
+<li class="md-tabs__item md-tabs__item--active">
 <a class="md-tabs__link" href="../../">
           
   
@@ -1403,19 +1408,19 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../../">
 <span class="md-ellipsis">
     EE
   </span>
 </a>
-<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
             EE
@@ -1563,15 +1568,19 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     嵌入式计算技术
   </span>
+</a>
+<label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_5_5_label" class="md-nav" data-md-level="2">
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_5_5_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_5_5">
 <span class="md-nav__icon md-icon"></span>
             嵌入式计算技术
@@ -1580,7 +1589,131 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../chap1/">
 <span class="md-ellipsis">
-    Chap1 绪论
+    Chap1 Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap.2md">
+<span class="md-ellipsis">
+    Chap2 Embedded Processors
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Chap3 Memory Architectures
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Chap3 Memory Architectures
+  </span>
+</a>
+<nav aria-label="toc.title" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      toc.title
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#types-of-memory">
+<span class="md-ellipsis">
+      Types of memory
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#memory-organization">
+<span class="md-ellipsis">
+      Memory organization
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#memory-map">
+<span class="md-ellipsis">
+      Memory map
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#memory-management-unit">
+<span class="md-ellipsis">
+      Memory Management Unit
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#memory-hierarchies">
+<span class="md-ellipsis">
+      Memory hierarchies
+    </span>
+</a>
+<nav aria-label="Memory hierarchies" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-cache-organization-structure">
+<span class="md-ellipsis">
+      Basic cache organization structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#direct-mapped-cache">
+<span class="md-ellipsis">
+      Direct-Mapped Cache
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#set-assocaitive-cache">
+<span class="md-ellipsis">
+      Set-Assocaitive Cache
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap4/">
+<span class="md-ellipsis">
+    Chap4 Input, Output and Interrupts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap4/">
+<span class="md-ellipsis">
+    Chap5 Sensors and Actuators
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap6/">
+<span class="md-ellipsis">
+    Chap6 Embedded Operation System and Process/Thread Management
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap7/">
+<span class="md-ellipsis">
+    Chap7 Mulit-task Framework and Real-time Scheduling
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../addition/">
+<span class="md-ellipsis">
+    Addition
   </span>
 </a>
 </li>
@@ -1589,12 +1722,16 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../Digital_Circuit/">
 <span class="md-ellipsis">
     数字电路
   </span>
+</a>
+<label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
+</div>
 <nav aria-expanded="false" aria-labelledby="__nav_5_6_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_5_6">
 <span class="md-nav__icon md-icon"></span>
@@ -1716,6 +1853,13 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../AA/Aerodynamics/chap7/">
+<span class="md-ellipsis">
+    Chap7 粘性流体基础
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1797,25 +1941,173 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="toc.title" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      toc.title
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#types-of-memory">
+<span class="md-ellipsis">
+      Types of memory
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#memory-organization">
+<span class="md-ellipsis">
+      Memory organization
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#memory-map">
+<span class="md-ellipsis">
+      Memory map
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#memory-management-unit">
+<span class="md-ellipsis">
+      Memory Management Unit
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#memory-hierarchies">
+<span class="md-ellipsis">
+      Memory hierarchies
+    </span>
+</a>
+<nav aria-label="Memory hierarchies" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-cache-organization-structure">
+<span class="md-ellipsis">
+      Basic cache organization structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#direct-mapped-cache">
+<span class="md-ellipsis">
+      Direct-Mapped Cache
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#set-assocaitive-cache">
+<span class="md-ellipsis">
+      Set-Assocaitive Cache
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Chap3</h1>
+<h1 id="chap3-memory-architectures">Chap3 Memory Architectures<a class="headerlink" href="#chap3-memory-architectures" title="Permanent link">¶</a></h1>
+<h2 id="types-of-memory">Types of memory<a class="headerlink" href="#types-of-memory" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">存储器分类</p>
+<ul>
+<li>非易失存储器（Non-Volatile Memory<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：Preserves contents when power is off<ul>
+<li>可擦除可编程只读存储器（erasable programmable read only memory, EPROM<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：可以被紫外线擦除并重新编程</li>
+<li>电可擦除可编程只读存储器（electrically erasable programmable read only memory, EEPROM<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：可以通过电子方式擦除或编程</li>
+<li><span>Flash<span class="heti-spacing"> </span></span>存储器</li>
+<li>磁盘存储器：辅助存储器，存储容量大但访问速度慢，一般不用于嵌入式系统</li>
+</ul>
+</li>
+<li>易失存储器（Volatile Memory<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：Loses contents when power is off<ul>
+<li>静态随机访问存储器（static random-access memory, SRAM<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：速度快，不需要刷新，成本高，常用于高速缓存（caches<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、暂存器（scratchpads）</li>
+<li>动态随机访问存储器（dynamic random-access memory, DRAM<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：需要定期刷新以保存数据，成本低，常用于主存（main memory）</li>
+<li>Boot loader：On power up, transfers data from non-volatile to volatile memory</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Flash</p>
+<p><span>Flash<span class="heti-spacing"> </span></span>是嵌入式系统广泛采用的主流存储器，主要特点是<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>按整块擦除<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>按字节编程<span><span class="heti-spacing"> </span>**</span>，具有低功耗、高密度、小体积等优点</p>
+<p>块擦除：把数据块的所有位，置为逻辑<span><span class="heti-spacing"> </span>1</span>，即浮栅晶体管电荷释放</p>
+<p>按字节编程：将字节的相应位从<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>变成<span><span class="heti-spacing"> </span>0</span>（不能从<span class="heti-skip"><span class="heti-spacing"> </span>0<span class="heti-spacing"> </span></span>变成<span><span class="heti-spacing"> </span>1</span>，要擦除）</p>
+<ul>
+<li><span>NOR Flash(<span class="heti-spacing"> </span></span>随机读取<span><span class="heti-spacing"> </span>)</span><ul>
+<li>读取速度快，擦除和写速度慢</li>
+<li>存储容量小，适用于存储嵌入式系统的<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>固件<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>程序代码<span><span class="heti-spacing"> </span>**</span>，如<span class="heti-skip"><span class="heti-spacing"> </span>BIOS<span class="heti-spacing"> </span></span>芯片</li>
+</ul>
+</li>
+<li><span>NAND Flash(<span class="heti-spacing"> </span></span>按块读取<span><span class="heti-spacing"> </span>)</span><ul>
+<li>读取速度慢，擦除和写速度快</li>
+<li>存储容量大，常用于存储<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>数据<span><span class="heti-spacing"> </span>**</span>，如<span class="heti-skip"><span class="heti-spacing"> </span>USB<span class="heti-spacing"> </span></span>驱动器、SSD</li>
+</ul>
+</li>
+</ul>
+</div>
+<details class="note">
+<summary><span>SRAM<span class="heti-spacing"> </span></span>存储单元</summary>
+<ul>
+<li>基本存储单元通常由<span class="heti-skip"><span class="heti-spacing"> </span>6<span class="heti-spacing"> </span></span>个晶体管组成（<span>4<span class="heti-spacing"> </span></span>个<span class="heti-skip"><span class="heti-spacing"> </span>N<span class="heti-spacing"> </span></span>沟道<span class="heti-skip"><span class="heti-spacing"> </span>MOS<span class="heti-spacing"> </span></span>管和<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>个<span class="heti-skip"><span class="heti-spacing"> </span>P<span class="heti-spacing"> </span></span>沟道<span class="heti-skip"><span class="heti-spacing"> </span>MOS<span class="heti-spacing"> </span></span>管）组成，构成一个双稳态触发器</li>
+<li>双稳态存储器可以稳定存储一个比特的数据，只要不断电，数据就会一直保持</li>
+<li>进行读写操作时，通过字线（Word Line）和位线（Bit Line）来控制存储单元，字线激活时，存储单元和位线连接，进行数据的读写</li>
+<li>随机访问时延接近逻辑门延迟，读写一次即可得到</li>
+</ul>
+</details>
+<details class="note">
+<summary><span>DRAM<span class="heti-spacing"> </span></span>存储单元</summary>
+<ul>
+<li>基本存储单元由一个晶体管和一个电容组成，数据以电荷的形式存储到电容中，有电荷表示<span><span class="heti-spacing"> </span>1</span>，无电荷表示<span><span class="heti-spacing"> </span>0</span></li>
+<li>由于电容存在漏电现象，所以电容上存储的电荷会逐渐丢失，需要定期刷新保持数据的正确性</li>
+<li>存取时，先进行行选通（Row Address Strobe, RAS<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，再列选通（Column Address Strobe, CAS<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，一次完整访问需要<span class="heti-skip"><span class="heti-spacing"> </span>2~3<span class="heti-spacing"> </span></span>个阶段</li>
+</ul>
+</details>
+<p>Scratchpad：<span>Scratchpad Memory<span class="heti-spacing"> </span></span>是集成到芯片上的非<span class="heti-skip"><span class="heti-spacing"> </span>cache<span class="heti-spacing"> </span></span>用途的<span class="heti-skip"><span class="heti-spacing"> </span>SRAM<span class="heti-spacing"> </span></span>存储器的统称，通常指的是<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>专用的、显式管理<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>的高速存储区，有时也称为<span><span class="heti-spacing"> </span>**Tightly Coupled Memory(TCM)**</span></p>
+<p>Cache：是一种<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>硬件管理的、自动执行的<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>数据缓冲存储器，位于主存和处理器之间，旨在缓存最近使用或常用的数据，以加速对内存的访问</p>
+<p>存储器性能指标：存储容量、访问时间、带宽、成本、可靠性</p>
+<h2 id="memory-organization">Memory organization<a class="headerlink" href="#memory-organization" title="Permanent link">¶</a></h2>
+<p>内存组织是指程序运行时在内存中的布局方式</p>
+<p>静态分配内存（Statically-allocated memory<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：编译时就确定并分配内存的方式，静态变量和全局变量通常存储在静态分配内存中</p>
+<p>动态分配内存（Dynamically-allocated memory<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：运行时分配内存</p>
+<p>栈（Stack<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：动态分配给程序的以后进先出（Last-In-First-Out, LIFO）方式访问的一块存储区域</p>
+<p>堆（Heap<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：动态分配的另一种区域，与栈不同，堆上的内存分配和释放不遵循<span class="heti-skip"><span class="heti-spacing"> </span>LIFO<span class="heti-spacing"> </span></span>原则。相反，它通常是由程序员显式地管理，或者通过垃圾回收机制来自动管理。在<span class="heti-skip"><span class="heti-spacing"> </span>C<span class="heti-spacing"> </span></span>语言中，程序员使用<span class="heti-skip"><span class="heti-spacing"> </span>malloc()<span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>free()<span class="heti-spacing"> </span></span>函数来在堆上分配和释放内存</p>
+<h2 id="memory-map">Memory map<a class="headerlink" href="#memory-map" title="Permanent link">¶</a></h2>
+<p>操作系统和硬件通过地址转换，将连续地址空间的逻辑地址转换为某个存储器的物理位置</p>
+<p>处理器的存储器映射（memory map）定义了如何将地址映射到硬件，且处理器的地址宽度限定了地址空间的总大小</p>
+<h2 id="memory-management-unit">Memory Management Unit<a class="headerlink" href="#memory-management-unit" title="Permanent link">¶</a></h2>
+<p>如果处理器具有内存管理单元（Memory Management Unit<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，程序就可以使用逻辑地址，并将这些逻辑地址译成物理地址</p>
+<h2 id="memory-hierarchies">Memory hierarchies<a class="headerlink" href="#memory-hierarchies" title="Permanent link">¶</a></h2>
+<p>在现代计算机中，为了平衡不同类型的内存之间的速度、成本和容量，内存被组织成一个层次结构</p>
+<h3 id="basic-cache-organization-structure">Basic cache organization structure<a class="headerlink" href="#basic-cache-organization-structure" title="Permanent link">¶</a></h3>
+<ul>
+<li>有效标签块（Valid Tag Block<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：表示缓存行是否有效</li>
+<li>集合索引（Set Index<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：用于确定数据应存放在哪个集合</li>
+<li>块偏移（Block Offset<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：在集合内部用于定位数据</li>
+<li>标签（Tag<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：用于识别一个特定的内存块</li>
+</ul>
+<p>当<span class="heti-skip"><span class="heti-spacing"> </span>CPU<span class="heti-spacing"> </span></span>尝试从内存中读取数据时，首先检查缓存。如果请求的地址的标签与缓存行中的标签匹配，则称为缓存命中，数据直接从缓存中读取。如果不匹配，则发生缓存未命中（cache miss<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，需要从主内存中获取数据，并更新缓存行</p>
+<h3 id="direct-mapped-cache">Direct-Mapped Cache<a class="headerlink" href="#direct-mapped-cache" title="Permanent link">¶</a></h3>
+<p>直接映射缓存（Direct-Mapped Cache<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：一种缓存策略，其中每个主内存块只能被放置到一个特定的缓存行中。缓存被组织成多个集合（Set<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，每个集合包含多个行（Line）</p>
+<h3 id="set-assocaitive-cache">Set-Assocaitive Cache<a class="headerlink" href="#set-assocaitive-cache" title="Permanent link">¶</a></h3>
+<p>组相联缓存（Set-Assocaitive Cache<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：每个集合可以包含多个行，每个行都可以存储一个块。当查找一个块时，会在一个集合内的多个行中进行查找，需要使用关联存储器（associative memory）或内容可寻址存储器（content-addressable memory<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。如果缓存未命中，则需要从主内存中获取该块，并替换集合中的某个行<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>这时就需要一个替换策略，如最近最少使用（LRU）或先进先出（FIFO）</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月30日 11:48:51</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年11月6日 20:41:39</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月30日 11:48:51</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年11月6日 20:41:39</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>

@@ -7,7 +7,7 @@
 <link href="https://happystarkitty.github.io/StarDiary/EE/Embedded_Computing_Technology/chap5/" rel="canonical"/>
 <link href="https://happystarkitty.github.io/avatar/avatar.jpg" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.14" name="generator"/>
-<title>Chap5 Input, Output and Interrupts - StarDiary</title>
+<title>Chap5 Sensors and Actuators - StarDiary</title>
 <link href="../../../assets/stylesheets/main.10ba22f1.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -29,7 +29,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#chap5-input-output-and-interrupts">
+<a class="md-skip" href="#chap5-sensors-and-actuators">
           Skip to content
         </a>
 </div>
@@ -53,7 +53,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Chap5 Input, Output and Interrupts
+              Chap5 Sensors and Actuators
             
           </span>
 </div>
@@ -1568,12 +1568,16 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     嵌入式计算技术
   </span>
+</a>
+<label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
+</div>
 <nav aria-expanded="false" aria-labelledby="__nav_5_5_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_5_5">
 <span class="md-nav__icon md-icon"></span>
@@ -1583,7 +1587,56 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../chap1/">
 <span class="md-ellipsis">
-    Chap1 绪论
+    Chap1 Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap.2md">
+<span class="md-ellipsis">
+    Chap2 Embedded Processors
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap3/">
+<span class="md-ellipsis">
+    Chap3 Memory Architectures
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap4/">
+<span class="md-ellipsis">
+    Chap4 Input, Output and Interrupts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap4/">
+<span class="md-ellipsis">
+    Chap5 Sensors and Actuators
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap6/">
+<span class="md-ellipsis">
+    Chap6 Embedded Operation System and Process/Thread Management
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap7/">
+<span class="md-ellipsis">
+    Chap7 Mulit-task Framework and Real-time Scheduling
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../addition/">
+<span class="md-ellipsis">
+    Addition
   </span>
 </a>
 </li>
@@ -1592,12 +1645,16 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../Digital_Circuit/">
 <span class="md-ellipsis">
     数字电路
   </span>
+</a>
+<label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
+</div>
 <nav aria-expanded="false" aria-labelledby="__nav_5_6_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_5_6">
 <span class="md-nav__icon md-icon"></span>
@@ -1719,6 +1776,13 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../AA/Aerodynamics/chap7/">
+<span class="md-ellipsis">
+    Chap7 粘性流体基础
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1800,25 +1864,192 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="toc.title" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      toc.title
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview-of-sensors-and-actuators">
+<span class="md-ellipsis">
+      Overview of Sensors and Actuators
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#design-issues">
+<span class="md-ellipsis">
+      Design Issues
+    </span>
+</a>
+<nav aria-label="Design Issues" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nonlinearity">
+<span class="md-ellipsis">
+      Nonlinearity
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sampling">
+<span class="md-ellipsis">
+      Sampling
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#noies">
+<span class="md-ellipsis">
+      Noies
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#faults-in-sensors">
+<span class="md-ellipsis">
+      Faults in Sensors
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="chap5-input-output-and-interrupts">Chap5 Input, Output and Interrupts<a class="headerlink" href="#chap5-input-output-and-interrupts" title="Permanent link">¶</a></h1>
+<h1 id="chap5-sensors-and-actuators">Chap5 Sensors and Actuators<a class="headerlink" href="#chap5-sensors-and-actuators" title="Permanent link">¶</a></h1>
+<h2 id="overview-of-sensors-and-actuators">Overview of Sensors and Actuators<a class="headerlink" href="#overview-of-sensors-and-actuators" title="Permanent link">¶</a></h2>
+<p>传感器是测量物理量的一种装置，执行器（作动器）是改变物理量的装置</p>
+<div class="admonition summary">
+<p class="admonition-title">Sensor &amp; Actuator</p>
+<ul>
+<li>Sensor<ul>
+<li>A sensor is a device that <strong>measures</strong> a physical quantity</li>
+<li><span>Cameras(<span class="heti-spacing"> </span></span>相机<span><span class="heti-spacing"> </span>)</span>、<span>Accelerometers(<span class="heti-spacing"> </span></span>加速度计<span><span class="heti-spacing"> </span>)</span>、<span>Gyroscopes(<span class="heti-spacing"> </span></span>陀螺仪<span><span class="heti-spacing"> </span>)</span>、<span>Barometer(<span class="heti-spacing"> </span></span>气压计<span><span class="heti-spacing"> </span>)</span>、<span>Strain gauges(<span class="heti-spacing"> </span></span>应力仪<span><span class="heti-spacing"> </span>)</span>、<span>Magnetometers(<span class="heti-spacing"> </span></span>磁力计<span><span class="heti-spacing"> </span>)</span>、<span>Radar/Lidar(<span class="heti-spacing"> </span></span>雷达<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>激光雷达<span><span class="heti-spacing"> </span>)</span></li>
+</ul>
+</li>
+<li>Actuator<ul>
+<li>An actuator is a device that <strong>modifies</strong> a physical quantity</li>
+<li><span>Solenoids(<span class="heti-spacing"> </span></span>电磁阀<span><span class="heti-spacing"> </span>)</span>、<span>Valves(<span class="heti-spacing"> </span></span>阀门<span><span class="heti-spacing"> </span>)</span>、Loudspeakers、<span>LCD(<span class="heti-spacing"> </span></span>液晶显示屏<span><span class="heti-spacing"> </span>)</span>、<span>LED(<span class="heti-spacing"> </span></span>发光二极管<span><span class="heti-spacing"> </span>)</span></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">传感器</p>
+<ul>
+<li>磁力仪<ul>
+<li>功用：测量磁场强度和方向</li>
+<li>原理：霍尔效应</li>
+</ul>
+</li>
+<li>加速度计<ul>
+<li>功用：导航、定向、跌落检测、图像稳定、气囊系统</li>
+<li>原理：弹簧<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>质量<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>阻尼系统、牛顿定律</li>
+<li>难点：区分倾斜和加速度、振动干扰、弹簧或阻尼器的非线性特性、二次积分获取位置</li>
+</ul>
+</li>
+<li>陀螺仪<ul>
+<li>功用：测量方向变化</li>
+<li>原理：萨格纳克效应</li>
+</ul>
+</li>
+<li>应变仪<ul>
+<li>功用：测量物体表面应变      </li>
+</ul>
+</li>
+</ul>
+</div>
+<p>MPU6050：<span>InvenSense<span class="heti-spacing"> </span></span>公司的芯片，集成加速度计和陀螺仪，同时检测三轴角速度和三轴加速度</p>
+<p><span>Inertial Navigation Systems(<span class="heti-spacing"> </span></span>惯性导航系统<span><span class="heti-spacing"> </span>):</span> <strong>GPS</strong> for initialization and periodic correction、three axis <strong>gyroscope</strong> measures orientation、three axis <strong>accelerometer</strong> double integrated for position after correction for orientation</p>
+<h2 id="design-issues">Design Issues<a class="headerlink" href="#design-issues" title="Permanent link">¶</a></h2>
+<div class="admonition summary">
+<p class="admonition-title">Design Issues</p>
+<ul>
+<li><span>Calibration-<span class="heti-spacing"> </span></span>标定<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>校准<ul>
+<li>Relating measurements to the physical phenomenon</li>
+<li>Can dramatically increase manufacturing costs</li>
+</ul>
+</li>
+<li><span>Nonlinearity-<span class="heti-spacing"> </span></span>非线性<ul>
+<li>Measurements may not be proportional to physical phenomenon</li>
+<li>Correction may be required</li>
+<li>Feedback can be used to keep operating point in the linear region</li>
+</ul>
+</li>
+<li><span>Sampling-<span class="heti-spacing"> </span></span>采样<ul>
+<li><span>Aliasing(<span class="heti-spacing"> </span></span>混叠<span><span class="heti-spacing"> </span>)</span></li>
+<li>Missed events</li>
+</ul>
+</li>
+<li><span>Noise-<span class="heti-spacing"> </span></span>噪声<ul>
+<li><span>Analog signal conditioning(<span class="heti-spacing"> </span></span>模拟信号调节<span><span class="heti-spacing"> </span>)</span></li>
+<li><span>Digital filtering(<span class="heti-spacing"> </span></span>数字滤波<span><span class="heti-spacing"> </span>)</span></li>
+<li><span>Introduces latency(<span class="heti-spacing"> </span></span>引入延迟<span><span class="heti-spacing"> </span>)</span></li>
+</ul>
+</li>
+<li><span>Failures-<span class="heti-spacing"> </span></span>错误<ul>
+<li><span>Redundancy(<span class="heti-spacing"> </span></span>冗余<span><span class="heti-spacing"> </span>)(sensor fusion problem)</span></li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="nonlinearity">Nonlinearity<a class="headerlink" href="#nonlinearity" title="Permanent link">¶</a></h3>
+<div class="admonition info">
+<p class="admonition-title">线性与仿射模型</p>
+<p>传感器可以由一个仿射函数进行近似建模。假设传感器在<span class="heti-skip"><span class="heti-spacing"> </span>t<span class="heti-spacing"> </span></span>时刻给出物理量<span class="heti-skip"><span class="heti-spacing"> </span>x(t)<span class="heti-spacing"> </span></span>的值为<span><span class="heti-spacing"> </span>f(x(t))</span></p>
+<p><span>Linear model(<span class="heti-spacing"> </span></span>线性函数<span><span class="heti-spacing"> </span>)</span>：<span class="arithmatex">\(f(x(t))=ax(t)\)</span></p>
+<p><span>Affine model(<span class="heti-spacing"> </span></span>仿射函数<span><span class="heti-spacing"> </span>)</span>：<span class="arithmatex">\(f(x(t))=ax(t)+b\)</span></p>
+<p><span>a: sensitivity(<span class="heti-spacing"> </span></span>灵敏度<span class="heti-skip"><span class="heti-spacing"> </span>), b: bias(<span class="heti-spacing"> </span></span>偏置<span><span class="heti-spacing"> </span>)</span></p>
+<p>传感器的量程（range）有限，测量范围范围外的物理量会出现饱和（saturate<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，即产生最大值或最小值</p>
+<p>仿射模型可扩展为</p>
+<div class="arithmatex">\[f(x(t))=\left\{\begin{aligned}ax(t)+b , L \le x(t) \le H \\ aH+b , x(t)&gt;H \\ aL+b , x(t)&lt;L\end{aligned}\right.\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">动态范围</p>
+<p>数字传感器无法区分物理量的两个间距极近的数值</p>
+<p>传感器的精度（presicion）<span>p<span class="heti-spacing"> </span></span>是传感器读数可区分的物理量的两个值之间的最小绝对差</p>
+<p>动态范围（Dynamic Range）定义为</p>
+<div class="arithmatex">\[D=\frac{H-L}{p}\]</div>
+<p>动态范围通常以分贝（decibels，dB）为单位进行测量</p>
+<div class="arithmatex">\[D_{dB}=20\log_{10}(\frac{H-L}{p})\]</div>
+</div>
+<h3 id="sampling">Sampling<a class="headerlink" href="#sampling" title="Permanent link">¶</a></h3>
+<h3 id="noies">Noies<a class="headerlink" href="#noies" title="Permanent link">¶</a></h3>
+<h2 id="faults-in-sensors">Faults in Sensors<a class="headerlink" href="#faults-in-sensors" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Marzullo's Algorithm</p>
+<p>马祖诺传感器融合算法：</p>
+<ul>
+<li>公理：若传感器无故障，其区间包含真实值</li>
+<li>观察：真实值必定处于无故障传感器区间的重叠区域</li>
+<li>共识（融合）区间（用于在<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>个传感器中容忍<span class="heti-skip"><span class="heti-spacing"> </span>f<span class="heti-spacing"> </span></span>个故障<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：选择包含所有“n−<span>f<span class="heti-spacing"> </span></span>个传感器区间重叠部分”的区间</li>
+</ul>
+<p><img alt="无法显示" src="../figures/chap6/mzn.png"/></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Schmid and Schossmaier's Method</p>
+<p>马祖诺算法会产生极大的不连续性（不连续问题：如果有传感器的测量值区间发生略微变化，可能导致最后的判定结果有跳变）</p>
+<p>考察<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>个传感器有<span class="heti-skip"><span class="heti-spacing"> </span>f<span class="heti-spacing"> </span></span>个故障的情况，选择区间是从<span class="heti-skip"><span class="heti-spacing"> </span>(f+1)<span class="heti-spacing"> </span></span>个最大的下界到<span class="heti-skip"><span class="heti-spacing"> </span>(f+1)<span class="heti-spacing"> </span></span>个最小的上界，这个选择在满足连续性条件下是最优的</p>
+<p><img alt="无法显示" src="../figures/chap6/ssm.png"/></p>
+</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月30日 11:48:51</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年11月6日 20:41:39</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年10月30日 11:48:51</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年11月6日 20:41:39</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>
