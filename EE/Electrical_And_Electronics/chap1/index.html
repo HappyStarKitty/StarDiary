@@ -2173,6 +2173,27 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../AA/Fundamentals_Of_Aerospace_Information_Technology/chap3/">
+<span class="md-ellipsis">
+    Chap3 电磁波的电磁环境
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../AA/Fundamentals_Of_Aerospace_Information_Technology/chap4/">
+<span class="md-ellipsis">
+    Chap4 遥感和雷达
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../AA/Fundamentals_Of_Aerospace_Information_Technology/chap5/">
+<span class="md-ellipsis">
+    Chap5 数据链
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -2458,40 +2479,29 @@
 <h2 id="_2">电阻、电感和电容元件<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_3">电阻元件<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>电阻：表征电能的消耗，是一个耗能元件</p>
+<div class="arithmatex">\[W=\int_{t_1}^{t_2}Ri^2 \mathrm{d}t\]</div>
 <h3 id="_4">电感元件<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>电感：表征磁场能的储存，是一个储能元件</p>
 <div class="arithmatex">\[W_L=\frac{1}{2}L I^2\]</div>
-<div class="admonition proof">
-<p class="admonition-title">推导过程</p>
+<details class="proof">
+<summary>推导过程</summary>
 <div class="arithmatex">\[N\phi = Li, L=\frac{N\phi}{i}\]</div>
 <div class="arithmatex">\[e_L=-\frac{dN\phi}{dt}=-L\frac{di}{dt}\]</div>
 <div class="arithmatex">\[u=-e_L\]</div>
 <div class="arithmatex">\[p=ui\]</div>
 <div class="arithmatex">\[W=\int p\mathrm{d}t=\int Li\mathrm{d}i=\frac{1}{2}Li^2\]</div>
-</div>
+</details>
 <h3 id="_5">电容元件<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>电容：表征电场能的储存</p>
+<p>电容：表征电场能的储存，是一个储能元件</p>
 <div class="arithmatex">\[W_C=\frac{1}{2} CU^2\]</div>
-<p><img alt="无法显示" src="../figures/chap1/component.png"/></p>
-<p><img alt="无法显示" src="../figures/chap1/chuan_bing.png"/></p>
+<p><img alt="无法显示" src="../figures/chap1/chuan_bing.png" width="500px"/></p>
 <h2 id="_6">独立电源元件<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_7">电压源和电流源<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition definition">
-<p class="admonition-title">电压源（理想电压源）</p>
-<p>源电压等于端电压</p>
+<p>电压源（理想电压源<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：源电压等于端电压</p>
 <div class="arithmatex">\[U_S=U\]</div>
-<p><img alt="无法显示" src="../figures/chap1/Vsource.png"/></p>
-</div>
-<div class="admonition definition">
-<p class="admonition-title">电流源（理想电流源）</p>
-<p>源电流等于端电流</p>
+<p>电流源（理想电流源<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：源电流等于端电流</p>
 <div class="arithmatex">\[I_S=I\]</div>
-<p><img alt="无法显示" src="../figures/chap1/Isource.png"/></p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">电源符号</p>
-<p>独立电源的符号可以用其伏安特性记忆。电压源端电压恒定，平行于横轴。电流源端电流恒定，平行于纵轴。</p>
-</div>
+<p>独立电源的符号可以用其伏安特性记忆：电压源端电压恒定，平行于横轴；电流源端电流恒定，平行于纵轴</p>
 <h3 id="_8">实际电源的模型<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>实际电压源：理想电压源与电阻串联</p>
 <div class="arithmatex">\[U=U_S-R_0I\]</div>
@@ -2560,17 +2570,10 @@
 </ul>
 </div>
 <h3 id="_10">二极管的特性和主要参数<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition definition">
-<p class="admonition-title">概念</p>
-<ul>
-<li>二极管：<span>PN<span class="heti-spacing"> </span></span>结、电极引线、管壳</li>
-<li>阳极：由<span class="heti-skip"><span class="heti-spacing"> </span>P<span class="heti-spacing"> </span></span>侧引出的电极</li>
-<li>阴极：由<span class="heti-skip"><span class="heti-spacing"> </span>N<span class="heti-spacing"> </span></span>侧引出的电极</li>
-</ul>
-</div>
-<p><img alt="无法显示" src="../figures/chap1/diode.png"/></p>
+<p>二极管由一个<span class="heti-skip"><span class="heti-spacing"> </span>PN<span class="heti-spacing"> </span></span>结加电极引线和管壳构成，由<span class="heti-skip"><span class="heti-spacing"> </span>P<span class="heti-spacing"> </span></span>侧引出的电极称为阳极，由<span class="heti-skip"><span class="heti-spacing"> </span>N<span class="heti-spacing"> </span></span>侧引出的电极称为阴极</p>
 <div class="admonition note">
 <p class="admonition-title">伏安特性</p>
+<p><img alt="无法显示" src="../figures/chap1/diode.png"/></p>
 <ul>
 <li>
 <p>正向特性</p>
@@ -2635,22 +2638,8 @@ PS：电压越大，越容易导通</li>
 <p>稳态二极管的动态电阻越小，稳压效果越好</p>
 <p>稳压二极管工作在反向击穿状态</p>
 <h3 id="_13">发光二极管和光电二极管<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition note">
-<p class="admonition-title">发光二极管</p>
-<ul>
-<li>简称<span><span class="heti-spacing"> </span>LED</span></li>
-<li>工作在正向偏置状态</li>
-<li>导通压降大于普通二极管</li>
-</ul>
-</div>
-<div class="admonition note">
-<p class="admonition-title">光电二极管</p>
-<ul>
-<li>又称光敏二极管</li>
-<li>工作在反向偏置状态</li>
-<li>反向电流随光照强度增加而增加</li>
-</ul>
-</div>
+<p>发光二极管简称<span><span class="heti-spacing"> </span>LED</span>，工作在正向偏置状态，导通压降大于普通二极管</p>
+<p>光电二极管，又称光敏二极管，<b>工作在反向偏置状态</b>，反向电流随光照强度增加而增加</p>
 <h2 id="_14">双极晶体管<a class="headerlink" href="#_14" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_15">基本结构和电流放电作用<a class="headerlink" href="#_15" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition definition">
@@ -2660,22 +2649,17 @@ PS：电压越大，越容易导通</li>
 <ul>
 <li>两个<span class="heti-skip"><span class="heti-spacing"> </span>PN<span class="heti-spacing"> </span></span>结：发射结、集电结</li>
 <li>三个电极：发射极<span><span class="heti-spacing"> </span>E</span>（emiter<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、基极<span><span class="heti-spacing"> </span>B</span>（base<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、集电极<span><span class="heti-spacing"> </span>C</span>（collector）</li>
-<li>三个区：<ul>
-<li>发射区：杂质浓度高</li>
-<li>集电区：杂质浓度高，比发射区稍低</li>
-<li>基区：杂质浓度相对很低</li>
+<li>三个区：发射区、集电区、基区</li>
 </ul>
-</li>
-</ul>
-<p><img alt="无法显示" src="../figures/chap1/common_emitter.png"/></p>
 </div>
+<p>发射区杂质浓度很高，基区很薄且杂质浓度很低，集电区的面积比发射结的面积大，且集电区杂质浓度较发射区低</p>
 <div class="admonition note">
 <p class="admonition-title">电流放大作用</p>
 <p>条件：发射结正向偏置，集电结反向偏置</p>
 <p><img alt="无法显示" src="../figures/chap1/current_amplication.png"/></p>
 <div class="arithmatex">\[I_E=I_C+I_B\]</div>
 <div class="arithmatex">\[I_B \ll I_C \approx I_E\]</div>
-<p>小的基极电流变化量<span class="heti-skip"><span class="heti-spacing"> </span>-&gt;<span class="heti-spacing"> </span></span>大的集电极电流变化量，具有电流放大作用（故三极管是电流控制性器件）</p>
+<p>小的基极电流变化量引起大的集电极电流变化量，具有电流放大作用，故<b>三极管是电流控制电流器件</b></p>
 </div>
 <h3 id="_16">特性曲线和主要参数<a class="headerlink" href="#_16" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition note">
@@ -2770,7 +2754,7 @@ PS：电压越大，越容易导通</li>
 </div>
 <p><img alt="无法显示" src="../figures/chap1/PMOS.png"/></p>
 <p>场效晶体管的源极相当于晶体管的发射极，漏极相当于集电极，栅极相当于基极  </p>
-<p>PS：<span>G-<span class="heti-spacing"> </span></span>栅极，<span>S-<span class="heti-spacing"> </span></span>源极，<span>D-<span class="heti-spacing"> </span></span>漏极，电压控制电流型器件（<span><span class="arithmatex">\(U_{GS}\)</span><span class="heti-spacing"> </span></span>控制<span><span class="heti-spacing"> </span><span class="arithmatex">\(I_D\)</span></span>，栅源电压控制漏极电流）</p>
+<p>PS：<span>G-<span class="heti-spacing"> </span></span>栅极，<span>S-<span class="heti-spacing"> </span></span>源极，<span>D-<span class="heti-spacing"> </span></span>漏极；<span><span class="arithmatex">\(U_{GS}\)</span><span class="heti-spacing"> </span></span>控制<span><span class="heti-spacing"> </span><span class="arithmatex">\(I_D\)</span></span>，栅源电压控制漏极电流，故<b><span class="heti-skip"><span class="heti-spacing"> </span>MOS<span class="heti-spacing"> </span></span>管是电压控制电流元件</b></p>
 <h3 id="_20">特性曲线和主要参数<a class="headerlink" href="#_20" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h4 id="_21">特性曲线<a class="headerlink" href="#_21" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p>输出特性：以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{cs}\)</span><span class="heti-spacing"> </span></span>为参变量时，<span><span class="arithmatex">\(i_D\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{DS}\)</span><span class="heti-spacing"> </span></span>之间的关系，即</p>

@@ -1859,6 +1859,52 @@
       边界层的概念
     </span>
 </a>
+<nav aria-label="边界层的概念" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      边界层厚度
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      边界层微分方程
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      平板层流边界层
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      边界层动量积分式
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      边界层微分方程的数值解法
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
+      边界层的分离
+    </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -1988,6 +2034,27 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Fundamentals_Of_Aerospace_Information_Technology/chap3/">
+<span class="md-ellipsis">
+    Chap3 电磁波的电磁环境
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Fundamentals_Of_Aerospace_Information_Technology/chap4/">
+<span class="md-ellipsis">
+    Chap4 遥感和雷达
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Fundamentals_Of_Aerospace_Information_Technology/chap5/">
+<span class="md-ellipsis">
+    Chap5 数据链
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -2059,6 +2126,52 @@
       边界层的概念
     </span>
 </a>
+<nav aria-label="边界层的概念" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      边界层厚度
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      边界层微分方程
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      平板层流边界层
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      边界层动量积分式
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      边界层微分方程的数值解法
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
+      边界层的分离
+    </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -2069,18 +2182,130 @@
 <article class="md-content__inner md-typeset">
 <h1 id="chap8"><span>Chap8<span class="heti-spacing"> </span></span>边界层理论<a class="headerlink" href="#chap8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <h2 id="_1">边界层的概念<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition definition">
+<p class="admonition-title">边界层</p>
+<p>速度梯度很大的薄层，粘性在该薄层内起作用</p>
+</div>
+<h3 id="_2">边界层厚度<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition definition">
+<p class="admonition-title">名义厚度</p>
+<p>名义厚度：<span><span class="arithmatex">\(u=0.99U_e\)</span><span class="heti-spacing"> </span></span>处的<span class="heti-skip"><span class="heti-spacing"> </span>y<span class="heti-spacing"> </span></span>值<span><span class="heti-spacing"> </span><span class="arithmatex">\(\delta(x)\)</span></span></p>
+<p><img alt="无法显示" src="../figures/chap8/mingyi.png"/></p>
+<p>可根据边界层中惯性力与粘性力具有相同量级，大致估计边界层的厚度</p>
+<p>惯性力项和粘性力项的量级分别为</p>
+<div class="arithmatex">\[\rho u \frac{\partial u}{\partial x} \sim \rho \frac{V_\infty^2}{l}, \frac{\partial}{\partial y}(\mu \frac{\partial u}{\partial y})\sim \frac{\mu V_\infty}{\delta^2}\]</div>
+<p>若</p>
+<div class="arithmatex">\[\frac{\rho V_\infty^2}{l} \sim \frac{\mu V_\infty}{\delta^2}\]</div>
+<p>则有</p>
+<div class="arithmatex">\[\delta \sim \sqrt{\frac{\mu l}{\rho \infty}}=\frac{l}{\sqrt{Re}}\]</div>
+<p>或写成</p>
+<div class="arithmatex">\[\frac{\delta}{l}\sim \frac{1}{\sqrt{Re}}\]</div>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">排挤厚度</p>
+<p><img alt="无法显示" src="../figures/chap8/paiji.png"/></p>
+<p>排挤厚度用于边界层精确计算时修正物面</p>
+<p>厚度为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\delta\)</span><span class="heti-spacing"> </span></span>的理想流体进入边界层时流量损失等于损失了厚度为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\delta_1\)</span><span class="heti-spacing"> </span></span>的理想流体流量<span><span class="heti-spacing"> </span><span class="arithmatex">\(\delta_1U_e\)</span></span></p>
+<p>其被排向主流，使主流的流线较势流流线外移<span><span class="heti-spacing"> </span><span class="arithmatex">\(\delta_1\)</span></span>，相当于势流中物体增加<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\delta_1\)</span><span class="heti-spacing"> </span></span>厚度</p>
+<div class="arithmatex">\[\delta_1 U_e=\int_0^\delta (U_e-u) \mathrm{d}y\]</div>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">动量损失厚度</p>
+<p>边界层内损失的动量相当于厚度为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\delta_2\)</span><span class="heti-spacing"> </span></span>的理想流体动量</p>
+<div class="arithmatex">\[\delta_2 = \int_0^{\infty(\delta)} \frac{u}{U_e} (1-\frac{u}{U_e})\mathrm{d}y\]</div>
+<p>边界层动量损失为</p>
+<div class="arithmatex">\[\int_0^{y_1} \rho u (U_e-u) \mathrm{d}y\]</div>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">动能损失厚度</p>
+<p>边界层内损失的动能相当于厚度为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\delta_3\)</span><span class="heti-spacing"> </span></span>的理想流体动能</p>
+<div class="arithmatex">\[\delta_3 =\int_{0}^{\infty(\delta)} \frac{u}{U_e}(1-\frac{u^2}{U_e^2}) \mathrm{d}y\]</div>
+</div>
+<div class="admonition summary">
+<p class="admonition-title">厚度比较</p>
+<p><span class="arithmatex">\(\delta_2&lt;\delta_1&lt;\delta_3\)</span></p>
+<p>都是流向位置<span class="heti-skip"><span class="heti-spacing"> </span>x<span class="heti-spacing"> </span></span>的函数，随<span class="heti-skip"><span class="heti-spacing"> </span>x<span class="heti-spacing"> </span></span>的增加而增厚</p>
+<p>对于可压缩流体，上述各种厚度计算公式变为  </p>
+<p><img alt="无法显示" src="../figures/chap8/houdu.png"/></p>
+<p>适用于层流和湍流</p>
+</div>
+<h2 id="_3">边界层微分方程<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>考察空气流过翼型的流场，流动分为三个区域</p>
+<p><img alt="无法显示" src="../figures/chap8/raoliu.png"/></p>
+<p>边界层：<span>N-S<span class="heti-spacing"> </span></span>方程化简为边界层方程；尾迹区：<span>N-S<span class="heti-spacing"> </span></span>方程；势流区：理想流<span class="heti-skip"><span class="heti-spacing"> </span>Euler<span class="heti-spacing"> </span></span>方程</p>
+<div class="admonition formula">
+<p class="admonition-title"><span>Prandtl<span class="heti-spacing"> </span></span>边界层方程</p>
+<p>在<b>高<span class="heti-skip"><span class="heti-spacing"> </span>Re<span class="heti-spacing"> </span></span>数</b>情况下<b><span class="heti-skip"><span class="heti-spacing"> </span>δ<span class="heti-spacing"> </span></span>较小</b>可以忽略，同时<b>忽略质量力</b>，得到<span class="heti-skip"><span class="heti-spacing"> </span>Prandtl<span class="heti-spacing"> </span></span>边界层方程为</p>
+<div class="arithmatex">\[\left\{\begin{aligned}\frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} = 0 \\ \frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} = - \frac{1}{\rho} \frac{\partial p}{\partial x} + v \frac{\partial^2 u}{\partial y^2} \\ \frac{\partial p}{\partial y} = 0\end{aligned}\right.\]</div>
+<p>边界条件为</p>
+<div class="arithmatex">\[\left\{\begin{aligned}y=0,u=0,v=0 \\ y=\infty ,u=u_e \end{aligned} \right.\]</div>
+</div>
+<div class="admonition summary">
+<p class="admonition-title">边界层基本特征</p>
+<ol>
+<li>边界层很薄</li>
+<li>边界层内速度梯度很大，粘性不可忽略</li>
+<li>边界层内压力沿壁面法向不变，等于外部势流压力</li>
+<li>边界层内速度分布具有渐进性</li>
+<li>边界层有涡性</li>
+</ol>
+</div>
+<div class="admonition info">
+<p class="admonition-title">定常层流边界层问题解法</p>
+<p><img alt="无法显示" src="../figures/chap8/ff1.png"/>
+<img alt="无法显示" src="../figures/chap8/ff2.png"/>
+<img alt="无法显示" src="../figures/chap8/ff3.png"/></p>
+</div>
+<h2 id="_4">平板层流边界层<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition formula">
+<p class="admonition-title">边界层方程</p>
+<p>半无限长平板、不可压缩、定常、层流、不计重力、<span class="arithmatex">\(\frac{\mathrm{d} p_e}{\mathrm{d}x}=0\)</span></p>
+<div class="arithmatex">\[\left\{\begin{aligned}\frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} = 0 \\ u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} = v \frac{\partial^2 u}{\partial y^2} \\ y = 0, \quad u = v = 0 \\ y \rightarrow \infty, \quad u = U_{\infty}\end{aligned}\right.\]</div>
+</div>
+<div class="admonition formula">
+<p class="admonition-title"><span>Blasius<span class="heti-spacing"> </span></span>解法</p>
+<p>化简后得三阶常微分方程</p>
+<div class="arithmatex">\[\left.\begin{aligned}2F''' + FF'' = 0 \\ \eta = 0, F' = 0, F = 0 \\ \eta \rightarrow \infty, F' = 1\end{aligned}\right\}\]</div>
+</div>
+<h2 id="_5">边界层动量积分式<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition formula">
+<p class="admonition-title">边界层动量积分方程</p>
+<p>边界层动量积分方程</p>
+<div class="arithmatex">\[\boxed{\frac{\tau_0}{\rho}=u_e^2 \frac{\mathrm{d} \delta_2}{\mathrm{d}x}+u_e (2\delta_2+\delta_1)\frac{\mathrm{d} u_e}{\mathrm{d}x}}\]</div>
+<p>无量纲形式</p>
+<div class="arithmatex">\[\boxed{\frac{C_f}{2}=\frac{\mathrm{d}\delta_2}{\mathrm{d}x}+(2+H)\frac{\delta_2}{u_e}\frac{\mathrm{d}u_e}{\mathrm{d}x}}\]</div>
+<p><span><span class="arithmatex">\(C_f=\frac{\tau_0}{\frac{1}{2}\rho u_e^2}\)</span><span class="heti-spacing"> </span></span>为当地摩擦系数，<span><span class="arithmatex">\(H=\frac{\delta_1}{\delta_2}\)</span><span class="heti-spacing"> </span></span>称为形状因子</p>
+<p>对平板边界层流动，有<span><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{\mathrm{d}p}{\mathrm{d}x}=0,\frac{\mathrm{d}u_e}{\mathrm{d}x}=0,u_e=const.\)</span></span></p>
+<div class="arithmatex">\[\frac{\tau_0}{\rho}=u_e^2 \frac{\mathrm{d}\delta_2}{\mathrm{d}x}\]</div>
+</div>
+<h2 id="_6">边界层微分方程的数值解法<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_7">边界层的分离<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>边界层中的流体质点受惯性力、粘性力和压力的作用，其中：</p>
+<p>惯性力与粘性力的相对大小决定了粘性影响的相对区域大小，或边界层厚度的大小</p>
+<p>粘性力的作用始终是阻滞流体质点运动，使流体质点减速，失去动能</p>
+<p>压力的作用取决于扰流物体的形状和流道形状，顺压梯度有助于流体加速前进，而逆压梯度阻碍流体运动</p>
+<div class="admonition definition">
+<p class="admonition-title">分离点</p>
+<p>分离点下游区域受逆压梯度的作用而发生倒流。分离点定义为紧邻壁面顺流区与倒流区的分界点</p>
+<p>在分离点附近和分离区，边界层假设不再成立</p>
+</div>
+<p>边界层分离的必要条件是：<b>存在逆压梯度和粘性剪切层</b></p>
+<div class="admonition definition">
+<p class="admonition-title">边界层分离</p>
+<p>在逆压梯度作用下，附面层底层出现倒流，与上层顺流相互作用，形成漩涡脱离物体表面的现象</p>
+</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年12月8日 13:53:52</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年12月22日 11:22:17</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年12月8日 13:53:53</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年12月22日 11:22:17</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>
