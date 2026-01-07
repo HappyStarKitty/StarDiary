@@ -35,6 +35,7 @@ theme:
 nav:
   - Home: README.md
   - Math:
+      - Index: Math/README.md
       - 微积分:
           - Index: Math/Calculus/README.md
           - Note: Math/Calculus/Note.md
@@ -58,16 +59,21 @@ nav:
           - Note: Math/Differential_Equation/Note.md
       - 数值计算方法:
           - Index: Math/Numerical_Method/README.md
-          - Chap0: Math/Numerical_Method/chap0.md
-          - Chap1: Math/Numerical_Method/chap1.md
-          - Chap2: Math/Numerical_Method/chap2.md
-          - Chap3: Math/Numerical_Method/chap3.md
-          - Chap4: Math/Numerical_Method/chap4.md
-          - Chap5: Math/Numerical_Method/chap5.md
-          - Chap6: Math/Numerical_Method/chap6.md
+          - Chap0 Matlab: Math/Numerical_Method/chap0.md
+          - Chap1 绪论: Math/Numerical_Method/chap1.md
+          - Chap2 非线性方程求根: Math/Numerical_Method/chap2.md
+          - Chap3 线性代数方程组: Math/Numerical_Method/chap3.md
+          - Chap4 插值和拟合: Math/Numerical_Method/chap4.md
+          - Chap5 数值微分和数值积分: Math/Numerical_Method/chap5.md
+          - Chap6 常微分方程的数值解: Math/Numerical_Method/chap6.md
       - 复变函数与积分变换:
-          - Index: Math/Complex_Function/README.md
-          - Note: Math/Complex_Function/Note.md
+          - Chap1 复数: Math/Complex_Function/chap1.md
+          - Chap2 复变函数: Math/Complex_Function/chap2.md
+          - Chap3 复变函数的积分: Math/Complex_Function/chap3.md
+          - Chap4 级数: Math/Complex_Function/chap4.md
+          - Chap5 留数: Math/Complex_Function/chap5.md
+          - Chap6 保角映射: Math/Complex_Function/chap6.md
+          - Chap7 拉普拉斯变换: Math/Complex_Function/chap7.md
       - 概率论与数理统计:
           - Index: Math/Probability_Theory/README.md
           - Note: Math/Probability_Theory/Note.md
@@ -78,101 +84,186 @@ nav:
           - Chap3: Math/Partial_Differential_Equation/chap3.md
           - Chap4: Math/Partial_Differential_Equation/chap4.md
           - Chap5: Math/Partial_Differential_Equation/chap5.md
+
+  - Phy:
+      - Index: Phy/README.md
+      - 大学物理（甲）: 
+        - Index: Phy/College_Physics/README.md
+        - 电磁学: Phy/College_Physics/electromagnetism.md
+        - 光学: Phy/College_Physics/optics.md
+        - 量子物理学: Phy/College_Physics/quantum.md
+      - 理论力学（甲）:
+        - Index: Phy/Theoretical_Mechanics/README.md
+        - Chap0: Phy/Theoretical_Mechanics/chap0.md
+        - Chap1: Phy/Theoretical_Mechanics/chap1.md
+        - Chap2: Phy/Theoretical_Mechanics/chap2.md
+        - Chap3: Phy/Theoretical_Mechanics/chap3.md
+        - Chap4: Phy/Theoretical_Mechanics/chap4.md
+      - 材料力学（乙）:
+        - Chap1 绪论: Phy/Mechanics_Of_Materials/chap1.md
+        - Chap2 拉伸、压缩与剪切: Phy/Mechanics_Of_Materials/chap2.md
+        - Chap3 扭转: Phy/Mechanics_Of_Materials/chap3.md
+        - Chap4 弯曲内力: Phy/Mechanics_Of_Materials/chap4.md
+        - Chap5 弯曲应力: Phy/Mechanics_Of_Materials/chap5.md
+        - Chap6 弯曲变形: Phy/Mechanics_Of_Materials/chap6.md
+        - Chap7 应力和应变分析 强度理论: Phy/Mechanics_Of_Materials/chap7.md
+        - Chap8 组合变形: Phy/Mechanics_Of_Materials/chap8.md
+        - Chap9 压杆稳定: Phy/Mechanics_Of_Materials/chap9.md
+        - Chap10 动载荷: Phy/Mechanics_Of_Materials/chap10.md
+        - Chap11 交变应力: Phy/Mechanics_Of_Materials/chap11.md
+        - Chap13 能量法: Phy/Mechanics_Of_Materials/chap13.md
+        - 附录: Phy/Mechanics_Of_Materials/addition.md
+      - 热力学基础:
+        - Chap1 基本概念和定义: Phy/Fundamentals_Of_Thermodynamics/chap1.md
+        - Chap2 热力学第一定律: Phy/Fundamentals_Of_Thermodynamics/chap2.md
+        - Chap3 气体和蒸汽的性质: Phy/Fundamentals_Of_Thermodynamics/chap3.md
+        - Chap4 气体和蒸汽的基本的热力过程: Phy/Fundamentals_Of_Thermodynamics/chap4.md
+        - Chap6 热力学第二定律: Phy/Fundamentals_Of_Thermodynamics/chap6.md
+        - Chap7 气体和蒸汽的流动: Phy/Fundamentals_Of_Thermodynamics/chap7.md
+        - Chap8 压气机的热力过程: Phy/Fundamentals_Of_Thermodynamics/chap8.md
+        - Chap9 气体动力循环: Phy/Fundamentals_Of_Thermodynamics/chap9.md
+  - EE:
+      - Index: EE/README.md
+      - 电工电子学: 
+        - Chap1 电路和电路元件: EE/Electrical_And_Electronics/chap1.md
+        - Chap2 电路分析基础: EE/Electrical_And_Electronics/chap2.md
+        - Chap3 分立元件基本电路: EE/Electrical_And_Electronics/chap3.md
+        - Chap4 数字集成电路: EE/Electrical_And_Electronics/chap4.md
+        - Chap5 集成运算放大器: EE/Electrical_And_Electronics/chap5.md
+        - Chap6 波形产生和变换: EE/Electrical_And_Electronics/chap6.md
+        - Chap7 测量和数据采集系统: EE/Electrical_And_Electronics/chap7.md
+        - Chap8 功率电子电路: EE/Electrical_And_Electronics/chap8.md
+        - Chap9 变压器和电动机: EE/Electrical_And_Electronics/chap9.md
+        - Chap10 电气控制技术: EE/Electrical_And_Electronics/chap10.md
+      
+      - 信号与系统:
+        - Chap1 信号与系统: EE/Signal_And_System/chap1.md
+        - Chap2 线性时不变系统: EE/Signal_And_System/chap2.md
+        - Chap3 周期信号的傅里叶级数表示: EE/Signal_And_System/chap3.md
+        - Chap4 连续时间傅里叶变换: EE/Signal_And_System/chap4.md
+        - Chap5 离散时间傅里叶变换: EE/Signal_And_System/chap5.md
+        - Chap6 信号与系统的时域和频域特性: EE/Signal_And_System/chap6.md
+        - Chap7 采样: EE/Signal_And_System/chap7.md
+        - Chap8 通信系统: EE/Signal_And_System/chap8.md
+        - Chap9 拉普拉斯变换: EE/Signal_And_System/chap9.md
+        - Chap10 z变换: EE/Signal_And_System/chap10.md
+      - 自动控制原理:
+        - Chap1 自动控制的一般概念: EE/Principle_Of_Automatic_Control/chap1.md
+        - Chap2 控制系统的数学模型: EE/Principle_Of_Automatic_Control/chap2.md
+        - Chap3 线性系统的时域分析法: EE/Principle_Of_Automatic_Control/chap3.md
+        - Chap4 线性系统的根轨迹法: EE/Principle_Of_Automatic_Control/chap4.md
+        - Chap5 线性系统的频域分析法: EE/Principle_Of_Automatic_Control/chap5.md
+        - Chap6 线性系统的校正方法: EE/Principle_Of_Automatic_Control/chap6.md
+        - Chap7 线性离散系统的分析与校正: EE/Principle_Of_Automatic_Control/chap7.md
+        - Chap8 非线性控制系统分析: EE/Principle_Of_Automatic_Control/chap8.md
+        - Chap9 线性系统的状态空间分析与综合: EE/Principle_Of_Automatic_Control/chap9.md
+        - Chap10 动态系统的最优控制方法: EE/Principle_Of_Automatic_Control/chap10.md
+      - 嵌入式计算技术:
+        - Index: EE/Embedded_Computing_Technology/README.md
+        - Chap1 Introduction: EE/Embedded_Computing_Technology/chap1.md
+        - Chap2 Embedded Processors: EE/Embedded_Computing_Technology/chap2.md
+        - Chap3 Memory Architectures: EE/Embedded_Computing_Technology/chap3.md
+        - Chap4 Input, Output and Interrupts: EE/Embedded_Computing_Technology/chap4.md
+        - Chap5 Sensors and Actuators: EE/Embedded_Computing_Technology/chap5.md
+        - Chap6 Embedded Operation System and Process/Thread Management: EE/Embedded_Computing_Technology/chap6.md
+        - Chap7 Mulit-task Framework and Real-time Scheduling: EE/Embedded_Computing_Technology/chap7.md
+        - Addition: EE/Embedded_Computing_Technology/addition.md
+      - 数字电路:
+        - Index: EE/Digital_Circuit/README.md
+        - Chap1 Digital Systems and Binary Numbers: EE/Digital_Circuit/chap1.md
+        - Chap2 Boolean Algebra and Logic Gates: EE/Digital_Circuit/chap2.md
+        - Chap3 Gate-Level Minimization: EE/Digital_Circuit/chap3.md
+        - Chap4 Combination Logic: EE/Digital_Circuit/chap4.md
+        - Chap5 Synchronous Seqential Logic: EE/Digital_Circuit/chap5.md
+        - Chap6 Registers and Counters: EE/Digital_Circuit/chap6.md
+        - Addition: EE/Digital_Circuit/addition.md
+  - AA:
+      - Index: AA/README.md
+      - 空气动力学:
+        - Chap1 绪论: AA/Aerodynamics/chap1.md
+        - Chap2 流体力学基本方程: AA/Aerodynamics/chap2.md
+        - Chap3 流体静力学: AA/Aerodynamics/chap3.md
+        - Chap4 无粘不可压缩流动: AA/Aerodynamics/chap4.md
+        - Chap5 绕翼型不可压缩流动: AA/Aerodynamics/chap5.md
+        - Chap6 量纲分析和相似理论: AA/Aerodynamics/chap6.md
+        - Chap7 粘性流体基础: AA/Aerodynamics/chap7.md
+        - Chap8 边界层理论: AA/Aerodynamics/chap8.md
+        - Chap10 绕有限翼展机翼不可压缩流动: AA/Aerodynamics/chap10.md
+        - Chap11 可压缩流动基础: AA/Aerodynamics/chap11.md
+        - Chap12 正激波: AA/Aerodynamics/chap12.md
+        - Chap13 斜激波: AA/Aerodynamics/chap13.md
+        - Chap14 准一维流动理论: AA/Aerodynamics/chap14.md
+        - Chap15 绕翼型可压缩流动: AA/Aerodynamics/chap15.md
+        - Chap16 高超音速流动概述: AA/Aerodynamics/chap16.md
+      - 飞行器结构设计基础:
+        - Chap1 飞行器结构设计引论: AA/Fundamentals_Of_Aircraft_Structure_Design/chap1.md
+        - Chap2 飞机结构设计思想和方法: AA/Fundamentals_Of_Aircraft_Structure_Design/chap2.md
+        - Chap3 飞机的外载荷和设计情况: AA/Fundamentals_Of_Aircraft_Structure_Design/chap3.md
+        - Chap4 机翼、尾翼结构设计与分析: AA/Fundamentals_Of_Aircraft_Structure_Design/chap4.md
+        - Chap5 机身结构与分析: AA/Fundamentals_Of_Aircraft_Structure_Design/chap5.md
+        - Chap6 起落架装置分析与设计: AA/Fundamentals_Of_Aircraft_Structure_Design/chap6.md
+        - Chap7 复合材料结构设计: AA/Fundamentals_Of_Aircraft_Structure_Design/chap7.md
+      
+      - 航天器轨道与姿态动力学:
+        - Chap1 绪论: AA/Spacecraft_Orbit_And_Attitude_Dynamics/chap1.md
+        - Chap2 轨道动力学: AA/Spacecraft_Orbit_And_Attitude_Dynamics/chap2.md
+        - Chap3 航天器导航: AA/Spacecraft_Orbit_And_Attitude_Dynamics/chap3.md
+        - Chap4 姿态动力学: AA/Spacecraft_Orbit_And_Attitude_Dynamics/chap4.md
+
   - CS:
       - Index: CS/README.md
+      - Computer Graphics:
+          - Games101:
+              - Lec1: CS/Computer_Graphics/Games101/lec1.md
+              - Lec2: CS/Computer_Graphics/Games101/lec2.md
+              - Lec3: CS/Computer_Graphics/Games101/lec3.md
+              - Lec4: CS/Computer_Graphics/Games101/lec4.md
+              - Lec5: CS/Computer_Graphics/Games101/lec5.md
+              - Lec6: CS/Computer_Graphics/Games101/lec6.md
       - Language:
           - C:
               - Index: CS/Language/C_Program/README.md
               - Note: CS/Language/C_Program/Note.md
               - Problem: CS/Language/C_Program/Problem.md
+          - C++:
+              - Index: CS/Language/C++/README.md
           - Python: 
               - Index: CS/Language/Python/README.md
               - Introduction: CS/Language/Python/introduction.md
               - Data Analysis: CS/Language/Python/data_analysis/README.md
               - Package: CS/Language/Python/package.md
-          - Assembly Language:
-              - Index: CS/Language/Assembly_Language/README.md
-              - Lesson Note: CS/Language/Assembly_Language/Lesson_Note.md
-              - Textbook Note: CS/Language/Assembly_Language/Textbook_Note.md
-          - Matlab: CS/Language/Matlab.md
+              
+          - Matlab: CS/Language/Matlab/Matlab.md
+          
       - Web Development: 
           - Index: CS/Web_Development/README.md
           - Frontend: CS/Web_Development/Frontend/README.md
           - Backend: CS/Web_Development/Backend/README.md
-      - Artificial Intelligence:
-          - Index: CS/Artificial_Intelligence/README.md
-          - Basic: 
-              - Index: CS/Artificial_Intelligence/Basic/basic.md
-              - Part1: CS/Artificial_Intelligence/Basic/part1.md    
-              - Part2: CS/Artificial_Intelligence/Basic/part2.md
-              - Part3: CS/Artificial_Intelligence/Basic/part3.md
-              - Part4: CS/Artificial_Intelligence/Basic/part4.md
-              - Part5: CS/Artificial_Intelligence/Basic/part5.md
-              - Part6: CS/Artificial_Intelligence/Basic/part6.md
-          - Network: 
-              - Index: CS/Artificial_Intelligence/Network/README.md
-              - Chap1: CS/Artificial_Intelligence/Network/chap1.md
-              - Chap2: CS/Artificial_Intelligence/Network/chap2.md
-              - Chap3: CS/Artificial_Intelligence/Network/chap3.md
-              - Chap4: CS/Artificial_Intelligence/Network/chap4.md
-              - Chap5: CS/Artificial_Intelligence/Network/chap5.md
-              - Chap6: CS/Artificial_Intelligence/Network/chap6.md
-              - Chap7: CS/Artificial_Intelligence/Network/chap7.md
-              - Chap8: CS/Artificial_Intelligence/Network/chap8.md
-              - Chap9: CS/Artificial_Intelligence/Network/chap9.md
-              - Addition: CS/Artificial_Intelligence/Network/addition.md
-      - Data Structure: 
-          - Index: CS/Data_Structure/README.md
-          - Chap1: CS/Data_structure/chap1.md
-          - Chap2: CS/Data_Structure/chap2.md
-          - Chap3: CS/Data_Structure/chap3.md
+             
+      - Algorithm: 
+          - Index: CS/Algorithm/README.md
+          - Chap1: CS/Algorithm/chap1.md
+          - Chap2: CS/Algorithm/chap2.md
+          - Chap3: CS/Algotirhm/chap3.md
       - Computer System: CS/Computer_System/README.md
       - Object-oriented Programming: CS/Object-oriented_Programming/README.md
       - Quantum Computation:
           - Index: CS/Quantum_Computation/README.md
-      - The Missing Semester:
-          - Index: CS/The_Missing_Semester/README.md
-          - Git: CS/The_Missing_Semester/Git.md
-          - Markdown: CS/The_Missing_Semester/Markdown.md
-          - Latex: CS/The_Missing_Semester/Latex.md
-          - Typst: CS/The_Missing_Semester/Typst.md
-          - Linux: CS/The_Missing_Semester/Linux.md
-          - Misc: CS/The_Missing_Semester/Misc.md
-      - Misc:
-          - Code: CS/Misc/code.md
-  - Phy:
-      - Index: Physics/README.md
-      - 大学物理（甲）: 
-        - Index: Physics/College_Physics/README.md
-        - 电磁学: Physics/College_Physics/electromagnetism.md
-        - 光学: Physics/College_Physics/optics.md
-        - 量子物理学: Physics/College_Physics/quantum.md
-      - 理论力学（甲）:
-        - Index: Physics/Theoretical_Mechanics/README.md
-        - 绪论: Physics/Theoretical_Mechanics/introduction.md
-        - 运动: Physics/Theoretical_Mechanics/motion.md
-        - 力系: Physics/Theoretical_Mechanics/force.md
-      - 材料力学（乙）:
-        - Chap1: Physics/Mechnics_Of_Materials/chap1.md
-  - EE:
-      - Index: Engineering/README.md
-      - 电工电子学: 
-        - Chap1 电路和电路元件: Engineering/Electrical_And_Electronics/chap1.md
-      - 信号分析与处理:
-        - Chap1 绪论: Engineering/Signal_Analysis_And_Processing/chap1.md
-        - Chap2 连续信号的分析: Engineering/Signal_Analysis_And_Processing/chap2.md
-        - Chap3 离散信号的分析: Engineering/Signal_Analysis_And_Processing/chap3.md
-        - Chap4 信号处理基础: Engineering/Signal_Analysis_And_Processing/chap4.md
-        - Chap5 滤波器: Engineering/Signal_Analysis_And_Processing/chap5.md
-  - AA:
-      - Index: AA/README.md
-  - Skills:
-      - Index: Skills/README.md
 
-  - Tools:
-      - 计科入门: Tools/CSbegin.md
-      - 相关资源: Tools/resource.md
-      - 实用工具: Tools/tools.md
+  - AI:
+      - Index: AI/README.md
+  - Misc:
+      - 模糊控制: Misc/Fuzzy.md
+      - 信息论与编码: Misc/Information.md
+
+  - Other:
+      - Git: Other/Tools/Git.md
+      - Linux: Other/Tools/Linux.md
+      - Latex: OtherTools/Latex.md
+      - Markdown: Other/Tools/Markdown.md
+      - Typst: Other/Tools/Typst.md
+      - Word: Other/Tools/Word.md
+
 
 markdown_extensions:
 
@@ -204,6 +295,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  #- mdx_truly_sane_lists
 
 plugins:
   - changelog
@@ -239,6 +331,7 @@ extra:
       link: happystarkitty@outlook.com
 
 extra_css:
+  - stylesheet/counter.css
   - stylesheet/custom.css
   - stylesheet/extra_changelog.css
   - https://unpkg.com/katex@0/dist/katex.min.css
@@ -247,9 +340,8 @@ extra_css:
   - https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap
 
 extra_javascript:
-  - js/katex.js
+  - js/mathjax.js
   - js/toc.js
   - js/anchor.js
-  - https://unpkg.com/katex@0/dist/katex.min.js
-  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
   # - https://polyfill.io/v3/polyfill.min.js?features=es6

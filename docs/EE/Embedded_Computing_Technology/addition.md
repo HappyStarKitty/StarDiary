@@ -1,0 +1,9 @@
+# Addition
+
+蓝牙模块HC05的四线制：VCC、GND、TXD、RXD
+
+SPI通信总线的四线制：SCLK、MOSI、MISO、SS
+
+I2C总线的引线：SDA、SCL
+
+RS232三线制：RXD、TXD、GND
