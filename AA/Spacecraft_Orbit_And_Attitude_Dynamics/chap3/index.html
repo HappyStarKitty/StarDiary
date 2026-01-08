@@ -180,7 +180,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../Misc/Fuzzy/">
+<a class="md-tabs__link" href="../../../Misc/">
           
   
     
@@ -1633,13 +1633,32 @@
       航天器自主导航系统
     </span>
 </a>
-</li>
+<nav aria-label="航天器自主导航系统" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#gps">
 <span class="md-ellipsis">
       GPS导航原理
     </span>
 </a>
+<nav aria-label="GPS导航原理" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gps_1">
+<span class="md-ellipsis">
+      GPS可见能见度分析
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gps_2">
+<span class="md-ellipsis">
+      GPS导航定位原理
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
@@ -1658,10 +1677,55 @@
 </ul>
 </nav>
 </li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../chap4/">
 <span class="md-ellipsis">
     Chap4 姿态动力学
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap5/">
+<span class="md-ellipsis">
+    Chap5 空间环境和干扰力矩
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap6/">
+<span class="md-ellipsis">
+    Chap6 姿态控制系统
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap7/">
+<span class="md-ellipsis">
+    Chap7 主动控制系统
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap1/">
+<span class="md-ellipsis">
+    Chap8 姿态确定算法
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap1/">
+<span class="md-ellipsis">
+    Chap9 轨道控制和编队控制
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../test/">
+<span class="md-ellipsis">
+    Addition 回忆卷
   </span>
 </a>
 </li>
@@ -1998,12 +2062,16 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_8" type="checkbox"/>
-<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Misc/">
 <span class="md-ellipsis">
     Misc
   </span>
+</a>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
+</div>
 <nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_8">
 <span class="md-nav__icon md-icon"></span>
@@ -2113,13 +2181,32 @@
       航天器自主导航系统
     </span>
 </a>
-</li>
+<nav aria-label="航天器自主导航系统" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#gps">
 <span class="md-ellipsis">
       GPS导航原理
     </span>
 </a>
+<nav aria-label="GPS导航原理" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gps_1">
+<span class="md-ellipsis">
+      GPS可见能见度分析
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gps_2">
+<span class="md-ellipsis">
+      GPS导航定位原理
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
@@ -2137,6 +2224,9 @@
 </li>
 </ul>
 </nav>
+</li>
+</ul>
+</nav>
 </div>
 </div>
 </div>
@@ -2147,10 +2237,55 @@
 <p>航天器导航就是轨道确定，航天器轨道确定可以分为两大类：<b>自主和非自主</b></p>
 <p>非自主测轨由地面站设备，例如雷达，对航天器进行跟踪测轨，并且在地面上进行数据处理，最后获得轨道位置信息</p>
 <p>若航天器的位置和速度等运动参数用星上测轨仪器来确定，而该仪器的工作不依赖位于地球或其他天体的导航和通信设备，那么轨道确定是自主的</p>
+<div class="admonition note">
+<p class="admonition-title">航天器导航分类</p>
+<ul>
+<li>测量对于天体视线的角度来确定航天器的位置</li>
+<li>测量地面目标基准来确定航天器的位置和姿态</li>
+<li>对已知信标测距</li>
+<li>惯性导航方法</li>
+<li>组合导航方法</li>
+</ul>
+</div>
 <h2 id="_2">航天器自主导航系统<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h2 id="gps"><span>GPS<span class="heti-spacing"> </span></span>导航原理<a class="headerlink" href="#gps" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h2 id="_3">惯性导航原理<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h2 id="_4">天文导航原理<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="gps"><span>GPS<span class="heti-spacing"> </span></span>导航原理<a class="headerlink" href="#gps" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>全球定位系统组成</p>
+<ul>
+<li>导航卫星</li>
+<li>地面站组</li>
+<li>用户设备</li>
+</ul>
+<h4 id="gps_1"><span>GPS<span class="heti-spacing"> </span></span>可见能见度分析<a class="headerlink" href="#gps_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<h4 id="gps_2"><span>GPS<span class="heti-spacing"> </span></span>导航定位原理<a class="headerlink" href="#gps_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<p>需测<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>颗以上卫星</p>
+<div class="admonition note">
+<p class="admonition-title"><span>GPS<span class="heti-spacing"> </span></span>卫星测量误差来源</p>
+<ul>
+<li>与<span class="heti-skip"><span class="heti-spacing"> </span>GPS<span class="heti-spacing"> </span></span>卫星有关的误差<ul>
+<li>SA</li>
+<li>卫星星历误差</li>
+<li>卫星钟误差</li>
+<li>卫星信号发射天线相位中心误差</li>
+</ul>
+</li>
+<li>与信号传播有关的误差<ul>
+<li>电离层折射</li>
+<li>对流层折射</li>
+<li>多路径效应</li>
+</ul>
+</li>
+<li>与接收设备有关的误差  <ul>
+<li>观测误差</li>
+<li>接收机的钟差</li>
+<li>天线的相位中心误差</li>
+</ul>
+</li>
+<li>其他误差</li>
+</ul>
+</div>
+<h3 id="_3">惯性导航原理<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="_4">天文导航原理<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>精度取决于光学敏感器（地平敏感器、太阳敏感器、星敏感器）</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">

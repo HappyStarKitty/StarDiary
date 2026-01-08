@@ -178,7 +178,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../Misc/Fuzzy/">
+<a class="md-tabs__link" href="../../../Misc/">
           
   
     
@@ -1613,6 +1613,48 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap5/">
+<span class="md-ellipsis">
+    Chap5 空间环境和干扰力矩
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap6/">
+<span class="md-ellipsis">
+    Chap6 姿态控制系统
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap7/">
+<span class="md-ellipsis">
+    Chap7 主动控制系统
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap1/">
+<span class="md-ellipsis">
+    Chap8 姿态确定算法
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap1/">
+<span class="md-ellipsis">
+    Chap9 轨道控制和编队控制
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../test/">
+<span class="md-ellipsis">
+    Addition 回忆卷
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1946,12 +1988,16 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_8" type="checkbox"/>
-<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Misc/">
 <span class="md-ellipsis">
     Misc
   </span>
+</a>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
+</div>
 <nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_8">
 <span class="md-nav__icon md-icon"></span>
@@ -2043,6 +2089,62 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="toc.title" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      toc.title
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      轨道机动
+    </span>
+</a>
+<nav aria-label="轨道机动" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      霍曼转移
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      轨道保持
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      编队控制
+    </span>
+</a>
+<nav aria-label="编队控制" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      组网构型设计
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      卫星编队
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -2050,6 +2152,21 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="chap9"><span>Chap9<span class="heti-spacing"> </span></span>轨道控制和编队控制<a class="headerlink" href="#chap9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<h2 id="_1">轨道机动<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>轨道机动包括变轨控制和轨道校正</p>
+<p>变轨控制分为轨道改变和轨道转移</p>
+<h3 id="_2">霍曼转移<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition question">
+<p class="admonition-title">最优轨道转移问题</p>
+<p>给定的是一个沿半径为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(r_A\)</span><span class="heti-spacing"> </span></span>的圆形轨道<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>运行的航天器，要确定以最小的燃料消耗量把航天器从轨道<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>转移到半径为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(r_B\)</span><span class="heti-spacing"> </span></span>的圆形轨道<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>所需要的速度增量</p>
+</div>
+<p><img alt="无法显示" src="../figures/chap9/hohmann.png"/></p>
+<p>转移轨道的偏心率为</p>
+<div class="arithmatex">\[e=\frac{(r_B/r_A)-1}{1+(r_B/r_A)}\]</div>
+<h2 id="_3">轨道保持<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_4">编队控制<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_5">组网构型设计<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="_6">卫星编队<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">

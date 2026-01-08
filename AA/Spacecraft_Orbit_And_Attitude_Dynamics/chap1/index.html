@@ -5,11 +5,11 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="HappyStarKitty" name="author"/>
 <link href="https://happystarkitty.github.io/StarDiary/AA/Spacecraft_Orbit_And_Attitude_Dynamics/chap1/" rel="canonical"/>
-<link href="../../Fundamentals_Of_Aircraft_Structure_Design/chap7/" rel="prev"/>
-<link href="../chap2/" rel="next"/>
+<link href="./" rel="prev"/>
+<link href="../test/" rel="next"/>
 <link href="https://happystarkitty.github.io/avatar/avatar.jpg" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.14" name="generator"/>
-<title>Chap1 绪论 - StarDiary</title>
+<title>Chap9 轨道控制和编队控制 - StarDiary</title>
 <link href="../../../assets/stylesheets/main.10ba22f1.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -55,7 +55,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Chap1 绪论
+              Chap9 轨道控制和编队控制
             
           </span>
 </div>
@@ -180,7 +180,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../Misc/Fuzzy/">
+<a class="md-tabs__link" href="../../../Misc/">
           
   
     
@@ -1587,17 +1587,73 @@
             航天器轨道与姿态动力学
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="./">
+<span class="md-ellipsis">
+    Chap1 绪论
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap2/">
+<span class="md-ellipsis">
+    Chap2 轨道动力学
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap3/">
+<span class="md-ellipsis">
+    Chap3 航天器导航
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap4/">
+<span class="md-ellipsis">
+    Chap4 姿态动力学
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap5/">
+<span class="md-ellipsis">
+    Chap5 空间环境和干扰力矩
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap6/">
+<span class="md-ellipsis">
+    Chap6 姿态控制系统
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap7/">
+<span class="md-ellipsis">
+    Chap7 主动控制系统
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="./">
+<span class="md-ellipsis">
+    Chap8 姿态确定算法
+  </span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    Chap1 绪论
+    Chap9 轨道控制和编队控制
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Chap1 绪论
+    Chap9 轨道控制和编队控制
   </span>
 </a>
 <nav aria-label="toc.title" class="md-nav md-nav--secondary">
@@ -1637,9 +1693,34 @@
       航天器控制的基本概念
     </span>
 </a>
-</li>
+<nav aria-label="航天器控制的基本概念" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      轨道控制
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      姿态控制
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
+      姿态控制与轨道控制的关系
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
 <span class="md-ellipsis">
       控制稳定性分析方法
     </span>
@@ -1649,23 +1730,9 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../chap2/">
+<a class="md-nav__link" href="../test/">
 <span class="md-ellipsis">
-    Chap2 轨道动力学
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../chap3/">
-<span class="md-ellipsis">
-    Chap3 航天器导航
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../chap4/">
-<span class="md-ellipsis">
-    Chap4 姿态动力学
+    Addition 回忆卷
   </span>
 </a>
 </li>
@@ -2002,12 +2069,16 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_8" type="checkbox"/>
-<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Misc/">
 <span class="md-ellipsis">
     Misc
   </span>
+</a>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
+</div>
 <nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_8">
 <span class="md-nav__icon md-icon"></span>
@@ -2135,9 +2206,34 @@
       航天器控制的基本概念
     </span>
 </a>
-</li>
+<nav aria-label="航天器控制的基本概念" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      轨道控制
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      姿态控制
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
+      姿态控制与轨道控制的关系
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
 <span class="md-ellipsis">
       控制稳定性分析方法
     </span>
@@ -2155,27 +2251,158 @@
 <h3 id="_2">分类<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>航天技术包括航天器、运载工具和地面测控三大部分</p>
 <p><img alt="无法显示" src="../figures/chap1/fenlei.png"/></p>
-<p>人造地球又可分为观测站、中继站、基准站和轨道武器四类</p>
+<div class="admonition note">
+<p class="admonition-title">人造地球卫星分类</p>
+<p>人造地球卫星根据在轨道上的功能又可分为观测站、中继站、基准站和轨道武器四类</p>
+<ul>
+<li>观测站<ul>
+<li>视场大、不受大气干扰影响，利于地球观察和天文预测</li>
+<li>侦察卫星、气象卫星、地球资源卫星、海洋卫星、预警卫星、核爆炸探测卫星、天文预测卫星</li>
+</ul>
+</li>
+<li>中继站<ul>
+<li>对信息进行放大和转发</li>
+<li>通信卫星、广播卫星、跟踪和数据中继卫星</li>
+</ul>
+</li>
+<li>基准站<ul>
+<li>轨道上的测量基准点</li>
+<li>导航卫星、测地卫星</li>
+</ul>
+</li>
+<li>轨道武器<ul>
+<li>具有空间防御和空间攻击的职能</li>
+<li>拦截卫星、轨道轰炸系统</li>
+</ul>
+</li>
+</ul>
+</div>
 <h3 id="_3">基本系统组成<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>基本系统一般分为有效载荷和保障系统两大类</p>
+<p>有效载荷是指用于直接完成特定的航天飞行任务的部件、仪器或分系统</p>
+<p>保障系统又称卫星平台，用于保障航天器从火箭起飞到工作寿命终止，星上所有分系统的正常工作，一般包括结构、热控、电源、姿控、轨控、测控等分系统</p>
+<div class="admonition note">
+<p class="admonition-title">保障系统</p>
+<ul>
+<li>结构系统：用于支承和固定航天器上各种仪器设备，使它们构成一个整体，以承受地面运输、运载器发射和空间运行时的各种力学环境以及空间运行环境<ul>
+<li>通常用结构质量比，即结构质量占航天器总重量的比例来衡量航天器结构设计和制造水平</li>
+</ul>
+</li>
+<li>热控制系统：</li>
+<li>电源系统：</li>
+<li>姿态控制系统：用来保持或改变航天器的运行姿态<ul>
+<li>常用的姿态控制方式有<b>重力梯度稳定、自旋稳定和三轴稳定</b></li>
+</ul>
+</li>
+<li>轨道控制系统：用来保持或改变航天器的运行轨道<ul>
+<li>与姿态控制配合，构成航天器控制系统</li>
+</ul>
+</li>
+<li>测控系统：包括<b>遥测、遥控和跟踪</b>三部分<ul>
+<li>遥测部分主要由<b>传感器、调制器、发射机</b>组成，用于测量并向地面发送航天器的各种仪器设备的工程参数（<span>212<span class="heti-spacing"> </span></span>作电压、电流和温度等）和其他参数（环境参数和姿态参数等）</li>
+<li>遥控部分一般由<b>接收机和译码器</b>组成，用于接收地面测控站发来的遥控指令，传送给有关系统执行</li>
+<li>跟踪部分主要是<b>信标机和应答机</b>，不断发出信号，以便地球测控站跟踪航天器并测量其轨道位置和速度</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>一般航天器按舱段划分可以分为<b>有效载荷舱和公用舱</b>两部分，或者分为<b>有效载荷舱、公用舱和推进舱</b>三部分。有效载荷放置于有效载荷舱中，保障系统安装在公用舱和推进舱中。</p>
 <h2 id="_4">航天器控制的基本概念<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>一个刚体航天器的运动可由其位置、速度、姿态和姿态运动来描述</p>
-<p>位置和速度描述航天器的质心运动，属于航天器的轨道问题</p>
-<p>姿态和姿态运动描述航天器绕质心的转动，属于姿态问题</p>
-<p>从运动学的观点来说，一个航天器的运动具有<span class="heti-skip"><span class="heti-spacing"> </span>6<span class="heti-spacing"> </span></span>个自由度，其中<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>个位置自由度表示航天器的轨道运动，另外三个绕质心的转动自由度表示航天器的姿态运动</p>
+<p>一个刚体航天器的运动可由其位置、速度、姿态和姿态运动来描述。</p>
+<p>位置和速度描述航天器的质心运动，属于航天器的轨道问题；姿态和姿态运动描述航天器绕质心的转动，属于姿态问题。</p>
+<p>从运动学的观点来说，一个航天器的运动具有<span class="heti-skip"><span class="heti-spacing"> </span>6<span class="heti-spacing"> </span></span>个自由度，其中<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>个位置自由度表示航天器的轨道运动，另外三个绕质心的转动自由度表示航天器的姿态运动。</p>
 <div class="admonition note">
 <p class="admonition-title">航天器控制</p>
 <p>航天器的控制可以分为两大类，即轨道控制和姿态控制</p>
 <ul>
-<li>轨道控制：对航天器的质心施以外力，以有目的地改变其运动轨迹的技术<ul>
-<li>轨道控制包括轨道确定和轨道控制两方面内容</li>
-<li></li>
-</ul>
+<li>
+<p>轨道控制：对航天器的质心施以外力，以有目的地改变其运动轨迹的技术</p>
 </li>
-<li>姿态控制：对航天器绕质心施加力矩，以保持或按需要改变其在空间的定向的技术</li>
+<li>
+<p>姿态控制：对航天器绕质心施加力矩，以保持或按需要改变其在空间的定向的技术</p>
+</li>
 </ul>
 </div>
-<h2 id="_5">控制稳定性分析方法<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_5">轨道控制<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>轨道控制包括轨道确定和轨道控制两方面的内容</p>
+<ul>
+<li>
+<p>轨道确定的任务是研究如何确定航天器的位置和速度，有时也称为空间导航，简称导航</p>
+</li>
+<li>
+<p>轨道控制是根据航天器现有位置、速度、飞行的最终目标，对质心施以控制力，以改变其运动轨迹的技术，又称为制导</p>
+</li>
+</ul>
+<p>轨道控制应用方式可分为四类：</p>
+<ul>
+<li>
+<p>轨道机动：指航天器从一个自由飞行段轨道转移到另一个自由飞行段轨道的控制</p>
+</li>
+<li>
+<p>轨道保持：指克服摄动影响，使航天器轨道的某些参数保持不变的控制</p>
+</li>
+<li>
+<p>轨道交会：指航天器能与另一个航天器在同一时间以相同速度达到空间同一位置而实施的控制过程</p>
+</li>
+<li>
+<p>再入返回保持：指使航天器脱离原来的轨道，返回进入大气层的控制</p>
+</li>
+</ul>
+<h3 id="_6">姿态控制<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>姿态控制包括姿态确定和姿态控制</p>
+<p>姿态控制通常包括</p>
+<ul>
+<li>
+<p>定向：指航天器的本体或附件以单轴或三轴按一定精度保持在给定的参考方向上</p>
+</li>
+<li>
+<p>再定向：指航天器本体从对一个参考方向的定向改变到另一个新参考方向的定向</p>
+</li>
+<li>
+<p>捕获：又称为初始对准，是指航天器由未知不确定姿态向已知定向姿态的机动控制过程</p>
+</li>
+<li>
+<p>粗对准：</p>
+</li>
+<li>
+<p>精对准：</p>
+</li>
+<li>
+<p>跟踪：</p>
+</li>
+<li>
+<p>搜索：</p>
+</li>
+</ul>
+<p>姿态稳定是保持已有姿态的控制，可分为</p>
+<ul>
+<li>
+<p>自旋稳定：卫星等航天器绕其一轴（自旋轴）旋转，依靠旋转动量矩保持自旋轴在惯性空间的指向。自旋稳定常辅以主动姿态控制，来修正自旋轴指向误差</p>
+</li>
+<li>
+<p>三轴稳定：依靠主动姿态控制或利用环境力矩，保持航天器本体三条正交轴线在某一参考空间的方向</p>
+</li>
+</ul>
+<h3 id="_7">姿态控制与轨道控制的关系<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>航天器控制按控制力和力矩的来源可分为</p>
+<ul>
+<li>
+<p>被动控制：其控制力或力矩由空间环境和航天器动力学特性提供，不需要消耗星上能源</p>
+</li>
+<li>
+<p>主动控制：需要消耗电能或工质等星上能源，由星载或地面设备组成闭环系统来实现</p>
+</li>
+</ul>
+<p>主动控制系统可分为</p>
+<ul>
+<li>星上自主控制；指不依赖于地面干预，完全由星载仪器实现的控制</li>
+</ul>
+<p><img alt="无法显示" src="../figures/chap1/xingshang.png"/></p>
+<ul>
+<li>地面控制：或称星<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>地大回路控制</li>
+</ul>
+<p><img alt="无法显示" src="../figures/chap1/dimian.png"/></p>
+<h2 id="_8">控制稳定性分析方法<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">

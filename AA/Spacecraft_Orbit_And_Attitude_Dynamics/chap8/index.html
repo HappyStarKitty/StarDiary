@@ -178,7 +178,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../Misc/Fuzzy/">
+<a class="md-tabs__link" href="../../../Misc/">
           
   
     
@@ -1613,6 +1613,48 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap5/">
+<span class="md-ellipsis">
+    Chap5 空间环境和干扰力矩
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap6/">
+<span class="md-ellipsis">
+    Chap6 姿态控制系统
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap7/">
+<span class="md-ellipsis">
+    Chap7 主动控制系统
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap1/">
+<span class="md-ellipsis">
+    Chap8 姿态确定算法
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap1/">
+<span class="md-ellipsis">
+    Chap9 轨道控制和编队控制
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../test/">
+<span class="md-ellipsis">
+    Addition 回忆卷
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1946,12 +1988,16 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_8" type="checkbox"/>
-<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Misc/">
 <span class="md-ellipsis">
     Misc
   </span>
+</a>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
+</div>
 <nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_8">
 <span class="md-nav__icon md-icon"></span>
@@ -2043,6 +2089,76 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="toc.title" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      toc.title
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      姿态敏感器的工作原理和性能比较
+    </span>
+</a>
+<nav aria-label="姿态敏感器的工作原理和性能比较" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      太阳敏感器
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      红外地平仪
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      星敏感器
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      陀螺
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      磁强计
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
+      常用定姿算法
+    </span>
+</a>
+<nav aria-label="常用定姿算法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+<span class="md-ellipsis">
+      卡尔曼滤波器
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -2050,6 +2166,31 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="chap8"><span>Chap8<span class="heti-spacing"> </span></span>姿态确定算法<a class="headerlink" href="#chap8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<h2 id="_1">姿态敏感器的工作原理和性能比较<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition note">
+<p class="admonition-title">姿态敏感器分类</p>
+<p>按不同的基准方位，可分为：</p>
+<ul>
+<li>以地球为基准方位：红外地平仪、地球反照敏感器</li>
+<li>以天体为基准方位：太阳敏感器、星敏感器</li>
+<li>以惯性空间为基准方位：陀螺、加速度计</li>
+<li>以地面站为基准方位：射频敏感器</li>
+<li>其他：</li>
+</ul>
+</div>
+<p>敏感器由测量变换器和信号处理线路两部分组成</p>
+<h3 id="_2">太阳敏感器<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="_3">红外地平仪<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="_4">星敏感器<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>分为星图仪、星跟踪器</p>
+<h3 id="_5">陀螺<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="_6">磁强计<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h2 id="_7">常用定姿算法<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>姿态确定算法均是姿态估计算法，得到的是估计值</p>
+<p>分为确定性方法、状态空间估计方法</p>
+<h3 id="_8">卡尔曼滤波器<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>滤波器估计过程某一时刻的状态，然后以（含噪声的）测量变量的方式获得反馈</p>
+<p>分为时间更新方程（视为预估方程<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、测量更新方程（视为校验方程）</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
