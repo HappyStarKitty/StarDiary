@@ -190,7 +190,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../Other/Git/">
+<a class="md-tabs__link" href="../../../Other/Tools/Git/">
           
   
     
@@ -1762,23 +1762,16 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../AA/Spacecraft_Orbit_And_Attitude_Dynamics/chap1/">
+<a class="md-nav__link" href="../../../AA/Spacecraft_Orbit_And_Attitude_Dynamics/chap8/">
 <span class="md-ellipsis">
     Chap8 姿态确定算法
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../AA/Spacecraft_Orbit_And_Attitude_Dynamics/chap1/">
+<a class="md-nav__link" href="../../../AA/Spacecraft_Orbit_And_Attitude_Dynamics/chap9/">
 <span class="md-ellipsis">
     Chap9 轨道控制和编队控制
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../AA/Spacecraft_Orbit_And_Attitude_Dynamics/test/">
-<span class="md-ellipsis">
-    Addition 回忆卷
   </span>
 </a>
 </li>
@@ -2162,47 +2155,95 @@
             Other
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_9_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
+<span class="md-ellipsis">
+    工具
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_9_1">
+<span class="md-nav__icon md-icon"></span>
+            工具
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Other/Git/">
+<a class="md-nav__link" href="../../../Other/Tools/Git/">
 <span class="md-ellipsis">
     Git
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Other/Linux/">
+<a class="md-nav__link" href="../../../Other/Tools/Linux/">
 <span class="md-ellipsis">
     Linux
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Other/Latex/">
+<a class="md-nav__link" href="../../../Other/Tools/Latex/">
 <span class="md-ellipsis">
     Latex
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Other/Markdown/">
+<a class="md-nav__link" href="../../../Other/Tools/Markdown/">
 <span class="md-ellipsis">
     Markdown
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Other/Typst/">
+<a class="md-nav__link" href="../../../Other/Tools/Typst/">
 <span class="md-ellipsis">
     Typst
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Other/Word/">
+<a class="md-nav__link" href="../../../Other/Tools/Word/">
 <span class="md-ellipsis">
     Word
   </span>
 </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_9_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
+<span class="md-ellipsis">
+    回忆卷
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_9_2">
+<span class="md-nav__icon md-icon"></span>
+            回忆卷
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Other/Test/guidao/">
+<span class="md-ellipsis">
+    航天器姿态与轨道动力学
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Other/Test/kongxin/">
+<span class="md-ellipsis">
+    空天信息技术基础
+  </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -2341,9 +2382,9 @@
 <h1 id="chap5"><span>Chap5<span class="heti-spacing"> </span></span>线性系统的频域分析法<a class="headerlink" href="#chap5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <h2 id="_1">频率特性<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p>系统性能分析的两种基本方法：根轨迹法和频率响应法</p>
-<p>定义谐波输入下，输出响应中与输入同频率的谐波分量与谐波输入的幅值之比<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A(\omega)\)</span><span class="heti-spacing"> </span></span>为幅频特性，相位之差<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\phi(\omega)\)</span><span class="heti-spacing"> </span></span>为相频特性，并称其指数表达形式</p>
+<p>定义谐波输入下，输出响应中与输入同频率的谐波分量与谐波输入的幅值之比<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A(\omega)\)</span><span class="heti-spacing"> </span></span>为<b>幅频特性</b>，相位之差<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\phi(\omega)\)</span><span class="heti-spacing"> </span></span>为<b>相频特性</b>，并称其指数表达形式</p>
 <div class="arithmatex">\[G(\mathrm{j}\omega)=A(\omega)e^{\mathrm{j}\phi(\omega)}\]</div>
-<p>为系统的频率特性</p>
+<p>为系统的<b>频率特性</b></p>
 <p>常用的频率特性曲线有：幅相频率特性曲线（又称幅相曲线或极坐标图<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、对数频率特性曲线（又称伯德曲线或伯德图<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、对数幅相曲线（又称尼科尔斯曲线或尼科尔斯图）</p>
 <h2 id="_2">典型环节与开环系统的频率特性<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <div class="admonition note">

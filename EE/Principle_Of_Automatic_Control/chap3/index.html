@@ -190,7 +190,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../Other/Git/">
+<a class="md-tabs__link" href="../../../Other/Tools/Git/">
           
   
     
@@ -1730,23 +1730,16 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../AA/Spacecraft_Orbit_And_Attitude_Dynamics/chap1/">
+<a class="md-nav__link" href="../../../AA/Spacecraft_Orbit_And_Attitude_Dynamics/chap8/">
 <span class="md-ellipsis">
     Chap8 姿态确定算法
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../AA/Spacecraft_Orbit_And_Attitude_Dynamics/chap1/">
+<a class="md-nav__link" href="../../../AA/Spacecraft_Orbit_And_Attitude_Dynamics/chap9/">
 <span class="md-ellipsis">
     Chap9 轨道控制和编队控制
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../AA/Spacecraft_Orbit_And_Attitude_Dynamics/test/">
-<span class="md-ellipsis">
-    Addition 回忆卷
   </span>
 </a>
 </li>
@@ -2130,47 +2123,95 @@
             Other
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_9_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
+<span class="md-ellipsis">
+    工具
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_9_1">
+<span class="md-nav__icon md-icon"></span>
+            工具
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Other/Git/">
+<a class="md-nav__link" href="../../../Other/Tools/Git/">
 <span class="md-ellipsis">
     Git
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Other/Linux/">
+<a class="md-nav__link" href="../../../Other/Tools/Linux/">
 <span class="md-ellipsis">
     Linux
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Other/Latex/">
+<a class="md-nav__link" href="../../../Other/Tools/Latex/">
 <span class="md-ellipsis">
     Latex
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Other/Markdown/">
+<a class="md-nav__link" href="../../../Other/Tools/Markdown/">
 <span class="md-ellipsis">
     Markdown
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Other/Typst/">
+<a class="md-nav__link" href="../../../Other/Tools/Typst/">
 <span class="md-ellipsis">
     Typst
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Other/Word/">
+<a class="md-nav__link" href="../../../Other/Tools/Word/">
 <span class="md-ellipsis">
     Word
   </span>
 </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_9_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
+<span class="md-ellipsis">
+    回忆卷
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_9_2">
+<span class="md-nav__icon md-icon"></span>
+            回忆卷
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Other/Test/guidao/">
+<span class="md-ellipsis">
+    航天器姿态与轨道动力学
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Other/Test/kongxin/">
+<span class="md-ellipsis">
+    空天信息技术基础
+  </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -2312,8 +2353,27 @@
 <p><img alt="无法显示" src="../figures/chap3/zhibiao.png"/></p>
 </div>
 <h2 id="_2">一阶系统的时域分析<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>系统对输入信号导数的响应，就等于系统对该输入信号响应的导数；或者，系统对输入信号积分的响应，就等于对该输入信号响应的积分，而积分常数由零输出初始条件确定</p>
+<p>一阶系统的传递函数为</p>
+<div class="arithmatex">\[\Phi(s)=\frac{C(s)}{R(s)}=\frac{1}{Ts+1}\]</div>
+<p><b>系统对输入信号导数的响应，就等于系统对该输入信号响应的导数</b></p>
+<p><b>系统对输入信号积分的响应，就等于对该输入信号响应的积分，而积分常数由零输出初始条件确定</b></p>
 <h2 id="_3">二阶系统的时域分析<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>二阶系统的传递函数为</p>
+<div class="arithmatex">\[\Phi(s)=\frac{C(s)}{R(s)}=\frac{\omega^2_n}{s^2+2\xi \omega_n s + \omega_n^2}\]</div>
+<p><span><span class="arithmatex">\(\omega_n\)</span><span class="heti-spacing"> </span></span>称为自然频率（或无阻尼振荡频率）</p>
+<p><span><span class="arithmatex">\(\xi\)</span><span class="heti-spacing"> </span></span>称为阻尼比（或相对阻尼系数）</p>
+<p>特征方程<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(s^2+2\xi \omega_n s+\omega_n^2\)</span><span class="heti-spacing"> </span></span>的两个特征根（闭环极点）为<span><span class="heti-spacing"> </span><span class="arithmatex">\(s_{1,2}=-\xi \omega_n \pm \omega_n \sqrt{\xi^2-1}\)</span></span></p>
+<p>根据<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\xi\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>的大小关系将系统分为欠阻尼、临界阻尼、过阻尼</p>
+<p><span><span class="arithmatex">\(\omega_d=\omega_n \sqrt{1-\xi^2}\)</span><span class="heti-spacing"> </span></span>称为阻尼自然频率</p>
+<div class="admonition note">
+<p class="admonition-title">性能指标</p>
+<p>上升时间</p>
+<div class="arithmatex">\[t_r=\frac{\pi -\text{arccos}(\xi)}{\omega_d}\]</div>
+<p>峰值时间</p>
+<div class="arithmatex">\[t_p=\frac{\pi}{\omega_d}\]</div>
+<p>超调量</p>
+<p>调节时间</p>
+</div>
 <h2 id="_4">高阶系统的时域分析<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p>如果在所有的闭环极点中，距虚轴最近的极点周围没有闭环零点，而其他闭环极点又远离虚轴，那么距虚轴最近的闭环极点所对应的响应分量，随时间的推移衰减缓慢，在系统的时间响应过程中起主导作用，这样的闭环极点就称为闭环主导极点</p>
 <h2 id="_5">线性系统的稳定性分析<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
