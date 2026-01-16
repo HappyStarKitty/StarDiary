@@ -1035,11 +1035,60 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Chap10 电气控制技术
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Chap10 电气控制技术
   </span>
 </a>
+<nav aria-label="toc.title" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      toc.title
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      常用低压电气
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#-">
+<span class="md-ellipsis">
+      三相异步电动机继电-接触器控制电路
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      可编程控制器
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      异步电动机的电子控制
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      安全用电
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1352,6 +1401,13 @@
 <a class="md-nav__link" href="../../Digital_Circuit/chap6/">
 <span class="md-ellipsis">
     Chap6 Registers and Counters
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Digital_Circuit/chap7/">
+<span class="md-ellipsis">
+    Chap7 Memory and Programmable Logic
   </span>
 </a>
 </li>
@@ -2133,6 +2189,47 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="toc.title" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      toc.title
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      常用低压电气
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#-">
+<span class="md-ellipsis">
+      三相异步电动机继电-接触器控制电路
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      可编程控制器
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      异步电动机的电子控制
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      安全用电
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -2140,6 +2237,28 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="chap10"><span>Chap10<span class="heti-spacing"> </span></span>电气控制技术<a class="headerlink" href="#chap10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<h2 id="_1">常用低压电气<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>低压断路器也称为自动空气开关，具有过载，短路和欠压保护功能</p>
+<p>刀开关和断路器组合使用时，通电先合刀开关，断路先断断路器</p>
+<p>刀开关安装时，手柄朝上为合，朝下为分</p>
+<p>交流接触器欠压保护，可以用来分断带有大电流负载的交流电路</p>
+<p>热继电器过载保护</p>
+<p>熔断器是最简便和有效的短路保护电器</p>
+<p>剩余电流动作保护装置以前称为漏电保护器用以对低压电网直接触电和间接触电进行有效保护</p>
+<p>接触器必须采用灭弧装置</p>
+<h2 id="-">三相异步电动机继电<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>接触器控制电路<a class="headerlink" href="#-" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>同步转速：<span class="arithmatex">\(n_1=60f/p\)</span></p>
+<p>异步转速：<span class="arithmatex">\(n \le n_1\)</span></p>
+<p>磁极对数：p</p>
+<p>转差率：<span class="arithmatex">\(S=(n_1-n)/n_1\)</span></p>
+<p>临界转差率：<span class="arithmatex">\(S_{cr}=\frac{R_2}{X_{20}}\)</span></p>
+<p>转矩额定值：<span class="arithmatex">\(T_n=\frac{9550P_N}{n_N}\)</span></p>
+<p>额定效率：<span class="arithmatex">\(\eta_N=\frac{P_N}{P_S}=\frac{P_N}{\sqrt{3}U_NI_N\cos \varphi_N}\)</span></p>
+<p>使用：起动、反转、调速</p>
+<p>单相异步电动机：电容式、罩极式</p>
+<h2 id="_2">可编程控制器<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_3">异步电动机的电子控制<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_4">安全用电<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">

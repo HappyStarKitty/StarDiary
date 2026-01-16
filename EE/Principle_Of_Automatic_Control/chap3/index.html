@@ -1252,6 +1252,41 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+<span class="md-ellipsis">
+      阶跃输入作用下的稳态误差和静态位置误差系数
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+<span class="md-ellipsis">
+      斜坡输入作用下的稳态误差和静态速度误差系数
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+<span class="md-ellipsis">
+      加速度输入作用下的稳态误差和静态加速度误差系数
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+<span class="md-ellipsis">
+      动态误差系数
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+<span class="md-ellipsis">
+      扰动作用下的稳态误差
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1444,6 +1479,13 @@
 <a class="md-nav__link" href="../../Digital_Circuit/chap6/">
 <span class="md-ellipsis">
     Chap6 Registers and Counters
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Digital_Circuit/chap7/">
+<span class="md-ellipsis">
+    Chap7 Memory and Programmable Logic
   </span>
 </a>
 </li>
@@ -2305,6 +2347,41 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+<span class="md-ellipsis">
+      阶跃输入作用下的稳态误差和静态位置误差系数
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+<span class="md-ellipsis">
+      斜坡输入作用下的稳态误差和静态速度误差系数
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+<span class="md-ellipsis">
+      加速度输入作用下的稳态误差和静态加速度误差系数
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+<span class="md-ellipsis">
+      动态误差系数
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+<span class="md-ellipsis">
+      扰动作用下的稳态误差
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -2366,13 +2443,15 @@
 <p>根据<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\xi\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>的大小关系将系统分为欠阻尼、临界阻尼、过阻尼</p>
 <p><span><span class="arithmatex">\(\omega_d=\omega_n \sqrt{1-\xi^2}\)</span><span class="heti-spacing"> </span></span>称为阻尼自然频率</p>
 <div class="admonition note">
-<p class="admonition-title">性能指标</p>
+<p class="admonition-title">二阶系统阶跃响应性能指标</p>
 <p>上升时间</p>
 <div class="arithmatex">\[t_r=\frac{\pi -\text{arccos}(\xi)}{\omega_d}\]</div>
 <p>峰值时间</p>
 <div class="arithmatex">\[t_p=\frac{\pi}{\omega_d}\]</div>
 <p>超调量</p>
+<div class="arithmatex">\[\sigma \%=e^{-\frac{\pi \xi}{\sqrt{1-\xi^2}}}\times 100\%\]</div>
 <p>调节时间</p>
+<div class="arithmatex">\[t_s=\frac{3.5}{\xi \omega_n}\]</div>
 </div>
 <h2 id="_4">高阶系统的时域分析<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p>如果在所有的闭环极点中，距虚轴最近的极点周围没有闭环零点，而其他闭环极点又远离虚轴，那么距虚轴最近的闭环极点所对应的响应分量，随时间的推移衰减缓慢，在系统的时间响应过程中起主导作用，这样的闭环极点就称为闭环主导极点</p>
@@ -2382,7 +2461,7 @@
 <p>根据李雅普诺夫稳定性理论，线性控制系统的稳定性可叙述如下：</p>
 <p>若线性控制系统在初始扰动的影响下，其动态过程随时间的推移逐渐衰减并趋于零（原平衡工作点<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，则称系统渐近稳定，简称稳定；反之，若在初始扰动影响下，系统的动态过程随时间的推移而发散，则称系统不稳定</p>
 <h3 id="_7">线性系统稳定的充分必要条件<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>线性系统稳定的充分必要条件：闭环系统特征方程的所有跟均具有负实部；或者说，闭环传递函数的极点均位于<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>左半平面</p>
+<p>线性系统稳定的充分必要条件：<b>闭环系统特征方程的所有跟均具有负实部；或者说，闭环传递函数的极点均位于<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>左半平面</b></p>
 <h3 id="-">劳斯<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>赫尔维茨稳定判据<a class="headerlink" href="#-" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition note">
 <p class="admonition-title">赫尔维茨判据</p>
@@ -2398,6 +2477,11 @@
 <h2 id="_8">线性系统的稳态误差计算<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_9">误差与稳态误差<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>控制系统的稳态误差定义为误差信号<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(e(t)\)</span><span class="heti-spacing"> </span></span>的稳态分量<span><span class="heti-spacing"> </span><span class="arithmatex">\(e_{ss}(\infty)\)</span></span>，常以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(e_{ss}\)</span><span class="heti-spacing"> </span></span>简单标志</p>
+<h3 id="_10">阶跃输入作用下的稳态误差和静态位置误差系数<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="_11">斜坡输入作用下的稳态误差和静态速度误差系数<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="_12">加速度输入作用下的稳态误差和静态加速度误差系数<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="_13">动态误差系数<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h3 id="_14">扰动作用下的稳态误差<a class="headerlink" href="#_14" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">

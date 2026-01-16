@@ -1433,6 +1433,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../Digital_Circuit/chap7/">
+<span class="md-ellipsis">
+    Chap7 Memory and Programmable Logic
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../Digital_Circuit/addition/">
 <span class="md-ellipsis">
     Addition
@@ -2304,30 +2311,80 @@
 <div class="arithmatex">\[X(\sigma+\mathrm{j}\omega)=\int_{-\infty}^{+\infty} [x(t)e^{-\sigma t}]e^{-\mathrm{j}\omega t}\mathrm{d}t=\mathcal{F}\{ x(t)e^{-\sigma t}\}\]</div>
 </div>
 <h2 id="_2">拉普拉斯变换收敛域<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<div class="admonition note">
-<p class="admonition-title">性质</p>
-<ol>
-<li><span>X(s)<span class="heti-spacing"> </span></span>的收敛域在<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>平面内由平行于<span class="heti-skip"><span class="heti-spacing"> </span>jω<span class="heti-spacing"> </span></span>轴的带状区域所组成</li>
-<li>对有理拉普拉斯变换来说，收敛域内不包含任何极点</li>
-<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>x(t)<span class="heti-spacing"> </span></span>是有限持续期，并且是绝对可积的，那么收敛域就是整个<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>平面</li>
-<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>x(t)<span class="heti-spacing"> </span></span>是右边信号，并且<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Re\{s\}=\sigma_0\)</span><span class="heti-spacing"> </span></span>这条线位于收敛域内，那么<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Re\{s\}&gt;\sigma_0\)</span><span class="heti-spacing"> </span></span>的全部<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>值都一定在收敛域内</li>
-<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>x(t)<span class="heti-spacing"> </span></span>是左边信号，并且<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Re\{s\}=\sigma_0\)</span><span class="heti-spacing"> </span></span>的全部<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>值也一定在收敛域内</li>
-<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>x(t)<span class="heti-spacing"> </span></span>是双边信号，并且<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Re{s}=\sigma_0\)</span><span class="heti-spacing"> </span></span>这条线位于收敛域内，那么收敛域就一定由<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>平面的一条带状区域组成，直线<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Re{s}=\sigma_0\)</span><span class="heti-spacing"> </span></span>位于带中</li>
-<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>X(t)<span class="heti-spacing"> </span></span>的拉普拉斯变换<span class="heti-skip"><span class="heti-spacing"> </span>X(s)<span class="heti-spacing"> </span></span>是有理的，那么它的收敛域是被极点所界定的或延伸到无限远。另外，在收敛域内不包含<span class="heti-skip"><span class="heti-spacing"> </span>X(s)<span class="heti-spacing"> </span></span>的任何极点</li>
-<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>x(t)<span class="heti-spacing"> </span></span>的拉普拉斯变换<span class="heti-skip"><span class="heti-spacing"> </span>X(s)<span class="heti-spacing"> </span></span>是有理的，那么若<span class="heti-skip"><span class="heti-spacing"> </span>x(t)<span class="heti-spacing"> </span></span>是右边信号，则其收敛域在<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>平面上位于最右边极点的左边；若<span class="heti-skip"><span class="heti-spacing"> </span>x(t)<span class="heti-spacing"> </span></span>是左边信号，则其收敛域在<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>平面上位于最左边极点的左边</li>
-</ol>
+<div class="admonition definition">
+<p class="admonition-title">收敛域</p>
+<ul>
+<li>
+<p>乘上衰减因子，<span><span class="arithmatex">\(x(t)e^{-\sigma t}\)</span><span class="heti-spacing"> </span></span>能否满足绝对可积条件</p>
+<div class="arithmatex">\[\int_{-\infty}^{\infty} |x(t)|e^{-\sigma t}\mathrm{d}t &lt;\infty\]</div>
+</li>
+<li>
+<p>取决于信号<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x(t)\)</span><span class="heti-spacing"> </span></span>的性质，也取决于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sigma\)</span><span class="heti-spacing"> </span></span>的性质。把能使信号的拉氏变换<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X_b (s)\)</span><span class="heti-spacing"> </span></span>存在的<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>值的范围称为信号<span class="heti-skip"><span class="heti-spacing"> </span>x(t)<span class="heti-spacing"> </span></span>的拉普拉斯变换的收敛域，简记为<span><span class="heti-spacing"> </span>ROC</span></p>
+</li>
+</ul>
 </div>
+<p>性质</p>
+<ol>
+<li>
+<p><span>X(s)<span class="heti-spacing"> </span></span>的收敛域在<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>平面内由平行于<span class="heti-skip"><span class="heti-spacing"> </span>jω<span class="heti-spacing"> </span></span>轴的带状区域所组成</p>
+</li>
+<li>
+<p>对有理拉普拉斯变换来说，收敛域内不包含任何极点</p>
+</li>
+<li>
+<p>如果<span class="heti-skip"><span class="heti-spacing"> </span>x(t)<span class="heti-spacing"> </span></span>是有限持续期，并且是绝对可积的，那么收敛域就是整个<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>平面</p>
+</li>
+<li>
+<p>如果<span class="heti-skip"><span class="heti-spacing"> </span>x(t)<span class="heti-spacing"> </span></span>是右边信号，并且<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Re\{s\}=\sigma_0\)</span><span class="heti-spacing"> </span></span>这条线位于收敛域内，那么<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Re\{s\}&gt;\sigma_0\)</span><span class="heti-spacing"> </span></span>的全部<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>值都一定在收敛域内</p>
+</li>
+<li>
+<p>如果<span class="heti-skip"><span class="heti-spacing"> </span>x(t)<span class="heti-spacing"> </span></span>是左边信号，并且<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Re\{s\}=\sigma_0\)</span><span class="heti-spacing"> </span></span>的全部<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>值也一定在收敛域内</p>
+</li>
+<li>
+<p>如果<span class="heti-skip"><span class="heti-spacing"> </span>x(t)<span class="heti-spacing"> </span></span>是双边信号，并且<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Re{s}=\sigma_0\)</span><span class="heti-spacing"> </span></span>这条线位于收敛域内，那么收敛域就一定由<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>平面的一条带状区域组成，直线<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Re{s}=\sigma_0\)</span><span class="heti-spacing"> </span></span>位于带中</p>
+</li>
+<li>
+<p>如果<span class="heti-skip"><span class="heti-spacing"> </span>X(t)<span class="heti-spacing"> </span></span>的拉普拉斯变换<span class="heti-skip"><span class="heti-spacing"> </span>X(s)<span class="heti-spacing"> </span></span>是有理的，那么它的收敛域是被极点所界定的或延伸到无限远。另外，在收敛域内不包含<span class="heti-skip"><span class="heti-spacing"> </span>X(s)<span class="heti-spacing"> </span></span>的任何极点</p>
+</li>
+<li>
+<p>如果<span class="heti-skip"><span class="heti-spacing"> </span>x(t)<span class="heti-spacing"> </span></span>的拉普拉斯变换<span class="heti-skip"><span class="heti-spacing"> </span>X(s)<span class="heti-spacing"> </span></span>是有理的，那么若<span class="heti-skip"><span class="heti-spacing"> </span>x(t)<span class="heti-spacing"> </span></span>是右边信号，则其收敛域在<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>平面上位于最右边极点的左边；若<span class="heti-skip"><span class="heti-spacing"> </span>x(t)<span class="heti-spacing"> </span></span>是左边信号，则其收敛域在<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>平面上位于最左边极点的左边</p>
+</li>
+</ol>
 <h2 id="_3">拉普拉斯逆变换<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <div class="admonition formula">
 <p class="admonition-title">拉普拉斯逆变换</p>
 <div class="arithmatex">\[\boxed{x(t)=\frac{1}{2\pi \mathrm{j}}\int_{\sigma-\mathrm{j}\infty}^{\sigma+\mathrm{j} \infty} X(s)e^{st} \mathrm{d}t}\]</div>
 </div>
+<p>部分分式法、留数法</p>
 <h2 id="-">由零<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>极点图对傅里叶变换进行几何求值<a class="headerlink" href="#-" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>若信号<span class="heti-skip"><span class="heti-spacing"> </span>x(t)<span class="heti-spacing"> </span></span>是实指数或复指数信号的线性组合，则其拉氏变换可以表示为</p>
+<div class="arithmatex">\[X_b(s)=\frac{N(s)}{D(s)}=\frac{X_0 \prod_{j=1}^m (s-z_j)}{\prod_{i=1}^{n} (s-p_i)}\]</div>
+<p>拉氏变换和傅氏变换的根本区别在于变换的讨论区域不同，前者为<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>平面中的整个收敛区域，后者只是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(j\omega\)</span><span class="heti-spacing"> </span></span>轴</p>
+<div class="admonition note">
+<p class="admonition-title">拉氏变换和傅氏变换的关系</p>
+<ul>
+<li>
+<p>收敛域包含<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(j\omega\)</span><span class="heti-spacing"> </span></span>轴：只要将<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X_b(s)\)</span><span class="heti-spacing"> </span></span>中的<span class="heti-skip"><span class="heti-spacing"> </span>s<span class="heti-spacing"> </span></span>代以<span><span class="heti-spacing"> </span><span class="arithmatex">\(j\omega\)</span></span>，即为信号的傅氏变换</p>
+<div class="arithmatex">\[X(\omega)=X_b(s)|_{s=j\omega}\]</div>
+</li>
+<li>
+<p>收敛域不包含<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(j\omega\)</span><span class="heti-spacing"> </span></span>轴：信号的傅氏变换不存在</p>
+</li>
+<li>
+<p>收敛域的收敛边界位于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(j\omega\)</span><span class="heti-spacing"> </span></span>轴：傅氏变换为</p>
+<div class="arithmatex">\[X(\omega)=X_b(s)|_{s=j\omega}+\pi \sum_{i=1}^p k_i \delta (\omega-\omega_i)\]</div>
+</li>
+</ul>
+</div>
 <h2 id="_4">拉普拉斯变换的性质<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p><img alt="无法显示" src="../figures/chap9/xingzhi.png"/></p>
 <h2 id="_5">常用拉普拉斯变换对<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p><img alt="无法显示" src="../figures/chap9/changyong.png"/></p>
 <h2 id="_6">用拉普拉斯变换分析与表征线性时不变系统<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h2 id="_7">系统函数的代数属性与方框图表示<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h2 id="_8">单边拉普拉斯变换<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="arithmatex">\[X(s)=\int_{0^-}^{\infty} x(t)e^{-st}\mathrm{d}t\]</div>
+<p>信号的单边拉氏变换可视为信号<span class="heti-skip"><span class="heti-spacing"> </span>x(t)u(t)<span class="heti-spacing"> </span></span>的双边拉氏变换</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">

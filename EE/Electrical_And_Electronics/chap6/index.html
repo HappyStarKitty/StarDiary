@@ -1459,6 +1459,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../Digital_Circuit/chap7/">
+<span class="md-ellipsis">
+    Chap7 Memory and Programmable Logic
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../Digital_Circuit/addition/">
 <span class="md-ellipsis">
     Addition
@@ -2341,6 +2348,11 @@
 <h2 id="_1">正弦波振荡电路<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p>正弦波振荡电路由放大、反馈、选频和稳幅环节组成，属于正反馈电路</p>
 <h3 id="_2">正弦波振荡电路的基本原理<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>维持自激振荡的平衡条件为</p>
+<div class="arithmatex">\[AF=1\]</div>
+<p>其中<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>为开环放大系数，<span>F<span class="heti-spacing"> </span></span>为反馈系数</p>
+<p>幅度平衡条件：<span class="arithmatex">\(AF=1\)</span></p>
+<p>相位平衡条件：<span class="arithmatex">\(\varphi_A+\varphi_F=2n\pi \quad(n=0,1,2...)\)</span></p>
 <h3 id="rc"><span>RC<span class="heti-spacing"> </span></span>正弦波振荡电路<a class="headerlink" href="#rc" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h3 id="lc"><span>LC<span class="heti-spacing"> </span></span>正弦波振荡电路<a class="headerlink" href="#lc" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h2 id="_3">多谐振荡器<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
@@ -2351,8 +2363,12 @@
 <p>常用的<span class="heti-skip"><span class="heti-spacing"> </span>555<span class="heti-spacing"> </span></span>定时器有：</p>
 <p>双极型定时器——5G15555</p>
 <p><span>CMOS<span class="heti-spacing"> </span></span>定时器——CB7555</p>
+<p><img alt="无法显示" src="../figures/chap6/cb7555.png"/></p>
+<p><img alt="无法显示" src="../figures/chap6/555gn.png"/></p>
+<p>多谐振荡器没有稳定状态，属于无稳触发器</p>
 <h2 id="_6">单稳态触发器和施密特触发器<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="555_1">用<span class="heti-skip"><span class="heti-spacing"> </span>555<span class="heti-spacing"> </span></span>集成定时器构成的单稳态触发器<a class="headerlink" href="#555_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>单稳态触发器主要用于整形、定时和延时</p>
 <h3 id="555_2">用<span class="heti-skip"><span class="heti-spacing"> </span>555<span class="heti-spacing"> </span></span>集成定时器构成的施密特触发器<a class="headerlink" href="#555_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <aside class="md-source-file">
 <span class="md-source-file__fact">

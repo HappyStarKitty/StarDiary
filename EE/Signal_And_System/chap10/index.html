@@ -1160,6 +1160,34 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#-">
+<span class="md-ellipsis">
+      利用零-极点图对傅里叶变换进行几何求值
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#z_3">
+<span class="md-ellipsis">
+      z变换的性质
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#z_4">
+<span class="md-ellipsis">
+      常用z变换对
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#z_5">
+<span class="md-ellipsis">
+      单边z变换
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1387,6 +1415,13 @@
 <a class="md-nav__link" href="../../Digital_Circuit/chap6/">
 <span class="md-ellipsis">
     Chap6 Registers and Counters
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Digital_Circuit/chap7/">
+<span class="md-ellipsis">
+    Chap7 Memory and Programmable Logic
   </span>
 </a>
 </li>
@@ -2194,6 +2229,34 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#-">
+<span class="md-ellipsis">
+      利用零-极点图对傅里叶变换进行几何求值
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#z_3">
+<span class="md-ellipsis">
+      z变换的性质
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#z_4">
+<span class="md-ellipsis">
+      常用z变换对
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#z_5">
+<span class="md-ellipsis">
+      单边z变换
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </div>
@@ -2206,26 +2269,50 @@
 <div class="admonition definition">
 <p class="admonition-title"><span>z<span class="heti-spacing"> </span></span>变换</p>
 <p>一个离散时间信号的<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>变换定义为</p>
-<div class="arithmatex">\[X(z)\triangleq=\sum_{-\infty}^{+\infty}x[n]z^{-n}\]</div>
+<div class="arithmatex">\[X(z)\triangleq\sum_{-\infty}^{+\infty}x[n]z^{-n}\]</div>
 <p>记为</p>
 <div class="arithmatex">\[x[n]\overset{Z}{\longleftrightarrow}X(z)\]</div>
 </div>
 <h2 id="z_1"><span>z<span class="heti-spacing"> </span></span>变换的收敛域<a class="headerlink" href="#z_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<div class="admonition theorem">
-<p class="admonition-title"><span>z<span class="heti-spacing"> </span></span>变换收敛域的性质</p>
+<p><span>z<span class="heti-spacing"> </span></span>变换收敛域的性质</p>
 <ol>
-<li><span>X(z)<span class="heti-spacing"> </span></span>的收敛域是在<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>平面内以原点为中心的圆环</li>
-<li>收敛域内不包含极点</li>
-<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>是有限长序列，那么收敛域就是整个<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>平面，可能除去<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(z=0\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>或<span><span class="heti-spacing"> </span><span class="arithmatex">\(z=\infty\)</span></span></li>
-<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>是一个右边序列，并且<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(|z|=r_0\)</span><span class="heti-spacing"> </span></span>的圆位于收敛域内，那么<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(|z|&gt;r_0\)</span><span class="heti-spacing"> </span></span>的全部有限<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>值都一定在这个收敛域内</li>
-<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>是一个左边序列，并且<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(|z|=r_0\)</span><span class="heti-spacing"> </span></span>的圆位于收敛域内，那么<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(0&lt;|z|&lt;r_0\)</span><span class="heti-spacing"> </span></span>的全部有限<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>值都一定在这个收敛域内</li>
-<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>是一个双边序列，并且<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(|z|=r_0\)</span><span class="heti-spacing"> </span></span>的圆位于收敛域内，那么该收敛域在<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>域中一定是包含<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(|z|=r_0\)</span><span class="heti-spacing"> </span></span>这一圆环的环状区域</li>
-<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>x[z]<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>变换<span class="heti-skip"><span class="heti-spacing"> </span>X(z)<span class="heti-spacing"> </span></span>时有理的，那么它的收敛域就被极点所界定，或者延伸至无限远</li>
-<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>变换<span class="heti-skip"><span class="heti-spacing"> </span>X(z)<span class="heti-spacing"> </span></span>是有理的，并且<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>是右边序列，那么收敛域就位于<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>平面内最外层极点的外边，也就是半径等于<span class="heti-skip"><span class="heti-spacing"> </span>X(z)<span class="heti-spacing"> </span></span>极点中最大模值得圆的外边。而且，若<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>是因果序列，即<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n&lt;0\)</span><span class="heti-spacing"> </span></span>时等于零的右边序列，那么收敛域也包含<span><span class="heti-spacing"> </span><span class="arithmatex">\(z=\infty\)</span></span></li>
-<li>如果<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>变换<span class="heti-skip"><span class="heti-spacing"> </span>X(z)<span class="heti-spacing"> </span></span>是有理的，并且<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>是左边序列，那么收敛域就位于<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>平面内最里层的非零极点的里边，也就是半径等于<span class="heti-skip"><span class="heti-spacing"> </span>X(z)<span class="heti-spacing"> </span></span>中除去<span class="heti-skip"><span class="heti-spacing"> </span>z=0<span class="heti-spacing"> </span></span>的极点中最小模值得圆的里边，并且向内延伸到可能包括<span><span class="heti-spacing"> </span>x=0</span>。特别是，若<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>是反因果序列，即<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span>n&gt;0<span class="heti-spacing"> </span></span>时等于零的左边序列，那么收敛域也包含<span><span class="heti-spacing"> </span>z=0</span></li>
+<li>
+<p><span>X(z)<span class="heti-spacing"> </span></span>的收敛域是在<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>平面内以原点为中心的圆环</p>
+</li>
+<li>
+<p>收敛域内不包含极点</p>
+</li>
+<li>
+<p>如果<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>是有限长序列，那么收敛域就是整个<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>平面，可能除去<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(z=0\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>或<span><span class="heti-spacing"> </span><span class="arithmatex">\(z=\infty\)</span></span></p>
+</li>
+<li>
+<p>如果<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>是一个右边序列，并且<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(|z|=r_0\)</span><span class="heti-spacing"> </span></span>的圆位于收敛域内，那么<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(|z|&gt;r_0\)</span><span class="heti-spacing"> </span></span>的全部有限<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>值都一定在这个收敛域内</p>
+</li>
+<li>
+<p>如果<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>是一个左边序列，并且<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(|z|=r_0\)</span><span class="heti-spacing"> </span></span>的圆位于收敛域内，那么<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(0&lt;|z|&lt;r_{0}\)</span><span class="heti-spacing"> </span></span>的全部有限<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>值都一定在这个收敛域内</p>
+</li>
+<li>
+<p>如果<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>是一个双边序列，并且<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(|z|=r_0\)</span><span class="heti-spacing"> </span></span>的圆位于收敛域内，那么该收敛域在<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>域中一定是包含<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(|z|=r_0\)</span><span class="heti-spacing"> </span></span>这一圆环的环状区域</p>
+</li>
+<li>
+<p>如果<span class="heti-skip"><span class="heti-spacing"> </span>x[z]<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>变换<span class="heti-skip"><span class="heti-spacing"> </span>X(z)<span class="heti-spacing"> </span></span>时有理的，那么它的收敛域就被极点所界定，或者延伸至无限远</p>
+</li>
+<li>
+<p>如果<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>变换<span class="heti-skip"><span class="heti-spacing"> </span>X(z)<span class="heti-spacing"> </span></span>是有理的，并且<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>是右边序列，那么收敛域就位于<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>平面内最外层极点的外边，也就是半径等于<span class="heti-skip"><span class="heti-spacing"> </span>X(z)<span class="heti-spacing"> </span></span>极点中最大模值得圆的外边。而且，若<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>是因果序列，即<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n&lt;0\)</span><span class="heti-spacing"> </span></span>时等于零的右边序列，那么收敛域也包含<span><span class="heti-spacing"> </span><span class="arithmatex">\(z=\infty\)</span></span></p>
+</li>
+<li>
+<p>如果<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>变换<span class="heti-skip"><span class="heti-spacing"> </span>X(z)<span class="heti-spacing"> </span></span>是有理的，并且<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>是左边序列，那么收敛域就位于<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>平面内最里层的非零极点的里边，也就是半径等于<span class="heti-skip"><span class="heti-spacing"> </span>X(z)<span class="heti-spacing"> </span></span>中除去<span class="heti-skip"><span class="heti-spacing"> </span>z=0<span class="heti-spacing"> </span></span>的极点中最小模值得圆的里边，并且向内延伸到可能包括<span><span class="heti-spacing"> </span>x=0</span>。特别是，若<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>是反因果序列，即<span class="heti-skip"><span class="heti-spacing"> </span>x[n]<span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span>n&gt;0<span class="heti-spacing"> </span></span>时等于零的左边序列，那么收敛域也包含<span><span class="heti-spacing"> </span>z=0</span></p>
+</li>
 </ol>
-</div>
 <h2 id="z_2"><span>z<span class="heti-spacing"> </span></span>逆变换<a class="headerlink" href="#z_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>幂级数展开法、部分分式法、留数法</p>
+<h2 id="-">利用零<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>极点图对傅里叶变换进行几何求值<a class="headerlink" href="#-" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="z_3"><span>z<span class="heti-spacing"> </span></span>变换的性质<a class="headerlink" href="#z_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p><img alt="无法显示" src="../figures/chap10/xingzhi.png"/></p>
+<h2 id="z_4">常用<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>变换对<a class="headerlink" href="#z_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p><img alt="无法显示" src="../figures/chap10/bianhuan.png"/></p>
+<h2 id="z_5">单边<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>变换<a class="headerlink" href="#z_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="arithmatex">\[X(z)=\sum_{n=0}^\infty x(n)z^{-n}\]</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">

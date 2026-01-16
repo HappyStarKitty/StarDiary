@@ -1537,6 +1537,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../Digital_Circuit/chap7/">
+<span class="md-ellipsis">
+    Chap7 Memory and Programmable Logic
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../Digital_Circuit/addition/">
 <span class="md-ellipsis">
     Addition
@@ -2500,14 +2507,23 @@
 <p class="admonition-title">集成运放</p>
 <p>集成运放基本组成主要有四个部分：输入级、中间级、输出级、偏置电路</p>
 <ul>
-<li>输入级：组成集成运放的关键部分，通常要求有高输入电阻、低漂移和高抗干扰能力，常采用差分放大电路</li>
-<li>中间级：亦称为电压放大极，主要使集成运放获得很高的电压放大倍数，常由一级或多级电压放大电路组成</li>
-<li>输出级：主要使集成运放有较强的带负载能力，通常采用互补对称式电路</li>
+<li>输入级：组成集成运放的关键部分，通常要求有高输入电阻、低漂移和高抗干扰能力，常采用<b>差分放大电路</b></li>
+<li>中间级：亦称为电压放大极，主要使集成运放获得很高的电压放大倍数，常由<b>一级或多级电压放大电路</b>组成</li>
+<li>输出级：主要使集成运放有较强的带负载能力，通常采用<b>互补对称式电路</b></li>
 <li>偏置电路：为各级电路提供偏置电流</li>
 </ul>
 </div>
+<p>由于晶体管特性、参数随温度变化或电源电压不稳定等影响，即使输入端短路，在输出端也会出现电压波动，这种现象称为<b>零点漂移</b></p>
 <h3 id="_3">集成运放的输入级电路——差分放大电路<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>抑制零点漂移，即放大差模信号，抑制共模信号</p>
+<p>输入信号大小相等、极性相反，称为差模信号</p>
+<p>两个输入端输入大小相等、极性相同的信号称为共模信号</p>
+<p>电路中的零点漂移可用输入端施加共模信号来模拟</p>
+<p>通常将差模电压放大倍数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A_d\)</span><span class="heti-spacing"> </span></span>与共模电压放大倍数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A_e\)</span><span class="heti-spacing"> </span></span>之比定义为共模抑制比</p>
+<div class="arithmatex">\[K_{CMB}=\frac{A_d}{A_e}\]</div>
+<p>共模抑制比反映了差分放大电路抑制共模信号的能力，其值越大，电路抑制共模信号（零点漂移）的能力越强</p>
 <h3 id="_4">集成运放的输出级电路——互补对称电路<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>采用互补对称式电路是为了减小静态消耗</p>
 <h3 id="_5">集成运放的图形符号和信号输入方式<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h2 id="_6">集成运放的基本特性<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_7">集成运放的主要参数<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
