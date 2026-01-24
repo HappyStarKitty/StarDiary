@@ -493,12 +493,16 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_9" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Math/Partial_Differential_Equation/">
 <span class="md-ellipsis">
     偏微分方程
   </span>
+</a>
+<label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
+</div>
 <nav aria-expanded="false" aria-labelledby="__nav_2_9_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_9">
 <span class="md-nav__icon md-icon"></span>
@@ -735,12 +739,16 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../Mechanics_Of_Materials/">
 <span class="md-ellipsis">
     材料力学（乙）
   </span>
+</a>
+<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
+</div>
 <nav aria-expanded="false" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_4">
 <span class="md-nav__icon md-icon"></span>
@@ -2230,15 +2238,27 @@
 <article class="md-content__inner md-typeset">
 <h1 id="chap6"><span>Chap6<span class="heti-spacing"> </span></span>约束的一般理论、分析力学基本概念<a class="headerlink" href="#chap6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <h2 id="_1">约束及其分类<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>几何约束：约束方程不包含速度</p>
-<p>运动约束：约束方程包含速度</p>
-<p>完整约束：几何约束和可积分的运动约束</p>
-<p>非完整约束：不能积分的运动约束</p>
-<p>定常约束：对于完整约束，约束方程不显含时间</p>
-<p>双边约束：约束方程以等式表出</p>
+<p>若约束方程不包含速度，称为<b>几何约束</b>；若约束方程包含速度，称为<b>运动约束</b></p>
+<p>几何约束和可积分的运动约束统称为<b>完整约束</b>，不能积分的运动约束称为<b>不完整约束</b></p>
+<p>完整约束对<b>位置</b>施加了限制，非完整约束对<b>速度</b>施加了限制</p>
+<p>所有约束都是完整约束的质点系称为<b>完整系统</b>；存在非完整约束的质点系称为<b>非完整系统</b></p>
+<p>对于完整约束，如果约束方程中不显含时间，那么称为<b>定常约束</b>，否则称为<b>非定常约束</b>。所有约束都是定常约束的质点系称为<b>定常系统</b>；存在非定常约束的质点系称为<b>非定常系统</b></p>
 <h2 id="_2">广义坐标、广义坐标数目、广义坐标时间<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h2 id="_3">坐标变分（虚位移）和自由度<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>这一变动<b>不依赖于时间，只受约束的限制</b>。在力学中，这一变动具有重要的意义，专称虚位移，更严格地，称为<b>在这一时刻、这一可能位置的虚位移</b></p>
+<p>解析法：对于<b>完整系统</b>，算出广义坐标数，选取广义坐标，将各质点的坐标用广义坐标表出；通过变分运算，用广义虚位移表出各质点的虚位移，进而得出各质点的虚位移关系</p>
+<p>几何法：对于<b>完整、定常系统</b>，虚位移集合和可能位移集合完全重合，可通过可能位移关系确定虚位移关系。又，可能位移关系与可能速度关系一致，因此可通过可能速度关系确定虚位移关系</p>
 <h2 id="_4">虚功和理想约束<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>考察约束质点系中的一个质点，在某一时刻<span><span class="heti-spacing"> </span><span class="arithmatex">\(t\)</span></span>、某一可能位置<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\bm{r}\)</span><span class="heti-spacing"> </span></span>处，受力<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\bm{F}\)</span><span class="heti-spacing"> </span></span>作用，质点发生虚位移<span><span class="heti-spacing"> </span><span class="arithmatex">\(\delta \bm{r}\)</span></span>。我们定义，</p>
+<div class="arithmatex">\[\bar{\delta}W=\bm{F}\cdot \delta \bm{r}\]</div>
+<p>称为力<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\bm{F}\)</span><span class="heti-spacing"> </span></span>在这一时刻<span><span class="heti-spacing"> </span><span class="arithmatex">\(t\)</span></span>、这一可能位置<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\bm{r}\)</span><span class="heti-spacing"> </span></span>处的<b>虚元功</b>（简称<b>虚功</b>）</p>
+<p>考察约束质点系中的一个质点，在某一时刻<span><span class="heti-spacing"> </span><span class="arithmatex">\(t\)</span></span>、某一可能位置<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\bm{r}\)</span><span class="heti-spacing"> </span></span>处，受力<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\bm{F}\)</span><span class="heti-spacing"> </span></span>作用，质点发生可能位移<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d} \bm{r}\)</span></span>。我们定义，</p>
+<div class="arithmatex">\[\bar{d}W=\bm{F}\cdot \mathrm{d}\bm{r} \]</div>
+<p>称为力<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\bm{F}\)</span><span class="heti-spacing"> </span></span>在这一时刻<span><span class="heti-spacing"> </span><span class="arithmatex">\(t\)</span></span>、这一可能位置<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\bm{r}\)</span><span class="heti-spacing"> </span></span>处的<b>可能元功</b></p>
+<p>考察一个约束，如果在任意时刻、在任意可能位置处，约束力在任意虚位移上的虚功之和均为零，则称该约束为<b>理想约束</b>，即，</p>
+<div class="arithmatex">\[\sum \bm{F}_{Ni}\cdot \delta \bm{r}_i=0\]</div>
+<p>力学中的五大类约束和常见的非定常约束都是理想约束。所有约束都是理想约束的质点系称为理想约束系统。自由单刚体是理想约束系统，由五大类约束连接形成的约束刚体系也是理想约束系统</p>
+<p>最后我们指出，在矢量力学中，力系拆分为外力和内力。而在分析力学中，力系拆分为主动力和约束力。对于理想约束系统，除了（理想）约束力之外的其它力统称为主动力；对于非理想约束系统，解除所有非理想约束，将这些约束代以作用力，并归入主动力，除了理想约束力之外的其它力统称为主动力。 主动力包括外加力（例如，主动施加的力和力偶、阻碍力和阻碍力偶、与外部之间相对滑动的摩擦力、与外部之间相对滚动的摩阻力偶等）和内部力（例如，弹簧力、万有引力、内部摩擦力等）</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
