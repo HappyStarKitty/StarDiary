@@ -2166,7 +2166,8 @@
 <p><span class="arithmatex">\(<span class="arithmatex">\(\frac{\partial (x,y)}{\partial (u,v)}=\left|\begin{array}{cccc}\frac{\partial x}{\partial u} &amp; \frac{\partial x}{\partial v} \\ \frac{\partial y}{\partial u} &amp; \frac{\partial y}{\partial v}
 \end{array}\right|\)</span>\)</span></p>
 </div>
-<p>傅里叶级数</p>
+<div class="admonition formula">
+<p class="admonition-title">傅里叶级数</p>
 <div class="arithmatex">\[
 \frac{a_0}{2}+\sum_{n=1}^{+\infty}(a_n \cos \frac{n\pi x}{l}+b_n \sin \frac{n\pi x}{l})
 \]</div>
@@ -2178,26 +2179,43 @@ b_n=\frac{1}{l}\int_{-l}^{l} f(x)\sin\frac{n\pi x}{l}dx, \quad n=1,2,3...
 \end{aligned}
 \right.
 \]</div>
-<p>高斯公式</p>
+</div>
+<div class="admonition formula">
+<p class="admonition-title">分部积分</p>
+<div class="arithmatex">\[\int u\mathrm{d}v=uv-\int v\mathrm{d}u\]</div>
+</div>
+<div class="admonition formula">
+<p class="admonition-title">高斯公式</p>
 <div class="arithmatex">\[\oiint_S F\cdot dS=\iiint_V \nabla \cdot F dV\]</div>
-<p>梯度公式</p>
+</div>
+<div class="admonition formula">
+<p class="admonition-title">梯度公式</p>
 <div class="arithmatex">\[\oiint_S p dS=\iiint_V \nabla pdV\]</div>
-<p>散度</p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">散度</p>
 <div class="arithmatex">\[\nabla \cdot A=\frac{\partial A_x}{\partial x}+\frac{\partial A_y}{\partial y}+\frac{\partial A_z}{\partial z}, A=A_x i + A_y j + A_zk\]</div>
-<p>梯度</p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">梯度</p>
 <div class="arithmatex">\[\nabla p=\frac{\partial p}{\partial x}i+\frac{\partial p}{\partial y}j+\frac{\partial p}{\partial z}k, p=p(x,y,z)\]</div>
-<p>旋度</p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">旋度</p>
 <div class="arithmatex">\[\nabla \times A=\left|\begin{array}{cccc}i &amp; j &amp; k \\
 \frac{\partial}{\partial x} &amp; \frac{\partial}{\partial y} &amp; \frac{\partial}{\partial z} \\
 A_x &amp; A_y &amp; A_z\end{array}\right|\]</div>
-<div class="admonition note 速度散度">
-<p class="admonition-title">Note</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">速度散度</p>
 <div class="arithmatex">\[\nabla\cdot V=\frac{1}{\partial V}\frac{D(\partial V)}{Dt}=\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial w}{\partial z}\]</div>
 <p>速度散度表示单位体积的运动流体微元的体积随时间的变化率</p>
 </div>
 <p><img alt="无法显示" src="../figures/tdsdxd.png"/></p>
-<p>环量</p>
+<div class="admonition definition">
+<p class="admonition-title">环量</p>
 <div class="arithmatex">\[\Gamma=-\oint_C V \cdot \mathcal{d}s\]</div>
+</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
