@@ -420,12 +420,16 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Math/Complex_Function/">
 <span class="md-ellipsis">
     复变函数与积分变换
   </span>
+</a>
+<label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
+</div>
 <nav aria-expanded="false" aria-labelledby="__nav_2_7_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_7">
 <span class="md-nav__icon md-icon"></span>
@@ -2388,6 +2392,13 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Other/Test/diangong_xc/">
+<span class="md-ellipsis">
+    电工电子学小测
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -2844,14 +2855,19 @@ PS：电压越大，越容易导通</li>
 <p>正向稳压为固定的导通压降，而反向稳定电压可以通过调节掺杂浓度改变</p>
 </div>
 <p>稳态二极管的动态电阻越小，稳压效果越好；其在电路中应用时，需要串联一个限流电阻</p>
+<div class="admonition note">
+<p class="admonition-title">稳压电路</p>
+<p><img alt="wfxs" src="../figures/chap1/wydl.png"/></p>
+<p>若<span><span class="heti-spacing"> </span>$U_o \uparrow \rightarrow U_o=U_Z \uparrow \rightarrow I_Z \uparrow \rightarrow I\uparrow \rightarrow IR \uparrow \rightarrow U_o \downarrow $</span></p>
+</div>
 <h3 id="_17">发光二极管和光电二极管<a class="headerlink" href="#_17" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>发光二极管简称<span><span class="heti-spacing"> </span>LED</span>，<b>工作在正向偏置状态</b>，导通压降大于普通二极管</p>
+<p>发光二极管简称<span><span class="heti-spacing"> </span>LED</span>，<b>工作在正向偏置状态</b>，导通压降大于普通二极管，常在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(1.4V\)</span><span class="heti-spacing"> </span></span>以上</p>
 <p>光电二极管，又称光敏二极管，<b>工作在反向偏置状态</b>，反向电流随光照强度增加而增加</p>
 <h2 id="_18">双极晶体管<a class="headerlink" href="#_18" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_19">基本结构和电流放电作用<a class="headerlink" href="#_19" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition definition">
 <p class="admonition-title">晶体管</p>
-<p>双极晶体管（BJT）简称晶体管、三极管</p>
+<p>双极晶体管（Bipolar Junction Transistor,BJT）简称晶体管、三极管</p>
 <p><img alt="无法显示" src="../figures/chap1/triode.png"/></p>
 <ul>
 <li>两个<span class="heti-skip"><span class="heti-spacing"> </span>PN<span class="heti-spacing"> </span></span>结：发射结、集电结</li>
@@ -2862,23 +2878,20 @@ PS：电压越大，越容易导通</li>
 <p>发射区杂质浓度很高，基区很薄且杂质浓度很低，集电区的面积比发射结的面积大，且集电区杂质浓度较发射区低</p>
 <div class="admonition note">
 <p class="admonition-title">电流放大作用</p>
-<p>条件：发射结正向偏置，集电结反向偏置</p>
+<p>条件：<b>发射结正向偏置，集电结反向偏置</b></p>
 <p><img alt="无法显示" src="../figures/chap1/current_amplication.png"/></p>
 <div class="arithmatex">\[I_E=I_C+I_B\]</div>
 <div class="arithmatex">\[I_B \ll I_C \approx I_E\]</div>
 <p>小的基极电流变化量引起大的集电极电流变化量，具有电流放大作用，故<b>三极管是电流控制电流器件</b></p>
+<p>放大倍数本质上是扩散与复合的电子比例</p>
 </div>
 <h3 id="_20">特性曲线和主要参数<a class="headerlink" href="#_20" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition note">
-<p class="admonition-title">输入特性曲线</p>
+<div class="admonition definition">
+<p class="admonition-title">特性曲线</p>
 <p>输入特性曲线：以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{CE}\)</span><span class="heti-spacing"> </span></span>为参变量，<span><span class="arithmatex">\(i_B\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{BE}\)</span><span class="heti-spacing"> </span></span>之间的关系，即</p>
-<div class="arithmatex">\[i_B=f(u_{BE})|u_{CE=const.}\]</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">输出特性曲线</p>
+<div class="arithmatex">\[i_B=f(u_{BE})|u_{CE=\text{const.}}\]</div>
 <p>输出特性曲线：以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(i_B\)</span><span class="heti-spacing"> </span></span>为参变量，<span><span class="arithmatex">\(i_C\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{CE}\)</span><span class="heti-spacing"> </span></span>之间的关系，即</p>
-<div class="arithmatex">\[i_c=f(u_{CE})|i_{B=const.}\]</div>
-</div>
+<div class="arithmatex">\[i_c=f(u_{CE})|i_{B=\text{const.}}\]</div>
 <p><img alt="无法显示" src="../figures/chap1/curve.png"/></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"/><input id="__tabbed_1_2" name="__tabbed_1" type="radio"/><input id="__tabbed_1_3" name="__tabbed_1" type="radio"/><div class="tabbed-labels"><label for="__tabbed_1_1">截止区</label><label for="__tabbed_1_2">饱和区</label><label for="__tabbed_1_3">放大区</label></div>
 <div class="tabbed-content">
@@ -2908,10 +2921,11 @@ PS：电压越大，越容易导通</li>
 </div>
 </div>
 </div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">主要参数</p>
 <ul>
-<li>电流放大系数<span><span class="heti-spacing"> </span><span class="arithmatex">\(\bar{\beta}=\frac{I_C-I_{CEO}}{I_B}\approx \frac{I_C}{I_B}（直流）\)</span> <span class="arithmatex">\(\beta=\frac{\Delta I_C}{\Delta I_B}（交流）\)</span></span></li>
+<li>电流放大系数<span><span class="heti-spacing"> </span><span class="arithmatex">\(\bar{\beta}=\frac{I_C-I_{CEO}}{I_B}\approx \frac{I_C}{I_B}\)</span></span>（直流） <span class="arithmatex">\(\beta=\frac{\Delta I_C}{\Delta I_B}\)</span>（交流）</li>
 <li>穿透电流<span><span class="heti-spacing"> </span><span class="arithmatex">\(I_{CEO}\)</span></span></li>
 <li>集电极最大允许电流<span><span class="heti-spacing"> </span><span class="arithmatex">\(I_{CM}\)</span></span></li>
 <li>集电极最大允许耗散功率<span><span class="heti-spacing"> </span><span class="arithmatex">\(P_{CM}\)</span></span></li>
@@ -2946,43 +2960,66 @@ PS：电压越大，越容易导通</li>
 <p><span>C-E<span class="heti-spacing"> </span></span>之间，<span class="arithmatex">\(I_C=\beta I_B\)</span></p>
 <p><span><span class="arithmatex">\(I_C\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(U_{CE}\)</span><span class="heti-spacing"> </span></span>基本无关</p>
 <p><img alt="无法显示" src="../figures/chap1/small_signal_model.png"/></p>
-<p>双极晶体管是电流控制电流源</p>
 <h2 id="_22">绝缘栅场效晶体管<a class="headerlink" href="#_22" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>场效晶体管：简称<span><span class="heti-spacing"> </span>FET</span>，分为结型场效晶体管、绝缘栅场效晶体管</p>
+<p>场效晶体管（field effect transistor, FET）分为结型场效晶体管、绝缘栅场效晶体管</p>
+<p>不同于双极晶体管，场效晶体管只有多子参与导电（<span>N<span class="heti-spacing"> </span></span>沟道是电子、<span>P<span class="heti-spacing"> </span></span>沟道是空穴<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，故又称单极晶体管</p>
 <h3 id="_23">基本结构和工作原理<a class="headerlink" href="#_23" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition definition">
 <p class="admonition-title"><span>MOS<span class="heti-spacing"> </span></span>管</p>
-<p><span>MOS<span class="heti-spacing"> </span></span>管：金属<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>氧化物<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>半导体场效晶体管，可分为：</p>
+<p>绝缘栅场效晶体管又称金属<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>氧化物<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>半导体场效晶体管，简称<span class="heti-skip"><span class="heti-spacing"> </span>MOS<span class="heti-spacing"> </span></span>管（metal oxide semiconductor<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，可分为：</p>
 <ul>
 <li><span>N<span class="heti-spacing"> </span></span>沟道绝缘场效晶体管（NMOS）和<span class="heti-skip"><span class="heti-spacing"> </span>P<span class="heti-spacing"> </span></span>沟道绝缘场效晶体管（PMOS）</li>
-<li>增强型绝缘场效晶体管（无沟道）和耗尽型绝缘场效晶体管（有沟道）</li>
+<li>增强型绝缘场效晶体管和耗尽型绝缘场效晶体管</li>
 </ul>
+<p>以<span class="heti-skip"><span class="heti-spacing"> </span>NMOS<span class="heti-spacing"> </span></span>为例，其以一块杂质浓度较低的<span class="heti-skip"><span class="heti-spacing"> </span>P<span class="heti-spacing"> </span></span>型硅片作为衬底，在其上面扩散两个杂质浓度很高的<span class="heti-skip"><span class="heti-spacing"> </span>N<span class="heti-spacing"> </span></span>区，并引出两个电极，分别称为<b>源极</b>和<b>漏极</b>。在源极和漏极之间的二氧化硅绝缘层上制作一个金属电极称为<b>栅极</b></p>
+<p>栅极和其他电极是绝缘的，故称为绝缘栅；金属栅极和半导体之间的绝缘层常用二氧化硅，故称为金属<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>氧化物<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>半导体</p>
 <p><img alt="无法显示" src="../figures/chap1/NMOS.png"/></p>
+<p>符号简记：增强型为虚线（需要电压才能出现沟道<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，耗尽型为实线；<span>N<span class="heti-spacing"> </span></span>沟道为<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>指出（流向<span><span class="heti-spacing"> </span><span class="arithmatex">\(N^+\)</span></span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，<span>P<span class="heti-spacing"> </span></span>沟道为<span class="heti-skip"><span class="heti-spacing"> </span>B<span class="heti-spacing"> </span></span>指向</p>
 </div>
-<p><img alt="无法显示" src="../figures/chap1/PMOS.png"/></p>
+<p><img alt="无法显示" src="../figures/chap1/gyj.png"/></p>
+<p>和双极晶体管的共发射极接法类似，<span>MOS<span class="heti-spacing"> </span></span>管常采用共源极接法</p>
 <p>场效晶体管的源极相当于晶体管的发射极，漏极相当于集电极，栅极相当于基极  </p>
-<p>PS：<span>G-<span class="heti-spacing"> </span></span>栅极，<span>S-<span class="heti-spacing"> </span></span>源极，<span>D-<span class="heti-spacing"> </span></span>漏极；<span><span class="arithmatex">\(U_{GS}\)</span><span class="heti-spacing"> </span></span>控制<span><span class="heti-spacing"> </span><span class="arithmatex">\(I_D\)</span></span>，栅源电压控制漏极电流，故<b><span class="heti-skip"><span class="heti-spacing"> </span>MOS<span class="heti-spacing"> </span></span>管是电压控制电流元件</b></p>
+<p>PS：<span>Gate-<span class="heti-spacing"> </span></span>栅极，<span>Source-<span class="heti-spacing"> </span></span>源极，<span>Drain-<span class="heti-spacing"> </span></span>漏极；<span><span class="arithmatex">\(U_{GS}\)</span><span class="heti-spacing"> </span></span>控制<span><span class="heti-spacing"> </span><span class="arithmatex">\(I_D\)</span></span>，栅源电压控制漏极电流，故<b><span class="heti-skip"><span class="heti-spacing"> </span>MOS<span class="heti-spacing"> </span></span>管是电压控制电流元件</b></p>
 <h3 id="_24">特性曲线和主要参数<a class="headerlink" href="#_24" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>由于<span class="heti-skip"><span class="heti-spacing"> </span>MOS<span class="heti-spacing"> </span></span>管的栅极是绝缘的，栅极电流<span><span class="heti-spacing"> </span><span class="arithmatex">\(I_G \approx 0\)</span></span>，因此不研究<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I_G\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(U_{GS}\)</span><span class="heti-spacing"> </span></span>之间的关系（即没有输入特性）</p>
 <h4 id="_25">特性曲线<a class="headerlink" href="#_25" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
-<p>输出特性：以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{cs}\)</span><span class="heti-spacing"> </span></span>为参变量时，<span><span class="arithmatex">\(i_D\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{DS}\)</span><span class="heti-spacing"> </span></span>之间的关系，即</p>
-<div class="arithmatex">\[i_D=f(u_{DS})|u_{CS=const.}\]</div>
+<div class="admonition definition">
+<p class="admonition-title">输出特性</p>
+<p>输出特性：以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{GS}\)</span><span class="heti-spacing"> </span></span>为参变量时，<span><span class="arithmatex">\(i_D\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{DS}\)</span><span class="heti-spacing"> </span></span>之间的关系，即</p>
+<div class="arithmatex">\[i_D=f(u_{DS})|u_{GS=\text{const.}}\]</div>
+<p>输出特性曲线也称为漏极特性曲线</p>
+<p>当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{DS}\)</span><span class="heti-spacing"> </span></span>较小时，场效晶体管<span><span class="heti-spacing"> </span>D</span>、<span>S<span class="heti-spacing"> </span></span>之间可视为一个受<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{GS}\)</span><span class="heti-spacing"> </span></span>控制的可变电阻，称为<b>可变电阻区</b></p>
+<p>当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{DS}\)</span><span class="heti-spacing"> </span></span>较大时，在一定的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{DS}\)</span><span class="heti-spacing"> </span></span>下<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(i_D\)</span><span class="heti-spacing"> </span></span>随<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{GS}\)</span><span class="heti-spacing"> </span></span>的增加而增长，称为<b>线性放大区</b>或<b>恒流区</b>，为放大功能的工作区</p>
+<p>当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{GS}\)</span><span class="heti-spacing"> </span></span>减小到某一数值时，<span>N<span class="heti-spacing"> </span></span>型导电沟道消失，<span class="arithmatex">\(i_D\approx 0\)</span>，称为场效晶体管处于<b>夹断</b>状态（即截止<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。定义<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(i_D\)</span><span class="heti-spacing"> </span></span>为某一微笑电流时的栅源电压为<b>栅源夹断电压</b><span><span class="heti-spacing"> </span><span class="arithmatex">\(U_{GS(off)}\)</span></span></p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">转移特性</p>
 <p>转移特性：以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{DS}\)</span><span class="heti-spacing"> </span></span>为参变量时，<span><span class="arithmatex">\(i_D\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{CS}\)</span><span class="heti-spacing"> </span></span>之间的关系，即</p>
-<div class="arithmatex">\[i_D=f(u_{CS})|u_{DS=const.}\]</div>
-<p>可近似表示为</p>
+<div class="arithmatex">\[i_D=f(u_{CS})|u_{DS=\text{const.}}\]</div>
+<p><span><span class="arithmatex">\(u_{GS}=0\)</span><span class="heti-spacing"> </span></span>时的漏极电流用<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I_{DSS}\)</span><span class="heti-spacing"> </span></span>表示，称为<b>饱和漏极电流</b>。在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{GS}&gt;U_{GS(off)}\)</span><span class="heti-spacing"> </span></span>的范围内，转移特性可近似表示为</p>
 <div class="arithmatex">\[I_D=I_{DSS}(1-\frac{U_{GS}}{U_{GS_{(off)}}})^2\]</div>
+</div>
 <p><img alt="无法显示" src="../figures/chap1/depletion_type.png"/></p>
+<p>增强型<span class="heti-skip"><span class="heti-spacing"> </span>MOS<span class="heti-spacing"> </span></span>管在制成后不存在导电沟道，使用时必须外加一定的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{GS}\)</span><span class="heti-spacing"> </span></span>才会出现导电沟道。使漏极和源极之间开始有电流流过的栅源电压称为开启电压<span><span class="heti-spacing"> </span><span class="arithmatex">\(U_{GS(th)}\)</span></span></p>
+<p>PS：<span>th-threshold-<span class="heti-spacing"> </span></span>阈值</p>
 <p><img alt="无法显示" src="../figures/chap1/enhancement.png"/></p>
 <h4 id="_26">主要参数<a class="headerlink" href="#_26" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <ul>
-<li>夹断电压<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(U_{GS_{off}}\)</span><span class="heti-spacing"> </span></span>和开启电压<span><span class="heti-spacing"> </span><span class="arithmatex">\(U_{GS_{th}}\)</span></span></li>
-<li>饱和漏极电流<span><span class="heti-spacing"> </span><span class="arithmatex">\(I_{DSS}\)</span></span>，即<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{GS}=0\)</span><span class="heti-spacing"> </span></span>时的漏极电流</li>
-<li>低频跨导<span><span class="heti-spacing"> </span><span class="arithmatex">\(g_m\)</span></span></li>
+<li>夹断电压<span><span class="heti-spacing"> </span><span class="arithmatex">\(U_{GS(off)}\)</span></span>（耗尽型<span class="heti-skip"><span class="heti-spacing"> </span>MOS<span class="heti-spacing"> </span></span>管<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，开启电压<span><span class="heti-spacing"> </span><span class="arithmatex">\(U_{GS(th)}\)</span></span>（增强型<span class="heti-skip"><span class="heti-spacing"> </span>MOS<span class="heti-spacing"> </span></span>管）</li>
+<li>饱和漏极电流<span><span class="heti-spacing"> </span><span class="arithmatex">\(I_{DSS}\)</span></span>（耗尽型<span class="heti-skip"><span class="heti-spacing"> </span>MOS<span class="heti-spacing"> </span></span>管<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，即<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_{GS}=0\)</span><span class="heti-spacing"> </span></span>时的漏极电流</li>
 <li>最大漏极电流<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I_{DM}\)</span><span class="heti-spacing"> </span></span>和最大耗散功率<span><span class="heti-spacing"> </span><span class="arithmatex">\(P_{DM}\)</span></span></li>
 <li>最大漏<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>源击穿电压<span><span class="heti-spacing"> </span><span class="arithmatex">\(U_{(BR)DS}\)</span></span></li>
 <li>栅源直流电阻<span><span class="heti-spacing"> </span><span class="arithmatex">\(R_{GS}\)</span></span></li>
+<li>低频跨导<span><span class="heti-spacing"> </span><span class="arithmatex">\(g_m\)</span></span>，在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(U_{DS}\)</span><span class="heti-spacing"> </span></span>为某一固定值时，漏极的微小电流变化量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\Delta I_D\)</span><span class="heti-spacing"> </span></span>和相应的栅源输入电压变化量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\Delta U_{GS}\)</span><span class="heti-spacing"> </span></span>之比，即</li>
 </ul>
+<div class="arithmatex">\[g_m=\frac{\Delta I_D}{\Delta U_{GS}}|_{U_{DS}=\text{const}}\]</div>
 <h3 id="_27">简化的小信号模型<a class="headerlink" href="#_27" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition note">
+<p class="admonition-title">小信号模型</p>
+<p>场效晶体管的输出特性曲线在线性放大区内比较平坦，可以近似认为是一族和横轴平行的直线，故<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(I_D\)</span><span class="heti-spacing"> </span></span>仅受<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(U_{GS}\)</span><span class="heti-spacing"> </span></span>控制，与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(U_{DS}\)</span><span class="heti-spacing"> </span></span>无关</p>
 <p><img alt="无法显示" src="../figures/chap1/MOS_small_signal.png"/></p>
+<p>由于<span class="heti-skip"><span class="heti-spacing"> </span>MOS<span class="heti-spacing"> </span></span>管的栅源输入电阻很大，故可认为<span><span class="heti-spacing"> </span>G</span>、<span>S<span class="heti-spacing"> </span></span>间是开路的</p>
+</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">

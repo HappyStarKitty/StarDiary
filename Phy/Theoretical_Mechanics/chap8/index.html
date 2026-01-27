@@ -420,12 +420,16 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Math/Complex_Function/">
 <span class="md-ellipsis">
     复变函数与积分变换
   </span>
+</a>
+<label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
+</div>
 <nav aria-expanded="false" aria-labelledby="__nav_2_7_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_7">
 <span class="md-nav__icon md-icon"></span>
@@ -686,11 +690,53 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Chap8 分析力学之动力学
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Chap8 分析力学之动力学
   </span>
 </a>
+<nav aria-label="toc.title" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      toc.title
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#-">
+<span class="md-ellipsis">
+      达朗贝尔-拉格朗日原理
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      哈密顿原理
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      拉格朗日方程
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      哈密顿方程
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -2139,6 +2185,13 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Other/Test/diangong_xc/">
+<span class="md-ellipsis">
+    电工电子学小测
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -2154,6 +2207,40 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="toc.title" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      toc.title
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#-">
+<span class="md-ellipsis">
+      达朗贝尔-拉格朗日原理
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      哈密顿原理
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      拉格朗日方程
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      哈密顿方程
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -2161,18 +2248,58 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="chap8"><span>Chap8<span class="heti-spacing"> </span></span>分析力学之动力学<a class="headerlink" href="#chap8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<p>分析动力学的<b>基本问题</b>是：给定约束质点系（或机构<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，给定主动力系，确定运动全过程</p>
+<h2 id="-">达朗贝尔<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>拉格朗日原理<a class="headerlink" href="#-" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition theorem">
+<p class="admonition-title">达朗贝尔<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>拉格朗日原理</p>
+<p><b>达朗贝尔<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>拉格朗日原理（一般形式<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</b><b>双边、理想</b>约束系统，在任一时刻，主动力与惯性力在真实位置的任意虚位移上的虚功之和为零。即，</p>
+<div class="arithmatex">\[\boxed{\sum_{i=1}^N \bar{\delta}W_{F_i}+\sum \bar{\delta}W_{F_{Ii}}=\sum_{i=1}^N (\bm{F}_i-m_i\bm{a}_i)\cdot \delta \bm{r}_i=0}\]</div>
+<p>或写成，</p>
+<div class="arithmatex">\[\sum_{i=1}^N (F_{xi}-m_i\ddot{x_i})\delta x_i+(F_{yi}-m_i\ddot{y_i})\delta y_i +(F_{zi}-m_i\ddot{z_i})\delta z_i=0\]</div>
+<p>上式称为<b>动力学普遍方程</b>或<b>动力虚功方程</b></p>
+</div>
+<h2 id="_1">哈密顿原理<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>达朗贝尔<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>拉格朗日原理属于<b>微分变分原理</b>，它给出了<b>在某一时刻，从所有的可能运动中区分出真实运动的准则</b>。这里，我们转入<b>积分变分原理</b>。积分变分原理不是给出某一时刻真实运动的判据，而是给出<b>在某一有限时段内真实运动的判据</b></p>
+<div class="arithmatex">\[\int_{t_0}^{t_1} \delta T+\bar{\delta}W\mathrm{d}t=0\]</div>
+<p>上式表明，对于双边、理想、完整约束系统，在始末位形确定的有限时段中，真实运动使动能的变分和主动力虚功在该时段内的积分为零——这就是<b>哈密顿原理的一般形式</b></p>
+<div class="arithmatex">\[\int_{t_0}^{t_1}\delta T(q_1,...,q_n,\dot{q_1},...,\dot{q_n},t)+\sum_{j=1}^n F_{Q_j}(q_1,...,q_n,t)\delta q_j \mathrm{d}t=0\]</div>
+<p>这就是<b>哈密顿原理的广义坐标形式</b></p>
+<p>定义<b>拉格朗日量</b>或<b>拉格朗日函数</b>，</p>
+<div class="arithmatex">\[L(q_1,...q_n,\dot{q_1},...,\dot{q_n},t)=T(q_1,...,q_n,\dot{q_1},...,\dot{q_n},t)-V(q_1,...,q_n,t)\]</div>
+<p>以及<b>哈密顿作用量</b>，</p>
+<div class="arithmatex">\[S=\int_{t_0}^{t_1} L\mathrm{d}t\]</div>
+<p>其中，拉格朗日量是动能与势能之差，而哈密顿作用量是拉格朗日量在有限时段中的累积量</p>
+<p>总结之，对于双边、理想、完整约束的有势系统，在始末位形确定的有限时段中，真实运动使哈密顿作用量取驻值。这就是<b>有势情形的哈密顿原理</b>。可以证明，如果初始时刻和末了时刻足够接近，真实运动使哈密顿作用量取<b>极小值</b></p>
+<h2 id="_2">拉格朗日方程<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>如果主动力有势，哈密顿原理的广义坐标形式化为端点确定的积分泛函<span class="heti-skip"><span class="heti-spacing"> </span>S<span class="heti-spacing"> </span></span>的驻值问题，即，</p>
+<div class="arithmatex">\[\delta S=\delta \int_{t_1}^{t_2} L\mathrm{d}t=0\]</div>
+<p>于是得，</p>
+<div class="arithmatex">\[\frac{\mathrm{d}}{\mathrm{d}t}(\frac{\partial L}{\partial \dot{q}_j})-\frac{\partial L}{\partial q_j}=0\]</div>
+<p>上式称为<b>第二类拉格朗日方程</b>，简称<b>拉格朗日方程</b></p>
+<h2 id="_3">哈密顿方程<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition definition">
+<p class="admonition-title">勒让德变换</p>
+<p>考虑关于变量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x_1,x_2,...x_n\)</span><span class="heti-spacing"> </span></span>的函数<span><span class="heti-spacing"> </span><span class="arithmatex">\(X=X(x_1,x_2,...,x_n;\alpha_1,\alpha_2,...,\alpha_m)\)</span></span>，其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\alpha_1,\alpha_2,...,\alpha_m\)</span><span class="heti-spacing"> </span></span>为参数。设函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X\)</span><span class="heti-spacing"> </span></span>对于变量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x_1,x_2,...,x_n\)</span><span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>Hess<span class="heti-spacing"> </span></span>式不等于零，即<span><span class="heti-spacing"> </span><span class="arithmatex">\(\text{det}[\frac{\partial^2 X}{\partial x_i \partial x_j}]\ne 0\)</span></span>。根据下式规定一个由变量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x_1,x_2,...,x_n\)</span><span class="heti-spacing"> </span></span>到另一组变量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y_1,y_2,...,y_n\)</span><span class="heti-spacing"> </span></span>的变换，</p>
+<div class="arithmatex">\[y_i=\frac{\partial X}{\partial x_i},i=1,2,...,n\]</div>
+<p>这一变换称为由函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X\)</span><span class="heti-spacing"> </span></span>生成的<b>勒让德变换</b></p>
+</div>
+<p>定义<b>哈密顿量</b>或<b>哈密顿函数</b>，</p>
+<div class="arithmatex">\[H=H(q_1q_2,...,q_n,p_1,p_2,...,p_n,t)\\=[\sum_{i=1}^n\dot{q}_ip_i-T(q_1,...,q_n,\dot{q}_1,...,\dot{q}_n,t)]|_{\dot{q}_i \rightarrow \dot{q}_i(q_1,...,q_n,p_1,...p_n,t)}\]</div>
+<p>于是有，</p>
+<div class="arithmatex">\[\dot{q}_i=\frac{\partial H}{\partial p_i},\dot{p}_i=-\frac{\partial H}{\partial q_i}+F_{Q_i}\quad i=1,2,...n\]</div>
+<p>上述一阶微分方程组称为<b>哈密顿方程</b></p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年1月26日 23:41:48</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年1月27日 23:22:45</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年1月26日 23:41:48</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年1月27日 23:22:45</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>

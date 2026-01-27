@@ -420,12 +420,16 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Math/Complex_Function/">
 <span class="md-ellipsis">
     复变函数与积分变换
   </span>
+</a>
+<label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
+</div>
 <nav aria-expanded="false" aria-labelledby="__nav_2_7_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_7">
 <span class="md-nav__icon md-icon"></span>
@@ -681,9 +685,20 @@
       物系平衡
     </span>
 </a>
-</li>
+<nav aria-label="物系平衡" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      桁架
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
       具摩擦的物系平衡
     </span>
@@ -2174,6 +2189,13 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Other/Test/diangong_xc/">
+<span class="md-ellipsis">
+    电工电子学小测
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -2207,9 +2229,20 @@
       物系平衡
     </span>
 </a>
-</li>
+<nav aria-label="物系平衡" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      桁架
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
       具摩擦的物系平衡
     </span>
@@ -2227,20 +2260,40 @@
 <p class="admonition-title">本章纲要</p>
 <ul>
 <li>
-<p>单刚体平衡：一般力系作用下单刚体平衡的充要条件（几何条件和解析条件<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；特殊力系作用下单刚体平衡的充要条件，强调独立平衡方程的个数。</p>
+<p><b>单刚体平衡：</b>一般力系作用下单刚体平衡的充要条件（几何条件和解析条件<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；特殊力系作用下单刚体平衡的充要条件，强调独立平衡方程的个数</p>
 </li>
 <li>
-<p>物系平衡：物系静定和超静定概念；物系平衡问题，确定平衡物系的受力状态和平衡位置；静定桁架，确定其受力状态。 </p>
+<p><b>物系平衡：</b>物系静定和超静定概念；物系平衡问题，确定平衡物系的受力状态和平衡位置；静定桁架，确定其受力状态 </p>
 </li>
 <li>
-<p>具有摩擦的物系平衡：滑动摩擦和滚动摩阻——摩擦力和摩擦因数、滚阻力偶和滚阻系数；具有摩擦的物系的平衡问题。 </p>
+<p><b>具有摩擦的物系平衡：</b>滑动摩擦和滚动摩阻——摩擦力和摩擦因数、滚阻力偶和滚阻系数；具有摩擦的物系的平衡问题</p>
 </li>
 </ul>
 </div>
-<p>矢量静力学的<b>基本问题</b>是：给定机构，给定外加力系，确定机构的平衡位置和约束反力；给定静定结构，给定外加力系，确定约束反力。</p>
+<p>矢量静力学的<b>基本问题</b>是：给定机构，给定外加力系，确定机构的平衡位置和约束反力；给定静定结构，给定外加力系，确定约束反力</p>
 <h2 id="_1">单刚体平衡<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p><b>单刚体上一般力系平衡的充要条件：力系主矢为零，对任一点的主矩为零</b></p>
+<div class="arithmatex">\[\bm{F}_R^*=0,\bm{M}_O^*\]</div>
+<p>一般力系平衡的充要条件是两个矢量和（各力矢的矢量和、各力对点之矩的矢量和）为零。这在几何上表现为：力系的力矢多边形和力矩矢多边形同时封闭，称为<b>一般力系平衡的几何条件</b></p>
+<div class="arithmatex">\[\sum F_{ix}=0,\sum F_{iy}=0,\sum F_{iz}=0,\sum M_{ix}=0,\sum M_{iy}=0,\sum M_{iz}=0\]</div>
+<p>上述六个等式称为<b>一般力系平衡的解析条件</b>，也即<b>平衡方程</b></p>
+<p>对于<b>平面一般力系</b>，仅需三个独立平衡方程</p>
+<div class="arithmatex">\[\sum F_{x}=0,\sum F_{y}=0,\sum M_{z}=0\]</div>
+<p>对<span class="heti-skip"><span class="heti-spacing"> </span>z<span class="heti-spacing"> </span></span>轴的取矩方程写成<span><span class="heti-spacing"> </span><span class="arithmatex">\(\sum M_O=0\)</span></span></p>
+<p>对于<b>空间平行力系</b>，有</p>
+<div class="arithmatex">\[\sum F_{z}=0,\sum M_{x}=0,\sum M_{y}=0\]</div>
+<p>对于<b>空间汇交力系</b>，有</p>
+<div class="arithmatex">\[\sum F_x=0,\sum F_y=0,\sum F_z=0\]</div>
+<p>对于<b>空间力偶系</b>，有</p>
+<div class="arithmatex">\[\sum M_x=0,\sum M_y=0,\sum M_z=0\]</div>
 <h2 id="_2">物系平衡<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h2 id="_3">具摩擦的物系平衡<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>物系平衡问题的<b>可解性判定</b>是指：对于结构，判定能否由平衡条件解出各约束反力；对于机构，判定能否由平衡条件解出平衡位置和各约束反力</p>
+<h3 id="_3">桁架<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p><b>桁架</b>是由二力杆铰接而成，且外加力作用于结点上的特殊物系，是一大类工程结构的简化模型。若各杆轴线共面，且外加力作用在该平面内，称为<b>平面桁架</b></p>
+<p>计算桁架内力时，按选取的研究对象不同，常采用两种方法：<b>结点法</b>和<b>截面法</b>。前者依次选销钉为研究对象；后者假想将桁架截开，研究一部分的平衡</p>
+<h2 id="_4">具摩擦的物系平衡<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>称全反力与公法线的最大夹角<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi_m\)</span><span class="heti-spacing"> </span></span>为摩擦角，显然有</p>
+<div class="arithmatex">\[\tan \varphi_m=\frac{F_{S\max}}{F_N}=f_S\]</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">

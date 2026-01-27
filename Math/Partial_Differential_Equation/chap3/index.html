@@ -420,12 +420,16 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../Complex_Function/">
 <span class="md-ellipsis">
     复变函数与积分变换
   </span>
+</a>
+<label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
+</div>
 <nav aria-expanded="false" aria-labelledby="__nav_2_7_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_7">
 <span class="md-nav__icon md-icon"></span>
@@ -2292,6 +2296,13 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Other/Test/diangong_xc/">
+<span class="md-ellipsis">
+    电工电子学小测
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -2461,8 +2472,8 @@
 <h1 id="chap3"><span>Chap3<span class="heti-spacing"> </span></span>分离变量法和特殊函数<a class="headerlink" href="#chap3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <h2 id="_1">齐次边界条件的定解问题<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_2">齐次方程齐次边界条件<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition tip 解题步骤">
-<p class="admonition-title">Tip</p>
+<div class="admonition tip">
+<p class="admonition-title">解题步骤</p>
 <ol>
 <li>
 <p>设定解问题的解具有变量分离的形式，将偏微分方程转化为常微分方程</p>
@@ -2479,8 +2490,8 @@
 </ol>
 <p>PS：需要用到二阶常微分方程和傅里叶变换的知识</p>
 </div>
-<div class="admonition question 题目">
-<p class="admonition-title">Question</p>
+<div class="admonition question">
+<p class="admonition-title">例题</p>
 <p>有界弦的自由振动</p>
 <div class="arithmatex">\[
 \left\{
@@ -2492,11 +2503,9 @@ u|_{t=0}=\varphi(x),\frac{\partial u}{\partial t}|_{t=0}=\phi(x)
 \right.
 \]</div>
 </div>
-<div class="admonition note 解答">
-<p class="admonition-title">Note</p>
-<ol>
-<li>分离变量</li>
-</ol>
+<div class="admonition proof">
+<p class="admonition-title">求解过程</p>
+<p><span>1.<span class="heti-spacing"> </span></span>分离变量</p>
 <div class="arithmatex">\[
 u(x,t)=X(x)T(t)
 \]</div>
@@ -2512,9 +2521,7 @@ X^{\prime\prime}(x)+\lambda X(x)=0
 <div class="arithmatex">\[
 T^{\prime\prime}(t)+\lambda a^2 T(t)=0
 \]</div>
-<ol>
-<li>解本征值问题</li>
-</ol>
+<p><span>2.<span class="heti-spacing"> </span></span>解本征值问题</p>
 <p><span class="arithmatex">\(\lambda\)</span>&lt;0</p>
 <div class="arithmatex">\[X(x)=C_1e^{\sqrt{-\lambda} x}+C_2e^{-\sqrt{-\lambda} x}\]</div>
 <p><span class="arithmatex">\(\lambda\)</span>=0</p>
@@ -2525,21 +2532,15 @@ X(x)=C_1 x+C_2
 <div class="arithmatex">\[
 X(x)=C_1\cos \sqrt{\lambda}x+C_2 \sin\sqrt{\lambda}x
 \]</div>
-<ol>
-<li>
-<p><span><span class="arithmatex">\(u_n(x,t)\)</span><span class="heti-spacing"> </span></span>的叠加</p>
-</li>
-<li>
-<p>系数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A_n,B_n\)</span><span class="heti-spacing"> </span></span>的确定</p>
-</li>
-</ol>
+<p><span>3.<span class="arithmatex">\(u_n(x,t)\)</span><span class="heti-spacing"> </span></span>的叠加</p>
+<p><span>4.<span class="heti-spacing"> </span></span>系数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A_n,B_n\)</span><span class="heti-spacing"> </span></span>的确定</p>
 </div>
 <h3 id="_3">非齐次方程齐次边界条件<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h2 id="_4">非齐次边界条件的定解问题<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_5">边界条件齐次化<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h3 id="_6">周期性条件和自然边界条件<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="admonition question 问题">
-<p class="admonition-title">Question</p>
+<div class="admonition question">
+<p class="admonition-title">例题</p>
 <p>设有半径为<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>的圆形薄板，上、下侧面绝热，圆周上的温度分布已知，求圆内的温度分布，其定解问题为</p>
 <div class="arithmatex">\[
 \left\{
@@ -2548,11 +2549,9 @@ X(x)=C_1\cos \sqrt{\lambda}x+C_2 \sin\sqrt{\lambda}x
 u|_{\partial \Omega}=\phi(x,y),(x^2+y^2=1)
 \end{aligned}\right.\]</div>
 </div>
-<div class="admonition note 解答">
-<p class="admonition-title">Note</p>
-<ol>
-<li>自变量变换</li>
-</ol>
+<div class="admonition proof">
+<p class="admonition-title">求解过程</p>
+<p><span>1.<span class="heti-spacing"> </span></span>自变量变换</p>
 <div class="arithmatex">\[\left\{
 \begin{aligned}
 x=r\cos\theta \\
@@ -2568,15 +2567,11 @@ u(1,\theta)=\phi(\theta)
 \quad (0\le \theta &lt;2\pi)
 \end{aligned}
 \right.\]</div>
-<ol>
-<li>分离变量</li>
-</ol>
+<p><span>2.<span class="heti-spacing"> </span></span>分离变量</p>
 <p>令<span><span class="heti-spacing"> </span><span class="arithmatex">\(u(r,\theta)=R(r)\Phi(\theta)\)</span></span></p>
 <div class="arithmatex">\[\Phi^{\prime\prime}(\theta)+\lambda\Phi(\theta)=0\]</div>
 <div class="arithmatex">\[r^2R^{\prime\prime}(r)+rR^{\prime}(r)-\lambda R(r)=0\]</div>
-<ol>
-<li>自然的周期性条件，构成本征值问题</li>
-</ol>
+<p><span>3.<span class="heti-spacing"> </span></span>自然的周期性条件，构成本征值问题</p>
 <div class="arithmatex">\[\left\{
 \begin{aligned}
 \Phi^{\prime\prime}+\lambda \Phi=0 \\
@@ -2586,9 +2581,7 @@ u(1,\theta)=\phi(\theta)
 <div class="arithmatex">\[\left\{\begin{aligned}
 r^2R^{\prime\prime}+rR^{\prime}-\lambda R=0 \\
 |R(0)|&lt;\infty\end{aligned}\right.\]</div>
-<ol>
-<li>解本征值问题</li>
-</ol>
+<p><span>4.<span class="heti-spacing"> </span></span>解本征值问题</p>
 <p>本征值<span><span class="heti-spacing"> </span><span class="arithmatex">\(\lambda+n =n^2\quad (n=0,1,2)\)</span></span></p>
 <p>本征函数<span><span class="heti-spacing"> </span><span class="arithmatex">\(\Phi_n =c_n\cos n\theta+d_n \sin n\theta\)</span></span></p>
 <p>代入上式，<span>Euler<span class="heti-spacing"> </span></span>方程的通解为</p>

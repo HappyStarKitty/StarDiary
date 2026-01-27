@@ -420,12 +420,16 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../Math/Complex_Function/">
 <span class="md-ellipsis">
     复变函数与积分变换
   </span>
+</a>
+<label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
+</div>
 <nav aria-expanded="false" aria-labelledby="__nav_2_7_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_7">
 <span class="md-nav__icon md-icon"></span>
@@ -2167,6 +2171,13 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Other/Test/diangong_xc/">
+<span class="md-ellipsis">
+    电工电子学小测
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -2209,24 +2220,40 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="chap7"><span>Chap7<span class="heti-spacing"> </span></span>分析力学之静力学<a class="headerlink" href="#chap7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>分析力学的核心思想是“主动扰动，观察信息”。对力学系统施加虚位移，找出定量数学关系，据此确定系统行为。</p>
-</div>
+<p>分析静力学的<b>基本问题</b>是：给定约束质点系（或机构<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，给定主动力系，确定约束质点系（或机构）的静止平衡位置</p>
 <h2 id="_1">虚位移原理<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition theorem">
+<p class="admonition-title">虚位移原理</p>
+<p><b>虚位移原理（一般形式<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</b><b>双边、理想</b>约束系统，在时刻<span><span class="heti-spacing"> </span>t</span>、位置<span class="heti-skip"><span class="heti-spacing"> </span>A<span class="heti-spacing"> </span></span>处于静止状态，它能在下一无限小邻近时刻继续保持静止的充要条件是，在时刻<span><span class="heti-spacing"> </span>t</span>、位置<span><span class="heti-spacing"> </span>A</span>，主动力在任意虚位移上的虚功之和为零。即，</p>
+<div class="arithmatex">\[\boxed{\sum_{i=1}^n \bar{\delta}W_{F_i}=\sum_{i=1}^N \bm{F}_i \cdot \delta \bm{r}_i=0}\]</div>
+<p>或写成，</p>
+<div class="arithmatex">\[\sum_{i=1}^N F_{xi}\delta x_i  +F_{yi}\delta y_i+F_{zi}\delta z_i=0\]</div>
+<p>上式称为<b>静力虚功方程</b></p>
+</div>
+<p>静止质点系继续保持静止的充要条件，</p>
+<div class="arithmatex">\[\delta V(\bm{r}_1,...\bm{r}_N)=0\]</div>
+<p>这就是<b>有势情形下虚位移原理的一般形式</b></p>
+<div class="arithmatex">\[\delta V(q_1,...,q_n)=0\]</div>
+<p>这就是<b>有势情形下虚位移原理的广义坐标形式</b>，也称<b>势能驻值定理</b></p>
 <h2 id="_2">静力稳定性<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>所谓<b>静力稳定性</b>，就是研究静止平衡系统在受到微扰后，是否能保持在原始平衡位置附近。如果对任意微扰，系统都倾向于恢复原始平衡位置，称为<b>稳定平衡</b>；如果存在一种微扰，系统倾向于远离原始平衡位置，称为<b>不稳定平衡</b>；如果对任意微扰，系统都可以在扰动后的位置保持静止平衡，称为<b>随遇平衡</b></p>
+<p>如果对<b>任意</b>非零的广义虚位移向量<span><span class="heti-spacing"> </span><span class="arithmatex">\(\delta \bm{q}\)</span></span>，都有<span><span class="heti-spacing"> </span><span class="arithmatex">\(\delta \bm{q}^T\cdot \bm{G}\cdot \delta \bm{q}&gt;0\)</span></span>，<b>系统稳定平衡</b>；如果<b>存在</b>某个非零的广义虚位移向量<span><span class="heti-spacing"> </span><span class="arithmatex">\(\delta \bm{q}\)</span></span>，使得<span><span class="heti-spacing"> </span><span class="arithmatex">\(\delta \bm{q}^T\cdot \bm{G}\cdot \delta \bm{q}&lt;0\)</span></span>，系统<b>不稳定平衡</b></p>
+<div class="admonition theorem">
+<p class="admonition-title">稳定性判定定理</p>
+<p>有势系统在某一位置静止平衡。若<span class="heti-skip"><span class="heti-spacing"> </span>G<span class="heti-spacing"> </span></span>的全部特征值为正（即正定<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，系统稳定平衡；若<span class="heti-skip"><span class="heti-spacing"> </span>G<span class="heti-spacing"> </span></span>的特征值中至少有一个为负，系统不稳定平衡</p>
+</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年1月26日 23:41:48</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年1月27日 23:22:45</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年1月26日 23:41:48</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年1月27日 23:22:45</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>
