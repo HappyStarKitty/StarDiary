@@ -2378,16 +2378,71 @@
 \begin{array}{rcl}
 \frac{\partial^2 u}{\partial t^2}=a^2\frac{\partial^2 u}{\partial x^2},(-\infty&lt;x&lt;+\infty,t&gt;0) \\
 u|_{t=0}=\varphi(x),(-\infty&lt;x&lt;+\infty) \\
-\frac{\partial u}{\partial t} |_{t=0}=\phi(x),(-\infty&lt;x&lt;+\infty)
+\frac{\partial u}{\partial t} |_{t=0}=\psi(x),(-\infty&lt;x&lt;+\infty)
 \end{array}
 \right.
 \]</div>
 <p>下式为该定解问题的解，称为<span class="heti-skip"><span class="heti-spacing"> </span>D'Alembert<span class="heti-spacing"> </span></span>公式</p>
 <div class="arithmatex">\[
-u(x,t)=\frac{1}{2} (\varphi (x-at) \varphi (x+at)) + \frac{1}{2a} \int_{x-at}^{x+at} \varphi(\alpha) d\alpha
+u(x,t)=\frac{1}{2} (\varphi (x-at) +\varphi (x+at)) + \frac{1}{2a} \int_{x-at}^{x+at} \psi(\alpha) d\alpha
 \]</div>
+<details class="proof">
+<summary>推导过程</summary>
+<p>作自变量变换</p>
+<div class="arithmatex">\[\left\{\begin{aligned}\xi=x-at \\ \eta=x+at\end{aligned}\right.\]</div>
+<p>方程化为</p>
+<div class="arithmatex">\[\frac{\partial^2 u}{\partial \xi \partial \eta}=0\]</div>
+<p>即有</p>
+<div class="arithmatex">\[u(\xi,\eta)=F(\xi)+G(\eta)\]</div>
+<p>换回原变量，得到通解</p>
+<div class="arithmatex">\[u(x,t)=F(x-at)+G(x+at)\]</div>
+<p>由初始条件不难得到</p>
+<div class="arithmatex">\[F(x)+G(x)=\varphi(x)\]</div>
+<div class="arithmatex">\[a[-F'(x)+G'(x)]=\psi(x)\]</div>
+<p>对上式两边关于<span class="heti-skip"><span class="heti-spacing"> </span>x<span class="heti-spacing"> </span></span>积分得</p>
+<div class="arithmatex">\[-F(x)+G(x)=\frac{1}{a}\int_{x_0}^{x}\psi(\alpha)\mathrm{d}\alpha+C\]</div>
+<p>其中<span><span class="heti-spacing"> </span><span class="arithmatex">\(C=G(x_0)-F(x_0)\)</span></span></p>
+<p>联立解得</p>
+<div class="arithmatex">\[F(x)=\frac{1}{2}\varphi(x)-\frac{1}{2a}\int_{x_0}^{x_1} \psi(\alpha)\mathrm{d}\alpha-\frac{C}{2}\]</div>
+<div class="arithmatex">\[G(x)=\frac{1}{2}\varphi(x)+\frac{1}{2a}\int_{x_0}^{x_1}\psi(\alpha)\mathrm{d}\alpha+\frac{C}{2}\]</div>
+<p>代入即有<span class="heti-skip"><span class="heti-spacing"> </span>D'Alembert<span class="heti-spacing"> </span></span>公式</p>
+</details>
 <h3 id="_3">半无界弦的自由振动<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>关于<span class="heti-skip"><span class="heti-spacing"> </span>x<span class="heti-spacing"> </span></span>作奇延拓</p>
+<p>一端固定的半无限长的弦自由振动，可归结为求解下列定解问题</p>
+<div class="arithmatex">\[
+\left\{
+\begin{array}{rcl}
+\frac{\partial^2 u}{\partial t^2}=a^2\frac{\partial^2 u}{\partial x^2},(0&lt;x&lt;+\infty,t&gt;0) \\
+u|_{t=0}=\varphi(x),(0&lt;x&lt;+\infty) \\
+\frac{\partial u}{\partial t} |_{t=0}=\psi(x),(0&lt;x&lt;+\infty)
+\\
+u|_{x=0}=0,(tge 0)
+\end{array}
+\right.
+\]</div>
+<details class="proof">
+<summary>推导过程</summary>
+<p>我们希望能够通过<span class="heti-skip"><span class="heti-spacing"> </span>D'Alembert<span class="heti-spacing"> </span></span>公式求解，为此将<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u(x,t),\varphi(x),\psi(x)\)</span><span class="heti-spacing"> </span></span>关于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>作<b>奇延拓</b>，即有</p>
+<div class="arithmatex">\[U(x,t)=\left\{\begin{aligned}u(x,t),(x\ge 0)\\ -u(-x,t),(x&lt;0)\end{aligned}\right.\]</div>
+<div class="arithmatex">\[\Phi(x)=\left\{\begin{aligned}\varphi(x),(x\ge 0)\\-\varphi(-x),(x&lt;0)\end{aligned}\right.\]</div>
+<div class="arithmatex">\[\Psi(x)=\left\{\begin{aligned}\psi(x),(x\ge 0)\\-\psi(-x),(x&lt;0)\end{aligned}\right.\]</div>
+<p>不难验证<span class="heti-skip"><span class="heti-spacing"> </span>U(x,t)<span class="heti-spacing"> </span></span>是下列初值问题的解</p>
+<div class="arithmatex">\[
+\left\{
+\begin{array}{rcl}
+\frac{\partial^2 U}{\partial t^2}=a^2\frac{\partial^2 U}{\partial x^2},(-\infty&lt;x&lt;+\infty,t&gt;0) \\
+U|_{t=0}=\Phi(x),(-\infty&lt;x&lt;+\infty) \\
+\frac{\partial U}{\partial t} |_{t=0}=\Psi(x),(-\infty&lt;x&lt;+\infty)
+\end{array}
+\right.
+\]</div>
+<p>我们可利用<span class="heti-skip"><span class="heti-spacing"> </span>D'Alembert<span class="heti-spacing"> </span></span>公式，求得</p>
+<div class="arithmatex">\[
+U(x,t)=\frac{1}{2} (\Phi (x-at)+ \Phi (x+at)) + \frac{1}{2a} \int_{x-at}^{x+at} \Psi(\alpha) d\alpha
+\]</div>
+<p>为了得到原定解问题的解，我们仅需考虑<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\ge 0\)</span><span class="heti-spacing"> </span></span>的情况</p>
+</details>
+<p>我们给出下列分片定义的函数<span><span class="heti-spacing"> </span>u(x,t)</span>，其为上述定解问题的解</p>
 <div class="arithmatex">\[
 u(x,t) = \left\{
 \begin{aligned}
@@ -2396,8 +2451,55 @@ u(x,t) = \left\{
 \end{aligned}
 \right.
 \]</div>
+<p>如果<span class="heti-skip"><span class="heti-spacing"> </span>x=0<span class="heti-spacing"> </span></span>的一端是自由的，只需将第四式用</p>
+<div class="arithmatex">\[\frac{\partial u}{\partial x}|_{x=0}=0\]</div>
+<p>代替，通过将<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varphi\)</span></span>、<span class="arithmatex">\(\psi\)</span>、<span><span class="arithmatex">\(u(x,t)\)</span><span class="heti-spacing"> </span></span>关于<span class="heti-skip"><span class="heti-spacing"> </span>x<span class="heti-spacing"> </span></span>作<b>偶延拓</b>，可用上述类似方法求解</p>
 <h3 id="_4">无界弦的强迫振动<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><strong><span>Duhamel<span class="heti-spacing"> </span></span>原理（齐次化原理）</strong></p>
+<p>无界弦的强迫振动，可归结为求下列定解问题</p>
+<div class="arithmatex">\[
+\left\{
+\begin{array}{rcl}
+\frac{\partial^2 u}{\partial t^2}=a^2\frac{\partial^2 u}{\partial x^2}+f(x,t),(-\infty&lt;x&lt;+\infty,t&gt;0) \\
+u|_{t=0}=\varphi(x),(-\infty&lt;x&lt;+\infty) \\
+\frac{\partial u}{\partial t} |_{t=0}=\psi(x),(-\infty&lt;x&lt;+\infty)
+\end{array}
+\right.
+\]</div>
+<details class="proof">
+<summary>推导过程<span><span class="heti-spacing"> </span>0</span></summary>
+<p>我们利用线性方程的叠加原理，将<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u(x,t)\)</span><span class="heti-spacing"> </span></span>分解为</p>
+<div class="arithmatex">\[u=u_1+u_2\]</div>
+<p>其中<span><span class="heti-spacing"> </span><span class="arithmatex">\(u_1\)</span></span>、<span><span class="arithmatex">\(u_2\)</span><span class="heti-spacing"> </span></span>分别为下列定解问题的解</p>
+<div class="arithmatex">\[
+\left\{
+\begin{array}{rcl}
+\frac{\partial^2 u}{\partial t^2}=a^2\frac{\partial^2 u}{\partial x^2}\\
+u|_{t=0}=\varphi(x) \\
+\frac{\partial u}{\partial t} |_{t=0}=\psi(x)
+\end{array}
+\right.
+\]</div>
+<div class="arithmatex">\[
+\left\{
+\begin{array}{rcl}
+\frac{\partial^2 u}{\partial t^2}=a^2\frac{\partial^2 u}{\partial x^2}+f(x,t) \\
+u|_{t=0}=0 \\
+\frac{\partial u}{\partial t} |_{t=0}=0
+\end{array}
+\right.
+\]</div>
+<p>对于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_1\)</span><span class="heti-spacing"> </span></span>我们可以直接利用<span class="heti-skip"><span class="heti-spacing"> </span>D'Alembert<span class="heti-spacing"> </span></span>公式求解，因此，我们只需讨论<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_2\)</span><span class="heti-spacing"> </span></span>的求解问题</p>
+</details>
+<details class="proof">
+<summary>推导过程<span><span class="heti-spacing"> </span>1</span>：引理</summary>
+<p>如果函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x,u)\)</span><span class="heti-spacing"> </span></span>及偏导数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f_u(x,u)\)</span><span class="heti-spacing"> </span></span>在矩形域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((a\le x\le b,\alpha \le u \le \beta)\)</span><span class="heti-spacing"> </span></span>上连续，则</p>
+<div class="arithmatex">\[\varphi(u)=\int_a^u f(x,u)\mathrm{d}x\]</div>
+<p>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([\alpha,\beta]\)</span><span class="heti-spacing"> </span></span>上可微，并且对于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\in [\alpha,\beta]\)</span><span class="heti-spacing"> </span></span>都有</p>
+<div class="arithmatex">\[\frac{\mathrm{d}\varphi}{\mathrm{d}u}=\int_\alpha^u \frac{\partial f}{\partial u}(x,u)\mathrm{d}x+f(x,u)\]</div>
+</details>
+<details class="proof">
+<summary>推导过程<span><span class="heti-spacing"> </span>2</span>：<span>Duhamel<span class="heti-spacing"> </span></span>原理</summary>
+<p><span>Duhamel<span class="heti-spacing"> </span></span>原理又称齐次化原理</p>
 <p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\omega=\omega(x,t,\tau)\)</span><span class="heti-spacing"> </span></span>是初值问题</p>
 <div class="arithmatex">\[
 \left\{
@@ -2423,7 +2525,27 @@ u|_{t=0}=0 \quad (-\infty&lt;x&lt;+\infty) \\
 \right.
 \]</div>
 <p>的解</p>
-<p><strong>一维非齐次波动方程解的<span class="heti-skip"><span class="heti-spacing"> </span>Kirchhoff<span class="heti-spacing"> </span></span>公式</strong></p>
+</details>
+<details class="proof">
+<summary>推导过程<span><span class="heti-spacing"> </span>3</span></summary>
+<p>由<span class="heti-skip"><span class="heti-spacing"> </span>Duhaml<span class="heti-spacing"> </span></span>原理，知</p>
+<div class="arithmatex">\[u_2(x,t)=\int_0^t \omega(x,t,\tau)\mathrm{d}\tau\]</div>
+<p>令<span><span class="heti-spacing"> </span><span class="arithmatex">\(t'=t-\tau\)</span></span>，则前式可化为</p>
+<div class="arithmatex">\[
+\left\{
+\begin{aligned}
+\frac{\partial^2 \omega}{\partial t^{'2}}=a^2 \frac{\partial \omega}{\partial x^2} \quad (-\infty&lt;x&lt;+\infty,t'&gt;0) \\
+\omega|_{t'=0}=0 \quad(-\infty&lt;x&lt;+\infty) \\
+\frac{\partial \omega}{\partial t'}|_{t'=0} =f(x,\tau) (-\infty&lt;x&lt;+\infty)
+\end{aligned}
+\right.
+\]</div>
+<p>利用<span class="heti-skip"><span class="heti-spacing"> </span>D'Alembert<span class="heti-spacing"> </span></span>公式，即可得</p>
+<div class="arithmatex">\[\omega(x,t,\tau)=\frac{1}{2a}\int_{x-a(t-\tau)}^{x+a(t-\tau)}f(\xi,\tau)\mathrm{d}\tau\]</div>
+<div class="arithmatex">\[u_2(x,t)=\frac{1}{2a}\int_0^t \int_{x-a(t-\tau)}^{x+a(t-\tau)}f(\xi,\tau)\mathrm{d}\tau=\frac{1}{2a}\iint_G f(\xi,\tau)\mathrm{d}\xi\mathrm{d}\tau\]</div>
+<p>其中区域<span class="heti-skip"><span class="heti-spacing"> </span>G<span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((\xi,\tau)\)</span><span class="heti-spacing"> </span></span>平面上过点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((x,t)\)</span><span class="heti-spacing"> </span></span>的两条特征线与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\xi\)</span><span class="heti-spacing"> </span></span>轴所围成的三角形区域</p>
+</details>
+<p>下式为上述定解问题的解，称为<b>一维非齐次波动方程解的<span class="heti-skip"><span class="heti-spacing"> </span>Kirchhoff<span class="heti-spacing"> </span></span>公式</b></p>
 <div class="arithmatex">\[
 u(x,t)=\frac{1}{2}[\varphi(x+at) +\varphi(x-at)] +\frac{1}{2a}\int_{x-at}^{x+at}\varphi(\xi)d \xi + \frac{1}{2a}\iint_G f(\xi,\tau)d\xi d\tau
 \]</div>
@@ -2434,7 +2556,14 @@ u(x,t)=\frac{1}{2}[\varphi(x+at) +\varphi(x-at)] +\frac{1}{2a}\int_{x-at}^{x+at}
 <h3 id="_8">降维法及二维波动方程<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h2 id="_9">解的物理意义<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="dalembert"><span>D'Alembert<span class="heti-spacing"> </span></span>公式的物理意义<a class="headerlink" href="#dalembert" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>考察一维波动方程的通解表达式</p>
+<div class="arithmatex">\[u(x,t)=F(x-at)+G(x-at)\]</div>
+<p>此式表明，波动方程的解由两个波组成</p>
+<p><span><span class="arithmatex">\(F(x-at)\)</span><span class="heti-spacing"> </span></span>代表沿<span class="heti-skip"><span class="heti-spacing"> </span>x<span class="heti-spacing"> </span></span>轴向右传播的波，当<span class="heti-skip"><span class="heti-spacing"> </span>t=0<span class="heti-spacing"> </span></span>时，波形为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>而后以恒定速率<span class="heti-skip"><span class="heti-spacing"> </span>a<span class="heti-spacing"> </span></span>向右传播，保持波形不变</p>
+<p><span><span class="arithmatex">\(G(x+at)\)</span><span class="heti-spacing"> </span></span>代表沿<span class="heti-skip"><span class="heti-spacing"> </span>x<span class="heti-spacing"> </span></span>轴向左传播的波，当<span class="heti-skip"><span class="heti-spacing"> </span>t=0<span class="heti-spacing"> </span></span>时，波形为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(g(x)\)</span><span class="heti-spacing"> </span></span>而后以恒定速率<span class="heti-skip"><span class="heti-spacing"> </span>a<span class="heti-spacing"> </span></span>想做传播，保持波形不变</p>
+<p>我们称<span class="heti-skip"><span class="heti-spacing"> </span>D'Alembert<span class="heti-spacing"> </span></span>公式给出的解为行波解，在求解过程中所用的方法为<b>行波法</b></p>
 <h3 id="_10">依赖区域、决定区域和影响区域<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>在物理上，波的传播过程由清晰的前阵面和波后阵面的现象，称为<b>惠更斯原理</b>或<b>无后效现象</b></p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
