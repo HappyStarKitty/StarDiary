@@ -847,20 +847,56 @@
       温度应力和装配应力
     </span>
 </a>
-</li>
+<nav aria-label="温度应力和装配应力" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_15">
 <span class="md-ellipsis">
-      应力集中的概念
+      温度应力
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_16">
 <span class="md-ellipsis">
+      装配压力
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+<span class="md-ellipsis">
+      应力集中的概念
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+<span class="md-ellipsis">
       剪切和挤压的实用计算
     </span>
 </a>
+<nav aria-label="剪切和挤压的实用计算" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+<span class="md-ellipsis">
+      剪切的使用计算
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_20">
+<span class="md-ellipsis">
+      挤压的实用计算
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -2409,20 +2445,56 @@
       温度应力和装配应力
     </span>
 </a>
-</li>
+<nav aria-label="温度应力和装配应力" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_15">
 <span class="md-ellipsis">
-      应力集中的概念
+      温度应力
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_16">
 <span class="md-ellipsis">
+      装配压力
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+<span class="md-ellipsis">
+      应力集中的概念
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+<span class="md-ellipsis">
       剪切和挤压的实用计算
     </span>
 </a>
+<nav aria-label="剪切和挤压的实用计算" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+<span class="md-ellipsis">
+      剪切的使用计算
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_20">
+<span class="md-ellipsis">
+      挤压的实用计算
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -2434,9 +2506,14 @@
 <h1 id="chap2"><span>Chap2<span class="heti-spacing"> </span></span>拉伸、压缩与剪切<a class="headerlink" href="#chap2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <div class="admonition summary">
 <p class="admonition-title">小结</p>
+<p>正应力公式与伸长量公式</p>
 <div class="arithmatex">\[\sigma=\frac{F_N}{A},\Delta l=\frac{F_N l}{EA}\]</div>
 <p>其中，只有杆件横截面上正应力均匀分布时，正应力公式才成立；只有轴向方向均匀变形时，伸长量公式才成立</p>
 <p>对于不均匀问题，应当化为一系列均匀问题的叠加</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">注意</p>
+<p>我们对截面上的微元进行考察时，由于微元取得很小，实际上就是过一点处不同方向面的应力。因此，当论及应力时，必须指明是哪一点处、哪一个方向面上的应力</p>
 </div>
 <h2 id="_1">轴向拉伸或压缩时横截面上的内力和应力<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p>当所有外力均沿杆的轴线方向作用时，杆的横截面上只有沿轴线方向的一个内力分量，这个内力分量称为轴力（normal force<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，用<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F_N\)</span><span class="heti-spacing"> </span></span>表示。表示轴力沿杆轴线方向变化的图形，称为轴力图（diagram of normal forces）</p>
@@ -2475,7 +2552,11 @@
 <p>可见，轴向拉伸（压缩）时，在杆件的横截面上，正应力为最大值；在与杆件轴线成<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(45^\circ\)</span><span class="heti-spacing"> </span></span>的斜截面上，切应力为最大值。最大切应力在数值上等于最大正应力的二分之一</p>
 <h2 id="_3">材料拉伸时的力学性能<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p>材料的力学性能也称为机械性质，是指材料在外力作用下表现出的变形、破坏等方面的特性</p>
+<p>低碳钢的屈服与最大切应力有关，铸铁的拉断与最大正应力有关</p>
+<p>进行拉伸实验，首先根据国家标准将被试验材料制成标准试样（standard specimen<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；然后将试样安装在试验机上，使试样承受轴向拉伸载荷，进行拉伸实验（tensile test<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。通过缓慢的加载过程，得到应力与应变的关系曲线，称为应力<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>应变曲线（stress-strain curve）</p>
+<p><img alt="wfxs" src="../figures/chap2/sy.png"/></p>
 <h3 id="_4">低碳钢拉伸时的力学性能<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>低碳钢是指含碳量在<span class="heti-skip"><span class="heti-spacing"> </span>0.3%<span class="heti-spacing"> </span></span>以下的碳素钢</p>
 <div class="admonition note">
 <p class="admonition-title">低碳钢拉伸时的力学性能</p>
 <p><img alt="无法显示" src="../figures/stress_strain.png"/></p>
@@ -2483,9 +2564,9 @@
 <li>
 <p>弹性阶段（弹性变形）</p>
 <ul>
-<li>满足胡克定律<span><span class="heti-spacing"> </span><span class="arithmatex">\(\sigma = E \varepsilon\)</span></span></li>
-<li>比例极限：<span class="arithmatex">\(\sigma_P\)</span> </li>
-<li>弹性极限：<span class="arithmatex">\(\sigma_e\)</span></li>
+<li>比例极限：<span class="arithmatex">\(\sigma_p\)</span> ，只有应力低于比例极限，应力才与应变成正比，材料才满足胡克定律<span><span class="heti-spacing"> </span><span class="arithmatex">\(\sigma = E \varepsilon\)</span></span>，这时称材料是<b>线弹性</b>的</li>
+<li>弹性极限：<span class="arithmatex">\(\sigma_e\)</span>，出现弹性变形的极限值</li>
+<li>应力超过弹性极限后，如再解除拉力，则变形的一部分随之消失，称为弹性变形，遗留下的不能消失的变形称为塑性变形或残余变形</li>
 </ul>
 </li>
 <li>
@@ -2493,25 +2574,40 @@
 <ul>
 <li>屈服<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>流动：应力基本保持不变，应变显著增加</li>
 <li>下屈服极限<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>屈服极限<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>屈服强度：<span class="arithmatex">\(\sigma_s\)</span></li>
+<li>滑移线：表面与轴线出现大致成<span class="heti-skip"><span class="heti-spacing"> </span>45°<span class="heti-spacing"> </span></span>倾角的条纹，是材料内部相对滑移形成</li>
+<li>可见屈服现象的出现与最大切应力有关</li>
 </ul>
 </li>
 <li>强化阶段（弹性变形<span class="heti-skip"><span class="heti-spacing"> </span>+<span class="heti-spacing"> </span></span>塑性变形）<ul>
+<li>强化：过屈服阶段后，材料又恢复抵抗变形的能力</li>
 <li>强度极限<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>抗拉强度：<span class="arithmatex">\(\sigma_b\)</span></li>
 </ul>
 </li>
 <li>局部变形阶段<ul>
-<li>缩颈现象：在某局部范围内，横向尺寸急剧缩小</li>
+<li>缩颈：在某局部范围内，横向尺寸急剧缩小</li>
 </ul>
 </li>
-<li>卸载定律及冷作硬化</li>
 </ul>
 </div>
-<p>伸长率：<span class="arithmatex">\(\delta=\frac{l_1-l}{l}\times 100\%\)</span></p>
-<p>断面收缩率：<span class="arithmatex">\(\psi=\frac{A-A_1}{A} \times 100\%\)</span></p>
-<p>塑性材料：<span class="arithmatex">\(\delta &gt; 5\%\)</span>，如低碳钢</p>
-<p>脆性材料：<span class="arithmatex">\(\delta &lt; 5\%\)</span>，如铸铁</p>
+<p>试样拉断后，由于保留塑性变形，试样标距由原来的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(l\)</span><span class="heti-spacing"> </span></span>变为<span><span class="heti-spacing"> </span><span class="arithmatex">\(l_1\)</span></span>，有伸长率</p>
+<div class="arithmatex">\[\delta=\frac{l_1-l}{l}\times 100\%\]</div>
+<p>根据伸长率，材料可分为：<span><span class="arithmatex">\(\delta &gt; 5\%\)</span><span class="heti-spacing"> </span></span>的塑性材料，如低碳钢；<span><span class="arithmatex">\(\delta &lt; 5\%\)</span><span class="heti-spacing"> </span></span>的脆性材料，如铸铁</p>
+<p>原始横截面面积为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>的试样，拉断后缩颈处的最小截面面积变为<span><span class="heti-spacing"> </span><span class="arithmatex">\(A_1\)</span></span>，有断面收缩率</p>
+<div class="arithmatex">\[\psi=\frac{A-A_1}{A} \times 100\%\]</div>
+<p><b>伸长率和断面收缩率都是衡量材料塑性的指标</b></p>
+<details class="theorem">
+<summary>卸载定律</summary>
+<p>如将试样拉到超过屈服极限的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(d\)</span><span class="heti-spacing"> </span></span>点，然后逐渐卸载拉力，应力和应变关系将沿着斜直线<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(dd'\)</span><span class="heti-spacing"> </span></span>回到<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(d'\)</span><span class="heti-spacing"> </span></span>点。斜直线近似地平行于<span><span class="heti-spacing"> </span><span class="arithmatex">\(Oa\)</span></span>。这说明：在卸载过程中，应力和应变按直线规律变化，即卸载定律</p>
+<p>拉力完全卸除后，应力<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>应变图中，<span><span class="arithmatex">\(d'g\)</span><span class="heti-spacing"> </span></span>表示消失了的弹性变形，而<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Od'\)</span><span class="heti-spacing"> </span></span>表示不再消失的塑性变形</p>
+</details>
+<details class="note">
+<summary>冷作硬化</summary>
+<p>第二次加载时，其比例极限（亦即弹性阶段）得到提高，但塑性变形和伸长率却有所降低，这种现象称为冷作硬化。冷作硬化现象经退火后又可消除</p>
+<p>工程上常利用冷作硬化提高材料的弹性阶段</p>
+</details>
 <h3 id="_5">其他塑性材料拉伸时的力学性能<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>对没有明显屈服极限的塑性材料，可以将产生<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(0.2\%\)</span><span class="heti-spacing"> </span></span>塑性应变时的应力作为屈服指标，称为规定塑性延伸强度，并用<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sigma_{p,0.2}\)</span><span class="heti-spacing"> </span></span>来表示</p>
+<p>对没有明显屈服极限的塑性材料如铝合金，可以将产生<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(0.2\%\)</span><span class="heti-spacing"> </span></span>塑性应变时的应力作为屈服指标，称为规定塑性延伸强度或条件屈服应力（offset yield stress<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，并用<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sigma_{p,0.2}\)</span><span class="heti-spacing"> </span></span>来表示</p>
+<p><img alt="wfxs" src="../figures/chap2/tjqfyl.png"/></p>
 <p>各类碳素钢中，随含碳量的增加，屈服极限和强度极限相应提高，但伸长率降低</p>
 <h3 id="_6">铸铁拉伸时的力学性能<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>灰口铸铁拉伸时的应力<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>应变关系是一段微弯曲线，是典型的脆性材料</p>
@@ -2587,24 +2683,59 @@
 <div class="arithmatex">\[-1\le \mu \le\frac{1}{2}\]</div>
 <p>对于常规、传统的材料，有<span><span class="heti-spacing"> </span><span class="arithmatex">\(0&lt;\mu&lt;1/2\)</span></span>；当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mu=1/2\)</span><span class="heti-spacing"> </span></span>时，材料在变形过程中体积将保持不变，称为不可压缩材料；当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mu=0\)</span><span class="heti-spacing"> </span></span>时，材料在变形过程中横向尺寸将保持不变；当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(-1&lt;\mu&lt;0\)</span><span class="heti-spacing"> </span></span>时，出现杆件伸长时横向增大的现象，这种材料称为负泊松比材料或拉胀材料</p>
 <h2 id="_12">轴向拉伸或压缩的应变能<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<div class="arithmatex">\[V_{\epsilon}=W=\frac{1}{2}F\Delta l=\frac{F^2l}{2EA}\]</div>
+<p>固体在外力作用下，因变形而储存的能量称为<b>应变能</b></p>
+<p>现在讨论轴向拉伸或压缩时的应变能。作用于杆件上的力<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F\)</span><span class="heti-spacing"> </span></span>因位移<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}(\Delta l)\)</span><span class="heti-spacing"> </span></span>而作功，且所作的功为</p>
+<div class="arithmatex">\[\mathrm{d}W=F\mathrm{d}(\Delta l)\]</div>
+<p><img alt="wfxs" src="../figures/chap2/ybn.png"/></p>
+<div class="arithmatex">\[W=\int_0^{\Delta l_1}F\mathrm{d}(\Delta l)\]</div>
+<p>在应力小于比例极限的范围内，<span><span class="arithmatex">\(F\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\Delta l\)</span><span class="heti-spacing"> </span></span>的关系是一斜直线，故有</p>
+<div class="arithmatex">\[W=\frac{1}{2}F\Delta l\]</div>
+<p>根据功能原理，拉力所完成的功应等于杆件获得的能量。忽略动能、热能等能量的变化，即有在线弹性范围内</p>
+<div class="arithmatex">\[V_{\varepsilon}=W=\frac{1}{2}F\Delta l=\frac{F^2l}{2EA}\]</div>
+<p>为了求出单位体积内的应变能，设想从构件中取出边长为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}x,\mathrm{d}y,\mathrm{d}z\)</span><span class="heti-spacing"> </span></span>的单元体</p>
+<p><img alt="wfxs" src="../figures/chap2/ybn2.png"/></p>
+<div class="arithmatex">\[\mathrm{d}V_{\varepsilon}=\int_0^{\varepsilon_1}\sigma \mathrm{d}y\mathrm{d}z\mathrm{d}x\mathrm{d}\varepsilon=(\int_0^{\varepsilon_1} \sigma \mathrm{d}\varepsilon)\mathrm{d}V\]</div>
+<p><b>应变能密度</b>即单位体积内的应变能为</p>
+<div class="arithmatex">\[\upsilon_{\varepsilon}=\frac{\mathrm{d}V_{\varepsilon}}{\mathrm{d}V}=\int_0^{\varepsilon_1}\sigma \mathrm{d}\varepsilon\]</div>
+<p>在应力小于比例极限的情况下，<span><span class="arithmatex">\(\sigma\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\varepsilon\)</span><span class="heti-spacing"> </span></span>的关系为斜直线，有</p>
+<div class="arithmatex">\[\upsilon_{\varepsilon}=\frac{1}{2}\sigma \varepsilon=\frac{E\varepsilon^2}{2}=\frac{\sigma^2}{2E}\]</div>
+<p>杆件的应变能为</p>
+<div class="arithmatex">\[V_{\varepsilon}=\int_V \upsilon_{\varepsilon}\mathrm{d}V\]</div>
 <h2 id="_13">拉伸、压缩超静定问题<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>综合静力方程、变形协调方程（几何方程<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、物理方程</p>
+<p>杆件的轴力可由静力平衡方程求出，称为<b>静定问题</b>；若不能全由静力平衡方程求出，称为<b>超静定问题</b>或<b>静不定问题</b></p>
+<p>未知力的个数减去静力平衡方程的个数就是超静定的次数</p>
+<p>一方面，多余约束使结构由静定变为静不定，问题由静力平衡可解变为静力平衡不可解；另一方面，多余约束对结构或构件的变形起一定限制作用，而结构或构件的变形又与受力密切相关，这就为求解静不定问题提供补充条件</p>
+<p>各构件变形之间的关系，或者构件各部分变形之间的关系，称为<b>变形协调关系</b>或<b>变形协调条件</b>（compatibility relations of deformation<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；进而根据弹性范围内的力和变形之间的关系（胡克定律<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，即<b>物理条件</b>，建立补充方程</p>
+<p>超静定问题综合<b>静力方程</b>、<b>变形协调方程</b>（几何方程<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>、<b>物理方程</b>求解</p>
 <h2 id="_14">温度应力和装配应力<a class="headerlink" href="#_14" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>静定结构由于可以自由变形，当温度均匀变化时，不会引起构件的内力；但在超静定结构中，因变形受到部分或全部约束，温度变化时，往往会引起内力</p>
-<h2 id="_15">应力集中的概念<a class="headerlink" href="#_15" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_15">温度应力<a class="headerlink" href="#_15" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>静定结构由于可以自由变形，当温度均匀变化时，不会引起构件的内力；但在超静定结构中，因变形受到部分或全部约束，温度变化时，往往会引起内力，称为热应力或<b>温度应力</b></p>
+<h3 id="_16">装配压力<a class="headerlink" href="#_16" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>对静定结构，加工误差仅造成结构几何形状的轻微变化，不会引起内力；但对超静定结构，加工误差往往会引起内力，称为<b>装配应力</b></p>
+<h2 id="_17">应力集中的概念<a class="headerlink" href="#_17" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p>在零件尺寸突然改变处的横截面上，应力并不是均匀分布的。这种因杆件外形突然变化，而引起局部应力急剧增大的现象，称为应力集中（stress concentration）</p>
 <div class="admonition theorem">
 <p class="admonition-title">圣维南原理</p>
 <p>如果杆端两种外加力静力学等效，则距离加力点稍远处，静力学等效对应力分布的影响很小，可以忽略不计</p>
 </div>
+<p>设发生应力集中的截面上的最大应力为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\sigma_{\max}\)</span></span>，同一截面上的平均应力为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\sigma\)</span></span>，则称其比值</p>
 <div class="arithmatex">\[K=\frac{\sigma_{\max}}{\sigma}\]</div>
-<p>K：理论应力集中系数</p>
-<h2 id="_16">剪切和挤压的实用计算<a class="headerlink" href="#_16" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>剪切：<span class="arithmatex">\(\tau=\frac{F_s}{A}\le [\tau]\)</span></p>
-<p>挤压：<span class="arithmatex">\(\sigma_{bs}=\frac{F}{A_{bs}}\le [\sigma_{bs}]\)</span></p>
-<p>剪切面平行于剪力</p>
-<p>挤压面垂直于剪力</p>
+<p>为理论应力集中系数（factor of stress concentration<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，是反映应力集中的程度的因数</p>
+<p>实验结果表明：截面尺寸变化越急剧、角越尖、孔越小，应力集中的程度就越严重</p>
+<h2 id="_18">剪切和挤压的实用计算<a class="headerlink" href="#_18" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>剪切面平行于剪力，而挤压面垂直于剪力</p>
+<h3 id="_19">剪切的使用计算<a class="headerlink" href="#_19" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>剪切的特点是：作用于构件某一截面两侧的力，大小相等，方向相反，且相互平行，使构件的两部分沿这一截面（剪切面）发生相对错动的变形</p>
+<p>工程中的连接件，如螺栓、铆钉、销钉、键等都是承受剪切的构件</p>
+<p><img alt="wfxs" src="../figures/chap2/jq.png"/></p>
+<p>切应力及相应强度条件为</p>
+<div class="arithmatex">\[\tau=\frac{F_s}{A}\le [\tau]\]</div>
+<h3 id="_20">挤压的实用计算<a class="headerlink" href="#_20" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>在外力作用下，连接件和被连接的构件之间，必将在接触面上相互压紧，这种现象称为<b>挤压</b></p>
+<p><img alt="wfxs" src="../figures/chap2/jy.png"/></p>
+<p>挤压应力及相应强度条件为</p>
+<div class="arithmatex">\[\sigma_{bs}=\frac{F}{A_{bs}}\le [\sigma_{bs}]\]</div>
+<p>实用计算中，<b>以圆孔或圆钉的直径平面面积</b><span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\delta d\)</span><span class="heti-spacing"> </span></span><b>除挤压应力</b><span><span class="heti-spacing"> </span><span class="arithmatex">\(F\)</span></span><b>，则所得应力大致与实际最大应力接近</b></p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
