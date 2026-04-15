@@ -268,6 +268,27 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/chap3/">
+<span class="md-ellipsis">
+    Chap3 微分中值定理及导数的应用
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/chap4/">
+<span class="md-ellipsis">
+    Chap4 定积分
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/chap5/">
+<span class="md-ellipsis">
+    Chap5 定积分及其应用
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -365,12 +386,57 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Math/Differential_Equation/Note/">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
 <span class="md-ellipsis">
     常微分方程
   </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_5">
+<span class="md-nav__icon md-icon"></span>
+            常微分方程
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Differential_Equation/chap1/">
+<span class="md-ellipsis">
+    Chap1 初等积分法
+  </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Differential_Equation/chap2/">
+<span class="md-ellipsis">
+    Chap2 线性微分方程
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Differential_Equation/chap3/">
+<span class="md-ellipsis">
+    Chap3 线性微分方程组
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Differential_Equation/chap4/">
+<span class="md-ellipsis">
+    Chap4 稳定性与稳定性理论初步
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Differential_Equation/chap5/">
+<span class="md-ellipsis">
+    Chap5 差分与差分方程
+  </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_6" type="checkbox"/>
@@ -1820,6 +1886,13 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Aircraft_Structural_Dynamics/chap4/">
+<span class="md-ellipsis">
+    Chap4 连续弹性体系统的振动
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1893,6 +1966,13 @@
 <a class="md-nav__link" href="../../Finite_Element_Method/chap3/">
 <span class="md-ellipsis">
     Chap3 Stiffness method
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Finite_Element_Method/chap4/">
+<span class="md-ellipsis">
+    Chap4 Truss element
   </span>
 </a>
 </li>
@@ -2679,7 +2759,7 @@
 <p>热膨胀性：流体的体积或密度随温度改变的性质</p>
 <p>在一般的有状态方程</p>
 <div class="arithmatex">\[\rho=f(p,T)\]</div>
-<div class="arithmatex"><span>\[\mathrm{d}\rho=\frac{\partial \rho}{\partial p}\mathrm{d}p+\frac{\partial \rho}{\partial T}\mathrm{d}T=\underbrace{\frac{\rho}{E}\mathrm{d} p}_{\text{<span class="heti-spacing"> </span></span>可压缩性<span class="heti-skip"><span class="heti-spacing"> </span>}}- \underbrace{\rho \beta \mathrm{d}T}_{\text{<span class="heti-spacing"> </span></span>热膨胀性<span><span class="heti-spacing"> </span>}}\]</span></div>
+<div class="arithmatex"><span>\[\mathrm{d}\rho=\frac{\partial\rho}{\partial p}\mathrm{d}p+\frac{\partial \rho}{\partial T}\mathrm{d}T=\underbrace{\frac{\rho}{E}\mathrm{d}p}_{\text{<span class="heti-spacing"> </span></span>可压缩性<span class="heti-skip"><span class="heti-spacing"> </span>}}-\underbrace{\rho\beta\mathrm{d}T}_{\text{<span class="heti-spacing"> </span></span>热膨胀性<span><span class="heti-spacing"> </span>}}\]</span></div>
 <p>热膨胀系数：</p>
 <div class="arithmatex">\[\beta=-\frac{1}{\rho}\frac{\partial \rho}{\partial T}=\frac{1}{v}\frac{\partial v}{\partial T}\]</div>
 </div>
@@ -2698,17 +2778,11 @@
 <p class="admonition-title">牛顿切应力定律推导</p>
 <p><img alt="无法显示" src="../figures/chap1/yingli.png"/></p>
 <p>考虑两块平行放置的平板，平板间充满均匀粘性流体，下板固定，上板以恒速<span class="heti-skip"><span class="heti-spacing"> </span>U<span class="heti-spacing"> </span></span>平行运动</p>
-<ol>
-<li>两板之间的流体流动速度呈线性分布</li>
-</ol>
+<p><span>1.<span class="heti-spacing"> </span></span>两板之间的流体流动速度呈线性分布</p>
 <div class="arithmatex">\[u(y)=\frac{y}{h}U\]</div>
-<ol>
-<li>切应力与速度呈正比，与两板间距离呈反比</li>
-</ol>
+<p><span>2.<span class="heti-spacing"> </span></span>切应力与速度呈正比，与两板间距离呈反比</p>
 <div class="arithmatex">\[\tau=\mu\frac{U}{h}\]</div>
-<ol>
-<li>推广到任意层流直线运动，取<span class="heti-skip"><span class="heti-spacing"> </span>dy<span class="heti-spacing"> </span></span>薄层</li>
-</ol>
+<p><span>3.<span class="heti-spacing"> </span></span>推广到任意层流直线运动，取<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}y\)</span><span class="heti-spacing"> </span></span>薄层</p>
 <div class="arithmatex">\[\tau=\mu\frac{u+du-u}{dy}=\mu\frac{du}{dy}\]</div>
 <p>其中，<span><span class="arithmatex">\(\tau\)</span><span class="heti-spacing"> </span></span>为单位面积上的粘性摩擦力，称为粘性切应力；<span><span class="arithmatex">\(\mu\)</span><span class="heti-spacing"> </span></span>为（动力）粘度，或称为（动力）粘性系数</p>
 </div>
@@ -2742,8 +2816,8 @@
 <p>热流密度：</p>
 <div class="arithmatex">\[q=-k\nabla T\]</div>
 <p>温度梯度：</p>
-<div class="arithmatex">\[\nabla T=\frac{\partial T}{\partial x}\bm{i}+\frac{\partial T}{\partial y}\bm{j}+\frac{\partial T}{\partial z}\bm{k}\]</div>
-<p>其中，<span>k<span class="heti-spacing"> </span></span>为热传导系数；气体热传导系数随温度升高而增大</p>
+<div class="arithmatex">\[\nabla T=\frac{\partial T}{\partial x}\mathbf{i}+\frac{\partial T}{\partial y}\mathbf{j}+\frac{\partial T}{\partial z}\mathbf{k}\]</div>
+<p>其中，<span><span class="arithmatex">\(k\)</span><span class="heti-spacing"> </span></span>为热传导系数；气体热传导系数随温度升高而增大</p>
 </div>
 <h3 id="_11">扩散性<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition definition">
