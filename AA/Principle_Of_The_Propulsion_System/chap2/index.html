@@ -1828,6 +1828,34 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../4.md">
+<span class="md-ellipsis">
+    Chap4 喷管中的基本流动现象
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap5/">
+<span class="md-ellipsis">
+    Chap5 化学热力学基础 火箭推进技术基础
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap6/">
+<span class="md-ellipsis">
+    Chap6 火箭方程及其应用
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap7/">
+<span class="md-ellipsis">
+    Chap7 火箭发动机的基本性能参数计算
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -2410,6 +2438,20 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Other/Test/tuijin/">
+<span class="md-ellipsis">
+    推进系统原理
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Other/Test/jiegou/">
+<span class="md-ellipsis">
+    飞行器结构动力学
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -2432,18 +2474,45 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="chap2"><span>Chap2<span class="heti-spacing"> </span></span>可压缩流体力学基础<a class="headerlink" href="#chap2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<p>一维情况</p>
+<div class="arithmatex">\[p=\rho RT\]</div>
+<div class="arithmatex">\[\dot{m}=\rho uA\]</div>
+<p>其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u\)</span><span class="heti-spacing"> </span></span>为速度，<span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>为内流道面积</p>
+<p>能量守恒方程</p>
+<div class="arithmatex">\[q-w=(h+\frac{u^2}{2})_o-(h+\frac{u^2}{2})_i\]</div>
+<p>量热完全气体</p>
+<div class="arithmatex">\[\mathrm{d}h=c_p\mathrm{d}T\]</div>
+<div class="arithmatex">\[h_2-h_1=c_p(T_2-T_1)\]</div>
+<p>给定气体常数，有</p>
+<div class="arithmatex">\[h=c_pT+(h_{\text{ref}}-c_pT_{ref})\]</div>
+<p>当考虑能量变化时</p>
+<p>滞止温度（总温）</p>
+<div class="arithmatex">\[T_t=T+\frac{u^2}{2c_p}\]</div>
+<p>定义滞止焓（总焓）</p>
+<div class="arithmatex">\[h_t=h+\frac{u^2}{2}\]</div>
+<div class="arithmatex">\[h_t=c_pT_t\]</div>
+<p>滞止压力（总压<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：绝热、不作功、可逆（等熵）过程中，流速减小到零时的压力</p>
+<p>定义质量流动参数<span><span class="heti-spacing"> </span><span class="arithmatex">\(MFP\)</span></span>（<span class="arithmatex">\(\frac{kg/s}{m^2}\frac{\sqrt{K}}{Pa}\)</span>）</p>
+<div class="arithmatex">\[MFP=\frac{\dot{m}}{A}\frac{\sqrt{R_t}}{p_t}=f(Ma)\]</div>
+<div class="arithmatex">\[\frac{A}{A^*}=\frac{\rho^*/RT^*u^*}{\rho/RTu}\]</div>
+<p>定义冲量函数</p>
+<div class="arithmatex">\[I=\rho A+\dot{m}u\]</div>
+<p>稳态动量方程</p>
+<div class="arithmatex">\[\boxed{\sum F=\dot{m}u_2-\dot{m}u_1}\]</div>
+<div class="arithmatex">\[p_1A_1-p_2A_2+F^\prime=\dot{m}u_2-\dot{m}u_1\]</div>
+<p><span><span class="arithmatex">\(F^\prime\)</span><span class="heti-spacing"> </span></span>管道对流体的作用力</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年4月16日 17:41:24</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年7月8日 10:39:24</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年4月16日 17:41:24</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年7月8日 10:39:24</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>

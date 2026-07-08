@@ -6,7 +6,7 @@
 <meta content="HappyStarKitty" name="author"/>
 <link href="https://happystarkitty.github.io/StarDiary/AA/Principle_Of_The_Propulsion_System/chap3/" rel="canonical"/>
 <link href="../chap2/" rel="prev"/>
-<link href="../../Finite_Element_Method/chap1/" rel="next"/>
+<link href="../chap5/" rel="next"/>
 <link href="https://happystarkitty.github.io/avatar/avatar.jpg" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.14" name="generator"/>
 <title>Chap3 内流可压缩流动现象 - StarDiary</title>
@@ -1822,9 +1822,72 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Chap3 内流可压缩流动现象
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Chap3 内流可压缩流动现象
+  </span>
+</a>
+<nav aria-label="toc.title" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      toc.title
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      等能量流动
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#raileigh">
+<span class="md-ellipsis">
+      加热的等面积无摩擦流动（Raileigh流动）
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fanno">
+<span class="md-ellipsis">
+      等面积有摩擦无加热的流动（Fanno流动）
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../4.md">
+<span class="md-ellipsis">
+    Chap4 喷管中的基本流动现象
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap5/">
+<span class="md-ellipsis">
+    Chap5 化学热力学基础 火箭推进技术基础
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap6/">
+<span class="md-ellipsis">
+    Chap6 火箭方程及其应用
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap7/">
+<span class="md-ellipsis">
+    Chap7 火箭发动机的基本性能参数计算
   </span>
 </a>
 </li>
@@ -2410,6 +2473,20 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Other/Test/tuijin/">
+<span class="md-ellipsis">
+    推进系统原理
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Other/Test/jiegou/">
+<span class="md-ellipsis">
+    飞行器结构动力学
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -2425,6 +2502,33 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="toc.title" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      toc.title
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      等能量流动
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#raileigh">
+<span class="md-ellipsis">
+      加热的等面积无摩擦流动（Raileigh流动）
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fanno">
+<span class="md-ellipsis">
+      等面积有摩擦无加热的流动（Fanno流动）
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -2432,18 +2536,42 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="chap3"><span>Chap3<span class="heti-spacing"> </span></span>内流可压缩流动现象<a class="headerlink" href="#chap3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<p>直观、物理现象的了解</p>
+<p><img alt="wfxs" src="../figures/chap3/hk.png"/></p>
+<h2 id="_1">等能量流动<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition definition">
+<p class="admonition-title">流推力函数</p>
+<p>流推力函数：单位质量流率的冲量函数</p>
+<div class="arithmatex">\[Sa=\frac{I}{\dot{m}}=u(1+\frac{RT}{u^2})\]</div>
+</div>
+<p>定义</p>
+<div class="arithmatex">\[H=\frac{C_p T}{C_p T_{ti}}\]</div>
+<p>为无量纲的焓</p>
+<div class="arithmatex">\[K=\frac{u^2}{2C_pT_{ti}}\]</div>
+<p>为无量纲的动能</p>
+<p>等能量流动满足</p>
+<div class="arithmatex">\[H+K=1\]</div>
+<h2 id="raileigh">加热的等面积无摩擦流动（<span>Raileigh<span class="heti-spacing"> </span></span>流动）<a class="headerlink" href="#raileigh" title="Permanent link">¶</a></h2>
+<p>热壅塞现象（超声速燃烧室）</p>
+<p>初始状态</p>
+<div class="arithmatex">\[H_i+K_i=1\]</div>
+<p>出口</p>
+<div class="arithmatex">\[H_e+K_e=\tau_e\ge 1\]</div>
+<h2 id="fanno">等面积有摩擦无加热的流动（<span>Fanno<span class="heti-spacing"> </span></span>流动）<a class="headerlink" href="#fanno" title="Permanent link">¶</a></h2>
+<p>摩擦壅塞现象</p>
+<div class="arithmatex">\[\Phi_i &gt;\Phi_e\]</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年4月16日 17:41:24</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年7月8日 10:39:24</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年4月16日 17:41:24</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年7月8日 10:39:24</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>
