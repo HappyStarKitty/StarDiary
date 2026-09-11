@@ -4,12 +4,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="HappyStarKitty" name="author"/>
-<link href="https://happystarkitty.github.io/StarDiary/Math/Linear_Algebra/Note/" rel="canonical"/>
-<link href="../../Calculus/chap11/" rel="prev"/>
-<link href="../../Discrete_Mathematics/chap1/" rel="next"/>
+<link href="https://happystarkitty.github.io/StarDiary/Math/Probability_Theory/chap5/" rel="canonical"/>
+<link href="../chap4/" rel="prev"/>
+<link href="../chap6/" rel="next"/>
 <link href="https://happystarkitty.github.io/avatar/avatar.jpg" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.14" name="generator"/>
-<title>线性代数 - StarDiary</title>
+<title>Chap5 大数定律及中心极限定理 - StarDiary</title>
 <link href="../../../assets/stylesheets/main.10ba22f1.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -31,7 +31,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
+<a class="md-skip" href="#chap5">
           Skip to content
         </a>
 </div>
@@ -55,7 +55,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              线性代数
+              Chap5 大数定律及中心极限定理
             
           </span>
 </div>
@@ -334,44 +334,85 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../Linear_Algebra/">
 <span class="md-ellipsis">
     线性代数
   </span>
+</a>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
-<a class="md-nav__link md-nav__link--active" href="./">
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            线性代数
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Linear_Algebra/chap1/">
 <span class="md-ellipsis">
-    线性代数
+    Chap1 线性方程组的求解
   </span>
 </a>
-<nav aria-label="toc.title" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      toc.title
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
+<a class="md-nav__link" href="../../Linear_Algebra/chap2/">
 <span class="md-ellipsis">
-      线性方程组
-    </span>
+    Chap2 行列式与矩阵的秩
+  </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
+<a class="md-nav__link" href="../../Linear_Algebra/chap3/">
 <span class="md-ellipsis">
-      矩阵
-    </span>
+    Chap3 矩阵的运算
+  </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
+<a class="md-nav__link" href="../../Linear_Algebra/chap4/">
 <span class="md-ellipsis">
-      向量
-    </span>
+    Chap4 n元向量空间
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Linear_Algebra/chap5/">
+<span class="md-ellipsis">
+    Chap5 矩阵的特征值理论与相似对角化
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Linear_Algebra/chap6/">
+<span class="md-ellipsis">
+    Chap6 二次型
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Linear_Algebra/chap7/">
+<span class="md-ellipsis">
+    Chap7 线性空间
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Linear_Algebra/chap8/">
+<span class="md-ellipsis">
+    Chap8 欧氏空间
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Linear_Algebra/chap9/">
+<span class="md-ellipsis">
+    Chap9 线性映射与线性变换初步
+  </span>
 </a>
 </li>
 </ul>
@@ -656,12 +697,111 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Probability_Theory/Note/">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_8" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     概率论与数理统计
   </span>
 </a>
+<label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_2_8_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_8">
+<span class="md-nav__icon md-icon"></span>
+            概率论与数理统计
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap1/">
+<span class="md-ellipsis">
+    Chap1 概率论的基本概念
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap2/">
+<span class="md-ellipsis">
+    Chap2 随机变量及其概率分布
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap3/">
+<span class="md-ellipsis">
+    Chap3 多维随机变量及其分布
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap4/">
+<span class="md-ellipsis">
+    Chap4 随机变量的数字特征
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Chap5 大数定律及中心极限定理
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Chap5 大数定律及中心极限定理
+  </span>
+</a>
+<nav aria-label="toc.title" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      toc.title
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      大数定律
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      中心极限定理
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap6/">
+<span class="md-ellipsis">
+    Chap6 统计量与抽样分布
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap7/">
+<span class="md-ellipsis">
+    Chap7 参数估计
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../chap8/">
+<span class="md-ellipsis">
+    Chap8 假设检验
+  </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_9" type="checkbox"/>
@@ -2508,23 +2648,16 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      大数定律
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
-      线性方程组
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      矩阵
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      向量
+      中心极限定理
     </span>
 </a>
 </li>
@@ -2535,35 +2668,52 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="_1">线性代数<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
-<h2 id="_2">线性方程组<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<div class="arithmatex">\[A x=b\]</div>
-<h2 id="_3">矩阵<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>秩（rank<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：非零子式的最高阶数</p>
-<p>特征值：<span class="arithmatex">\(A\alpha = \lambda \alpha\)</span></p>
-<p>相似矩阵：<span class="arithmatex">\(B=P^{-1}AP\)</span></p>
-<p>实对称矩阵：</p>
-<ul>
-<li>特征值均为实数</li>
-<li>不同特征值的特征向量正交</li>
-<li>可相似对角化</li>
-<li>可正交相似对角化</li>
-</ul>
-<p>二次型</p>
-<h2 id="_4">向量<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>正交矩阵：<span class="arithmatex">\(A A^{T} = E \leftrightarrow A^{-1} = A^{T}\)</span></p>
+<h1 id="chap5"><span>Chap5<span class="heti-spacing"> </span></span>大数定律及中心极限定理<a class="headerlink" href="#chap5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<h3 id="_1">大数定律<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p><strong>马尔可夫不等式</strong></p>
+<div class="arithmatex">\[P\{|Y| \ge \varepsilon\} \le \frac{E(|Y|^k)}{\varepsilon^k}
+\]</div>
+<p><strong>切比雪夫不等式</strong></p>
+<div class="arithmatex">\[
+P\{ |X-\mu| \ge \varepsilon\}\le \frac{\sigma^2}{\varepsilon^2}
+\]</div>
+<div class="arithmatex">\[
+P\{|X-E(X)| \ge \varepsilon \} \le \frac{Var(X)}{\varepsilon^2}
+\]</div>
+<p><strong>伯努利大数定律</strong></p>
+<div class="arithmatex">\[
+\lim_{n \rightarrow +\infty}P\{ |\frac{n_A}{n}-p|\ge \varepsilon\} =0
+\]</div>
+<p><strong>辛钦大数定律</strong></p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow +\infty}P\{|\frac{1}{n}\sum_{i=1}^{n}h(X_i)-a|\ge \varepsilon\}=0
+\]</div>
+<h3 id="_2">中心极限定理<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p><strong>林德伯格<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>莱维中心极限定理</strong></p>
+<div class="arithmatex">\[
+\lim_{n \rightarrow +\infty}P\{{\frac{\sum_{i=1}^n X_i - E(\sum_{i=1}^n X_i)}{\sqrt{Var(\sum_{i=1}^n X_i)}}\le x}\}=\lim_{n \rightarrow +\infty}P\{\frac{\sum_{i=1}^{n} X_i-n\mu}{\sigma\sqrt{n}}\le x\}=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{x}e^{-\frac{t^2}{2}}dt=\Phi(x)
+\]</div>
+<p>也称为独立同分布的中心极限定理</p>
+<p><strong>棣莫弗<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>拉普拉斯中心极限定理</strong></p>
+<div class="arithmatex">\[
+\lim_{n \rightarrow +\infty}P\{\frac{n_A-np}{\sqrt{np(1-p)}} \le x\}=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^x e^{-\frac{t^2}{2}}dt=\Phi(x)
+\]</div>
+<p><strong>李雅普诺夫中心极限定理</strong></p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow +\infty}P\{\frac{1}{B_n}\sum_{i=1}^{n}(X_i-\mu_i)\le x\}=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{x}e^{-\frac{t^2}{2}}dt=\Phi(x)
+\]</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年3月4日 12:56:36</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月11日 10:42:54</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年4月28日 10:33:20</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月11日 10:42:55</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>
