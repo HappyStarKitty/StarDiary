@@ -9,7 +9,7 @@
 <link href="../chap5/" rel="next"/>
 <link href="https://happystarkitty.github.io/avatar/avatar.jpg" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.14" name="generator"/>
-<title>Chap4 定积分 - StarDiary</title>
+<title>Chap4 不定积分 - StarDiary</title>
 <link href="../../../assets/stylesheets/main.10ba22f1.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -55,7 +55,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Chap4 定积分
+              Chap4 不定积分
             
           </span>
 </div>
@@ -279,13 +279,13 @@
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    Chap4 定积分
+    Chap4 不定积分
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Chap4 定积分
+    Chap4 不定积分
   </span>
 </a>
 <nav aria-label="toc.title" class="md-nav md-nav--secondary">
@@ -2725,18 +2725,25 @@
 <p>令<span><span class="heti-spacing"> </span><span class="arithmatex">\(\text{arcsin}e^x=t\)</span></span>，则<span><span class="heti-spacing"> </span><span class="arithmatex">\(x=\ln \sin t\)</span></span>，<span class="arithmatex">\(\mathrm{d}x=\frac{\cos t}{\sin t}\mathrm{d}t\)</span></p>
 <p><span class="arithmatex">\(\int \frac{\arcsin e^x}{e^x}\mathrm{d}x=\int \frac{t}{\sin t}\cdot \frac{\cos t}{\sin t}\mathrm{d}t=-\int t\mathrm{d}(\frac{1}{\sin t})=-\frac{t}{\sin t}+\int \frac{1}{\sin t}\mathrm{d}t\)</span></p>
 </div>
+<div class="admonition question">
+<p class="admonition-title">例题</p>
+<p><span class="arithmatex">\(f(x)=\frac{1}{1+\sin^2 x},x\in[0,\pi]\)</span>，则<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(f(x)\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([0,\pi]\)</span><span class="heti-spacing"> </span></span>上的全体原函数是<span><span class="heti-spacing"> </span>____</span></p>
+<div class="arithmatex">\[\int \frac{1}{1+\sin^2 x}=\int \frac{\frac{1}{\cos^2 x}\mathrm{d}x}{\frac{1}{\cos^2 x}+\tan^2 x}=\int \frac{\mathrm{d}\tan x}{1+2\tan^2 x}\]</div>
+<div class="arithmatex">\[F(x)=\left\{\begin{aligned}\frac{1}{\sqrt{2}}\arctan(\sqrt{2}\tan x)-\frac{\pi}{2\sqrt{2}},0\le x&lt;\frac{\pi}{2} \\ 0,x=\frac{\pi}{2} \\ \frac{1}{\sqrt{2}}\arctan (\sqrt{2}\tan x)+\frac{\pi}{2\sqrt{2}},\frac{\pi}{2}&lt;x\le \pi\end{aligned}\right.\]</div>
+<div class="arithmatex">\[\int f(x)\mathrm{d}x=F(x)+C\]</div>
+</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月14日 20:34:55</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月15日 17:56:37</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月14日 20:34:55</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月15日 17:56:37</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>

@@ -278,7 +278,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../Math/Calculus/chap4/">
 <span class="md-ellipsis">
-    Chap4 定积分
+    Chap4 不定积分
   </span>
 </a>
 </li>
@@ -1067,6 +1067,13 @@
 <a class="md-nav__link" href="#_5">
 <span class="md-ellipsis">
       载荷集度、剪力和弯矩间的关系
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      平面曲杆的弯曲内力
     </span>
 </a>
 </li>
@@ -2703,6 +2710,13 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      平面曲杆的弯曲内力
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </div>
@@ -2712,22 +2726,71 @@
 <article class="md-content__inner md-typeset">
 <h1 id="chap4"><span>Chap4<span class="heti-spacing"> </span></span>弯曲内力<a class="headerlink" href="#chap4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <h2 id="_1">弯曲的概念和实例<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>以弯曲变形为主的杆件习惯上称为梁</p>
+<p>杆件承受垂直于其轴线的外力或位于其轴线所在平面内的力偶作用时，其轴线将弯曲成曲线，这种受力与变形形式称为弯曲（bending）</p>
+<p>以弯曲变形为主的杆件习惯上称为梁（beam）</p>
 <h2 id="_2">受弯杆件的简化<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <div class="admonition note">
 <p class="admonition-title">静定梁的基本形式</p>
-<p>一端为固定铰支座，另一端为可动铰支座，这种梁称为<b>简支梁</b>。传动轴、桥式起重机的大梁可简化为简支梁</p>
+<p>一端为固定铰支座，另一端为可动铰支座，这种梁称为<b>简支梁</b>（simple supported beam<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。传动轴、桥式起重机的大梁可简化为简支梁</p>
 <p><img alt="wfxs" src="../figures/chap4/jzl.png"/></p>
-<p>一端伸出支座之外，这种梁称为<b>外伸梁</b>。车床主轴、火车轮轴可简化为外伸梁</p>
+<p>一端伸出支座之外，这种梁称为<b>外伸梁</b>（overhanging beam<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。车床主轴、火车轮轴可简化为外伸梁</p>
 <p><img alt="wfxs" src="../figures/chap4/wsl.png"/></p>
 <p>一端为固定端，另一端为自由端，这种梁称为<b>悬臂梁</b>。割刀、镗刀杆可简化为悬臂梁</p>
 <p><img alt="wfxs" src="../figures/chap4/xbl.png"/></p>
 <p>简支梁或外伸梁的两个铰支座之间的距离称为跨度，用<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(l\)</span><span class="heti-spacing"> </span></span>来表示。悬臂梁的跨度是固定端刀自由端的距离</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">控制面</p>
+<p>在一段杆上，内力按某一种函数变化，这一段杆的两个端截面称为控制面（control cross-section<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。据此，下列截面均可为控制面：</p>
+<ul>
+<li>集中力作用点的两侧截面</li>
+<li>集中力偶作用点的两侧截面</li>
+<li>均布载荷（集度相同）起点和终点处的截面</li>
+</ul>
+</div>
 <h2 id="_3">剪力和弯矩<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<div class="arithmatex">\[\frac{\mathrm{d}^2 M(x)}{\mathrm{d} x^2}=\frac{\mathrm{d} F_s(x)}{\mathrm{d}x}=q(x)\]</div>
+<p><img alt="wfxs" src="../figures/chap4/jlwj.png"/></p>
+<p>以上图所示的简支梁为例，<span><span class="arithmatex">\(F_1、F_2、F_3\)</span><span class="heti-spacing"> </span></span>为作用在梁上的载荷，<span><span class="arithmatex">\(F_{RA}\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F_{RB}\)</span><span class="heti-spacing"> </span></span>为两端的支座约束力，沿截面<span class="heti-skip"><span class="heti-spacing"> </span>m-m<span class="heti-spacing"> </span></span>假想地把梁分成两部分，并以左段为研究对象</p>
+<p>由<span><span class="heti-spacing"> </span><span class="arithmatex">\(\sum F_y=0\)</span></span>，得</p>
+<div class="arithmatex">\[F_S=F_{RA}-F_1\]</div>
+<p><span><span class="arithmatex">\(F_S\)</span><span class="heti-spacing"> </span></span>称为横截面<span class="heti-skip"><span class="heti-spacing"> </span>m-m<span class="heti-spacing"> </span></span>上的剪力，它是与横截面相切得分布内力系的合力</p>
+<p>由<span><span class="heti-spacing"> </span><span class="arithmatex">\(\sum M_O=0\)</span></span>，得</p>
+<div class="arithmatex">\[M=F_{RA}x-F_1(x-a)\]</div>
+<p><span><span class="arithmatex">\(M\)</span><span class="heti-spacing"> </span></span>称为横截面<span class="heti-skip"><span class="heti-spacing"> </span>m-m<span class="heti-spacing"> </span></span>上的弯矩，它是与横截面垂直的分布力系合成的力偶矩</p>
+<p>剪力和弯矩同为梁横截面上的内力，都可由梁端的平衡方程来确定</p>
+<p><img alt="wfxs" src="../figures/chap4/jlwjfx.png"/></p>
+<p>在上图（a）所示变形情况下，即截面<span class="heti-skip"><span class="heti-spacing"> </span>m-m<span class="heti-spacing"> </span></span>的左段对右段向上相对错动时，截面<span class="heti-skip"><span class="heti-spacing"> </span>m-m<span class="heti-spacing"> </span></span>上的剪力规定为正，反之为负如图（b<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；在上图（c）所示变形情况下，即在截面<span class="heti-skip"><span class="heti-spacing"> </span>m-m<span class="heti-spacing"> </span></span>处弯曲变形凸向下时，截面<span class="heti-skip"><span class="heti-spacing"> </span>m-m<span class="heti-spacing"> </span></span>上的弯矩规定为正，反之为负如图（d）</p>
 <h2 id="_4">剪力方程和弯矩方程 剪力图和弯矩图<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>描述梁的剪力和弯矩沿长度方向变化的代数方程，分别称为<b>剪力方程</b>（equation of shearing force）和<b>弯矩方程</b>（equation of bending moment）</p>
+<p>在绘制刚架的弯矩图时，约定把弯矩图画在杆件弯曲变形凹入的一侧，亦即画在受压的一侧</p>
 <h2 id="_5">载荷集度、剪力和弯矩间的关系<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<details class="proof">
+<summary>推导过程</summary>
+<p><img alt="wfxs" src="../figures/chap4/gx.png"/></p>
+<p>考察上图所示的轴线为直线的梁，以轴线为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>轴，<span><span class="arithmatex">\(y\)</span><span class="heti-spacing"> </span></span>轴向上为正。梁上分布载荷的集度<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(q(x)\)</span><span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>的连续函数，且规定<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(q(x)\)</span><span class="heti-spacing"> </span></span>向上（与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y\)</span><span class="heti-spacing"> </span></span>轴方向一致）为正。从梁中取出长为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}x\)</span><span class="heti-spacing"> </span></span>的微段</p>
+<p>微段左边截面上的剪力和弯矩分别是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F_{\mathrm{s}}(x)\)</span><span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span><span class="arithmatex">\(M(x)\)</span></span>。当坐标<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>有一增量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}x\)</span><span class="heti-spacing"> </span></span>时，<span><span class="arithmatex">\(F_{\mathrm{s}}(x)\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(M(x)\)</span><span class="heti-spacing"> </span></span>的相应增量是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}F_{\mathrm{s}}(x)\)</span><span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}M(x)\)</span></span>。所以，微段右边截面上的剪力和弯矩应分别为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F_{\mathrm{s}}(x) + \mathrm{d}F_{\mathrm{s}}(x)\)</span><span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span><span class="arithmatex">\(M(x) + \mathrm{d}M(x)\)</span></span>。微段上的这些内力都取正值，且设微段内无集中力和集中力偶。由微段的平衡方程<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sum F_y = 0\)</span><span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span><span class="arithmatex">\(\sum M_C = 0\)</span></span>，得</p>
+<div class="arithmatex">\[
+F_{\mathrm{s}}(x) - \left[ F_{\mathrm{s}}(x) + \mathrm{d}F_{\mathrm{s}}(x) \right] + q(x) \, \mathrm{d}x = 0
+\]</div>
+<div class="arithmatex">\[
+-M(x) + \left[ M(x) + \mathrm{d}M(x) \right] - F_{\mathrm{s}}(x) \, \mathrm{d}x - q(x) \, \mathrm{d}x \cdot \frac{\mathrm{d}x}{2} = 0
+\]</div>
+<p>略去第二式中的高阶微量<span><span class="heti-spacing"> </span><span class="arithmatex">\(q(x) \, \mathrm{d}x \cdot \dfrac{\mathrm{d}x}{2}\)</span></span>，整理后得出</p>
+<div class="arithmatex">\[
+\frac{\mathrm{d}F_{\mathrm{s}}(x)}{\mathrm{d}x} = q(x) 
+\]</div>
+<div class="arithmatex">\[
+\frac{\mathrm{d}M(x)}{\mathrm{d}x} = F_{\mathrm{s}}(x) 
+\]</div>
+<p>这就是直梁微段的平衡方程</p>
+<p>又可得出</p>
+<div class="arithmatex">\[\frac{\mathrm{d}^2 M(x)}{\mathrm{d} x^2}=\frac{\mathrm{d} F_s(x)}{\mathrm{d}x}=q(x)\]</div>
+<p>以上三式又称为平衡微分方程</p>
+</details>
+<div class="arithmatex">\[\frac{\mathrm{d}^2 M(x)}{\mathrm{d} x^2}=\frac{\mathrm{d} F_s(x)}{\mathrm{d}x}=q(x)\]</div>
+<h2 id="_6">平面曲杆的弯曲内力<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>某些构件，如活塞环、链环、拱等，一般都有一纵向对称面，其轴线是一平面曲线，称为平面曲杆或平面曲梁。当载荷作用于纵向对称面内时，曲杆将发生弯曲变形</p>
+<p>关于内力的符号，规定为：引起拉伸变形时的轴力<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F_N\)</span><span class="heti-spacing"> </span></span>为正；使轴线曲率增加的弯矩<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(M\)</span><span class="heti-spacing"> </span></span>为正；以剪力<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F_S\)</span><span class="heti-spacing"> </span></span>对所考虑的一段曲杆内任一点取矩，若力矩为顺时针方向，则剪力<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F_S\)</span><span class="heti-spacing"> </span></span>为正</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">

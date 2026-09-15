@@ -278,7 +278,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../Calculus/chap4/">
 <span class="md-ellipsis">
-    Chap4 定积分
+    Chap4 不定积分
   </span>
 </a>
 </li>
@@ -824,16 +824,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mmaxxy">
+<a class="md-nav__link" href="#mmaxxynminxy">
 <span class="md-ellipsis">
-      \(M=\max(X,Y)\)的分布
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#nminxy">
-<span class="md-ellipsis">
-      \(N=\min(X,Y)\)的分布
+      \(M=\max(X,Y)\)、\(N=\min(X,Y)\)的分布
     </span>
 </a>
 </li>
@@ -2801,16 +2794,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mmaxxy">
+<a class="md-nav__link" href="#mmaxxynminxy">
 <span class="md-ellipsis">
-      \(M=\max(X,Y)\)的分布
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#nminxy">
-<span class="md-ellipsis">
-      \(N=\min(X,Y)\)的分布
+      \(M=\max(X,Y)\)、\(N=\min(X,Y)\)的分布
     </span>
 </a>
 </li>
@@ -2914,7 +2900,14 @@ f_{Y|X}(y|x)=\frac{f(x,y)}{f_X(x)}
 </div>
 <div class="admonition definition">
 <p class="admonition-title">二元正态分布</p>
-<div class="arithmatex">\[(X,Y)\sim N(\mu_1,\mu_2,\sigma_1,\sigma_2,\rho)\]</div>
+<p>设二维随机变量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((X, Y)\)</span><span class="heti-spacing"> </span></span>具有联合密度函数：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+f(x, y) = \frac{1}{2\pi \sigma_1 \sigma_2 \sqrt{1 - \rho^2}} \exp\Big\{ -\frac{1}{2(1 - \rho^2)} \Big[ &amp;\frac{(x - \mu_1)^2}{\sigma_1^2} - \\
+&amp;2\rho \frac{(x - \mu_1)(y - \mu_2)}{\sigma_1 \sigma_2} + \frac{(y - \mu_2)^2}{\sigma_2^2} \Big] \Big\}
+\end{aligned}
+\]</div>
+<p>其中<span><span class="heti-spacing"> </span><span class="arithmatex">\(-\infty &lt; \mu_1 &lt; +\infty, -\infty &lt; \mu_2 &lt; +\infty, \sigma_1 &gt; 0, \sigma_2 &gt; 0, |\rho| &lt; 1\)</span></span>，则称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((X, Y)\)</span><span class="heti-spacing"> </span></span>服从参数为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((\mu_1, \mu_2; \sigma_1, \sigma_2; \rho)\)</span><span class="heti-spacing"> </span></span>的<b>二元正态分布</b>，记为<span><span class="heti-spacing"> </span><span class="arithmatex">\((X, Y) \sim N(\mu_1, \mu_2; \sigma_1^2, \sigma_2^2; \rho)\)</span></span></p>
 </div>
 <h2 id="_8">随机变量的独立性<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <div class="admonition definition">
@@ -2928,26 +2921,83 @@ P\{X \le x, Y \le y\}=P\{X \le x\}\cdot P\{Y \le y\}
 </div>
 <h2 id="_9">多元随机变量函数的分布<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="zxy"><span><span class="arithmatex">\(Z=X+Y\)</span><span class="heti-spacing"> </span></span>的分布<a class="headerlink" href="#zxy" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="mmaxxy"><span><span class="arithmatex">\(M=\max(X,Y)\)</span><span class="heti-spacing"> </span></span>的分布<a class="headerlink" href="#mmaxxy" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>若<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((X, Y)\)</span><span class="heti-spacing"> </span></span>为二维离散型随机变量，设<span><span class="heti-spacing"> </span><span class="arithmatex">\(P(X = x_i, Y = y_j) = p_{ij}, i, j = 1, 2, \cdots\)</span></span>，又设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Z\)</span><span class="heti-spacing"> </span></span>的可能取值有<span><span class="heti-spacing"> </span><span class="arithmatex">\(z_1, z_2, \cdots, z_k, \cdots\)</span></span>，则有</p>
 <div class="arithmatex">\[
-F_M(t)=\prod_{i=1}^{n} F_i(t)
+\begin{aligned}
+P(Z = z_k) &amp;= P(X + Y = z_k) \\
+&amp;= \sum_{i=1}^{+\infty} P(X = x_i, Y = z_k - x_i), k = 1, 2, \cdots
+\end{aligned}
 \]</div>
-<h3 id="nminxy"><span><span class="arithmatex">\(N=\min(X,Y)\)</span><span class="heti-spacing"> </span></span>的分布<a class="headerlink" href="#nminxy" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>或</p>
 <div class="arithmatex">\[
-F_N(t)=1-\prod_{i=1}^{n}[1-F_i(t)]
+\begin{aligned}
+P(Z = z_k) &amp;= P(X + Y = z_k) \\
+&amp;= \sum_{j=1}^{+\infty} P(X = z_k - y_j, Y = y_j), k = 1, 2, \cdots
+\end{aligned}
+\]</div>
+<p>特别地，当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X, Y\)</span><span class="heti-spacing"> </span></span>相互独立时，上式可以写成：</p>
+<div class="arithmatex">\[
+P(Z = z_k) = \sum_{i=1}^{+\infty} P(X = x_i) \cdot P(Y = z_k - x_i), k = 1, 2, \cdots
+\]</div>
+<p>或</p>
+<div class="arithmatex">\[
+P(Z = z_k) = \sum_{j=1}^{+\infty} P(X = z_k - y_j) \cdot P(Y = y_j), k = 1, 2, \cdots
+\]</div>
+<p>若<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((X, Y)\)</span><span class="heti-spacing"> </span></span>为二维连续型随机变量，设联合密度函数为<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(x, y)\)</span></span>，则<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Z\)</span><span class="heti-spacing"> </span></span>的分布函数为：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+F_Z(z) &amp;= P(Z \le z) = \iint_{x+y \le z} f(x, y) \, \mathrm{d}x \mathrm{d}y \\
+&amp;= \int_{-\infty}^{+\infty} \left[ \int_{-\infty}^{z-y} f(x, y) \, \mathrm{d}x \right] \mathrm{d}y \\
+&amp;= \int_{-\infty}^{+\infty} \left[ \int_{-\infty}^{z} f(u - y, y) \, \mathrm{d}u \right] \mathrm{d}y \\
+&amp;= \int_{-\infty}^{z} \left[ \int_{-\infty}^{+\infty} f(u - y, y) \, \mathrm{d}y \right] \mathrm{d}u = \int_{-\infty}^{z} f_Z(u) \, \mathrm{d}u
+\end{aligned}
+\]</div>
+<p>故<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Z\)</span><span class="heti-spacing"> </span></span>的密度函数为：<span class="arithmatex">\(\displaystyle f_Z(z) = \int_{-\infty}^{+\infty} f(z - y, y) \, \mathrm{d}y\)</span></p>
+<p>由对称性知：<span class="arithmatex">\(\displaystyle f_Z(z) = \int_{-\infty}^{+\infty} f(x, z - x) \, \mathrm{d}x\)</span></p>
+<div class="admonition formula">
+<p class="admonition-title">卷积公式</p>
+<p>当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X, Y\)</span><span class="heti-spacing"> </span></span>相互独立时，<span class="arithmatex">\(\displaystyle f_Z(z) = \int_{-\infty}^{+\infty} f_X(z - y) f_Y(y) \, \mathrm{d}y = \int_{-\infty}^{+\infty} f_X(x) f_Y(z - x) \, \mathrm{d}x\)</span></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">结论</p>
+<ul>
+<li>
+<p><span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>个相互独立的服从泊松分布的随机变量的和仍服从泊松分布，即：若<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X_1, X_2, \cdots, X_n\)</span><span class="heti-spacing"> </span></span>相互独立，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(X_i \sim P(\lambda_i)\)</span></span>，则<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \sum_{i=1}^{n} X_i \sim P\left( \sum_{i=1}^{n} \lambda_i \right)\)</span></span></p>
+</li>
+<li>
+<p><span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>个正态变量的线性组合仍为正态变量（不要求相互独立）</p>
+</li>
+<li>
+<p>若<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X_1, X_2, \cdots, X_n\)</span><span class="heti-spacing"> </span></span>相互独立，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(X_i \sim N(\mu_i, \sigma_i^2)\)</span></span>，则<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle a_0 + \sum_{i=1}^{n} a_i X_i \sim N\left( a_0 + \sum_{i=1}^{n} a_i \mu_i, \sum_{i=1}^{n} a_i^2 \sigma_i^2 \right)\)</span></span></p>
+</li>
+</ul>
+</div>
+<h3 id="mmaxxynminxy"><span class="arithmatex">\(M=\max(X,Y)\)</span>、<span><span class="arithmatex">\(N=\min(X,Y)\)</span><span class="heti-spacing"> </span></span>的分布<a class="headerlink" href="#mmaxxynminxy" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>记<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X, Y\)</span><span class="heti-spacing"> </span></span>的联合分布函数为<span><span class="heti-spacing"> </span><span class="arithmatex">\(F(x, y)\)</span></span>，<span><span class="arithmatex">\(X, Y\)</span><span class="heti-spacing"> </span></span>的边际分布函数分别为<span><span class="heti-spacing"> </span><span class="arithmatex">\(F_X(t), F_Y(t)\)</span></span></p>
+<p><span><span class="arithmatex">\(M\)</span><span class="heti-spacing"> </span></span>的分布函数：<span class="arithmatex">\(F_M(t) = P(\max\{X, Y\} \le t) = P(X \le t, Y \le t) = F(t, t)\)</span></p>
+<p>当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X, Y\)</span><span class="heti-spacing"> </span></span>相互<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>独立<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>时，<span class="arithmatex">\(F_M(t) = F_X(t) \cdot F_Y(t)\)</span></p>
+<p><span><span class="arithmatex">\(N\)</span><span class="heti-spacing"> </span></span>的分布函数：<span class="arithmatex">\(F_N(t) = P(\min\{X, Y\} \le t) = P((X \le t) \cup (Y \le t)) = F_X(t) + F_Y(t) - F(t, t)\)</span>，或者<span><span class="heti-spacing"> </span><span class="arithmatex">\(F_N(t) = 1 - P(\min\{X, Y\} &gt; t) = 1 - P(X &gt; t, Y &gt; t)\)</span></span></p>
+<p>记忆：因为要求<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X, Y\)</span><span class="heti-spacing"> </span></span>的最小值<span><span class="heti-spacing"> </span><span class="arithmatex">\(\le t\)</span></span>，那么只要确保<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X, Y\)</span><span class="heti-spacing"> </span></span>中至少有一个<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\le t\)</span><span class="heti-spacing"> </span></span>即可，因此取的是两个事件的<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>并集<span><span class="heti-spacing"> </span>**</span></p>
+<p>当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X, Y\)</span><span class="heti-spacing"> </span></span>相互<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>独立<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>时，<span class="arithmatex">\(F_N(t) = F_X(t) + F_Y(t) - F_X(t) \cdot F_Y(t) = 1 - [1 - F_X(t)] \cdot [1 - F_Y(t)]\)</span></p>
+<p>推广到<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>个变量：设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X_1, X_2, \cdots, X_n\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>个相互独立的随机变量，分布函数分别为<span><span class="heti-spacing"> </span><span class="arithmatex">\(F_1(x), F_2(x), \cdots, F_n(x)\)</span></span>，记<span><span class="heti-spacing"> </span><span class="arithmatex">\(M = \max\{X_1, X_2, \cdots, X_n\}\)</span></span>，<span class="arithmatex">\(N = \min\{X_1, X_2, \cdots, X_n\}\)</span>，则：</p>
+<div class="arithmatex">\[
+F_M(t) = \prod_{i=1}^{n} F_i(t)
+\]</div>
+<div class="arithmatex">\[
+F_N(t) = 1 - \prod_{i=1}^{n} [1 - F_i(t)]
 \]</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月14日 20:35:01</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月15日 17:56:45</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月14日 20:35:01</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月15日 17:56:45</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>
