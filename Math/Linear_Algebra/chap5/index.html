@@ -20,7 +20,6 @@
 <link href="../../../stylesheet/counter.css" rel="stylesheet"/>
 <link href="../../../stylesheet/custom.css" rel="stylesheet"/>
 <link href="../../../stylesheet/extra_changelog.css" rel="stylesheet"/>
-<link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
@@ -382,11 +381,60 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Chap5 矩阵的特征值理论与相似对角化
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Chap5 矩阵的特征值理论与相似对角化
   </span>
 </a>
+<nav aria-label="toc.title" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      toc.title
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      特征值与特征向量的定义及计算
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      特征值与特征向量的基本性质
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      矩阵的相似及其性质
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      矩阵的相似对角化
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      实对称矩阵的相似对角化
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../chap6/">
@@ -2656,6 +2704,47 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="toc.title" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      toc.title
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      特征值与特征向量的定义及计算
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      特征值与特征向量的基本性质
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      矩阵的相似及其性质
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      矩阵的相似对角化
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      实对称矩阵的相似对角化
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -2663,18 +2752,65 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="chap5"><span>Chap5<span class="heti-spacing"> </span></span>矩阵的特征值理论与相似对角化<a class="headerlink" href="#chap5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<h2 id="_1">特征值与特征向量的定义及计算<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition definition">
+<p class="admonition-title">特征值与特征向量</p>
+<p>对于给定的<span><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A} \in \mathbb{P}^{n \times n}\)</span></span>，若存在数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\lambda_0 \in \mathbb{P}\)</span><span class="heti-spacing"> </span></span>及非零向量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{\xi} \in \mathbb{P}^n\)</span><span class="heti-spacing"> </span></span>使得</p>
+<div class="arithmatex">\[
+\boldsymbol{A}\boldsymbol{\xi} = \lambda_0 \boldsymbol{\xi}
+\]</div>
+<p>则称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\lambda_0\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}\)</span><span class="heti-spacing"> </span></span>中的一个<b>特征值</b>，称非零向量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{\xi}\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}^n\)</span><span class="heti-spacing"> </span></span>中属于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\lambda_0\)</span><span class="heti-spacing"> </span></span>的<b>特征向量</b></p>
+</div>
+<h2 id="_2">特征值与特征向量的基本性质<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p><strong>性质<span><span class="heti-spacing"> </span>1</span></strong> 若<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>阶方阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}\)</span><span class="heti-spacing"> </span></span>中有<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>个特征值<span><span class="heti-spacing"> </span><span class="arithmatex">\(\lambda_1, \lambda_2, \cdots, \lambda_n\)</span></span>（重特征值按重数计<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，则</p>
+<div class="arithmatex">\[
+|\boldsymbol{A}| = \prod_{i=1}^{n} \lambda_i, \quad \operatorname{tr}(\boldsymbol{A}) = \sum_{i=1}^{n} \lambda_i
+\]</div>
+<p><strong>性质<span><span class="heti-spacing"> </span>2</span></strong> 方阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>的属于不同特征值的特征向量线性无关</p>
+<p><strong>性质<span><span class="heti-spacing"> </span>4</span></strong> <span><span class="arithmatex">\(\dim V_{\lambda_0} \leqslant \lambda_0\)</span><span class="heti-spacing"> </span></span>的重数，这里<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\lambda_0\)</span><span class="heti-spacing"> </span></span>的重数是指<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\lambda_0\)</span><span class="heti-spacing"> </span></span>作为特征多项式零点的重数<span><span class="heti-spacing"> </span>.</span></p>
+<p>通常，我们称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(V_{\lambda_0}\)</span><span class="heti-spacing"> </span></span>的维数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\dim V_{\lambda_0}\)</span><span class="heti-spacing"> </span></span>为特征值<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\lambda_0\)</span><span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>几何重数<span><span class="heti-spacing"> </span>**</span>，而称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\lambda_0\)</span><span class="heti-spacing"> </span></span>的重数为特征值<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\lambda_0\)</span><span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>代数重数<span><span class="heti-spacing"> </span>**.</span></p>
+<p>通过类似于待定系数法的方法，不难得到</p>
+<p><strong>定理<span><span class="heti-spacing"> </span>1</span>（Hamilton-Cayley（哈密顿<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>凯莱）定理）</strong> 设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>为数域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}\)</span><span class="heti-spacing"> </span></span>上的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>阶方阵，<span><span class="arithmatex">\(f(\lambda) = |\lambda \boldsymbol{E} - \boldsymbol{A}|\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>的特征多项式，则<span><span class="heti-spacing"> </span><span class="arithmatex">\(f(\boldsymbol{A}) = \boldsymbol{O}\)</span>.</span></p>
+<p>相应于矩阵的多项式、逆矩阵的特征值和特征向量问题，有</p>
+<p><strong>定理<span><span class="heti-spacing"> </span>2</span></strong> 设<span><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\boldsymbol{\xi} = \lambda \boldsymbol{\xi}\)</span></span>，这里<span><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A} \in \mathbb{P}^{n \times n}\)</span></span>，<span class="arithmatex">\(\lambda \in \mathbb{P}\)</span>，<span><span class="arithmatex">\(\boldsymbol{\xi} \in \mathbb{P}^n\)</span><span class="heti-spacing"> </span></span>且<span><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{\xi} \neq \boldsymbol{\theta}\)</span>.</span></p>
+<p><span>1)<span class="heti-spacing"> </span></span>若<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(g(x)\)</span><span class="heti-spacing"> </span></span>是数域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}\)</span><span class="heti-spacing"> </span></span>上的一个多项式，则<span><span class="heti-spacing"> </span><span class="arithmatex">\(g(\boldsymbol{A})\boldsymbol{\xi} = g(\lambda)\boldsymbol{\xi}\)</span></span></p>
+<p><span>2)<span class="heti-spacing"> </span></span>若<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>可逆，则<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\lambda \neq 0\)</span><span class="heti-spacing"> </span></span>且<span><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}^{-1}\boldsymbol{\xi} = \dfrac{1}{\lambda}\boldsymbol{\xi}\)</span></span></p>
+<p><strong>定理<span><span class="heti-spacing"> </span>3</span></strong> 设<span><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A} \in \mathbb{C}^{n \times n}\)</span></span>，<span><span class="arithmatex">\(g(x)\)</span><span class="heti-spacing"> </span></span>是复系数多项式，若<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>的所有特征值（含重数）为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\lambda_1, \lambda_2, \cdots, \lambda_n\)</span></span>，则<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(g(\boldsymbol{A})\)</span><span class="heti-spacing"> </span></span>的所有特征值（含重数）为<span><span class="heti-spacing"> </span><span class="arithmatex">\(g(\lambda_1), g(\lambda_2), \cdots, g(\lambda_n)\)</span></span></p>
+<h2 id="_3">矩阵的相似及其性质<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition definition">
+<p class="admonition-title">矩阵相似</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}, \boldsymbol{B}\)</span><span class="heti-spacing"> </span></span>为数域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}\)</span><span class="heti-spacing"> </span></span>上的两个同阶方阵，若存在数域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}\)</span><span class="heti-spacing"> </span></span>上的同阶可逆矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{P}\)</span><span class="heti-spacing"> </span></span>使得</p>
+<div class="arithmatex">\[
+\boldsymbol{B} = \boldsymbol{P}^{-1}\boldsymbol{A}\boldsymbol{P} \quad \text{或} \quad \boldsymbol{P}\boldsymbol{B} = \boldsymbol{A}\boldsymbol{P},
+\]</div>
+<p>则称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>与<span><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{B}\)</span></span>（在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}\)</span><span class="heti-spacing"> </span></span>上）<b>相似</b></p>
+<p>当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{B}\)</span><span class="heti-spacing"> </span></span>相似时，记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A} \stackrel{S}{\sim} \boldsymbol{B}\)</span></span></p>
+<p>依据定义，有</p>
+<p>相似矩阵的秩相同，相似矩阵是相抵的，相似矩阵的行列式相同</p>
+</div>
+<h2 id="_4">矩阵的相似对角化<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition theorem">
+<p class="admonition-title">定理</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>是数域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}\)</span><span class="heti-spacing"> </span></span>上的一个<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>阶方阵，则下列命题等价：</p>
+<p><span>1) <span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}\)</span><span class="heti-spacing"> </span></span>上的某个对角矩阵相似</p>
+<p><span>2) <span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}^n\)</span><span class="heti-spacing"> </span></span>中有<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>个线性无关的特征向量</p>
+<p><span>3) <span class="arithmatex">\(\mathbb{P}^n\)</span><span class="heti-spacing"> </span></span>中存在一个由<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>的特征向量所形成的基</p>
+<p><span>4) <span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}^n\)</span><span class="heti-spacing"> </span></span>中的所有两两互异的特征子空间的维数之和等于<span><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span></span></p>
+<p><span>5) <span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}\)</span><span class="heti-spacing"> </span></span>上有<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>个特征值（当特征多项式有重根时，按重数计<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，且对于每个特征值<span><span class="heti-spacing"> </span><span class="arithmatex">\(\lambda\)</span></span>，<span><span class="arithmatex">\(\dim V_\lambda\)</span><span class="heti-spacing"> </span></span>等于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\lambda\)</span><span class="heti-spacing"> </span></span>的重数</p>
+</div>
+<h2 id="_5">实对称矩阵的相似对角化<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月16日 15:44:09</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月17日 15:57:28</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月16日 15:44:09</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月17日 15:57:28</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>

@@ -20,7 +20,6 @@
 <link href="../../../stylesheet/counter.css" rel="stylesheet"/>
 <link href="../../../stylesheet/custom.css" rel="stylesheet"/>
 <link href="../../../stylesheet/extra_changelog.css" rel="stylesheet"/>
-<link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
@@ -2803,7 +2802,7 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="chap8"><span>Chap8<span class="heti-spacing"> </span></span>假设检验<a class="headerlink" href="#chap8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
-<h3 id="_1">假设检验的基本思想<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h2 id="_1">假设检验的基本思想<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p><span class="arithmatex">\(H_0\)</span>：原假设<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>零假设</p>
 <p><span class="arithmatex">\(H_1\)</span>：备择假设<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>对立假设</p>
 <p>左侧检验：<span class="arithmatex">\(H_0:\theta \ge \theta_0,H_1:\theta&lt; \theta_0\)</span></p>
@@ -2813,8 +2812,8 @@
 <div class="arithmatex"><span>\[\alpha=P{<span class="heti-spacing"> </span></span>拒绝<span class="heti-skip"><span class="heti-spacing"> </span>H_0|H_0<span class="heti-spacing"> </span></span>是真实的<span><span class="heti-spacing"> </span>}\]</span></div>
 <p>第Ⅱ类错误<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>存伪错误：</p>
 <div class="arithmatex"><span>\[\beta=P{<span class="heti-spacing"> </span></span>接受<span class="heti-skip"><span class="heti-spacing"> </span>H_0|H_0<span class="heti-spacing"> </span></span>是错误的<span><span class="heti-spacing"> </span>}\]</span></div>
-<div class="admonition note 处理假设检验问题的基本步骤">
-<p class="admonition-title">Note</p>
+<div class="admonition info">
+<p class="admonition-title">处理假设检验问题的基本步骤</p>
 <ol>
 <li>
 <p>根据实际问题提出原假设和备择假设</p>
@@ -2830,8 +2829,8 @@
 </li>
 </ol>
 </div>
-<h3 id="_2">单个正态总体参数的假设检验<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h4 id="_3">有关参数<span class="heti-skip"><span class="heti-spacing"> </span>μ<span class="heti-spacing"> </span></span>的假设检验<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<h2 id="_2">单个正态总体参数的假设检验<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_3">有关参数<span class="heti-skip"><span class="heti-spacing"> </span>μ<span class="heti-spacing"> </span></span>的假设检验<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p><span><span class="arithmatex">\(\sigma^2\)</span><span class="heti-spacing"> </span></span>已知</p>
 <ul>
 <li>
@@ -2858,9 +2857,9 @@
 <p><span><span class="arithmatex">\(\sigma^2\)</span><span class="heti-spacing"> </span></span>未知</p>
 <p>检验统计量为<span><span class="heti-spacing"> </span><span class="arithmatex">\(T=\frac{\bar{X}-\mu_0}{S/\sqrt{n}}\)</span></span></p>
 <p>上述检验称为<span class="heti-skip"><span class="heti-spacing"> </span>t<span class="heti-spacing"> </span></span>检验</p>
-<h4 id="t">成对数据的<span class="heti-skip"><span class="heti-spacing"> </span>t<span class="heti-spacing"> </span></span>检验<a class="headerlink" href="#t" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<h3 id="t">成对数据的<span class="heti-skip"><span class="heti-spacing"> </span>t<span class="heti-spacing"> </span></span>检验<a class="headerlink" href="#t" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>检验统计量为<span><span class="heti-spacing"> </span><span class="arithmatex">\(T=\frac{\bar{D}}{S_D/\sqrt{n}}\)</span></span></p>
-<h4 id="sigma2">有关参数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sigma^2\)</span><span class="heti-spacing"> </span></span>的假设检验<a class="headerlink" href="#sigma2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
+<h3 id="sigma2">有关参数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sigma^2\)</span><span class="heti-spacing"> </span></span>的假设检验<a class="headerlink" href="#sigma2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <ul>
 <li>检验统计量</li>
 </ul>
@@ -2884,21 +2883,21 @@
 <p>上述检验称为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\chi^2\)</span><span class="heti-spacing"> </span></span>检验</p>
 </li>
 </ul>
-<h3 id="_4">两个正态总体参数的假设检验<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_5">假设检验与区间估计<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<h3 id="_6">拟合优度检验<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h2 id="_4">两个正态总体参数的假设检验<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_5">假设检验与区间估计<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_6">拟合优度检验<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月16日 15:44:13</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月17日 15:57:32</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月16日 15:44:13</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月17日 15:57:32</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>

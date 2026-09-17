@@ -20,7 +20,6 @@
 <link href="../../../stylesheet/counter.css" rel="stylesheet"/>
 <link href="../../../stylesheet/custom.css" rel="stylesheet"/>
 <link href="../../../stylesheet/extra_changelog.css" rel="stylesheet"/>
-<link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
@@ -388,7 +387,46 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_1">
 <span class="md-ellipsis">
+      矩阵的加减法、数乘、乘法和转置
+    </span>
+</a>
+<nav aria-label="矩阵的加减法、数乘、乘法和转置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      矩阵的乘法
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
       矩阵求逆
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      分块矩阵的运算
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      矩阵的初等变换与矩阵乘法的联系
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      矩阵运算对矩阵秩的影响
     </span>
 </a>
 </li>
@@ -2685,7 +2723,46 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_1">
 <span class="md-ellipsis">
+      矩阵的加减法、数乘、乘法和转置
+    </span>
+</a>
+<nav aria-label="矩阵的加减法、数乘、乘法和转置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      矩阵的乘法
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
       矩阵求逆
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      分块矩阵的运算
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      矩阵的初等变换与矩阵乘法的联系
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      矩阵运算对矩阵秩的影响
     </span>
 </a>
 </li>
@@ -2697,19 +2774,100 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="chap3"><span>Chap3<span class="heti-spacing"> </span></span>矩阵的运算<a class="headerlink" href="#chap3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
-<h2 id="_1">矩阵求逆<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_1">矩阵的加减法、数乘、乘法和转置<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_2">矩阵的乘法<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition definition">
+<p class="admonition-title">矩阵乘法</p>
+<p>称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}^{m \times n}\)</span><span class="heti-spacing"> </span></span>中矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{C} = (c_{ij})_{m \times n}\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}^{m \times s}\)</span><span class="heti-spacing"> </span></span>中的矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A} = (a_{ij})_{m \times s}\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}^{s \times n}\)</span><span class="heti-spacing"> </span></span>中的矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{B} = (b_{ij})_{s \times n}\)</span><span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>积<span><span class="heti-spacing"> </span>**</span>，并记作<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{C} = \boldsymbol{A}\boldsymbol{B}\)</span><span class="heti-spacing"> </span></span>或<span><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{C} = \boldsymbol{A} \cdot \boldsymbol{B}\)</span></span>，如果</p>
+<div class="arithmatex">\[
+c_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{is}b_{sj} = \sum_{k=1}^{s} a_{ik}b_{kj}
+\]</div>
+<div class="arithmatex">\[
+i = 1, 2, \cdots, m,\ j = 1, 2, \cdots, n.
+\]</div>
+<p>上式表示<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(c_{ij}\)</span><span class="heti-spacing"> </span></span>是矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>的第<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(i\)</span><span class="heti-spacing"> </span></span>行与矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{B}\)</span><span class="heti-spacing"> </span></span>的第<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(j\)</span><span class="heti-spacing"> </span></span>列对应元素乘积之和</p>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">定理</p>
+<p>若<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(B\)</span><span class="heti-spacing"> </span></span>均为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}^{n\times n}\)</span><span class="heti-spacing"> </span></span>中的矩阵，则<span><span class="heti-spacing"> </span><span class="arithmatex">\(|AB|=|A||B|\)</span></span></p>
+</div>
+<h2 id="_3">矩阵求逆<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition definition">
+<p class="admonition-title">逆矩阵</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}^{n \times n}\)</span><span class="heti-spacing"> </span></span>中的一个方阵，<span><span class="arithmatex">\(\boldsymbol{E}\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}^{n \times n}\)</span><span class="heti-spacing"> </span></span>中的单位矩阵，若存在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}^{n \times n}\)</span><span class="heti-spacing"> </span></span>中的方阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{B}\)</span><span class="heti-spacing"> </span></span>使得</p>
+<div class="arithmatex">\[
+\boldsymbol{A}\boldsymbol{B} = \boldsymbol{E} = \boldsymbol{B}\boldsymbol{A}, 
+\]</div>
+<p>则称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>是<b>可逆的</b>，并称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{B}\)</span><span class="heti-spacing"> </span></span>为其<b>逆矩阵</b>；若对所有的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{B} \in \mathbb{P}^{n \times n}\)</span><span class="heti-spacing"> </span></span>均不成立，则称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>是<b>不可逆的</b></p>
+<p>当一个方阵可逆时，我们也称它是<b>非退化的</b>或<b>非奇异的</b>； 当一个方阵不可逆时，我们也称它是<b>退化的</b>或<b>奇异的</b></p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">伴随矩阵</p>
+<div class="arithmatex">\[
+\boldsymbol{A}^* = \begin{pmatrix}
+A_{11} &amp; A_{21} &amp; \cdots &amp; A_{n1} \\
+A_{12} &amp; A_{22} &amp; \cdots &amp; A_{n2} \\
+\vdots &amp; \vdots &amp; &amp; \vdots \\
+A_{1n} &amp; A_{2n} &amp; \cdots &amp; A_{nn}
+\end{pmatrix}
+\]</div>
+<p>这里<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A_{ij}\)</span><span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>的第<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(i\)</span><span class="heti-spacing"> </span></span>行和第<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(j\)</span><span class="heti-spacing"> </span></span>列交叉位置上元素的代数余子式<span><span class="heti-spacing"> </span><span class="arithmatex">\((i, j = 1, 2, \cdots, n)\)</span></span>，则</p>
+<div class="arithmatex">\[
+\boldsymbol{A}\boldsymbol{A}^* = \boldsymbol{A}^*\boldsymbol{A} = |\boldsymbol{A}|\boldsymbol{E}
+\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">矩阵求逆的性质</p>
+<ul>
+<li>
+<p><span class="arithmatex">\((\boldsymbol{A}^{-1})^{-1} = \boldsymbol{A}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\((\boldsymbol{A}\boldsymbol{B})^{-1} = \boldsymbol{B}^{-1}\boldsymbol{A}^{-1}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\((c\boldsymbol{A})^{-1} = \dfrac{1}{c}\boldsymbol{A}^{-1} \quad (c \in \mathbb{P},\ c \neq 0)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\((\boldsymbol{A}^{\mathrm{T}})^{-1} = (\boldsymbol{A}^{-1})^{\mathrm{T}}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(|\boldsymbol{A}^{-1}| = |\boldsymbol{A}|^{-1}\)</span></p>
+</li>
+</ul>
+</div>
+<h2 id="_4">分块矩阵的运算<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_5">矩阵的初等变换与矩阵乘法的联系<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="arithmatex">\[
+\left( \begin{array}{c|c} \boldsymbol{A} &amp; \boldsymbol{E} \end{array} \right) \xrightarrow{\text{仅有限次初等行变换}} \left( \begin{array}{c|c} \boldsymbol{E} &amp; \boldsymbol{A}^{-1} \end{array} \right)
+\]</div>
+<h2 id="_6">矩阵运算对矩阵秩的影响<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition formula">
+<p class="admonition-title"><span>Sylvester<span class="heti-spacing"> </span></span>不等式</p>
+<p>设<span><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span></span>，<span><span class="arithmatex">\(\boldsymbol{B}\)</span><span class="heti-spacing"> </span></span>是数域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}\)</span><span class="heti-spacing"> </span></span>上的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>阶方阵，则</p>
+<div class="arithmatex">\[
+r(\boldsymbol{A}\boldsymbol{B}) \geqslant r(\boldsymbol{A}) + r(\boldsymbol{B}) - n.
+\]</div>
+</div>
+<div class="admonition formula">
+<p class="admonition-title">Frobenius（弗罗贝尼乌斯）不等式）</p>
+<p>设<span><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span></span>，<span class="arithmatex">\(\boldsymbol{B}\)</span>，<span><span class="arithmatex">\(\boldsymbol{C}\)</span><span class="heti-spacing"> </span></span>是数域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}\)</span><span class="heti-spacing"> </span></span>上的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>阶方阵，则</p>
+<div class="arithmatex">\[
+r(\boldsymbol{A}\boldsymbol{B}\boldsymbol{C}) \geqslant r(\boldsymbol{A}\boldsymbol{B}) + r(\boldsymbol{B}\boldsymbol{C}) - r(\boldsymbol{B})
+\]</div>
+</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月16日 15:44:09</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月17日 15:57:28</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月16日 15:44:09</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月17日 15:57:28</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>

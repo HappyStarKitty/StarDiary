@@ -20,7 +20,6 @@
 <link href="../../../stylesheet/counter.css" rel="stylesheet"/>
 <link href="../../../stylesheet/custom.css" rel="stylesheet"/>
 <link href="../../../stylesheet/extra_changelog.css" rel="stylesheet"/>
-<link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
@@ -354,11 +353,60 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Chap1 线性方程组的求解
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Chap1 线性方程组的求解
   </span>
 </a>
+<nav aria-label="toc.title" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      toc.title
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      线性方程组的形式及相关概念
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      同解变形与阶梯线性方程组
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gauss">
+<span class="md-ellipsis">
+      Gauss消元法的一般结论
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      矩阵及其初等变换
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gauss_1">
+<span class="md-ellipsis">
+      Gauss消元过程的矩阵形式
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../chap2/">
@@ -2656,6 +2704,47 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="toc.title" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      toc.title
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      线性方程组的形式及相关概念
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      同解变形与阶梯线性方程组
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gauss">
+<span class="md-ellipsis">
+      Gauss消元法的一般结论
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      矩阵及其初等变换
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gauss_1">
+<span class="md-ellipsis">
+      Gauss消元过程的矩阵形式
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -2663,19 +2752,72 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="chap1"><span>Chap1<span class="heti-spacing"> </span></span>线性方程组的求解<a class="headerlink" href="#chap1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<h2 id="_1">线性方程组的形式及相关概念<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}\)</span><span class="heti-spacing"> </span></span>是一个数域，<span><span class="arithmatex">\(m, n\)</span><span class="heti-spacing"> </span></span>为正整数，数域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}\)</span><span class="heti-spacing"> </span></span>上一个由<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(m\)</span><span class="heti-spacing"> </span></span>个方程，<span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>个未知量构成的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>元线性方程组通常写为如下形式：</p>
+<div class="arithmatex">\[
+\begin{cases}
+a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1, \\
+a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2, \\
+\quad \cdots \cdots \cdots \cdots \cdots \cdots \\
+a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m,
+\end{cases} 
+\]</div>
+<p>可简单写作：</p>
 <div class="arithmatex">\[A x=b\]</div>
+<p>若线性方程组中的常数项全为零，即<span><span class="heti-spacing"> </span><span class="arithmatex">\(b_1=b_2=...n_m=0\)</span></span>，则称其为<b>齐次线性方程组</b>；反之，称为<b>非齐次线性方程组</b></p>
+<p>当一个线性方程组可解时，称其是<b>相容</b>的；反之，称为<b>不相容</b>的</p>
+<h2 id="_2">同解变形与阶梯线性方程组<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition note">
+<p class="admonition-title">线性方程组的初等变换</p>
+<ul>
+<li>
+<p><b>互换：</b>交换两个方程在线性方程组中的位置，用“<span class="arithmatex">\(\xrightarrow{R_{ij}}\)</span>” 表示互换第<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(i\)</span><span class="heti-spacing"> </span></span>个方程和第<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(j\)</span><span class="heti-spacing"> </span></span>个方程位置的过程</p>
+</li>
+<li>
+<p><b>倍乘：</b>用一个非零常数乘某个方程，用“<span class="arithmatex">\(\xrightarrow{cR_i}\)</span>”表示用非零常数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(c\in\mathbb{P}\)</span><span class="heti-spacing"> </span></span>乘第<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(i\)</span><span class="heti-spacing"> </span></span>个方程的过程</p>
+</li>
+<li>
+<p><b>倍加：</b>将一个方程加到另一个方程上，用“<span class="arithmatex">\(\xrightarrow{R_i+cR_{j}}\)</span>”表示第<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(j\)</span><span class="heti-spacing"> </span></span>个方程倍乘后加到第<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(i\)</span><span class="heti-spacing"> </span></span>个方程的过程</p>
+</li>
+</ul>
+<p>初等变换前后的两个线性方程组是同解的</p>
+</div>
+<h2 id="gauss"><span>Gauss<span class="heti-spacing"> </span></span>消元法的一般结论<a class="headerlink" href="#gauss" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_3">矩阵及其初等变换<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="gauss_1"><span>Gauss<span class="heti-spacing"> </span></span>消元过程的矩阵形式<a class="headerlink" href="#gauss_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="arithmatex">\[
+\boldsymbol{A} = (a_{ij})_{m \times n} = \begin{pmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
+\end{pmatrix}
+\]</div>
+<p>称为线性方程组的<b>系数矩阵</b></p>
+<div class="arithmatex">\[
+\bar{\boldsymbol{A}} = \begin{pmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} &amp; b_1 \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} &amp; b_2 \\
+\vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} &amp; b_m
+\end{pmatrix}
+\quad \left( \text{或记作} \quad \bar{\boldsymbol{A}} = \left( \begin{array}{c|c}
+\boldsymbol{A} &amp; \begin{matrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{matrix}
+\end{array} \right) \right)
+\]</div>
+<p>称为线性方程组的<b>增广矩阵</b></p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月16日 15:44:09</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月17日 15:57:28</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月16日 15:44:09</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月17日 15:57:28</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>

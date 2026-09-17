@@ -20,7 +20,6 @@
 <link href="../../../stylesheet/counter.css" rel="stylesheet"/>
 <link href="../../../stylesheet/custom.css" rel="stylesheet"/>
 <link href="../../../stylesheet/extra_changelog.css" rel="stylesheet"/>
-<link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
@@ -379,7 +378,21 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#n-">
+<span class="md-ellipsis">
+      n-排列
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      方阵的行列式
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
       行列式的性质
     </span>
@@ -393,9 +406,23 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
+<a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
       矩阵的秩
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gauss">
+<span class="md-ellipsis">
+      Gauss消元过程中的不变量
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      矩阵的相抵
     </span>
 </a>
 </li>
@@ -2697,7 +2724,21 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#n-">
+<span class="md-ellipsis">
+      n-排列
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      方阵的行列式
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
       行列式的性质
     </span>
@@ -2711,9 +2752,23 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
+<a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
       矩阵的秩
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gauss">
+<span class="md-ellipsis">
+      Gauss消元过程中的不变量
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      矩阵的相抵
     </span>
 </a>
 </li>
@@ -2725,28 +2780,124 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="chap2"><span>Chap2<span class="heti-spacing"> </span></span>行列式与矩阵的秩<a class="headerlink" href="#chap2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<h2 id="n-"><span>n-<span class="heti-spacing"> </span></span>排列<a class="headerlink" href="#n-" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition definition">
+<p class="admonition-title">逆序数</p>
+<p>在一个<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span>-<span class="heti-spacing"> </span></span>排列<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(i_1 i_2 \cdots i_n\)</span><span class="heti-spacing"> </span></span>中，若存在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(1 \leqslant k &lt; l \leqslant n\)</span><span class="heti-spacing"> </span></span>使得<span><span class="heti-spacing"> </span><span class="arithmatex">\(i_k &gt; i_l\)</span></span>，则称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(i_k\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(i_l\)</span><span class="heti-spacing"> </span></span>构成该<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span>-<span class="heti-spacing"> </span></span>排列的一个<b>逆序</b>（或<b>逆序对</b>）</p>
+<p><span><span class="arithmatex">\(i_1 i_2 \cdots i_n\)</span><span class="heti-spacing"> </span></span>的逆序（或逆序对）的总数目称为该<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span>-<span class="heti-spacing"> </span></span>排列的<b>逆序数</b>，记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(\tau(i_1 i_2 \cdots i_n)\)</span></span></p>
+<p>若以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\tau(i_j)\)</span><span class="heti-spacing"> </span></span>表示<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span>-<span class="heti-spacing"> </span></span>排列<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(i_1 i_2 \cdots i_n\)</span><span class="heti-spacing"> </span></span>中排在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(i_j\)</span><span class="heti-spacing"> </span></span>之后但比<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(i_j\)</span><span class="heti-spacing"> </span></span>小的数的个数（<span class="arithmatex">\(1 \leqslant j \leqslant n\)</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，则</p>
+<div class="arithmatex">\[
+\tau(i_1 i_2 \cdots i_n) = \tau(i_1) + \tau(i_2) + \cdots + \tau(i_n) = \sum_{j=1}^{n} \tau(i_j).
+\]</div>
+<p>如<span><span class="heti-spacing"> </span><span class="arithmatex">\(\tau(123 \cdots n) = 0\)</span></span>，通常称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(123 \cdots n\)</span><span class="heti-spacing"> </span></span>为一个<b>标准排列</b>（或<b>自然序排列</b>）</p>
+<p>若<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\tau(i_1 i_2 \cdots i_n)\)</span><span class="heti-spacing"> </span></span>为奇数，则称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span>-<span class="heti-spacing"> </span></span>排列<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(i_1 i_2 \cdots i_n\)</span><span class="heti-spacing"> </span></span>为一个<b>奇排列</b>，否则称之为<b>偶排列</b></p>
+</div>
+<h2 id="_1">方阵的行列式<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <div class="admonition definition">
 <p class="admonition-title">行列式</p>
-<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A=(a_{ij})_{n\times n}\)</span><span class="heti-spacing"> </span></span>是数域上的一个<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>阶方阵，<span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>的行列式定义为</p>
-<div class="arithmatex">\[\left\|\begin{aligned} a_{11} &amp; a_{12} &amp; ... a_{1n} \\ a_{21} &amp; a_{22} &amp; ...\end{aligned}\right.=\sum_{j1j2...jn}(-1)^{\tau(j1j2...jn)}a_{1j1}...a_{nj_n}\]</div>
-<p>记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(|A|\)</span></span></p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A} = (a_{ij})_{n \times n}\)</span><span class="heti-spacing"> </span></span>是数域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}\)</span><span class="heti-spacing"> </span></span>上的一个<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>阶方阵，<span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>的行列式定义为</p>
+<div class="arithmatex">\[
+\begin{vmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; &amp; \vdots \\
+a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}
+\end{vmatrix}
+= \sum_{j_1 j_2 \cdots j_n} (-1)^{\tau(j_1 j_2 \cdots j_n)} a_{1j_1} a_{2j_2} \cdots a_{nj_n}
+\]</div>
+<p>这里<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(j_1 j_2 \cdots j_n\)</span><span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span>-<span class="heti-spacing"> </span></span>排列，<span><span class="arithmatex">\(\displaystyle \sum_{j_1 j_2 \cdots j_n}\)</span><span class="heti-spacing"> </span></span>表示对所有的相应于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span>-<span class="heti-spacing"> </span></span>排列的项求和</p>
+<p><span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>阶矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A} = (a_{ij})_{n \times n}\)</span><span class="heti-spacing"> </span></span>的行列式常称作<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>阶行列式，常记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(|\boldsymbol{A}|\)</span></span>，<span class="arithmatex">\(|a_{ij}|_n\)</span>，<span><span class="arithmatex">\(D_n\)</span><span class="heti-spacing"> </span></span>或<span><span class="heti-spacing"> </span><span class="arithmatex">\(D\)</span></span></p>
 </div>
-<h2 id="_1">行列式的性质<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_2">行列式的性质<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition note">
+<p class="admonition-title">行列式的性质</p>
+<ul>
+<li>性质<span><span class="heti-spacing"> </span>1</span>：<span class="arithmatex">\(|A|=|A^T|\)</span>，即转置不改变行列式的值</li>
+<li>性质<span><span class="heti-spacing"> </span>2</span>：若交换行列式中某两行（列）所有对应元素的位置，则行列式的值变号</li>
+<li>性质<span><span class="heti-spacing"> </span>3</span>（倍乘<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：以常数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(c\)</span><span class="heti-spacing"> </span></span>乘行列式某一行（列）的每一个元素所形成的新行列式的值等于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(c\)</span><span class="heti-spacing"> </span></span>乘原行列式的值</li>
+<li>性质<span><span class="heti-spacing"> </span>4</span>：若行列式的某行（列）元素均是另一行（列）对应元素的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(c\)</span><span class="heti-spacing"> </span></span>倍，则行列式的值为零</li>
+<li>性质<span><span class="heti-spacing"> </span>5</span>（分拆<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：</li>
+<li>性质<span><span class="heti-spacing"> </span>6</span>（倍加<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：行列式某行（列）的每一个元素均乘常数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(c\)</span><span class="heti-spacing"> </span></span>后加到另一行（列）对应元素上所形成的新行列式与原行列式的值相同</li>
+</ul>
+</div>
 <h2 id="laplace"><span>Laplace<span class="heti-spacing"> </span></span>定理<a class="headerlink" href="#laplace" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h2 id="_2">矩阵的秩<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>秩（rank<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>：非零子式的最高阶数</p>
+<div class="admonition definition">
+<p class="admonition-title">代数余子式</p>
+<p>对于任意的<span><span class="heti-spacing"> </span><span class="arithmatex">\(i, j = 1, 2, \cdots, n\ (n &gt; 1)\)</span></span>，称行列式<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(M_{ij} \stackrel{\text{def}}{=} |\boldsymbol{B}_{ij}|\)</span><span class="heti-spacing"> </span></span>为元素<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(a_{ij}\)</span><span class="heti-spacing"> </span></span>的<b>余子式</b>，称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A_{ij} \stackrel{\text{def}}{=} (-1)^{i+j} M_{ij}\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(a_{ij}\)</span><span class="heti-spacing"> </span></span>的<b>代数余子式</b></p>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">定理</p>
+<p>对每一个满足<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(1 \leqslant i \leqslant n\ (n &gt; 1)\)</span><span class="heti-spacing"> </span></span>的整数<span><span class="heti-spacing"> </span><span class="arithmatex">\(i\)</span></span>，</p>
+<div class="arithmatex">\[
+\begin{aligned}
+|\boldsymbol{A}| &amp;= a_{i1}A_{i1} + a_{i2}A_{i2} + \cdots + a_{in}A_{in} \\
+&amp;= \sum_{k=1}^{n} a_{ik}A_{ik} \quad (\text{称为 } |\boldsymbol{A}| \text{ 按第 } i \text{ 行展开})  \\
+&amp;= a_{1i}A_{1i} + a_{2i}A_{2i} + \cdots + a_{ni}A_{ni} \\
+&amp;= \sum_{k=1}^{n} a_{ki}A_{ki} \quad (\text{称为 } |\boldsymbol{A}| \text{ 按第 } i \text{ 列展开})
+\end{aligned}
+\]</div>
+<p>进一步，有如下重要公式：</p>
+<div class="arithmatex">\[
+\boxed{\ \sum_{k=1}^{n} a_{ik}A_{jk} = \begin{cases} |\boldsymbol{A}|, &amp; i = j, \\ 0, &amp; i \neq j, \end{cases} \quad 1 \leqslant i, j \leqslant n\ (n &gt; 1).\ } 
+\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title"><span>Vandermonde(<span class="heti-spacing"> </span></span>范德蒙德<span class="heti-skip"><span class="heti-spacing"> </span>)<span class="heti-spacing"> </span></span>行列式</p>
+<p>若<span><span class="heti-spacing"> </span><span class="arithmatex">\(n \geqslant 2\)</span></span>，则</p>
+<div class="arithmatex">\[
+D_n = \begin{vmatrix}
+1 &amp; 1 &amp; \cdots &amp; 1 \\
+x_1 &amp; x_2 &amp; \cdots &amp; x_n \\
+x_1^2 &amp; x_2^2 &amp; \cdots &amp; x_n^2 \\
+\vdots &amp; \vdots &amp; &amp; \vdots \\
+x_1^{n-1} &amp; x_2^{n-1} &amp; \cdots &amp; x_n^{n-1}
+\end{vmatrix} = \prod_{1 \leqslant i &lt; j \leqslant n} (x_j - x_i).
+\]</div>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title"><span>Cramer<span class="heti-spacing"> </span></span>法则</p>
+<p>线性方程组当其系数行列式<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(D \neq 0\)</span><span class="heti-spacing"> </span></span>时有且仅有唯一解</p>
+<div class="arithmatex">\[
+x_j = \frac{D_j}{D}, \quad j = 1, 2, \cdots, n
+\]</div>
+<p>其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(D_j\ (j = 1, 2, \cdots, n)\)</span><span class="heti-spacing"> </span></span>是将系数行列式<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(D\)</span><span class="heti-spacing"> </span></span>中第<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(j\)</span><span class="heti-spacing"> </span></span>列元素<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(a_{1j}, a_{2j}, \cdots, a_{nj}\)</span><span class="heti-spacing"> </span></span>对应地换为方程组的常数项<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(b_1, b_2, \cdots, b_n\)</span><span class="heti-spacing"> </span></span>后所得到的行列式</p>
+</div>
+<div class="arithmatex">\[
+\begin{vmatrix}
+\boldsymbol{O}_{s \times t} &amp; \boldsymbol{A}_{s \times s} \\
+\boldsymbol{B}_{t \times t} &amp; \boldsymbol{C}_{t \times s}
+\end{vmatrix}
+= (-1)^{st} |\boldsymbol{A}| |\boldsymbol{B}|.
+\]</div>
+<h2 id="_3">矩阵的秩<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition definition">
+<p class="admonition-title">秩</p>
+<p>称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}^{m \times n}\)</span><span class="heti-spacing"> </span></span>中的矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>的非零子式的最高阶数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(r\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>的<b>秩</b>，记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(r(\boldsymbol{A}) = r\)</span></span></p>
+<p>若矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>的所有子式均为零，则称该矩阵的秩为零，记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(r(\boldsymbol{A}) = 0\)</span></span></p>
+<p>我们有<span><span class="heti-spacing"> </span><span class="arithmatex">\(0 \leqslant r(\boldsymbol{A}) \leqslant \min\{m, n\}\)</span></span>，显然<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(r(\boldsymbol{A}) = 0 \iff \boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>为零矩阵</p>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">定理</p>
+<p>矩阵的秩是矩阵初等变换的不变量</p>
+</div>
+<h2 id="gauss"><span>Gauss<span class="heti-spacing"> </span></span>消元过程中的不变量<a class="headerlink" href="#gauss" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_4">矩阵的相抵<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition definition">
+<p class="admonition-title">矩阵相抵</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}\)</span><span class="heti-spacing"> </span></span>为数域，<span class="arithmatex">\(\boldsymbol{A} \in \mathbb{P}^{m \times n}\)</span>，<span class="arithmatex">\(\boldsymbol{B} \in \mathbb{P}^{m \times n}\)</span>，若<span><span class="heti-spacing"> </span><span class="arithmatex">\(r(\boldsymbol{A}) = r(\boldsymbol{B})\)</span></span>，则称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{B}\)</span><span class="heti-spacing"> </span></span><b>相抵</b>（或<b>等价</b><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A} \stackrel{R}{\sim} \boldsymbol{B}\)</span></span></p>
+</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月16日 15:44:09</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月17日 15:57:28</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月16日 15:44:09</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月17日 15:57:28</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>
