@@ -2853,40 +2853,83 @@
 <article class="md-content__inner md-typeset">
 <h1 id="chap5"><span>Chap5<span class="heti-spacing"> </span></span>弯曲应力<a class="headerlink" href="#chap5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <h2 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>梁横截面上既有弯矩又有剪力，称为横力弯曲；梁横截面上剪力等于零，而弯矩为常量，称为纯弯曲</p>
-<p>变形前原为平面的梁的横截面变形后仍保持为平面，且仍然垂直于变形后的梁轴线，这就是弯曲变形的平面假设</p>
-<p>中性层与横截面的交线称为中性轴</p>
+<div class="admonition definition">
+<p class="admonition-title">梁弯曲的概念</p>
+<p>梁的横截面具有对称轴，所有相同的对称轴组成的平面，称为<b>对称面</b>（symmetric plane<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；如果没有对称轴，但是都有通过横截面形心的形心主轴，所有相同的形心主轴组成的平面，称为<b>主轴平面</b>（plane including principal axed）</p>
+<p>梁横截面上既有弯矩又有剪力，称为<b>横力弯曲</b>（transverse bending<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>；梁横截面上剪力等于零，而弯矩为常量，称为<b>纯弯曲</b>（pure bending）</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">平面假设</p>
+<p>变形前原为平面的梁的横截面变形后仍保持为平面，且仍然垂直于变形后的梁轴线，这就是弯曲变形的<b>平面假设</b>（plane assumption）</p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">中性层与中性轴</p>
+<p>梁发生弯曲时，中间必定存在一长度不变的纤维层，称为<b>中性层</b>或<b>中性面</b>（neutral axis）</p>
+<p>中性层与横截面的交线称为<b>中性轴</b>（neutral axis）</p>
+</div>
 <p><img alt="无法显示" src="../figures/wan_qu_bian_xing.png"/></p>
 <p>纯弯曲变形假设：平面假设、纵向纤维间无正应力</p>
 <h2 id="_2">纯弯曲时的正应力<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p><img alt="wfxs" src="../figures/chap5/cwq.png"/></p>
 <h3 id="_3">几何关系<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>根据平面假设可知，距中性层为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y\)</span><span class="heti-spacing"> </span></span>的纤维<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(bb\)</span><span class="heti-spacing"> </span></span>的长度变为</p>
+<div class="arithmatex">\[
+\widehat{b'b'} = (\rho + y) \, \mathrm{d}\theta
+\]</div>
+<p><span><span class="arithmatex">\(\rho\)</span><span class="heti-spacing"> </span></span>为中性层的曲率半径</p>
+<p>纤维<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(bb\)</span><span class="heti-spacing"> </span></span>的原长度为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}x\)</span></span>，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(\overline{bb} = \mathrm{d}x = \overline{OO}\)</span></span>。因为变形前和变形后中性层内纤维<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(OO\)</span><span class="heti-spacing"> </span></span>的长度不变，故有</p>
+<div class="arithmatex">\[
+\overline{bb} = \mathrm{d}x = \overline{OO} = \widehat{O'O'} = \rho \, \mathrm{d}\theta
+\]</div>
+<p>纤维<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(bb\)</span><span class="heti-spacing"> </span></span>的应变为</p>
 <div class="arithmatex">\[\varepsilon=\frac{(\rho+y)\mathrm{d}\theta-\rho\mathrm{d}\theta}{\rho \mathrm{d}\theta}=\frac{y}{\rho}\]</div>
+<p>可见，纵向纤维的应变与它到中性层的距离成正比</p>
 <h3 id="_4">物理关系<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>单向拉伸胡克定律</p>
+<p>因为纵向纤维间无正应力，每一纤维都是单向拉伸或压缩。当应力小于比例极限时，由胡克定律知</p>
+<div class="arithmatex">\[\sigma=E\varepsilon\]</div>
+<p>即有</p>
 <div class="arithmatex">\[\sigma=E\frac{y}{\rho}\]</div>
+<p>可见，任意纵向纤维的正应力与它到中性层的距离成正比。在横截面上，任意点的正应力与该点到中性轴的距离成正比。亦即沿截面高度，正应力按直线规律变化，且在中性层处等于零</p>
 <h3 id="_5">静力关系<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>沿截面高度，正应力按直线规律变化，且在中性层处等于零</p>
+<p>横截面上的微内力组成垂直于横截面的空间平行力系。这一力系只可能简化为三个内力分量，即平行于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x\)</span><span class="heti-spacing"> </span></span>轴的轴力<span><span class="heti-spacing"> </span><span class="arithmatex">\(F_N\)</span></span>，分别对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y\)</span><span class="heti-spacing"> </span></span>轴和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(z\)</span><span class="heti-spacing"> </span></span>轴的力偶矩<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(M_{iy}\)</span><span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span><span class="arithmatex">\(M_{iz}\)</span></span></p>
+<p>内、外力必须满足平衡方程<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sum F_x=0\)</span><span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span><span class="arithmatex">\(\sum M_y=0\)</span></span>，即有</p>
+<div class="arithmatex">\[F_N=\int_A \sigma \mathrm{d}A=0\]</div>
+<div class="arithmatex">\[M_{iy}=\int_A z\sigma \mathrm{d}A=0\]</div>
+<p>这样，横截面上的内力系最终只归结为一个力偶矩<span><span class="heti-spacing"> </span><span class="arithmatex">\(M_{iz}\)</span></span>，即弯矩<span><span class="heti-spacing"> </span><span class="arithmatex">\(M\)</span></span></p>
+<div class="arithmatex">\[M_{iz}=M=\int_A y\sigma\mathrm{d}A\]</div>
+<p>根据平衡方程，弯矩<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(M\)</span><span class="heti-spacing"> </span></span>和外力偶矩<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(M_e\)</span><span class="heti-spacing"> </span></span>大小相等，方向相反</p>
+<div class="arithmatex">\[\int_A \sigma\mathrm{d}A=\frac{E}{\rho}\int_A y\mathrm{d}A=0\]</div>
+<p>式中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\frac{E}{\rho}\)</span><span class="heti-spacing"> </span></span>为非零常量，故必须有<span><span class="heti-spacing"> </span><span class="arithmatex">\(\int_A y\mathrm{d}A=S_z=0\)</span></span>，即横截面对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(z\)</span><span class="heti-spacing"> </span></span>轴的静矩必须等于零，亦即<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(z\)</span><span class="heti-spacing"> </span></span>轴（中性轴）应通过截面形心</p>
+<p>进一步有</p>
+<div class="arithmatex">\[M=\int_A y\sigma\mathrm{d}A=\frac{E}{\rho}\int_A y^2\mathrm{d}A\]</div>
+<p>式中积分</p>
+<div class="arithmatex">\[\int_A y^2\mathrm{d}A=I_z\]</div>
+<p>是横截面对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(z\)</span><span class="heti-spacing"> </span></span>轴（中性轴）的惯性矩，即有</p>
 <div class="arithmatex">\[\frac{1}{\rho}=\frac{M}{EI_z}\]</div>
-<p><span><span class="arithmatex">\(\frac{1}{\rho}\)</span><span class="heti-spacing"> </span></span>为梁轴线变形后的曲率</p>
-<p><span><span class="arithmatex">\(EI_z\)</span><span class="heti-spacing"> </span></span>称为抗弯刚度</p>
-<p>弯曲正应力公式</p>
+<p><span><span class="arithmatex">\(\frac{1}{\rho}\)</span><span class="heti-spacing"> </span></span>为梁轴线变形后的曲率，<span><span class="arithmatex">\(EI_z\)</span><span class="heti-spacing"> </span></span>称为抗弯刚度</p>
+<p>即有纯弯曲时正应力的计算公式</p>
 <div class="arithmatex">\[\sigma=\frac{My}{I_z}\]</div>
-<p>最大弯曲正应力</p>
-<div class="arithmatex">\[\sigma_{\max}=\frac{M y_{\max}}{I_z}=\frac{M}{W}\]</div>
 <h2 id="_6">横力弯曲时的正应力<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>截面抗弯系数</p>
-<div class="arithmatex">\[W=\frac{I_z}{y_max}\]</div>
-<p>对于矩形，<span class="arithmatex">\(W=\frac{bh^2}{6}\)</span></p>
-<p>对于圆形，<span class="arithmatex">\(W=\frac{\pi d^3}{32}\)</span></p>
+<p>一般情况下，最大弯曲正应力<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sigma_{\max}\)</span><span class="heti-spacing"> </span></span>发生于弯矩最大的截面上，且离中性轴最远处，有</p>
+<div class="arithmatex">\[\sigma_{\max}=\frac{M_{\max} y_{\max}}{I_z}\]</div>
+<p>引入记号</p>
+<div class="arithmatex">\[W=\frac{I_z}{y_{\max}}\]</div>
+<div class="arithmatex">\[\sigma_{\max}=\frac{M}{W}\]</div>
+<p><span><span class="arithmatex">\(W\)</span><span class="heti-spacing"> </span></span>称为抗弯截面系数，与截面的几何形状有关</p>
+<p>若截面是高为<span><span class="heti-spacing"> </span><span class="arithmatex">\(h\)</span></span>、宽为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(b\)</span><span class="heti-spacing"> </span></span>的矩形，<span class="arithmatex">\(W=\frac{bh^2}{6}\)</span></p>
+<p>若截面是直径为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(d\)</span><span class="heti-spacing"> </span></span>的圆形，<span class="arithmatex">\(W=\frac{\pi d^3}{32}\)</span></p>
+<p>求出弯曲最大正应力后，弯曲正应力的强度条件为</p>
+<div class="arithmatex">\[\sigma_{\max}=\frac{M_{\max}}{W}\le[\sigma]\]</div>
 <h2 id="_7">弯曲切应力<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_8">矩形截面梁<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="arithmatex">\[\tau=\frac{F_s}{2I_z}(\frac{h^2}{4}-y^2)\]</div>
 <p>对于矩形截面，沿截面高度方向切应力按抛物线规律变化，截面上下边缘的各点处切应力为零，最大切应力发生在中性轴上</p>
-<p>矩形截面</p>
 <div class="arithmatex">\[\tau_{\max}=\frac{3}{2}\frac{F_s}{A}=\frac{3}{2}\frac{F_s}{bh}\]</div>
 <h3 id="_9">工字形截面梁<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p><img alt="wfxs" src="../figures/chap5/gzl.png"/></p>
 <div class="arithmatex">\[\tau_{\max}=\frac{F_S}{I_zb_0}[\frac{bh^2}{8}-(b-b_0)\frac{h_0^2}{8}]\]</div>
 <div class="arithmatex">\[\tau_{\min}=\frac{F_S}{I_zb_0}[\frac{bh^2}{8}-\frac{bh_0^2}{8}]\]</div>
+<p>因为腹板的宽度<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(b_0\)</span><span class="heti-spacing"> </span></span>远小于翼缘的宽度<span><span class="heti-spacing"> </span><span class="arithmatex">\(b\)</span></span>，因此<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\tau_{\max}\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\tau_{\min}\)</span><span class="heti-spacing"> </span></span>实际上相差不大；可以认为，在腹板上切应力大致是呈均匀分布的</p>
 <div class="arithmatex">\[\tau=\frac{F_S}{b_0h_0}\]</div>
 <h3 id="_10">圆形截面梁<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="arithmatex">\[\tau_{\max}=\frac{4}{3}\frac{F_s}{A}=\frac{3}{2}\frac{F_s}{\pi R^2}\]</div>
@@ -2897,7 +2940,7 @@
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年1月7日 10:56:06</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月18日 21:08:53</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">

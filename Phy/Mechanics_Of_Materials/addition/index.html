@@ -2756,10 +2756,11 @@
 <div class="admonition definition">
 <p class="admonition-title">静矩</p>
 <div class="arithmatex">\[S_z=\int_A y\mathrm{d}A , S_y=\int_A z\mathrm{d}A\]</div>
-<p>为图形对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(z\)</span><span class="heti-spacing"> </span></span>轴和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y\)</span><span class="heti-spacing"> </span></span>轴的静矩</p>
+<p>称为图形对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(z\)</span><span class="heti-spacing"> </span></span>轴和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y\)</span><span class="heti-spacing"> </span></span>轴的<b>静矩</b>（static moment）或<b>截面一次矩</b>（first moment of an area）</p>
 </div>
 <div class="admonition formula">
 <p class="admonition-title">形心坐标公式</p>
+<p>图形几何形状的中心称为<b>形心</b>（centroid of an area）</p>
 <div class="arithmatex">\[\bar{y}=\frac{\int_A y\mathrm{d}A}{A},\bar{z}=\frac{\int_A z\mathrm{d}A}{A}\]</div>
 </div>
 <p>若图形对某一轴的静矩等于零，则该轴必然通过图形的形心；反之，若某一轴通过形心，则图形对该轴的静矩必等于零</p>
@@ -2767,42 +2768,50 @@
 <div class="admonition definition">
 <p class="admonition-title">惯性矩</p>
 <div class="arithmatex">\[I_y=\int_A z^2\mathrm{d}A, I_z=\int_A y^2 \mathrm{d}A\]</div>
-<p>为图形对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y\)</span><span class="heti-spacing"> </span></span>轴和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(z\)</span><span class="heti-spacing"> </span></span>轴的惯性矩</p>
+<p>称为图形对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y\)</span><span class="heti-spacing"> </span></span>轴和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(z\)</span><span class="heti-spacing"> </span></span>轴的<b>惯性矩</b>（moment of inertia）或<b>截面二次轴矩</b>（second moment of an area）</p>
 </div>
 <p>矩形的惯性矩</p>
 <div class="arithmatex">\[I_y=\frac{bh^3}{12}, I_z=\frac{b^3 h}{12}\]</div>
 <div class="admonition definition">
 <p class="admonition-title">惯性半径</p>
 <div class="arithmatex">\[i_y=\sqrt{\frac{I_y}{A}},i_z=\sqrt{\frac{I_z}{A}}\]</div>
-<p><span><span class="arithmatex">\(i_y\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(i_z\)</span><span class="heti-spacing"> </span></span>分别称为图形对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y\)</span><span class="heti-spacing"> </span></span>轴和对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(z\)</span><span class="heti-spacing"> </span></span>轴的惯性半径</p>
+<p><span><span class="arithmatex">\(i_y\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(i_z\)</span><span class="heti-spacing"> </span></span>分别称为图形对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y\)</span><span class="heti-spacing"> </span></span>轴和对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(z\)</span><span class="heti-spacing"> </span></span>轴的<b>惯性半径</b>（radius of gyration）</p>
 </div>
 <div class="admonition definition">
 <p class="admonition-title">极惯性矩</p>
 <p>以<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\rho\)</span><span class="heti-spacing"> </span></span>表示微面积<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}A\)</span><span class="heti-spacing"> </span></span>到坐标原点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(O\)</span><span class="heti-spacing"> </span></span>的距离，下列积分</p>
 <div class="arithmatex">\[I_p=\int_A \rho^2\mathrm{d}A\]</div>
-<p>定义为图形对坐标原点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(O\)</span><span class="heti-spacing"> </span></span>的极惯性矩</p>
+<p>定义为图形对坐标原点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(O\)</span><span class="heti-spacing"> </span></span>的<b>极惯性矩</b>（polar moment of inertia）或<b>截面二次极矩</b>（second polar moment of an area）</p>
 </div>
 <h2 id="_3">惯性积<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <div class="admonition definition">
 <p class="admonition-title">惯性积</p>
 <p>在平面图形的坐标<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((y,z)\)</span><span class="heti-spacing"> </span></span>处，取微面积<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}A\)</span></span>，遍及整个图形面积<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>的积分</p>
 <div class="arithmatex">\[I_{yz}=\int_A yz\mathrm{d}A\]</div>
-<p>定义为图形对<span><span class="heti-spacing"> </span><span class="arithmatex">\(y\)</span></span>，<span><span class="arithmatex">\(z\)</span><span class="heti-spacing"> </span></span>轴的惯性积</p>
+<p>定义为图形对<span><span class="heti-spacing"> </span><span class="arithmatex">\(y\)</span></span>，<span><span class="arithmatex">\(z\)</span><span class="heti-spacing"> </span></span>轴的<b>惯性积</b>（product of inertia）</p>
 </div>
 <p>坐标系的两根坐标轴中只要有一根为图形的对称轴，则图形对这一坐标系的惯性积就等于零</p>
 <h2 id="_4">平行移轴公式<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>所谓移轴是图形对于平行轴的惯性矩和惯性积之间的关系</p>
 <div class="admonition formula">
 <p class="admonition-title">惯性矩和惯性积的平行移轴公式</p>
 <div class="arithmatex">\[\left\{\begin{aligned}I_y=I_{y_C}+a^2A \\ I_z=I_{z_C}+b^2A \\ I_{yz}=I_{y_{C^zC}}+abA\end{aligned}\right.\]</div>
 </div>
 <h2 id="_5">转轴公式 主惯性轴<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p>所谓转轴是坐标系绕原点转动时，图形对这些坐标轴的惯性矩和惯性积的变化规律</p>
+<div class="admonition formula">
+<p class="admonition-title">惯性矩和惯性积的转轴定理</p>
 <div class="arithmatex">\[I_{y1}=\frac{I_y+I_z}{2}+\frac{I_y-I_z}{2}\cos 2\alpha-I_{yz}\sin 2\alpha\]</div>
 <div class="arithmatex">\[I_{y1}=\frac{I_y+I_z}{2}-\frac{I_y-I_z}{2}\cos 2\alpha+I_{yz}\sin 2\alpha\]</div>
 <div class="arithmatex">\[I_{y_1z_1}=\frac{I_y-I_z}{2}\sin 2\alpha + I_{yz}\cos 2\alpha\]</div>
+</div>
 <div class="arithmatex">\[\tan 2\alpha_0=-\frac{2I_{yz}}{I_y-I_z}\]</div>
-<p>当坐标系绕<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(O\)</span><span class="heti-spacing"> </span></span>点旋转到某一位置<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y_0\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(z_0\)</span><span class="heti-spacing"> </span></span>时，图形对这一对坐标轴的惯性积等于零，这一对坐标轴称为主惯性轴，简称为主轴。对主惯性轴的惯性矩称为主惯性矩。对主轴的两个主惯性矩，一个是最大值，另一个是最小值</p>
-<p>通过图形形心<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(C\)</span><span class="heti-spacing"> </span></span>的主惯性轴称为形心主惯性轴，图形对该轴的惯性矩就称为形心主惯性矩</p>
+<div class="admonition definition">
+<p class="admonition-title">主惯性轴</p>
+<p>当坐标系绕<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(O\)</span><span class="heti-spacing"> </span></span>点旋转到某一位置<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y_0\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(z_0\)</span><span class="heti-spacing"> </span></span>时，图形对这一对坐标轴的惯性积等于零，这一对坐标轴称为主惯性轴，简称为<b>主轴</b>（principal axes）</p>
+<p>对主惯性轴的惯性矩称为<b>主惯性矩</b>（principal moment of inertia<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。对主轴的两个主惯性矩，一个是最大值，另一个是最小值</p>
+<p>通过图形形心<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(C\)</span><span class="heti-spacing"> </span></span>的主惯性轴称为<b>形心主惯性轴</b>，图形对该轴的惯性矩就称为<b>形心主惯性矩</b></p>
+</div>
 <p>主惯性矩的计算公式</p>
 <div class="arithmatex">\[\left.\begin{aligned}I_{y0}=\frac{I_y+I_z}{2}+\frac{1}{2}\sqrt{(I_y-I_z)^2+4I_{yz}^2} \\ I_{z0}=\frac{I_y+I_z}{2}-\frac{1}{2}\sqrt{(I_y-I_z)^2+4I_{yz}^2}\end{aligned}\right\}\]</div>
 <div class="arithmatex">\[I_{y1}+I_{z1}=I_y+I_z\]</div>
@@ -2812,7 +2821,7 @@
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年1月7日 10:56:06</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月18日 21:08:53</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">

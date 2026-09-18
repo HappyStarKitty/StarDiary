@@ -781,6 +781,31 @@
       \(\chi^2\)分布，\(t\)分布，\(F\)分布
     </span>
 </a>
+<nav aria-label="\(\chi^2\)分布，\(t\)分布，\(F\)分布" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chi2">
+<span class="md-ellipsis">
+      \(\chi^2\)分布
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#t">
+<span class="md-ellipsis">
+      \(t\)分布
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#f">
+<span class="md-ellipsis">
+      \(F\)分布
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
@@ -788,6 +813,24 @@
       正态总体下的抽样分布
     </span>
 </a>
+<nav aria-label="正态总体下的抽样分布" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      单个正态总体
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      多个正态总体
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -2708,6 +2751,31 @@
       \(\chi^2\)分布，\(t\)分布，\(F\)分布
     </span>
 </a>
+<nav aria-label="\(\chi^2\)分布，\(t\)分布，\(F\)分布" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chi2">
+<span class="md-ellipsis">
+      \(\chi^2\)分布
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#t">
+<span class="md-ellipsis">
+      \(t\)分布
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#f">
+<span class="md-ellipsis">
+      \(F\)分布
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
@@ -2715,6 +2783,24 @@
       正态总体下的抽样分布
     </span>
 </a>
+<nav aria-label="正态总体下的抽样分布" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      单个正态总体
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      多个正态总体
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -2742,55 +2828,68 @@ A_k=\frac{1}{n}\sum_{i=1}^{n}X_i^k, \quad k=1,2...
 B_k=\frac{1}{n} \sum_{i=1}^n (X_i-\bar{X})^k, \quad k=2,3...
 \]</div>
 <h2 id="chi2tf"><span><span class="arithmatex">\(\chi^2\)</span><span class="heti-spacing"> </span></span>分布，<span><span class="arithmatex">\(t\)</span><span class="heti-spacing"> </span></span>分布，<span><span class="arithmatex">\(F\)</span><span class="heti-spacing"> </span></span>分布<a class="headerlink" href="#chi2tf" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p><strong><span><span class="arithmatex">\(\chi^2\)</span><span class="heti-spacing"> </span></span>分布</strong></p>
+<h3 id="chi2"><span><span class="arithmatex">\(\chi^2\)</span><span class="heti-spacing"> </span></span>分布<a class="headerlink" href="#chi2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition definition">
+<p class="admonition-title"><span><span class="arithmatex">\(\chi^2\)</span><span class="heti-spacing"> </span></span>分布</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X_1,X_2...X_n\)</span><span class="heti-spacing"> </span></span>为独立同分布的随机变量，且都服从标准正态<span><span class="heti-spacing"> </span><span class="arithmatex">\(N(0,1)\)</span></span>，记：</p>
 <div class="arithmatex">\[Y=X_1^2+X_2^2+...X_n^2 \sim\chi^2(n)
 \]</div>
-<p>其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X_1,X_2...X_n\)</span><span class="heti-spacing"> </span></span>为独立同分布的随机变量，且都服从<span><span class="heti-spacing"> </span><span class="arithmatex">\(N(0,1)\)</span></span></p>
-<p><span><span class="arithmatex">\(\chi^2\)</span><span class="heti-spacing"> </span></span>分布可加性</p>
-<p>设<span><span class="heti-spacing"> </span><span class="arithmatex">\(Y_1\sim\chi^2(m)\)</span></span>，<span class="arithmatex">\(Y_2\sim\chi^2(n)\)</span>，且两者相互独立，则<span><span class="heti-spacing"> </span><span class="arithmatex">\(Y_1+Y2\sim\chi^2(m+n)\)</span></span></p>
-<p><span><span class="arithmatex">\(\chi^2\)</span><span class="heti-spacing"> </span></span>分布的数学期望和方差</p>
-<div class="arithmatex">\[
-E(\chi^2(n))=n, \quad Var(\chi^2(n))=2n
-\]</div>
-<p><strong><span><span class="arithmatex">\(t\)</span><span class="heti-spacing"> </span></span>分布</strong></p>
-<div class="arithmatex">\[
-t=\frac{X}{\sqrt{Y/n}}\sim t(n)
-\]</div>
-<p>其中<span><span class="heti-spacing"> </span><span class="arithmatex">\(X\sim N(0,1)\)</span></span>，<span class="arithmatex">\(Y\sim \chi^2(n)\)</span></p>
-<p><strong><span><span class="arithmatex">\(F\)</span><span class="heti-spacing"> </span></span>分布</strong></p>
-<div class="arithmatex">\[
-F=\frac{U/n_1}{V/n_2}\sim F(n_1,n_2)
-\]</div>
-<p>其中<span><span class="heti-spacing"> </span><span class="arithmatex">\(U\sim \chi^2(n_1)\)</span></span>，<span class="arithmatex">\(V\sim \chi^2(n_2)\)</span></p>
-<h2 id="_2">正态总体下的抽样分布<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>设<span><span class="heti-spacing"> </span><span class="arithmatex">\(X_1\)</span></span>，<span class="arithmatex">\(X_2\)</span>，<span>...<span class="arithmatex">\(X_n\)</span><span class="heti-spacing"> </span></span>为来自正态分布<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(N(\mu,\sigma^2)\)</span><span class="heti-spacing"> </span></span>的简单随机样本，<span><span class="arithmatex">\(\bar{X}\)</span><span class="heti-spacing"> </span></span>是样本均值，<span><span class="arithmatex">\(S^2\)</span><span class="heti-spacing"> </span></span>是样本方差，则有</p>
-<ol>
+<p>称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Y\)</span><span class="heti-spacing"> </span></span>服从自由度为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\chi^2\)</span><span class="heti-spacing"> </span></span>分布，记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(Y\sim\chi^2(n)\)</span></span></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title"><span><span class="arithmatex">\(\chi^2\)</span><span class="heti-spacing"> </span></span>分布的性质</p>
+<ul>
 <li>
-<p>$
-\bar{X} \sim N(\mu, \frac{\sigma^2}{n})
-$</p>
+<p>分布可加性：设<span><span class="heti-spacing"> </span><span class="arithmatex">\(Y_1\sim\chi^2(m)\)</span></span>，<span class="arithmatex">\(Y_2\sim\chi^2(n)\)</span>，且两者相互独立，则<span><span class="heti-spacing"> </span><span class="arithmatex">\(Y_1+Y2\sim\chi^2(m+n)\)</span></span></p>
+</li>
+<li>
+<p>数学期望和方差：设<span><span class="heti-spacing"> </span><span class="arithmatex">\(Y\sim\chi^2(n)\)</span></span>，<span class="arithmatex">\(E(Y)=n,Var(Y)=2n\)</span></p>
+</li>
+<li>
+<p>分位数：对于给定的正数<span><span class="heti-spacing"> </span><span class="arithmatex">\(\alpha,0&lt;\alpha&lt;1\)</span></span>，称满足条件<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(P(\chi^2&gt;\chi_{\alpha}^2(n))=\int_{\chi^2_\alpha(n)}^{+\infty} f_{\chi^2}(x)\mathrm{d}x=\alpha\)</span><span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\chi_{\alpha}^2(x)\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\chi^2(n)\)</span><span class="heti-spacing"> </span></span>分布的上（侧）<span><span class="arithmatex">\(\alpha\)</span><span class="heti-spacing"> </span></span>分位数</p>
+</li>
+</ul>
+</div>
+<h3 id="t"><span><span class="arithmatex">\(t\)</span><span class="heti-spacing"> </span></span>分布<a class="headerlink" href="#t" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition definition">
+<p class="admonition-title"><span><span class="arithmatex">\(t\)</span><span class="heti-spacing"> </span></span>分布</p>
+<p>设<span><span class="heti-spacing"> </span><span class="arithmatex">\(X\sim N(0,1)\)</span></span>，<span class="arithmatex">\(Y\sim \chi^2(n)\)</span>，且<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X,Y\)</span><span class="heti-spacing"> </span></span>相互独立，则称随机变量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(t=\frac{X}{\sqrt{Y/n}}\)</span><span class="heti-spacing"> </span></span>服从自由度为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(t\)</span><span class="heti-spacing"> </span></span>分布，记为<span><span class="heti-spacing"> </span><span class="arithmatex">\(t\sim t(n)\)</span></span></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title"><span>t<span class="heti-spacing"> </span></span>分布的性质</p>
+</div>
+<h3 id="f"><span><span class="arithmatex">\(F\)</span><span class="heti-spacing"> </span></span>分布<a class="headerlink" href="#f" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition definition">
+<p class="admonition-title"><span><span class="arithmatex">\(F\)</span><span class="heti-spacing"> </span></span>分布</p>
+<p>设<span><span class="heti-spacing"> </span><span class="arithmatex">\(U\sim \chi^2(n_1)\)</span></span>，<span class="arithmatex">\(V\sim \chi^2(n_2)\)</span>，且<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(U\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(V\)</span><span class="heti-spacing"> </span></span>相互独立，则称随机变量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F=\frac{U/n_1}{V/n_2}\)</span><span class="heti-spacing"> </span></span>服从第一自由度为<span><span class="heti-spacing"> </span><span class="arithmatex">\(n_1\)</span></span>，第二自由度为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n_2\)</span><span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F\)</span><span class="heti-spacing"> </span></span>分布，记为<span><span class="heti-spacing"> </span><span class="arithmatex">\(F\sim F(n_1,n_2)\)</span></span></p>
+</div>
+<h2 id="_2">正态总体下的抽样分布<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_3">单个正态总体<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>设<span><span class="heti-spacing"> </span><span class="arithmatex">\(X_1\)</span></span>，<span class="arithmatex">\(X_2\)</span>，<span>...<span class="arithmatex">\(X_n\)</span><span class="heti-spacing"> </span></span>为来自正态分布<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(N(\mu,\sigma^2)\)</span><span class="heti-spacing"> </span></span>的简单随机样本，<span><span class="arithmatex">\(\bar{X}\)</span><span class="heti-spacing"> </span></span>是样本均值，<span><span class="arithmatex">\(S^2\)</span><span class="heti-spacing"> </span></span>是样本方差，则有</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\bar{X} \sim N(\mu, \frac{\sigma^2}{n})\)</span></p>
 </li>
 <li>
 <p><span><span class="arithmatex">\(\bar{X}\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(S^2\)</span><span class="heti-spacing"> </span></span>相互独立</p>
 </li>
 <li>
-<p>$\frac{(n-1)S<sup>2}{\sigma</sup>2}\sim \chi^2(n-1)
-$</p>
+<p><span class="arithmatex">\(\frac{(n-1)S^2}{\sigma^2}\sim \chi^2(n-1)\)</span></p>
 </li>
 <li>
 <p><span class="arithmatex">\(\frac{\bar{X}-\mu}{S/\sqrt{n}}\sim t(n-1)\)</span></p>
 </li>
-</ol>
+</ul>
+<h3 id="_4">多个正态总体<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X_1,X_2,...X_{n1}\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Y_1,Y_2,...Y_{n2}\)</span><span class="heti-spacing"> </span></span>分别为来自正态总体<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(N(\mu_1,\sigma_1^2)\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(N(\mu_2,\sigma_2^2)\)</span><span class="heti-spacing"> </span></span>的两个相互独立的简单随机样本</p>
-<ol>
+<ul>
 <li>
-<p>$\frac{S_1<sup>2/\sigma_1</sup>2}{S_2<sup>2/\sigma_2</sup>2}\sim F(n_1-1,n_2-1)
-$</p>
+<p><span class="arithmatex">\(\frac{S_1^2/\sigma_1^2}{S_2^2/\sigma_2^2}\sim F(n_1-1,n_2-1)\)</span></p>
 </li>
 <li>
 <p>当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sigma_1^2=\sigma_2^2=\sigma^2\)</span><span class="heti-spacing"> </span></span>时，</p>
 </li>
-</ol>
+</ul>
 <div class="arithmatex">\[
 \frac{(\bar{X}-\bar{Y})-(\mu_1-\mu_2)}{S_w\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}\sim t(n_1+n_2-2)
 \]</div>
@@ -2800,13 +2899,13 @@ $</p>
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月17日 15:57:31</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月18日 21:08:53</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月17日 15:57:31</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月18日 21:08:53</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>

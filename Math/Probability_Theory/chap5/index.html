@@ -774,6 +774,24 @@
       中心极限定理
     </span>
 </a>
+<nav aria-label="中心极限定理" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      独立同分布情形
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      独立不同分布情形
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -2701,6 +2719,24 @@
       中心极限定理
     </span>
 </a>
+<nav aria-label="中心极限定理" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      独立同分布情形
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      独立不同分布情形
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -2711,50 +2747,107 @@
 <article class="md-content__inner md-typeset">
 <h1 id="chap5"><span>Chap5<span class="heti-spacing"> </span></span>大数定律及中心极限定理<a class="headerlink" href="#chap5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <h2 id="_1">大数定律<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p><strong>马尔可夫不等式</strong></p>
+<div class="admonition formula">
+<p class="admonition-title">马尔可夫不等式</p>
+<p>若随机变量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Y\)</span><span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(k\)</span><span class="heti-spacing"> </span></span>阶（原点）矩存在（<span class="arithmatex">\(k\ge1\)</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，则对任意<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varepsilon\)</span></span>，有：</p>
 <div class="arithmatex">\[P\{|Y| \ge \varepsilon\} \le \frac{E(|Y|^k)}{\varepsilon^k}
 \]</div>
-<p><strong>切比雪夫不等式</strong></p>
+</div>
+<div class="admonition formula">
+<p class="admonition-title">切比雪夫不等式</p>
 <div class="arithmatex">\[
 P\{ |X-\mu| \ge \varepsilon\}\le \frac{\sigma^2}{\varepsilon^2}
 \]</div>
 <div class="arithmatex">\[
 P\{|X-E(X)| \ge \varepsilon \} \le \frac{Var(X)}{\varepsilon^2}
 \]</div>
-<p><strong>伯努利大数定律</strong></p>
+</div>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{X_i, i \geqslant 1\}\)</span><span class="heti-spacing"> </span></span>为一随机变量序列，若存在常数序列<span><span class="heti-spacing"> </span><span class="arithmatex">\(\{c_n, n \geqslant 0\}\)</span></span>，使得对任意<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varepsilon &gt; 0\)</span></span>，有：</p>
+<div class="arithmatex">\[
+\lim_{n \to +\infty} P\left( \left| \frac{1}{n}\sum_{i=1}^{n} X_i - c_n \right| \geqslant \varepsilon \right) = 0 \quad \left( \text{or} \quad \lim_{n \to +\infty} P\left( \left| \frac{1}{n}\sum_{i=1}^{n} X_i - c_n \right| &lt; \varepsilon \right) = 1 \right)
+\]</div>
+<p>成立，即当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n \to +\infty\)</span><span class="heti-spacing"> </span></span>时，有<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \frac{1}{n}\sum_{i=1}^{n} X_i - c_n \xrightarrow{P} 0\)</span></span>，则称随机变量序列<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{X_i, i \geqslant 1\}\)</span><span class="heti-spacing"> </span></span>服从<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>弱大数定律<span><span class="heti-spacing"> </span>**</span>，简称服从<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>大数定律<span><span class="heti-spacing"> </span>**</span>。特别地，当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(c_n = c\ (n = 1, 2, \dots)\)</span><span class="heti-spacing"> </span></span>时，可写为：<span class="arithmatex">\(\displaystyle \frac{1}{n}\sum_{i=1}^{n} X_i \xrightarrow{P} c,\ n \to +\infty\)</span></p>
+<div class="admonition theorem">
+<p class="admonition-title">伯努利大数定律</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n_A\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>重伯努利试验中事件<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>发生的次数，<span><span class="arithmatex">\(p\)</span><span class="heti-spacing"> </span></span>为事件<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>在每次试验中发生的概率，则对任意<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varepsilon&gt;0\)</span></span>，有：</p>
 <div class="arithmatex">\[
 \lim_{n \rightarrow +\infty}P\{ |\frac{n_A}{n}-p|\ge \varepsilon\} =0
 \]</div>
-<p><strong>辛钦大数定律</strong></p>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">辛钦大数定律</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{X_i,i\ge1\}\)</span><span class="heti-spacing"> </span></span>为独立同分布的随机变量序列，且数学期望存在，记为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mu\)</span></span>，则对任意<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varepsilon&gt;0\)</span></span>，有：</p>
 <div class="arithmatex">\[
-\lim_{n\rightarrow +\infty}P\{|\frac{1}{n}\sum_{i=1}^{n}h(X_i)-a|\ge \varepsilon\}=0
+\lim_{n\rightarrow +\infty}P\{|\frac{1}{n}\sum_{i=1}^{n}X_i-\mu|\ge \varepsilon\}=0
 \]</div>
+<p>即<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \frac{1}{n}\sum_{i=1}^{n} X_i \xrightarrow{P} \mu\ (n \to +\infty)\)</span></span>，并认为此时随机变量序列<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{X_i, i \geqslant 1\}\)</span><span class="heti-spacing"> </span></span>服从大数定律</p>
+<p>推论：</p>
+<ul>
+<li>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{X_i, i \geqslant 1\}\)</span><span class="heti-spacing"> </span></span>为独立同分布的随机变量序列，若<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(h(x)\)</span><span class="heti-spacing"> </span></span>为一连续函数，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(E(|h(X_1)|) &lt; +\infty\)</span></span>，则对任意<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varepsilon &gt; 0\)</span></span>，有：</li>
+</ul>
+<div class="arithmatex">\[
+\lim_{n \to +\infty} P\left( \left| \frac{1}{n}\sum_{i=1}^{n} h(X_i) - a \right| \geqslant \varepsilon \right) = 0
+\]</div>
+<p>其中<span><span class="heti-spacing"> </span><span class="arithmatex">\(a = E(h(X_1))\)</span></span>，即<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \frac{1}{n}\sum_{i=1}^{n} h(X_i) \xrightarrow{P} a,\ n \to +\infty\)</span></span></p>
+<ul>
+<li><span class="arithmatex">\(f(\overline{X}) \xrightarrow{P} f(E(X))\)</span></li>
+</ul>
+</div>
 <h2 id="_2">中心极限定理<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p><strong>林德伯格<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>莱维中心极限定理</strong></p>
+<h3 id="_3">独立同分布情形<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition theorem">
+<p class="admonition-title">林德伯格<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>莱维中心极限定理</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{X_i,i\ge1\}\)</span><span class="heti-spacing"> </span></span>为独立同分布的随机变量序列，且期望<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(E(X_i)=\mu\)</span><span class="heti-spacing"> </span></span>和方差<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(Var(X_i)=\sigma^2\)</span><span class="heti-spacing"> </span></span>均存在（<span class="arithmatex">\(\sigma&gt;0\)</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，则对任意<span><span class="heti-spacing"> </span><span class="arithmatex">\(x\in R\)</span></span>，有：</p>
 <div class="arithmatex">\[
 \lim_{n \rightarrow +\infty}P\{{\frac{\sum_{i=1}^n X_i - E(\sum_{i=1}^n X_i)}{\sqrt{Var(\sum_{i=1}^n X_i)}}\le x}\}=\lim_{n \rightarrow +\infty}P\{\frac{\sum_{i=1}^{n} X_i-n\mu}{\sigma\sqrt{n}}\le x\}=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{x}e^{-\frac{t^2}{2}}dt=\Phi(x)
 \]</div>
 <p>也称为独立同分布的中心极限定理</p>
-<p><strong>棣莫弗<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>拉普拉斯中心极限定理</strong></p>
+<p>该定理表明：期望为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mu\)</span></span>，方差为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sigma^2\)</span><span class="heti-spacing"> </span></span>的独立同分布的随机变量的部分和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \sum_{i=1}^{n} X_i\)</span><span class="heti-spacing"> </span></span>的标准化变量<span><span class="heti-spacing"> </span><span class="arithmatex">\(\dfrac{\displaystyle \sum_{i=1}^{n} X_i - n\mu}{\sigma\sqrt{n}}\)</span></span>，当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>充分大时，近似地服从<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>标准正态分布<span><span class="heti-spacing"> </span>** <span class="arithmatex">\(N(0, 1)\)</span></span>，即：</p>
+<div class="arithmatex">\[
+\frac{\displaystyle \sum_{i=1}^{n} X_i - n\mu}{\sigma\sqrt{n}} \overset{\text{approximately}}{\sim} N(0, 1), \text{ when } n \text{ is sufficiently large}
+\]</div>
+<p>或者记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \frac{1}{n}\sum_{i=1}^{n} X_i \overset{\text{approximately}}{\sim} N\left(\mu, \frac{\sigma^2}{n}\right)\)</span></span>（当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>充分大时）</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">例题</p>
+<p>利用中心极限定理，<span class="arithmatex">\(\lim_{n\rightarrow +\infty}\frac{n^k}{k!}e^{-n}=\)</span>____</p>
+<p>引随机变量列：<span><span class="arithmatex">\(X_k\)</span><span class="heti-spacing"> </span></span>服从参数为<span class="heti-skip"><span class="heti-spacing"> </span>1<span class="heti-spacing"> </span></span>的泊松分布，且相互独立，则知<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sum_{i=1}^n X_k\)</span><span class="heti-spacing"> </span></span>服从参数为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>的泊松分布，<span class="arithmatex">\(E(\sum X_k)=D(\sum X_k)=n\)</span>，有</p>
+<div class="arithmatex">\[P{\sum X_k \le n}=\sum \frac{n^k}{k!}e^{-n}\]</div>
+<p>又</p>
+<div class="arithmatex">\[P(\sum X_k \le n)=P\{\frac{\sum X_k-n}{\sqrt{n}}\ge \frac{n-n}{\sqrt{n}}\}\]</div>
+<p>由中心极限定理，即得</p>
+<div class="arithmatex">\[\lim \sum \frac{n^k}{k!}e^{-n}=\Phi(0)=\frac{1}{2}\]</div>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">棣莫弗<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>拉普拉斯中心极限定理</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n_A\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>重伯努利试验中事件<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>发生的次数，<span><span class="arithmatex">\(p\)</span><span class="heti-spacing"> </span></span>为事件<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>在每次试验中发生的概率，则对任意<span><span class="heti-spacing"> </span><span class="arithmatex">\(x\in R\)</span></span>，有：</p>
 <div class="arithmatex">\[
 \lim_{n \rightarrow +\infty}P\{\frac{n_A-np}{\sqrt{np(1-p)}} \le x\}=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^x e^{-\frac{t^2}{2}}dt=\Phi(x)
 \]</div>
-<p><strong>李雅普诺夫中心极限定理</strong></p>
+<p>该定理表明，当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>充分大时，二项分布<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(B(n,p)\)</span><span class="heti-spacing"> </span></span>可用正态分布<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(N(np,np(1-p))\)</span><span class="heti-spacing"> </span></span>来逼近</p>
+</div>
+<h3 id="_4">独立不同分布情形<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition theorem">
+<p class="admonition-title">李雅普诺夫中心极限定理</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{X_i,i\ge1\}\)</span><span class="heti-spacing"> </span></span>为相互独立的随机变量序列，且数学期望<span><span class="heti-spacing"> </span><span class="arithmatex">\(E(X_i)=\mu_i\)</span></span>，方差<span><span class="heti-spacing"> </span><span class="arithmatex">\(Var(X_i)=\sigma_i^2\)</span></span>（<span class="arithmatex">\(\sigma_i&gt;0\)</span><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，如果存在<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varepsilon&gt;0\)</span></span>，使</p>
+<div class="arithmatex">\[\lim_{n\rightarrow +\infty}\frac{1}{B_n^{2+\varepsilon}}\sum_{i=1}^{n} E|X_i-\mu_i|^{2+\varepsilon}=0\]</div>
+<p>其中<span><span class="heti-spacing"> </span><span class="arithmatex">\(B_n^2=\sum_{i=1}^n \sigma_i^2\)</span></span>，那么对任意的<span><span class="heti-spacing"> </span><span class="arithmatex">\(x\in R\)</span></span>，有</p>
 <div class="arithmatex">\[
 \lim_{n\rightarrow +\infty}P\{\frac{1}{B_n}\sum_{i=1}^{n}(X_i-\mu_i)\le x\}=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{x}e^{-\frac{t^2}{2}}dt=\Phi(x)
 \]</div>
+</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月17日 15:57:31</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月18日 21:08:53</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月17日 15:57:31</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2026年9月18日 21:08:53</span>
 </span>
 </aside>
 <p style="font-size: 30px; font-weight: 600">评论区</p>
