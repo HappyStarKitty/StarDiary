@@ -36,14 +36,30 @@ nav:
   - Home: README.md
   - Math:
       - Index: Math/README.md
-      - 微积分:
-          - Index: Math/Calculus/README.md
-          - Note: Math/Calculus/Note.md
-      - 线性代数:
+      - 微积分: 
+          - Chap1 函数与极限: Math/Calculus/chap1.md
+          - Chap2 导数与微分: Math/Calculus/chap2.md
+          - Chap3 微分中值定理及导数的应用: Math/Calculus/chap3.md
+          - Chap4 不定积分: Math/Calculus/chap4.md
+          - Chap5 定积分及其应用: Math/Calculus/chap5.md
+          - Chap6 常微分方程: Math/Calculus/chap6.md
+          - Chap7 矢量代数与空间解析几何: Math/Calculus/chap7.md
+          - Chap8 多元函数微分学: Math/Calculus/chap8.md
+          - Chap9 多元函数积分学: Math/Calculus/chap9.md
+          - Chap10 第二类曲线积分与第二类曲面积分: Math/Calculus/chap10.md
+          - Chap11 级数: Math/Calculus/chap11.md
+      - 线性代数: 
           - Index: Math/Linear_Algebra/README.md
-          - Note: Math/Linear_Algebra/Note.md
+          - Chap1 线性方程组的求解: Math/Linear_Algebra/chap1.md
+          - Chap2 行列式与矩阵的秩: Math/Linear_Algebra/chap2.md
+          - Chap3 矩阵的运算: Math/Linear_Algebra/chap3.md
+          - Chap4 n元向量空间: Math/Linear_Algebra/chap4.md
+          - Chap5 矩阵的特征值理论与相似对角化: Math/Linear_Algebra/chap5.md
+          - Chap6 二次型: Math/Linear_Algebra/chap6.md
+          - Chap7 线性空间: Math/Linear_Algebra/chap7.md
+          - Chap8 欧氏空间: Math/Linear_Algebra/chap8.md
+          - Chap9 线性映射与线性变换初步: Math/Linear_Algebra/chap9.md
       - 离散数学:
-          - Index: Math/Discrete_Mathematics/README.md
           - Chap1: Math/Discrete_Mathematics/chap1.md
           - Chap2: Math/Discrete_Mathematics/chap2.md
           - Chap3: Math/Discrete_Mathematics/chap3.md
@@ -54,9 +70,12 @@ nav:
           - Chap8: Math/Discrete_Mathematics/chap8.md
           - Chap9: Math/Discrete_Mathematics/chap9.md
           - Chap10: Math/Discrete_Mathematics/chap10.md
-      - 常微分方程:
-          - Index: Math/Differential_Equation/README.md
-          - Note: Math/Differential_Equation/Note.md
+      - 常微分方程: 
+          - Chap1 初等积分法: Math/Differential_Equation/chap1.md
+          - Chap2 线性微分方程: Math/Differential_Equation/chap2.md
+          - Chap3 线性微分方程组: Math/Differential_Equation/chap3.md
+          - Chap4 稳定性与稳定性理论初步: Math/Differential_Equation/chap4.md
+          - Chap5 差分与差分方程: Math/Differential_Equation/chap5.md
       - 数值计算方法:
           - Index: Math/Numerical_Method/README.md
           - Chap0 Matlab: Math/Numerical_Method/chap0.md
@@ -67,6 +86,7 @@ nav:
           - Chap5 数值微分和数值积分: Math/Numerical_Method/chap5.md
           - Chap6 常微分方程的数值解: Math/Numerical_Method/chap6.md
       - 复变函数与积分变换:
+          - Index: Math/Complex_Function/README.md
           - Chap1 复数: Math/Complex_Function/chap1.md
           - Chap2 复变函数: Math/Complex_Function/chap2.md
           - Chap3 复变函数的积分: Math/Complex_Function/chap3.md
@@ -74,16 +94,23 @@ nav:
           - Chap5 留数: Math/Complex_Function/chap5.md
           - Chap6 保角映射: Math/Complex_Function/chap6.md
           - Chap7 拉普拉斯变换: Math/Complex_Function/chap7.md
-      - 概率论与数理统计:
+      - 概率论与数理统计: 
           - Index: Math/Probability_Theory/README.md
-          - Note: Math/Probability_Theory/Note.md
+          - Chap1 概率论的基本概念: Math/Probability_Theory/chap1.md
+          - Chap2 随机变量及其概率分布: Math/Probability_Theory/chap2.md
+          - Chap3 多维随机变量及其分布: Math/Probability_Theory/chap3.md
+          - Chap4 随机变量的数字特征: Math/Probability_Theory/chap4.md
+          - Chap5 大数定律及中心极限定理: Math/Probability_Theory/chap5.md
+          - Chap6 统计量与抽样分布: Math/Probability_Theory/chap6.md
+          - Chap7 参数估计: Math/Probability_Theory/chap7.md
+          - Chap8 假设检验: Math/Probability_Theory/chap8.md
       - 偏微分方程:
           - Index: Math/Partial_Differential_Equation/README.md
-          - Chap1: Math/Partial_Differential_Equation/chap1.md
-          - Chap2: Math/Partial_Differential_Equation/chap2.md
-          - Chap3: Math/Partial_Differential_Equation/chap3.md
-          - Chap4: Math/Partial_Differential_Equation/chap4.md
-          - Chap5: Math/Partial_Differential_Equation/chap5.md
+          - Chap1 方程的导出和定解问题: Math/Partial_Differential_Equation/chap1.md
+          - Chap2 行波法: Math/Partial_Differential_Equation/chap2.md
+          - Chap3 分离变量法和特殊函数: Math/Partial_Differential_Equation/chap3.md
+          - Chap4 积分变换法: Math/Partial_Differential_Equation/chap4.md
+          - Chap5 Green函数法: Math/Partial_Differential_Equation/chap5.md
 
   - Phy:
       - Index: Phy/README.md
@@ -94,12 +121,17 @@ nav:
         - 量子物理学: Phy/College_Physics/quantum.md
       - 理论力学（甲）:
         - Index: Phy/Theoretical_Mechanics/README.md
-        - Chap0: Phy/Theoretical_Mechanics/chap0.md
-        - Chap1: Phy/Theoretical_Mechanics/chap1.md
-        - Chap2: Phy/Theoretical_Mechanics/chap2.md
-        - Chap3: Phy/Theoretical_Mechanics/chap3.md
-        - Chap4: Phy/Theoretical_Mechanics/chap4.md
+        - Chap0 绪论: Phy/Theoretical_Mechanics/chap0.md
+        - Chap1 运动，其描述与简化: Phy/Theoretical_Mechanics/chap1.md
+        - Chap2 力系，其描述与简化: Phy/Theoretical_Mechanics/chap2.md
+        - Chap3 矢量力学之静力学: Phy/Theoretical_Mechanics/chap3.md
+        - Chap4 矢量力学之动力学: Phy/Theoretical_Mechanics/chap4.md
+        - Chap5 数学间奏——从函数到泛函、从微分到积分: Phy/Theoretical_Mechanics/chap5.md
+        - Chap6 约束的一般理论、分析力学基本概念: Phy/Theoretical_Mechanics/chap6.md
+        - Chap7 分析力学之静力学: Phy/Theoretical_Mechanics/chap7.md
+        - Chap8 分析力学之动力学: Phy/Theoretical_Mechanics/chap8.md
       - 材料力学（乙）:
+        - Index: Phy/Mechanics_Of_Materials/README.md
         - Chap1 绪论: Phy/Mechanics_Of_Materials/chap1.md
         - Chap2 拉伸、压缩与剪切: Phy/Mechanics_Of_Materials/chap2.md
         - Chap3 扭转: Phy/Mechanics_Of_Materials/chap3.md
@@ -111,6 +143,7 @@ nav:
         - Chap9 压杆稳定: Phy/Mechanics_Of_Materials/chap9.md
         - Chap10 动载荷: Phy/Mechanics_Of_Materials/chap10.md
         - Chap11 交变应力: Phy/Mechanics_Of_Materials/chap11.md
+        - Chap12 弯曲的补充问题: Phy/Mechanics_Of_Materials/chap12.md
         - Chap13 能量法: Phy/Mechanics_Of_Materials/chap13.md
         - 附录: Phy/Mechanics_Of_Materials/addition.md
       - 热力学基础:
@@ -122,6 +155,7 @@ nav:
         - Chap7 气体和蒸汽的流动: Phy/Fundamentals_Of_Thermodynamics/chap7.md
         - Chap8 压气机的热力过程: Phy/Fundamentals_Of_Thermodynamics/chap8.md
         - Chap9 气体动力循环: Phy/Fundamentals_Of_Thermodynamics/chap9.md
+
   - EE:
       - Index: EE/README.md
       - 电工电子学: 
@@ -147,6 +181,7 @@ nav:
         - Chap8 通信系统: EE/Signal_And_System/chap8.md
         - Chap9 拉普拉斯变换: EE/Signal_And_System/chap9.md
         - Chap10 z变换: EE/Signal_And_System/chap10.md
+
       - 自动控制原理:
         - Chap1 自动控制的一般概念: EE/Principle_Of_Automatic_Control/chap1.md
         - Chap2 控制系统的数学模型: EE/Principle_Of_Automatic_Control/chap2.md
@@ -158,6 +193,7 @@ nav:
         - Chap8 非线性控制系统分析: EE/Principle_Of_Automatic_Control/chap8.md
         - Chap9 线性系统的状态空间分析与综合: EE/Principle_Of_Automatic_Control/chap9.md
         - Chap10 动态系统的最优控制方法: EE/Principle_Of_Automatic_Control/chap10.md
+
       - 嵌入式计算技术:
         - Index: EE/Embedded_Computing_Technology/README.md
         - Chap1 Introduction: EE/Embedded_Computing_Technology/chap1.md
@@ -168,6 +204,7 @@ nav:
         - Chap6 Embedded Operation System and Process/Thread Management: EE/Embedded_Computing_Technology/chap6.md
         - Chap7 Mulit-task Framework and Real-time Scheduling: EE/Embedded_Computing_Technology/chap7.md
         - Addition: EE/Embedded_Computing_Technology/addition.md
+
       - 数字电路:
         - Index: EE/Digital_Circuit/README.md
         - Chap1 Digital Systems and Binary Numbers: EE/Digital_Circuit/chap1.md
@@ -176,7 +213,9 @@ nav:
         - Chap4 Combination Logic: EE/Digital_Circuit/chap4.md
         - Chap5 Synchronous Seqential Logic: EE/Digital_Circuit/chap5.md
         - Chap6 Registers and Counters: EE/Digital_Circuit/chap6.md
+        - Chap7 Memory and Programmable Logic: EE/Digital_Circuit/chap7.md
         - Addition: EE/Digital_Circuit/addition.md
+        
   - AA:
       - Index: AA/README.md
       - 空气动力学:
@@ -195,6 +234,7 @@ nav:
         - Chap14 准一维流动理论: AA/Aerodynamics/chap14.md
         - Chap15 绕翼型可压缩流动: AA/Aerodynamics/chap15.md
         - Chap16 高超音速流动概述: AA/Aerodynamics/chap16.md
+
       - 飞行器结构设计基础:
         - Chap1 飞行器结构设计引论: AA/Fundamentals_Of_Aircraft_Structure_Design/chap1.md
         - Chap2 飞机结构设计思想和方法: AA/Fundamentals_Of_Aircraft_Structure_Design/chap2.md
@@ -209,17 +249,43 @@ nav:
         - Chap2 轨道动力学: AA/Spacecraft_Orbit_And_Attitude_Dynamics/chap2.md
         - Chap3 航天器导航: AA/Spacecraft_Orbit_And_Attitude_Dynamics/chap3.md
         - Chap4 姿态动力学: AA/Spacecraft_Orbit_And_Attitude_Dynamics/chap4.md
+        - Chap5 空间环境和干扰力矩: AA/Spacecraft_Orbit_And_Attitude_Dynamics/chap5.md
+        - Chap6 姿态控制系统: AA/Spacecraft_Orbit_And_Attitude_Dynamics/chap6.md
+        - Chap7 主动控制系统: AA/Spacecraft_Orbit_And_Attitude_Dynamics/chap7.md
+        - Chap8 姿态确定算法: AA/Spacecraft_Orbit_And_Attitude_Dynamics/chap8.md
+        - Chap9 轨道控制和编队控制: AA/Spacecraft_Orbit_And_Attitude_Dynamics/chap9.md
+
+      - 飞行器结构动力学:
+        - Chap1 绪论: AA/Aircraft_Structural_Dynamics/chap1.md
+        - Chap2 单自由度系统的振动: AA/Aircraft_Structural_Dynamics/chap2.md
+        - Chap3 多自由度系统的振动: AA/Aircraft_Structural_Dynamics/chap3.md
+        - Chap4 连续弹性体系统的振动: AA/Aircraft_Structural_Dynamics/chap4.md
+
+      - 推进系统原理:
+        - Chap1 绪论: AA/Principle_Of_The_Propulsion_System/chap1.md
+        - Chap2 可压缩流体力学基础: AA/Principle_Of_The_Propulsion_System/chap2.md
+        - Chap3 内流可压缩流动现象: AA/Principle_Of_The_Propulsion_System/chap3.md
+        - Chap4 喷管中的基本流动现象: AA/Principle_Of_The_Propulsion_System/chap4.md
+        - Chap5 化学热力学基础 火箭推进技术基础: AA/Principle_Of_The_Propulsion_System/chap5.md
+        - Chap6 火箭方程及其应用: AA/Principle_Of_The_Propulsion_System/chap6.md
+        - Chap7 火箭发动机的基本性能参数计算: AA/Principle_Of_The_Propulsion_System/chap7.md
+        - Addition 作业答案: AA/Principle_Of_The_Propulsion_System/addition.md
+
+      - 有限元方法:
+        - Chap1 Introduction: AA/Finite_Element_Method/chap1.md
+        - Chap2 Preknowledge: AA/Finite_Element_Method/chap2.md
+        - Chap3 Stiffness method: AA/Finite_Element_Method/chap3.md
+        - Chap4 Truss element: AA/Finite_Element_Method/chap4.md
 
   - CS:
       - Index: CS/README.md
       - Computer Graphics:
-          - Games101:
-              - Lec1: CS/Computer_Graphics/Games101/lec1.md
-              - Lec2: CS/Computer_Graphics/Games101/lec2.md
-              - Lec3: CS/Computer_Graphics/Games101/lec3.md
-              - Lec4: CS/Computer_Graphics/Games101/lec4.md
-              - Lec5: CS/Computer_Graphics/Games101/lec5.md
-              - Lec6: CS/Computer_Graphics/Games101/lec6.md
+          - Lec1: CS/Computer_Graphics/lec1.md
+          - Lec2: CS/Computer_Graphics/lec2.md
+          - Lec3: CS/Computer_Graphics/lec3.md
+          - Lec4: CS/Computer_Graphics/lec4.md
+          - Lec5: CS/Computer_Graphics/lec5.md
+          - Lec6: CS/Computer_Graphics/lec6.md
       - Language:
           - C:
               - Index: CS/Language/C_Program/README.md
@@ -244,25 +310,46 @@ nav:
           - Index: CS/Algorithm/README.md
           - Chap1: CS/Algorithm/chap1.md
           - Chap2: CS/Algorithm/chap2.md
-          - Chap3: CS/Algotirhm/chap3.md
+          - Chap3: CS/Algorithm/chap3.md
       - Computer System: CS/Computer_System/README.md
       - Object-oriented Programming: CS/Object-oriented_Programming/README.md
-      - Quantum Computation:
-          - Index: CS/Quantum_Computation/README.md
+
 
   - AI:
       - Index: AI/README.md
   - Misc:
-      - 模糊控制: Misc/Fuzzy.md
+      - Index: Misc/README.md
+      - 模糊控制: 
+          - Chap1 Control challenges in robotics and automation: Misc/Fuzzy_Control/chap1.md
+          - Chap2 Fuzzy logic and ANN: Misc/Fuzzy_Control/chap2.md
+          - Chap3 Mathematical basics of fuzzy logic: Misc/Fuzzy_Control/chap3.md
+          - Chap4 Fuzzy control: Misc/Fuzzy_Control/chap4.md
+          - Chap5 Neuron models: Misc/Fuzzy_Control/chap5.md
+          - Chap6 Learning in nerual networks: Misc/Fuzzy_Control/chap6.md
+          - Chap7 Layered nerual networks and backpropagation: Misc/Fuzzy_Control/chap7.md
+          - Chap8 Associative nerual networks: Misc/Fuzzy_Control/chap8.md
+          - Chap9 Self-organizing nerual networks: Misc/Fuzzy_Control/chap9.md
+          - Addition: Misc/Fuzzy_Control/addition.md
       - 信息论与编码: Misc/Information.md
 
   - Other:
-      - Git: Other/Tools/Git.md
-      - Linux: Other/Tools/Linux.md
-      - Latex: OtherTools/Latex.md
-      - Markdown: Other/Tools/Markdown.md
-      - Typst: Other/Tools/Typst.md
-      - Word: Other/Tools/Word.md
+      - 工具:
+          - Git: Other/Tools/Git.md
+          - Linux: Other/Tools/Linux.md
+          - Latex: Other/Tools/Latex.md
+          - Markdown: Other/Tools/Markdown.md
+          - Typst: Other/Tools/Typst.md
+          - Word: Other/Tools/Word.md
+      - 回忆卷:
+          - 航天器姿态与轨道动力学: Other/Test/guidao.md
+          - 空天信息技术基础: Other/Test/kongxin.md
+          - 电工电子学小测: Other/Test/diangong_xc.md
+          - 推进系统原理: Other/Test/tuijin.md
+          - 飞行器结构动力学: Other/Test/jiegou.md
+      - 飞行手册:
+          - Index: Other/Manual/README.md
+          - 总体篇: Other/Manual/zongti.md
+          - 飞动篇: Other/Manual/feidong.md
 
 
 markdown_extensions:
@@ -334,7 +421,6 @@ extra_css:
   - stylesheet/counter.css
   - stylesheet/custom.css
   - stylesheet/extra_changelog.css
-  - https://unpkg.com/katex@0/dist/katex.min.css
   - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
   - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
   - https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap

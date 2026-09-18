@@ -97,7 +97,7 @@
 
     $$\rho=f(p,T)$$
 
-    $$\mathrm{d}\rho=\frac{\partial \rho}{\partial p}\mathrm{d}p+\frac{\partial \rho}{\partial T}\mathrm{d}T=\underbrace{\frac{\rho}{E}\mathrm{d} p}_{\text{可压缩性}}- \underbrace{\rho \beta \mathrm{d}T}_{\text{热膨胀性}}$$
+    $$\mathrm{d}\rho=\frac{\partial\rho}{\partial p}\mathrm{d}p+\frac{\partial \rho}{\partial T}\mathrm{d}T=\underbrace{\frac{\rho}{E}\mathrm{d}p}_{\text{可压缩性}}-\underbrace{\rho\beta\mathrm{d}T}_{\text{热膨胀性}}$$
 
     热膨胀系数：
 
@@ -120,15 +120,15 @@
 
     考虑两块平行放置的平板，平板间充满均匀粘性流体，下板固定，上板以恒速U平行运动
 
-    1. 两板之间的流体流动速度呈线性分布
+    1.两板之间的流体流动速度呈线性分布
 
     $$u(y)=\frac{y}{h}U$$
 
-    2. 切应力与速度呈正比，与两板间距离呈反比
+    2.切应力与速度呈正比，与两板间距离呈反比
 
     $$\tau=\mu\frac{U}{h}$$
 
-    3. 推广到任意层流直线运动，取dy薄层
+    3.推广到任意层流直线运动，取$\mathrm{d}y$薄层
 
     $$\tau=\mu\frac{u+du-u}{dy}=\mu\frac{du}{dy}$$
 
@@ -172,9 +172,9 @@
 
     温度梯度：
 
-    $$\nabla T=\frac{\partial T}{\partial x}\bm{i}+\frac{\partial T}{\partial y}\bm{j}+\frac{\partial T}{\partial z}\bm{k}$$
+    $$\nabla T=\frac{\partial T}{\partial x}\mathbf{i}+\frac{\partial T}{\partial y}\mathbf{j}+\frac{\partial T}{\partial z}\mathbf{k}$$
 
-    其中，k为热传导系数；气体热传导系数随温度升高而增大
+    其中，$k$为热传导系数；气体热传导系数随温度升高而增大
 
 ### 扩散性
 
@@ -183,7 +183,6 @@
 
 !!! theorem "菲克定律"
     扩散速率与物质的浓度梯度成正比
-
 
     物质扩散通量
 

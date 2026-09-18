@@ -21,7 +21,13 @@ k=1和k=-1的项称为基波分量或一次谐波分量，k=2和k=-2的项称为
 
 $$x(t)=a_0+2\sum_{k=1}^\infty A_k \cos (k\omega_0 t+\theta_k)$$
 
-!!! proof "推导过程"
+将$a_k$以笛卡尔坐标形式表示，即令
+
+$$a_k=B_k+C_k$$
+
+$$x(t)=a_0+2\sum_{k=1}^{\infty} [B_k \cos k\omega_0 t -C_k \sin k\omega_0 t]$$
+
+??? proof "推导过程"
     由于x(t)是一个实信号
 
     $$x(t)=x^*(t)$$
@@ -70,16 +76,16 @@ $$x(t)=a_0+2\sum_{k=1}^\infty A_k \cos (k\omega_0 t+\theta_k)$$
 
 !!! formula "分析公式"
 
-    $$a_k=\frac{1}{T} \int_T x(t)=e^{-jk\omega_0 t}dt=\frac{1}{T} \int_T x(t)e^{-jk (2\pi/T)t}dt$$
+    $$a_k=\frac{1}{T} \int_T x(t)=\frac{1}{T} \int_T e^{-jk\omega_0 t}dt=\frac{1}{T} \int_T x(t)e^{-jk (2\pi/T)t}dt$$
 
 $\{a_k\}$称为傅里叶数级系数或频谱系数
 
 ## 傅里叶级数的收敛
 
-!!! note "狄里赫利条件"
+!!! theorem "狄里赫利条件"
     1. 在任何周期内，$x(t)$必须绝对可积，即
 
-    $$\int_T |x(t)|\mathrm{d}t <\infty$$
+        $$\int_T |x(t)|\mathrm{d}t <\infty$$
 
     2. 在任意有限区间内，$x(t)$具有有限个起伏变化；即，在任何单个周期内，$x(t)$的最大值和最小值的数目有限
 
@@ -88,6 +94,30 @@ $\{a_k\}$称为傅里叶数级系数或频谱系数
 ## 连续时间傅里叶级数性质
 
 ![无法显示](figures/chap3/xingzhi.png)
+
+带有尺度变换的时移特性
+
+$$F[x(at-t_0)]=\frac{1}{|a|}X(\frac{\omega}{a})e^{-j \frac{\omega t_0}{a}}$$
+
+### 积分特性
+
+$$F[\int_{-\infty}^{t}x(\tau)\mathrm{d}\tau]=\frac{X(\omega)}{j\omega}+\pi X(0)\delta(\omega)$$
+
+### 帕斯瓦尔定理
+
+$$\int_{-\infty}^\infty |x(t)|^2 \mathrm{d}t=\frac{1}{2\pi} \int_{-\infty}^{\infty} |X(\omega)|^2 \mathrm{d}\omega$$
+
+信号的总能量可由频域求得
+
+### 卷积定理
+
+时域卷积定理
+
+$$x_1(t)*x_x(t) \leftrightarrow X_1(\omega) \cdot X_2(\omega)$$
+
+频域卷积定理
+
+$$x_1(t) \cdot x_2(t) \leftrightarrow \frac{1}{2\pi} X_1(\omega) * X_2(\omega)$$
 
 ## 离散时间周期信号的傅里叶级数表示
 
@@ -100,6 +130,19 @@ $\{a_k\}$称为傅里叶数级系数或频谱系数
 ## 离散时间傅里叶级数性质
 
 ![无法显示](figures/chap3/xingzhi2.png)
+
+!!! note "差分"
+    前向差分
+
+    $$\nabla_f x(n)=x(n+1)-x(n)$$
+
+    后向差分
+
+    $$\nabla_b x(n)=x(n)-x(n-1)$$
+
+    由此可得
+
+    $$\nabla_f x(n)=\nabla_b x(n-1)$$
 
 ## 傅里叶级数与线性时不变系统
 

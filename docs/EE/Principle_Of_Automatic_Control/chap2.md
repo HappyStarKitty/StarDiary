@@ -113,21 +113,21 @@
 
     ![无法显示](figures/chap2/graph.png)
 
-### 结构图的等效变换的简化
+### 结构图的等效变换和简化
 
-1. 串联方框的简化
+串联方框的简化
 
 ![无法显示](figures/chap2/chuanlian.png)
 
 $$C(s)=G_1(s)G_2(s)R(s)=G(s)R(s)$$
 
-2. 并联方框的简化
+并联方框的简化
 
 ![无法显示](figures/chap2/binglian.png)
 
 $$C(s)=[G_1(s)\pm G_2(s)]R(s)=G(s)R(s)$$
 
-3. 反馈连接方框的简化
+反馈连接方框的简化
 
 ![无法显示](figures/chap2/fankui.png)
 
@@ -151,3 +151,13 @@ $$C(s)=G(s)[R(s)\pm H(s)C(s)]=\frac{G(s)}{1+\mp G(s)H(s)}R(s)=\Phi(s)R(s)$$
 
 ### 梅森增益函数
 
+!!! formula "梅森增益公式"
+    $$P=\frac{1}{\Delta}\sum_{k=1}^n p_k \Delta_k$$
+
+### 闭环系统的传递函数
+
+系统的开环传递函数，等效为主反馈断开时，从输入信号R(s)到反馈信号B(s)之间的传递函数
+
+![无法显示](figures/chap2/sys.png)
+
+对于图示系统，称G(s)H(s)为开环传递函数，称$\frac{G(s)}{1+G(s)H(s)}$为闭环传递函数

@@ -1,7 +1,9 @@
 window.MathJax = {
+  loader: {load: ['[tex]/boldsymbol']}, // 加载扩展
   tex: {
     inlineMath: [["\\(", "\\)"]],
     displayMath: [["\\[", "\\]"]],
+    packages: {'[+]': ['boldsymbol']}, // 激活宏包
     processEscapes: true,
     processEnvironments: true
   },

@@ -20,3 +20,8 @@ tips: odd有奇怪的意思，even有甚至、偶然的意思
 - minterm 最小项
 - maxterm 最大项
 - standard form 标准式
+
+## Chap5
+
+- lateches 锁存器
+- flip-flops 触发器

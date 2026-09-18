@@ -4,7 +4,7 @@
 
 ### 齐次方程齐次边界条件
 
-!!! tip 解题步骤
+!!! tip "解题步骤"
     1. 设定解问题的解具有变量分离的形式，将偏微分方程转化为常微分方程
 
     2. 解本征值问题，得本征值和本征函数
@@ -15,7 +15,7 @@
 
     PS：需要用到二阶常微分方程和傅里叶变换的知识
 
-!!! question 题目
+!!! question "例题"
     有界弦的自由振动
 
     $$
@@ -28,8 +28,8 @@
     \right.
     $$
 
-!!! note 解答
-    1. 分离变量
+!!! proof "求解过程"
+    1.分离变量
 
     $$
     u(x,t)=X(x)T(t)
@@ -51,7 +51,7 @@
     T^{\prime\prime}(t)+\lambda a^2 T(t)=0
     $$
 
-    2. 解本征值问题
+    2.解本征值问题
 
     $\lambda$<0
 
@@ -69,9 +69,9 @@
     X(x)=C_1\cos \sqrt{\lambda}x+C_2 \sin\sqrt{\lambda}x
     $$
 
-    3. $u_n(x,t)$的叠加
+    3.$u_n(x,t)$的叠加
 
-    4. 系数$A_n,B_n$的确定
+    4.系数$A_n,B_n$的确定
 
 ### 非齐次方程齐次边界条件
 
@@ -81,7 +81,7 @@
 
 ### 周期性条件和自然边界条件
 
-!!! question 问题
+!!! question "例题"
     设有半径为1的圆形薄板，上、下侧面绝热，圆周上的温度分布已知，求圆内的温度分布，其定解问题为
 
     $$
@@ -91,8 +91,8 @@
     u|_{\partial \Omega}=\phi(x,y),(x^2+y^2=1)
     \end{aligned}\right.$$
 
-!!! note 解答
-    1. 自变量变换
+!!! proof "求解过程"
+    1.自变量变换
 
     $$\left\{
     \begin{aligned}
@@ -112,7 +112,7 @@
     \end{aligned}
     \right.$$
 
-    2. 分离变量
+    2.分离变量
 
     令$u(r,\theta)=R(r)\Phi(\theta)$
 
@@ -120,7 +120,7 @@
 
     $$r^2R^{\prime\prime}(r)+rR^{\prime}(r)-\lambda R(r)=0$$
 
-    3. 自然的周期性条件，构成本征值问题
+    3.自然的周期性条件，构成本征值问题
 
     $$\left\{
     \begin{aligned}
@@ -134,7 +134,7 @@
     r^2R^{\prime\prime}+rR^{\prime}-\lambda R=0 \\
     |R(0)|<\infty\end{aligned}\right.$$
 
-    4. 解本征值问题
+    4.解本征值问题
 
     本征值 $\lambda+n =n^2\quad (n=0,1,2)$
 
