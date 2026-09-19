@@ -241,12 +241,16 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../Calculus/">
 <span class="md-ellipsis">
     微积分
   </span>
+</a>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
+</div>
 <nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_2">
 <span class="md-nav__icon md-icon"></span>
@@ -2889,27 +2893,37 @@
 <article class="md-content__inner md-typeset">
 <h1 id="chap7"><span>Chap7<span class="heti-spacing"> </span></span>参数估计<a class="headerlink" href="#chap7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <h2 id="_1">点估计<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>设总体<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X\)</span><span class="heti-spacing"> </span></span>的分布函数为<span><span class="heti-spacing"> </span><span class="arithmatex">\(F(x; \theta)\)</span></span>，<span><span class="arithmatex">\(\theta\)</span><span class="heti-spacing"> </span></span>是待估参数，<span><span class="arithmatex">\(X_1, X_2, \cdots, X_n\)</span><span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X\)</span><span class="heti-spacing"> </span></span>的一个样本。<span>**<span class="heti-spacing"> </span></span>点估计<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>问题就是要构造一个适当的统计量<span><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{\theta}(X_1, X_2, \cdots, X_n)\)</span></span>，用来估计参数<span><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span></span>。</p>
+<p>设总体<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X\)</span><span class="heti-spacing"> </span></span>的分布函数为<span><span class="heti-spacing"> </span><span class="arithmatex">\(F(x; \theta)\)</span></span>，<span><span class="arithmatex">\(\theta\)</span><span class="heti-spacing"> </span></span>是待估参数，<span><span class="arithmatex">\(X_1, X_2, \cdots, X_n\)</span><span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X\)</span><span class="heti-spacing"> </span></span>的一个样本</p>
+<p><b>点估计</b>问题就是要构造一个适当的统计量<span><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{\theta}(X_1, X_2, \cdots, X_n)\)</span></span>，用来估计参数<span><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span></span></p>
 <ul>
 <li>
-<p>此时称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{\theta}(X_1, X_2, \cdots, X_n)\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span><span class="heti-spacing"> </span></span>的（点）<strong>估计量</strong></p>
+<p>此时称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{\theta}(X_1, X_2, \cdots, X_n)\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span><span class="heti-spacing"> </span></span>的（点）<b>估计量</b></p>
 </li>
 <li>
-<p>若用样本值<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x_1, x_2, \cdots, x_n\)</span><span class="heti-spacing"> </span></span>代替样本，称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{\theta}(x_1, x_2, \cdots, x_n)\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span><span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>估计值<span><span class="heti-spacing"> </span>**</span></p>
+<p>若用样本值<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x_1, x_2, \cdots, x_n\)</span><span class="heti-spacing"> </span></span>代替样本，称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{\theta}(x_1, x_2, \cdots, x_n)\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span><span class="heti-spacing"> </span></span>的<b>估计值</b></p>
 </li>
 <li>
-<p>估计量和估计值统称为<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>估计<span><span class="heti-spacing"> </span>**</span>，简记为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{\theta}\)</span></span></p>
+<p>估计量和估计值统称为<b>估计</b>，简记为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{\theta}\)</span></span></p>
 </li>
 </ul>
 <p>两种常用的点估计方法：矩法、极大似然法</p>
 <h3 id="_2">矩法<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>本质是用<b>样本矩作为总体矩</b>的估计</p>
+<p>当样本容量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\rightarrow +\infty\)</span><span class="heti-spacing"> </span></span>时，样本矩依概率收敛于相应的总体矩，即</p>
+<div class="arithmatex">\[A_k\rightarrow \mu_k,B_k \rightarrow v_k\]</div>
+<p>其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A_k,B_k\)</span><span class="heti-spacing"> </span></span>分别为样本的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(k\)</span><span class="heti-spacing"> </span></span>阶原点矩和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(k\)</span><span class="heti-spacing"> </span></span>阶中心矩。因此，矩法的统计思想是：<b>用样本矩作为相应总体矩的估计</b></p>
 <h3 id="_3">极大似然法<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p><strong>似然函数</strong></p>
-<p>使得样本<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X_1,X_2,..X_n\)</span><span class="heti-spacing"> </span></span>发生概率最大的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span><span class="heti-spacing"> </span></span>值</p>
+<p>基本思想：设某事件<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>发生的概率依赖于待估参数<span><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span></span>，如果观察到<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>已发生，那么就使取得事件<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>发生的概率达到最大的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span><span class="heti-spacing"> </span></span>值作为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span><span class="heti-spacing"> </span></span>的估计</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X\)</span><span class="heti-spacing"> </span></span>为离散型总体，其概率分布律为<span><span class="heti-spacing"> </span><span class="arithmatex">\(P(X=x)=P(x;\theta)\)</span></span>。样本<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X_1,X_2,...X_n\)</span><span class="heti-spacing"> </span></span>取到样本值<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x_1,x_2...x_n\)</span><span class="heti-spacing"> </span></span>的概率为：</p>
+<div class="arithmatex">\[P(X=x_1,X_2=x_2,...,X_n=x_n)=\prod_{i=1}^n P(X_i=x_i)=\prod_{i=1}^n p(x_i;\theta)\]</div>
+<p>将其记为似然函数<span><span class="heti-spacing"> </span><span class="arithmatex">\(L(\theta)\)</span></span></p>
+<p>选取<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span><span class="heti-spacing"> </span></span>的估计值<span><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{\theta}\)</span></span>，使得<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(L(\theta)\)</span><span class="heti-spacing"> </span></span>取最大，于是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{\theta}\)</span><span class="heti-spacing"> </span></span>满足：</p>
+<div class="arithmatex">\[L(\hat{\theta})=\max_{\theta \in \Theta} L(\theta;x_1,x_2,...x_n)\]</div>
+<p>由此取得的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{\theta}\)</span><span class="heti-spacing"> </span></span>称为参数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span><span class="heti-spacing"> </span></span>的<b>极大似然估计值</b>，相应的统计量称为参数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span><span class="heti-spacing"> </span></span>的<b>极大似然估计量</b></p>
+<p>同理，对于连续型总体，<b>似然函数</b>为</p>
 <div class="arithmatex">\[
-L({\theta})=L(\theta;x1,x_2,\cdots,x_n)=\prod_{i=1}^{n}p(x_i;\theta)
+L({\theta})=L(\theta;x1,x_2,\cdots,x_n)=\prod_{i=1}^{n}f(x_i;\theta)
 \]</div>
+<p>记<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(l(\theta)=\ln L(\theta)\)</span><span class="heti-spacing"> </span></span>为<b>对数似然函数</b></p>
 <ul>
 <li>
 <p>似然函数单调递减时，<span class="arithmatex">\(\hat{\theta}=\max\{X_1,X_2,...X_n\}\)</span></p>
@@ -2928,39 +2942,48 @@ L({\theta})=L(\theta;x1,x_2,\cdots,x_n)=\prod_{i=1}^{n}p(x_i;\theta)
 </div>
 <h2 id="_4">估计量的评价准则<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_5">无偏性准则<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>无偏估计量</p>
-<div class="arithmatex">\[
-E(\bar{\theta})=\theta
-\]</div>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\theta \in \Theta\)</span><span class="heti-spacing"> </span></span>是总体<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X\)</span><span class="heti-spacing"> </span></span>的待估参数，<span><span class="arithmatex">\(X_1, X_2, \cdots, X_n\)</span><span class="heti-spacing"> </span></span>是来自总体<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X\)</span><span class="heti-spacing"> </span></span>的样本。若估计量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{\theta} = \hat{\theta}(X_1, X_2, \cdots, X_n)\)</span><span class="heti-spacing"> </span></span>的数学期望存在，且满足：<span class="arithmatex">\(E(\hat{\theta}) = \theta\)</span>，<span class="arithmatex">\(\theta \in \Theta\)</span>，称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{\theta}\)</span><span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span><span class="heti-spacing"> </span></span>的无偏估计量或<b>无偏估计</b></p>
+<ul>
+<li><b>偏差：</b><span class="arithmatex">\(E(\hat{\theta}) - \theta\)</span>（<span class="arithmatex">\(E(\hat{\theta}) \neq \theta\)</span>）</li>
+<li><b>渐近无偏估计</b>：满足<span><span class="heti-spacing"> </span><span class="arithmatex">\(\lim\limits_{n \to +\infty} E(\hat{\theta}) = \theta\)</span></span>，但<span><span class="heti-spacing"> </span><span class="arithmatex">\(E(\hat{\theta}) \neq \theta\)</span></span></li>
+</ul>
 <h3 id="_6">有效性准则<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>若<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\bar{\theta_1}\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\bar{\theta_2}\)</span><span class="heti-spacing"> </span></span>均为无偏估计，且<span><span class="heti-spacing"> </span><span class="arithmatex">\(D(\bar{\theta_1})&lt;D(\bar{\theta_2})\)</span></span>，则<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\bar{\theta_1}\)</span><span class="heti-spacing"> </span></span>更有效</p>
+<p>设<span><span class="heti-spacing"> </span><span class="arithmatex">\(\widehat{\theta_1} = \widehat{\theta_1}(x_1, x_2, \cdots, x_n)\)</span></span>，<span><span class="arithmatex">\(\widehat{\theta_2} = \widehat{\theta_2}(x_1, x_2, \cdots, x_n)\)</span><span class="heti-spacing"> </span></span>都是参数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span><span class="heti-spacing"> </span></span>的无偏估计，若<span><span class="heti-spacing"> </span><span class="arithmatex">\(\forall \theta \in \Theta\)</span></span>，<span class="arithmatex">\(Var_\theta(\widehat{\theta_1}) \leqslant Var_\theta(\widehat{\theta_2})\)</span>，且至少有一个<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\theta \in \Theta\)</span><span class="heti-spacing"> </span></span>使不等号成立，则称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\widehat{\theta_1}\)</span><span class="heti-spacing"> </span></span>比<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\widehat{\theta_2}\)</span><span class="heti-spacing"> </span></span>有效</p>
 <h3 id="_7">均方误差准则<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{\theta} = \hat{\theta}(X_1, X_2, \cdots, X_n)\)</span><span class="heti-spacing"> </span></span>是总体参数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span><span class="heti-spacing"> </span></span>的估计量，称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(E[(\hat{\theta} - \theta)^2]\)</span><span class="heti-spacing"> </span></span>是估计量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{\theta}\)</span><span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>均方误差<span><span class="heti-spacing"> </span>**</span>，记为<span><span class="heti-spacing"> </span><span class="arithmatex">\(Mse(\hat{\theta})\)</span></span></p>
+<ul>
+<li><span class="arithmatex">\(Mse(\hat{\theta}) = E[(\hat{\theta} - \theta)^2] = Var(\hat{\theta}) + [E(\hat{\theta}) - \theta]^2\)</span></li>
+<li>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\widehat{\theta_1}, \widehat{\theta_2}\)</span><span class="heti-spacing"> </span></span>都是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span><span class="heti-spacing"> </span></span>的估计量，若<span><span class="heti-spacing"> </span><span class="arithmatex">\(\forall \theta \in \Theta\)</span></span>，<span class="arithmatex">\(Mse(\widehat{\theta_1}) \leqslant Mse(\widehat{\theta_2})\)</span>，则称在均方误差准则下，<span><span class="arithmatex">\(\widehat{\theta_1}\)</span><span class="heti-spacing"> </span></span>优于<span><span class="heti-spacing"> </span><span class="arithmatex">\(\widehat{\theta_2}\)</span></span></li>
+<li>均方误差准则常用于有偏估计之间，有偏估计与无偏估计之间的比较</li>
+<li>若<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\hat{\theta}\)</span><span class="heti-spacing"> </span></span>是参数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span><span class="heti-spacing"> </span></span>的无偏估计量，则<span><span class="heti-spacing"> </span><span class="arithmatex">\(Mse(\hat{\theta}) = Var(\hat{\theta})\)</span></span>，即均方误差准则在无偏估计之间的比较等价于有效性准则</li>
+<li>在实际情况下，均方误差准则比无偏性准则更重要，即如果一个估计量虽然有偏，但其均方误差较小，有时比方差较大的无偏估计更有用</li>
+</ul>
 <h3 id="_8">相合性准则<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\widehat{\theta_n} = \hat{\theta}(X_1, X_2, \cdots, X_n)\)</span><span class="heti-spacing"> </span></span>是总体参数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span><span class="heti-spacing"> </span></span>的估计量，若<span><span class="heti-spacing"> </span><span class="arithmatex">\(\forall \varepsilon &gt; 0\)</span></span>，有：<span class="arithmatex">\(\lim\limits_{n \to +\infty} P(|\widehat{\theta_n} - \theta| &lt; \varepsilon) = 1\)</span>，即<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\widehat{\theta_n}\)</span><span class="heti-spacing"> </span></span>依概率收敛于<span><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span></span>，称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\widehat{\theta_n}\)</span><span class="heti-spacing"> </span></span>是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span><span class="heti-spacing"> </span></span>的<b>相合估计量</b>，并记<span><span class="heti-spacing"> </span><span class="arithmatex">\(\widehat{\theta_n} \xrightarrow{P} \theta\)</span></span>，<span class="arithmatex">\(n \to +\infty\)</span></p>
+<ul>
+<li>一般地，由矩法求得的参数估计量都满足相合性</li>
+<li>对于极大似然估计，在总体分布满足一定条件下，求得的估计量也是待估参数的相合估计量</li>
+</ul>
 <h2 id="_9">区间估计<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_10">置信区间的定义<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<div class="admonition definition">
+<p class="admonition-title">置信区间</p>
+<p>设总体为<span><span class="heti-spacing"> </span><span class="arithmatex">\(X\)</span></span>，<span><span class="arithmatex">\(\theta \in \Theta\)</span><span class="heti-spacing"> </span></span>为待估参数，<span><span class="arithmatex">\(X_1, X_2, \cdots, X_n\)</span><span class="heti-spacing"> </span></span>是来自总体<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X\)</span><span class="heti-spacing"> </span></span>的样本，统计量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\widehat{\theta_L} = \widehat{\theta_L}(X_1, X_2, \cdots, X_n)\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\widehat{\theta_U} = \widehat{\theta_U}(X_1, X_2, \cdots, X_n)\)</span><span class="heti-spacing"> </span></span>满足<span><span class="heti-spacing"> </span><span class="arithmatex">\(\widehat{\theta_L} &lt; \widehat{\theta_U}\)</span></span>，且对给定<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\alpha \in (0, 1)\)</span><span class="heti-spacing"> </span></span>和任意<span><span class="heti-spacing"> </span><span class="arithmatex">\(\theta \in \Theta\)</span></span>，有：<span class="arithmatex">\(P(\widehat{\theta_L} &lt; \theta &lt; \widehat{\theta_U}) \geqslant 1 - \alpha\)</span>，则</p>
+<ul>
+<li>
+<p>称随机区间<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\((\widehat{\theta_L}, \widehat{\theta_U})\)</span><span class="heti-spacing"> </span></span>是参数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span><span class="heti-spacing"> </span></span>的<b>置信水平</b>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(1 - \alpha\)</span><span class="heti-spacing"> </span></span>的<b>置信区间</b></p>
+</li>
+<li>
+<p><span><span class="arithmatex">\(\widehat{\theta_L}, \widehat{\theta_U}\)</span><span class="heti-spacing"> </span></span>分别称为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span><span class="heti-spacing"> </span></span>的置信水平是<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(1 - \alpha\)</span><span class="heti-spacing"> </span></span>的<b>双侧置信下限</b>和<b>双侧置信上限</b></p>
+</li>
+</ul>
+</div>
 <h3 id="_11">枢轴量法<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition definition">
 <p class="admonition-title">枢轴量</p>
 <p>样本和参数的函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(G(X_1,X_2,...X_n;\theta)\)</span><span class="heti-spacing"> </span></span>的分布不依赖于参数<span><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span></span>，则称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(G(X_1,...X_n;\theta)\)</span><span class="heti-spacing"> </span></span>为枢轴量</p>
 </div>
-<div class="admonition info">
-<p class="admonition-title">求解置信区间</p>
-<ol>
-<li>
-<p>构造一个分布已知的枢轴量</p>
-</li>
-<li></li>
-</ol>
-</div>
 <h2 id="_12">正态总体参数的区间估计<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<div class="admonition info">
-<p class="admonition-title">解题步骤</p>
-<ol>
-<li>提出假设</li>
-<li>选检验统计量</li>
-<li>得拒绝域</li>
-</ol>
-</div>
 <h2 id="_13">非正态总体参数的区间估计<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <aside class="md-source-file">
 <span class="md-source-file__fact">

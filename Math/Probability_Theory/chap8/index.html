@@ -241,12 +241,16 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../Calculus/">
 <span class="md-ellipsis">
     微积分
   </span>
+</a>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
+</div>
 <nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_2">
 <span class="md-nav__icon md-icon"></span>
@@ -792,22 +796,23 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
-      单个正态总体参数的假设检验
+      正态总体参数的假设检验
     </span>
 </a>
-<nav aria-label="单个正态总体参数的假设检验" class="md-nav">
+<nav aria-label="正态总体参数的假设检验" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
-      有关参数μ的假设检验
+      单个正态总体
     </span>
 </a>
-</li>
+<nav aria-label="单个正态总体" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#t">
+<a class="md-nav__link" href="#mu">
 <span class="md-ellipsis">
-      成对数据的t检验
+      有关参数\(\mu\)的假设检验
     </span>
 </a>
 </li>
@@ -824,9 +829,12 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
-      两个正态总体参数的假设检验
+      两个正态总体
     </span>
 </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_5">
@@ -2744,22 +2752,23 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
-      单个正态总体参数的假设检验
+      正态总体参数的假设检验
     </span>
 </a>
-<nav aria-label="单个正态总体参数的假设检验" class="md-nav">
+<nav aria-label="正态总体参数的假设检验" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
-      有关参数μ的假设检验
+      单个正态总体
     </span>
 </a>
-</li>
+<nav aria-label="单个正态总体" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#t">
+<a class="md-nav__link" href="#mu">
 <span class="md-ellipsis">
-      成对数据的t检验
+      有关参数\(\mu\)的假设检验
     </span>
 </a>
 </li>
@@ -2776,9 +2785,12 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
-      两个正态总体参数的假设检验
+      两个正态总体
     </span>
 </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_5">
@@ -2803,15 +2815,72 @@
 <article class="md-content__inner md-typeset">
 <h1 id="chap8"><span>Chap8<span class="heti-spacing"> </span></span>假设检验<a class="headerlink" href="#chap8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <h2 id="_1">假设检验的基本思想<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p><span class="arithmatex">\(H_0\)</span>：原假设<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>零假设</p>
-<p><span class="arithmatex">\(H_1\)</span>：备择假设<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>对立假设</p>
+<div class="admonition note">
+<p class="admonition-title">假设检验</p>
+<p>提出两个完全相反的假设，分别为<b>原假设<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>零假设</b><span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(H_0\)</span><span class="heti-spacing"> </span></span>和<b>备择假设<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>对立假设</b><span><span class="heti-spacing"> </span><span class="arithmatex">\(H_1\)</span></span>（备择假设一般是我们想要支持的假设）</p>
+<p>关于总体参数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\theta\)</span><span class="heti-spacing"> </span></span>的假设，有三种情况</p>
+<ul>
+<li>
 <p>左侧检验：<span class="arithmatex">\(H_0:\theta \ge \theta_0,H_1:\theta&lt; \theta_0\)</span></p>
+</li>
+<li>
 <p>右侧检验：<span class="arithmatex">\(H_0:\theta \le \theta_0,H_1:\theta&gt;\theta_0\)</span></p>
+</li>
+<li>
 <p>双侧检验：<span class="arithmatex">\(H_0:\theta=\theta_0,H_1:\theta\ne \theta_0\)</span></p>
-<p>第Ⅰ类错误<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>弃真错误：</p>
-<div class="arithmatex"><span>\[\alpha=P{<span class="heti-spacing"> </span></span>拒绝<span class="heti-skip"><span class="heti-spacing"> </span>H_0|H_0<span class="heti-spacing"> </span></span>是真实的<span><span class="heti-spacing"> </span>}\]</span></div>
-<p>第Ⅱ类错误<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>存伪错误：</p>
-<div class="arithmatex"><span>\[\beta=P{<span class="heti-spacing"> </span></span>接受<span class="heti-skip"><span class="heti-spacing"> </span>H_0|H_0<span class="heti-spacing"> </span></span>是错误的<span><span class="heti-spacing"> </span>}\]</span></div>
+</li>
+</ul>
+<p>称拒绝原假设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(H_0\)</span><span class="heti-spacing"> </span></span>的的样本值范围为<b>拒绝域</b><span><span class="heti-spacing"> </span><span class="arithmatex">\(W\)</span></span>，其补集称为<b>接受域</b><span><span class="heti-spacing"> </span><span class="arithmatex">\(\bar{W}\)</span></span></p>
+<p>在假设检验中，可能出现错误</p>
+<ul>
+<li>
+<p>第Ⅰ类错误<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>弃真错误：<span class="arithmatex">\(\alpha=P\{拒绝H_0|H_0是真实的\}\)</span></p>
+</li>
+<li>
+<p>第Ⅱ类错误<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>存伪错误：<span class="arithmatex">\(\beta=P\{接受H_0|H_0是错误的\}\)</span></p>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">区间估计和假设检验</p>
+<p>对于正态总体的区间估计和假设检验，可以发现以下对应关系：</p>
+<ul>
+<li>
+<p>双侧置信区间<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\leftrightarrow\)</span><span class="heti-spacing"> </span></span>双侧检验的接受域</p>
+</li>
+<li>
+<p>单侧置信下限<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\leftrightarrow\)</span><span class="heti-spacing"> </span></span>左侧检验的接受域</p>
+</li>
+<li>
+<p>单侧置信上限<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\leftrightarrow\)</span><span class="heti-spacing"> </span></span>右侧检验的接受域</p>
+</li>
+</ul>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">奈曼<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>皮尔逊原则</p>
+<ul>
+<li>
+<p>首先控制第Ⅰ类错误的概率，即选定一个常数<span><span class="heti-spacing"> </span><span class="arithmatex">\(\alpha \in(0,1)\)</span></span>，要求犯第Ⅰ类错误的概率不超过<span><span class="heti-spacing"> </span><span class="arithmatex">\(\alpha\)</span></span></p>
+</li>
+<li>
+<p>然后在满足这个约束条件的检验下，使得犯第Ⅱ类错误的概率尽可能小</p>
+</li>
+<li>
+<p><span><span class="arithmatex">\(\alpha\)</span><span class="heti-spacing"> </span></span>称为<b>显著性水平</b></p>
+</li>
+</ul>
+</div>
+<div class="admonition definition">
+<p class="admonition-title"><span>P-<span class="heti-spacing"> </span></span>值与统计显著性</p>
+<ul>
+<li>
+<p><span><span class="arithmatex">\(P-\)</span><span class="heti-spacing"> </span></span>值用于衡量拒绝<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(H_0\)</span><span class="heti-spacing"> </span></span>的理由是否充分，其值越小拒绝<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(H_0\)</span><span class="heti-spacing"> </span></span>的理由越充分</p>
+</li>
+<li>
+<p>若<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(P-\)</span><span class="heti-spacing"> </span></span>值<span><span class="heti-spacing"> </span><span class="arithmatex">\(\le \alpha\)</span></span>，则拒绝原假设，此时称检验结果在显著性水平<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\alpha\)</span><span class="heti-spacing"> </span></span>下是统计显著的</p>
+</li>
+</ul>
+</div>
 <div class="admonition info">
 <p class="admonition-title">处理假设检验问题的基本步骤</p>
 <ol>
@@ -2822,22 +2891,23 @@
 <p>提出检验统计量和拒绝域的形式</p>
 </li>
 <li>
-<p>根据奈曼<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>皮尔逊原则和给定的显著水平<span><span class="heti-spacing"> </span><span class="arithmatex">\(\alpha\)</span></span>，求出拒绝域<span class="heti-skip"><span class="heti-spacing"> </span>W<span class="heti-spacing"> </span></span>中的临界值</p>
+<p>根据奈曼<span class="heti-skip"><span class="heti-spacing"> </span>-<span class="heti-spacing"> </span></span>皮尔逊原则和给定的显著水平<span><span class="heti-spacing"> </span><span class="arithmatex">\(\alpha\)</span></span>，求出拒绝域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(W\)</span><span class="heti-spacing"> </span></span>中的临界值</p>
 </li>
 <li>
 <p>根据实际样本值作出判断</p>
 </li>
 </ol>
 </div>
-<h2 id="_2">单个正态总体参数的假设检验<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<h3 id="_3">有关参数<span class="heti-skip"><span class="heti-spacing"> </span>μ<span class="heti-spacing"> </span></span>的假设检验<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h2 id="_2">正态总体参数的假设检验<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_3">单个正态总体<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<h4 id="mu">有关参数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mu\)</span><span class="heti-spacing"> </span></span>的假设检验<a class="headerlink" href="#mu" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <p><span><span class="arithmatex">\(\sigma^2\)</span><span class="heti-spacing"> </span></span>已知</p>
 <ul>
 <li>
 <p>检验统计量<span><span class="heti-spacing"> </span><span class="arithmatex">\(Z=\frac{\bar{X}-\mu_0}{\sigma/\sqrt{n}}\)</span></span></p>
 </li>
 <li>
-<p><span>P_<span class="heti-spacing"> </span></span>值</p>
+<p><span>P-<span class="heti-spacing"> </span></span>值</p>
 <ul>
 <li>
 <p>双侧假设：<span class="arithmatex">\(2(1-\Phi(|z_0|))\)</span></p>
@@ -2855,18 +2925,22 @@
 </li>
 </ul>
 <p><span><span class="arithmatex">\(\sigma^2\)</span><span class="heti-spacing"> </span></span>未知</p>
+<ul>
+<li>
 <p>检验统计量为<span><span class="heti-spacing"> </span><span class="arithmatex">\(T=\frac{\bar{X}-\mu_0}{S/\sqrt{n}}\)</span></span></p>
+</li>
+<li>
 <p>上述检验称为<span class="heti-skip"><span class="heti-spacing"> </span>t<span class="heti-spacing"> </span></span>检验</p>
-<h3 id="t">成对数据的<span class="heti-skip"><span class="heti-spacing"> </span>t<span class="heti-spacing"> </span></span>检验<a class="headerlink" href="#t" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<p>检验统计量为<span><span class="heti-spacing"> </span><span class="arithmatex">\(T=\frac{\bar{D}}{S_D/\sqrt{n}}\)</span></span></p>
-<h3 id="sigma2">有关参数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sigma^2\)</span><span class="heti-spacing"> </span></span>的假设检验<a class="headerlink" href="#sigma2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+</li>
+</ul>
+<h4 id="sigma2">有关参数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sigma^2\)</span><span class="heti-spacing"> </span></span>的假设检验<a class="headerlink" href="#sigma2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h4>
 <ul>
 <li>检验统计量</li>
 </ul>
 <div class="arithmatex">\[\chi^2=\frac{(n-1)S^2}{\sigma_0^2}\]</div>
 <ul>
 <li>
-<p><span>P_<span class="heti-spacing"> </span></span>值</p>
+<p><span>P-<span class="heti-spacing"> </span></span>值</p>
 <ul>
 <li>
 <p>双侧检验：<span class="arithmatex">\(2\min(p_1,1-p_0)\)</span></p>
@@ -2883,7 +2957,7 @@
 <p>上述检验称为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\chi^2\)</span><span class="heti-spacing"> </span></span>检验</p>
 </li>
 </ul>
-<h2 id="_4">两个正态总体参数的假设检验<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h3 id="_4">两个正态总体<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <h2 id="_5">假设检验与区间估计<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h2 id="_6">拟合优度检验<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <aside class="md-source-file">

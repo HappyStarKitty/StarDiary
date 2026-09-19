@@ -241,12 +241,16 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../Calculus/">
 <span class="md-ellipsis">
     微积分
   </span>
+</a>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
+</div>
 <nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_2">
 <span class="md-nav__icon md-icon"></span>
@@ -2766,7 +2770,7 @@ P\{|X-E(X)| \ge \varepsilon \} \le \frac{Var(X)}{\varepsilon^2}
 <div class="arithmatex">\[
 \lim_{n \to +\infty} P\left( \left| \frac{1}{n}\sum_{i=1}^{n} X_i - c_n \right| \geqslant \varepsilon \right) = 0 \quad \left( \text{or} \quad \lim_{n \to +\infty} P\left( \left| \frac{1}{n}\sum_{i=1}^{n} X_i - c_n \right| &lt; \varepsilon \right) = 1 \right)
 \]</div>
-<p>成立，即当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n \to +\infty\)</span><span class="heti-spacing"> </span></span>时，有<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \frac{1}{n}\sum_{i=1}^{n} X_i - c_n \xrightarrow{P} 0\)</span></span>，则称随机变量序列<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{X_i, i \geqslant 1\}\)</span><span class="heti-spacing"> </span></span>服从<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>弱大数定律<span><span class="heti-spacing"> </span>**</span>，简称服从<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>大数定律<span><span class="heti-spacing"> </span>**</span>。特别地，当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(c_n = c\ (n = 1, 2, \dots)\)</span><span class="heti-spacing"> </span></span>时，可写为：<span class="arithmatex">\(\displaystyle \frac{1}{n}\sum_{i=1}^{n} X_i \xrightarrow{P} c,\ n \to +\infty\)</span></p>
+<p>成立，即当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n \to +\infty\)</span><span class="heti-spacing"> </span></span>时，有<span><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \frac{1}{n}\sum_{i=1}^{n} X_i - c_n \xrightarrow{P} 0\)</span></span>，则称随机变量序列<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\{X_i, i \geqslant 1\}\)</span><span class="heti-spacing"> </span></span>服从<b>弱大数定律</b>，简称服从<b>大数定律</b>。特别地，当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(c_n = c\ (n = 1, 2, \dots)\)</span><span class="heti-spacing"> </span></span>时，可写为：<span class="arithmatex">\(\displaystyle \frac{1}{n}\sum_{i=1}^{n} X_i \xrightarrow{P} c,\ n \to +\infty\)</span></p>
 <div class="admonition theorem">
 <p class="admonition-title">伯努利大数定律</p>
 <p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n_A\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>重伯努利试验中事件<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>发生的次数，<span><span class="arithmatex">\(p\)</span><span class="heti-spacing"> </span></span>为事件<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>在每次试验中发生的概率，则对任意<span><span class="heti-spacing"> </span><span class="arithmatex">\(\varepsilon&gt;0\)</span></span>，有：</p>
@@ -2802,7 +2806,7 @@ P\{|X-E(X)| \ge \varepsilon \} \le \frac{Var(X)}{\varepsilon^2}
 \lim_{n \rightarrow +\infty}P\{{\frac{\sum_{i=1}^n X_i - E(\sum_{i=1}^n X_i)}{\sqrt{Var(\sum_{i=1}^n X_i)}}\le x}\}=\lim_{n \rightarrow +\infty}P\{\frac{\sum_{i=1}^{n} X_i-n\mu}{\sigma\sqrt{n}}\le x\}=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{x}e^{-\frac{t^2}{2}}dt=\Phi(x)
 \]</div>
 <p>也称为独立同分布的中心极限定理</p>
-<p>该定理表明：期望为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mu\)</span></span>，方差为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sigma^2\)</span><span class="heti-spacing"> </span></span>的独立同分布的随机变量的部分和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \sum_{i=1}^{n} X_i\)</span><span class="heti-spacing"> </span></span>的标准化变量<span><span class="heti-spacing"> </span><span class="arithmatex">\(\dfrac{\displaystyle \sum_{i=1}^{n} X_i - n\mu}{\sigma\sqrt{n}}\)</span></span>，当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>充分大时，近似地服从<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>标准正态分布<span><span class="heti-spacing"> </span>** <span class="arithmatex">\(N(0, 1)\)</span></span>，即：</p>
+<p>该定理表明：期望为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mu\)</span></span>，方差为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sigma^2\)</span><span class="heti-spacing"> </span></span>的独立同分布的随机变量的部分和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\displaystyle \sum_{i=1}^{n} X_i\)</span><span class="heti-spacing"> </span></span>的标准化变量<span><span class="heti-spacing"> </span><span class="arithmatex">\(\dfrac{\displaystyle \sum_{i=1}^{n} X_i - n\mu}{\sigma\sqrt{n}}\)</span></span>，当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>充分大时，近似地服从<b>标准正态分布</b><span><span class="heti-spacing"> </span><span class="arithmatex">\(N(0, 1)\)</span></span>，即：</p>
 <div class="arithmatex">\[
 \frac{\displaystyle \sum_{i=1}^{n} X_i - n\mu}{\sigma\sqrt{n}} \overset{\text{approximately}}{\sim} N(0, 1), \text{ when } n \text{ is sufficiently large}
 \]</div>
