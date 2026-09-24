@@ -433,6 +433,13 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
+      实二次型的正交替换
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
       二次型的正定性
     </span>
 </a>
@@ -2643,6 +2650,13 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
+      实二次型的正交替换
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
       二次型的正定性
     </span>
 </a>
@@ -2656,14 +2670,52 @@
 <article class="md-content__inner md-typeset">
 <h1 id="chap6"><span>Chap6<span class="heti-spacing"> </span></span>二次型<a class="headerlink" href="#chap6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <h2 id="_1">二次型的定义及标准形<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition definition">
+<p class="admonition-title">二次型</p>
+<p>数域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}\)</span><span class="heti-spacing"> </span></span>上关于变元<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x_1, x_2, \cdots, x_n \in \mathbb{P}\)</span><span class="heti-spacing"> </span></span>的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>元二次型定义为如下的形式：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+f(x_1, x_2, \cdots, x_n) &amp;= a_{11}x_1^2 + 2a_{12}x_1x_2 + 2a_{13}x_1x_3 + \cdots + 2a_{1n}x_1x_n + \\
+&amp;\quad a_{22}x_2^2 + 2a_{23}x_2x_3 + \cdots + 2a_{2n}x_2x_n + \cdots + a_{nn}x_n^2 \\
+&amp;= \sum_{i=1}^{n} a_{ii}x_i^2 + 2\sum_{1 \leqslant i &lt; j \leqslant n} a_{ij}x_ix_j, 
+\end{aligned}
+\]</div>
+<p>当各项系数都是实数时，称为实二次型</p>
+</div>
+<p>称</p>
+<div class="arithmatex">\[
+\begin{cases}
+x_1 = c_{11}y_1 + c_{12}y_2 + \cdots + c_{1n}y_n, \\
+x_2 = c_{21}y_1 + c_{22}y_2 + \cdots + c_{2n}y_n, \\
+\quad \cdots \cdots \cdots \cdots \cdots \cdots \\
+x_n = c_{n1}y_1 + c_{n2}y_2 + \cdots + c_{nn}y_n
+\end{cases} 
+\]</div>
+<p>为数域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}\)</span><span class="heti-spacing"> </span></span>上的一个线性替换，这里<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(x_1, x_2, \cdots, x_n\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(y_1, y_2, \cdots, y_n\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}\)</span><span class="heti-spacing"> </span></span>中的变元，<span class="arithmatex">\(c_{ij} \in \mathbb{P}\ (i, j = 1, 2, \cdots, n)\)</span></p>
+<p>若<span><span class="heti-spacing"> </span><span class="arithmatex">\(|c_{ij}| \neq 0\)</span></span>，则称非退化的，否则称是退化的</p>
+<p>当二次型仅有平方项时，称为标准形</p>
 <h2 id="_2">二次型的矩阵形式与矩阵的合同<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition definition">
+<p class="admonition-title">矩阵合同</p>
+<p>设<span><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}, \boldsymbol{B} \in \mathbb{P}^{n \times n}\)</span></span>，若存在可逆矩阵<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{C} \in \mathbb{P}^{n \times n}\)</span><span class="heti-spacing"> </span></span>使得</p>
+<div class="arithmatex">\[
+\boldsymbol{B} = \boldsymbol{C}^{\mathrm{T}}\boldsymbol{A}\boldsymbol{C},
+\]</div>
+<p>则称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>与<span><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{B}\)</span></span>（在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}\)</span><span class="heti-spacing"> </span></span>上）合同，并记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A} \stackrel{T}{\sim} \boldsymbol{B}\)</span></span></p>
+</div>
 <h2 id="_3">二次型的规范形<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <div class="admonition theorem">
 <p class="admonition-title">惯性定理</p>
 <p>实二次型的实的标准形中的正系数项的个数、负系数项的个数以及零系数项的个数与非退化的线性替换的选取无关</p>
 <p>通常，分别称实二次型的实的标准形中与非退化的线性替换选择无关的正系数项的个数<span><span class="heti-spacing"> </span><span class="arithmatex">\(p\)</span></span>、负系数项的个数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(r - p\)</span><span class="heti-spacing"> </span></span>以及<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(2p - r\)</span><span class="heti-spacing"> </span></span>为该实二次型或其矩阵的<b>正惯性指数</b>、<b>负惯性指数</b>及<b>符号差</b></p>
 </div>
-<h2 id="_4">二次型的正定性<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_4">实二次型的正交替换<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>称由正交矩阵所构成的非退化的线性替换为正交（线性）替换</p>
+<div class="admonition theorem">
+<p class="admonition-title">定理</p>
+<p>任意一个<span class="heti-skip"><span class="heti-spacing"> </span>n<span class="heti-spacing"> </span></span>元的实二次型均可经正交替换化为标准形，且这个标准形中平方项的所有系数恰为这个实二次型的矩阵的所有特征值</p>
+</div>
+<h2 id="_5">二次型的正定性<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <div class="admonition definition">
 <p class="admonition-title">正定性</p>
 <p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>阶实对称矩阵，若</p>

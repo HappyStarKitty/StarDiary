@@ -2849,6 +2849,7 @@
 \int_{\Gamma_{AB}} P(x, y) \, \mathrm{d}x + Q(x, y) \, \mathrm{d}y = \int_{t_A}^{t_B} \left[ P(x(t), y(t)) \, x'(t) + Q(x(t), y(t)) \, y'(t) \right] \mathrm{d}t.
 \]</div>
 <h3 id="_3">格林公式<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
+<p>设区域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(D\)</span><span class="heti-spacing"> </span></span>的边界由一条或几条光滑曲线所围成，边界曲线<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\Gamma\)</span><span class="heti-spacing"> </span></span>的正向规定为：当沿边界行走时，区域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(D\)</span><span class="heti-spacing"> </span></span>总在他的左边，若与上述方向相反，则称为负方向，并记为<span><span class="heti-spacing"> </span><span class="arithmatex">\(-\Gamma\)</span></span></p>
 <div class="admonition formula">
 <p class="admonition-title">格林公式</p>
 <p>若函数<span><span class="heti-spacing"> </span><span class="arithmatex">\(P\)</span></span>，<span><span class="arithmatex">\(Q\)</span><span class="heti-spacing"> </span></span>在有界闭区域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(D \subset \mathbf{R}^2\)</span><span class="heti-spacing"> </span></span>上连续且具有一阶连续偏导数，则</p>
@@ -2861,6 +2862,8 @@
 \iint_{D} \begin{vmatrix} \dfrac{\partial}{\partial x} &amp; \dfrac{\partial}{\partial y} \\[2ex] P &amp; Q \end{vmatrix} \mathrm{d}x \mathrm{d}y = \oint_{\Gamma} P \, \mathrm{d}x + Q \, \mathrm{d}y
 \]</div>
 </div>
+<p>在格林公式中，令<span><span class="heti-spacing"> </span><span class="arithmatex">\(P=-y,Q=x\)</span></span>，可得计算平面区域的面积<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(S\)</span><span class="heti-spacing"> </span></span>的公式。若<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\Gamma\)</span><span class="heti-spacing"> </span></span>是区域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(D\)</span><span class="heti-spacing"> </span></span>边界曲线正向，有</p>
+<div class="arithmatex">\[S=\frac{1}{2}\oint_\Gamma -y\mathrm{d}x+x\mathrm{d}y\]</div>
 <h3 id="_4">平面曲线积分与路径无关性<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition theorem">
 <p class="admonition-title">定理</p>
@@ -2924,19 +2927,24 @@
 <li><span class="arithmatex">\(\displaystyle \iint_{S} Q(x, y, z) \, \mathrm{d}z \mathrm{d}x = \operatorname{sgn}\left( \frac{\pi}{2} - \beta \right) \iint_{\sigma_{zx}} Q(x, y(x, z), z) \, \mathrm{d}\sigma\)</span></li>
 <li><span class="arithmatex">\(\displaystyle \iint_{S} R(x, y, z) \, \mathrm{d}x \mathrm{d}y = \operatorname{sgn}\left( \frac{\pi}{2} - \gamma \right) \iint_{\sigma_{xy}} R(x, y, z(x, y)) \, \mathrm{d}\sigma\)</span></li>
 </ul>
+<div class="admonition example">
+<p class="admonition-title">例题</p>
+<p><img alt="wfxs" src="../figures/chap10/lt.png"/></p>
+<p>注意：上下两片曲面的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(sgn(\frac{\pi}{2}-\gamma)\)</span><span class="heti-spacing"> </span></span>是不同的，与第一类曲面积分有区别</p>
+</div>
 <h3 id="_7">高斯公式<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition formula">
 <p class="admonition-title">高斯公式</p>
 <p>设空间区域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(V\)</span><span class="heti-spacing"> </span></span>由分片光滑的双侧封闭曲面<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(S\)</span><span class="heti-spacing"> </span></span>构成，若函数<span><span class="heti-spacing"> </span><span class="arithmatex">\(P\)</span></span>，<span class="arithmatex">\(Q\)</span>，<span><span class="arithmatex">\(R\)</span><span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(V\)</span><span class="heti-spacing"> </span></span>上连续，且有一阶连续偏导数，则</p>
 <div class="arithmatex">\[
-\iiint_{V} \left( \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z} \right) \mathrm{d}x \mathrm{d}y \mathrm{d}z = \oiint_{S} P \, \mathrm{d}y \mathrm{d}z + Q \, \mathrm{d}z \mathrm{d}x + R \, \mathrm{d}x \mathrm{d}y
+\iiint_{V} \left( \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z} \right) \mathrm{d}x \mathrm{d}y \mathrm{d}z =  ∯_{S} P \, \mathrm{d}y \mathrm{d}z + Q \, \mathrm{d}z \mathrm{d}x + R \, \mathrm{d}x \mathrm{d}y
 \]</div>
 <p>其中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(S\)</span><span class="heti-spacing"> </span></span>取外侧</p>
 </div>
 <h3 id="_8">散度场<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition definition">
 <p class="admonition-title">散度</p>
-<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}(x, y, z) = (P(x, y, z), Q(x, y, z), R(x, y, z))\)</span><span class="heti-spacing"> </span></span>为空间区域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(V\)</span><span class="heti-spacing"> </span></span>上的向量函数，对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(V\)</span><span class="heti-spacing"> </span></span>上的每一点<span><span class="heti-spacing"> </span><span class="arithmatex">\((x, y, z)\)</span></span>，称函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\dfrac{\partial P}{\partial x} + \dfrac{\partial Q}{\partial y} + \dfrac{\partial R}{\partial z}\)</span><span class="heti-spacing"> </span></span>为向量函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>在点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(M(x, y, z)\)</span><span class="heti-spacing"> </span></span>处的<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>散度<span><span class="heti-spacing"> </span>**</span>，记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(\operatorname{div} \boldsymbol{A}(x, y, z)\)</span></span></p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}(x, y, z) = (P(x, y, z), Q(x, y, z), R(x, y, z))\)</span><span class="heti-spacing"> </span></span>为空间区域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(V\)</span><span class="heti-spacing"> </span></span>上的向量函数，对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(V\)</span><span class="heti-spacing"> </span></span>上的每一点<span><span class="heti-spacing"> </span><span class="arithmatex">\((x, y, z)\)</span></span>，称函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\dfrac{\partial P}{\partial x} + \dfrac{\partial Q}{\partial y} + \dfrac{\partial R}{\partial z}\)</span><span class="heti-spacing"> </span></span>为向量函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>在点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(M(x, y, z)\)</span><span class="heti-spacing"> </span></span>处的<b>散度</b>，记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(\operatorname{div} \boldsymbol{A}(x, y, z)\)</span></span></p>
 </div>
 <p>则高斯公式可以改写为：</p>
 <div class="arithmatex">\[\displaystyle \iiint_{V} \operatorname{div} \boldsymbol{A} \, \mathrm{d}V = \oiint_{S} \boldsymbol{A} \cdot \mathrm{d}\boldsymbol{S}\]</div>
@@ -3006,7 +3014,7 @@
 <div class="arithmatex">\[
 \operatorname{\mathbf{rot}} \boldsymbol{A} = \begin{vmatrix} \boldsymbol{i} &amp; \boldsymbol{j} &amp; \boldsymbol{k} \\[1ex] \dfrac{\partial}{\partial x} &amp; \dfrac{\partial}{\partial y} &amp; \dfrac{\partial}{\partial z} \\[2ex] P &amp; Q &amp; R \end{vmatrix}
 \]</div>
-<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{e}_\tau\)</span><span class="heti-spacing"> </span></span>是曲线<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(L\)</span><span class="heti-spacing"> </span></span>在点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(M(x, y, z)\)</span><span class="heti-spacing"> </span></span>处于指定的方向一致的单位切向量，向量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}\boldsymbol{s} = \boldsymbol{e}_\tau \, \mathrm{d}s\)</span><span class="heti-spacing"> </span></span>被称为<span class="heti-skip"><span class="heti-spacing"> </span>**<span class="heti-spacing"> </span></span>弧长元素向量<span><span class="heti-spacing"> </span>**</span>。</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{e}_\tau\)</span><span class="heti-spacing"> </span></span>是曲线<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(L\)</span><span class="heti-spacing"> </span></span>在点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(M(x, y, z)\)</span><span class="heti-spacing"> </span></span>处于指定的方向一致的单位切向量，向量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}\boldsymbol{s} = \boldsymbol{e}_\tau \, \mathrm{d}s\)</span><span class="heti-spacing"> </span></span>被称为弧长元素向量</p>
 <p><span><span class="arithmatex">\(\therefore\)</span><span class="heti-spacing"> </span></span>斯托克斯公式的第<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>种表示法：</p>
 <div class="arithmatex">\[
 \iint_{S} \operatorname{\mathbf{rot}} \boldsymbol{A} \cdot \mathrm{d}\boldsymbol{S} = \oint_{L} \boldsymbol{A} \cdot \mathrm{d}\boldsymbol{s}

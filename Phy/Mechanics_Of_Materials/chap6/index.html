@@ -968,28 +968,42 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_1">
 <span class="md-ellipsis">
-      挠曲线的微分方程
+      工程中的弯曲变形问题
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
-      用积分法求弯曲变形
+      挠曲线的微分方程
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
-      用叠加法求弯曲变形
+      用积分法求弯曲变形
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
+      用叠加法求弯曲变形
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
       简单超静定梁
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      提高弯曲刚度的一些措施
     </span>
 </a>
 </li>
@@ -2622,28 +2636,42 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_1">
 <span class="md-ellipsis">
-      挠曲线的微分方程
+      工程中的弯曲变形问题
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
-      用积分法求弯曲变形
+      挠曲线的微分方程
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
-      用叠加法求弯曲变形
+      用积分法求弯曲变形
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
+      用叠加法求弯曲变形
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
       简单超静定梁
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
+      提高弯曲刚度的一些措施
     </span>
 </a>
 </li>
@@ -2655,15 +2683,28 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="chap6"><span>Chap6<span class="heti-spacing"> </span></span>弯曲变形<a class="headerlink" href="#chap6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
-<h2 id="_1">挠曲线的微分方程<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_1">工程中的弯曲变形问题<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>工程中通常是限制弯曲变形，但在一些情况下，又利用弯曲变形以达到某种要求，如叠板弹簧、弹簧扳手</p>
+<h2 id="_2">挠曲线的微分方程<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p>挠曲线的近似微分方程</p>
 <div class="arithmatex">\[\frac{\mathrm{d}^2 w}{\mathrm{d}x^2}=\frac{M}{EI}\]</div>
-<h2 id="_2">用积分法求弯曲变形<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_3">用积分法求弯曲变形<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>将挠曲线近似微分方程的两边乘以<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}x\)</span></span>，积分得转角方程</p>
+<div class="arithmatex">\[\theta=\frac{\mathrm{d}w}{\mathrm{d}x}=\int \frac{M}{EI}\mathrm{d}x+C\]</div>
+<p>再乘以<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}x\)</span></span>，积分得挠曲线的方程</p>
+<div class="arithmatex">\[w=\iint (\frac{M}{EI}\mathrm{d}x)\mathrm{d}x+Cx+D\]</div>
+<p>在梁的支座上，根据支座提供的位移限制特征，可给定挠度和转角。在固定端，挠度和转角都为零，在铰支座上，挠度为零，这类条件称为边界条件</p>
+<p>挠曲线是一条连续光滑的曲线，这就是连续条件</p>
+<p>梁的刚度条件为</p>
+<div class="arithmatex">\[\left.\begin{aligned}|w|_{\max}\le [w] \\ |\theta|_{\max}\le[\theta]\end{aligned}\right\}\]</div>
+<p>式中<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([w]\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\([\theta]\)</span><span class="heti-spacing"> </span></span>为规定的许可挠度和转角</p>
 <p>积分法中，转角逆时针为正，挠度向上为正</p>
-<p>积分一次得转角方程，积分两次得挠度方程</p>
-<h2 id="_3">用叠加法求弯曲变形<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_4">用叠加法求弯曲变形<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p><img alt="无法显示" src="../figures/die_jia_fa.png"/></p>
-<h2 id="_4">简单超静定梁<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_5">简单超静定梁<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_6">提高弯曲刚度的一些措施<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>改善结构形式和载荷作用方式，减小弯矩</p>
+<p>选择合理的截面形状</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">

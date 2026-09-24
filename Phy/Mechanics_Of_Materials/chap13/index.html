@@ -2798,33 +2798,48 @@
 <article class="md-content__inner md-typeset">
 <h1 id="chap13"><span>Chap13<span class="heti-spacing"> </span></span>能量法<a class="headerlink" href="#chap13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
 <h2 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>由功能原理可知，弹性固体的应变能<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(V_{\varepsilon}\)</span><span class="heti-spacing"> </span></span>在数值上等于外力所作的功<span><span class="heti-spacing"> </span><span class="arithmatex">\(W\)</span></span></p>
 <div class="arithmatex">\[V_{\varepsilon}=W=\frac{1}{2}F\delta\]</div>
 <h2 id="_2">杆件应变能的计算<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <h3 id="_3">轴向拉伸或压缩<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="arithmatex">\[V_\varepsilon=W=\frac{1}{2}F\Delta l\]</div>
 <p>整个杆件的应变能</p>
-<div class="arithmatex">\[V_{\varepsilon}=\int_l \frac{F_N^2(x)dx}{2EA}\]</div>
-<p>应变能密度</p>
+<div class="arithmatex">\[V_{\varepsilon}=\int_l \frac{F_N^2(x)\mathrm{d}x}{2EA}\]</div>
+<p>单位体积的应变能即应变能密度为</p>
 <div class="arithmatex">\[v_\varepsilon=\frac{\sigma^2}{2E}=\frac{1}{2}\sigma \varepsilon\]</div>
 <h3 id="_4">纯剪切<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="arithmatex">\[\varepsilon=\frac{\tau^2}{2G}=\frac{1}{2}\tau \gamma\]</div>
 <h3 id="_5">扭转<a class="headerlink" href="#_5" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="arithmatex">\[V_\epsilon=\int_l \frac{T^2(x)dx}{2GI_p}\]</div>
+<div class="arithmatex">\[V_\epsilon=\int_l \frac{T^2(x)\mathrm{d}x}{2GI_p}\]</div>
 <h3 id="_6">弯曲<a class="headerlink" href="#_6" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
-<div class="arithmatex">\[V_\varepsilon=\int_l \frac{M^2(x)dx}{2EI}\]</div>
+<div class="arithmatex">\[V_\varepsilon=\int_l \frac{M^2(x)\mathrm{d}x}{2EI}\]</div>
 <h2 id="_7">应变能的普遍表达式<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>克拉贝伊隆原理：线弹性体的应变能等于每一外力与其相应位移乘积的二分之一的总和</p>
 <h2 id="_8">互等定理<a class="headerlink" href="#_8" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <p>第一组力在第二组力引起位移上所做的功，等于第二组力在第一组力引起位移上所做的功</p>
 <h2 id="_9">卡氏定理<a class="headerlink" href="#_9" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<p>卡氏第二定理：应变能对任一载荷的偏导数，等于载荷作用点沿<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F_i\)</span><span class="heti-spacing"> </span></span>方向的位移<span><span class="heti-spacing"> </span><span class="arithmatex">\(\delta_i\)</span></span></p>
+<div class="admonition theorem">
+<p class="admonition-title">卡氏第二定理</p>
+<p>应变能对任一载荷的偏导数，等于载荷作用点沿<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(F_i\)</span><span class="heti-spacing"> </span></span>方向的位移<span><span class="heti-spacing"> </span><span class="arithmatex">\(\delta_i\)</span></span></p>
+</div>
 <h3 id="_10">轴向拉压<a class="headerlink" href="#_10" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="arithmatex">\[\delta_i  =\frac{}{}=\int\]</div>
 <h2 id="_11">虚功原理<a class="headerlink" href="#_11" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>在虚位移中，外力所作虚功等于内力在相应虚变形上所作虚功</p>
 <h2 id="_12">单位载荷法 莫尔积分<a class="headerlink" href="#_12" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<div class="arithmatex">\[\Delta=\int_l \frac{M(x)\bar{M}(x)dx}{EI}\]</div>
+<p>设在外力作用下，刚架<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>点沿某一任意方向<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(aa\)</span><span class="heti-spacing"> </span></span>的位移为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\Delta\)</span></span>。为了计算<span><span class="heti-spacing"> </span><span class="arithmatex">\(\Delta\)</span></span>，设想在同一刚架的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>点上，沿<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(aa\)</span><span class="heti-spacing"> </span></span>方向作用一单位力，它与支座约束力组成平衡力系。这时刚架横截面上的轴力、弯矩和剪力分别为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\overline{F}_N(x)\)</span></span>，<span><span class="arithmatex">\(\overline{M}(x)\)</span><span class="heti-spacing"> </span></span>和<span><span class="heti-spacing"> </span><span class="arithmatex">\(\overline{F}_s(x)\)</span></span>。把刚架在原有外力作用下的位移作为虚位移，加于单位力作用下的刚架上</p>
+<p>表达虚功原理的式化为</p>
+<div class="arithmatex">\[
+1 \cdot \Delta = \int \overline{F}_N(x) \, \mathrm{d}(\Delta l) + \int \overline{M}(x) \, \mathrm{d}\theta + \int \overline{F}_s(x) \, \mathrm{d}\lambda 
+\]</div>
+<div class="admonition formula">
+<p class="admonition-title">莫尔积分</p>
+<div class="arithmatex">\[\Delta=\int_l \frac{M(x)\bar{M}(x)\mathrm{d}x}{EI}\]</div>
 <div class="arithmatex">\[\Delta = \sum_{i=1}^{n} \frac{F_{Ni}\bar{F}_{Ni}l_i}{EA_i}\]</div>
-<div class="arithmatex">\[\Delta=\int_l \frac{T(x)\bar{T}(x)dx}{GI_p}\]</div>
+<div class="arithmatex">\[\Delta=\int_l \frac{T(x)\bar{T}(x)\mathrm{d}x}{GI_p}\]</div>
+</div>
 <h2 id="_13">计算莫尔积分的图乘法<a class="headerlink" href="#_13" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="arithmatex">\[\Delta=\int_l \frac{M(x)\bar{M}(x)\mathrm{d}x}{EI}=\frac{\omega \bar{M_c}}{EI}\]</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
