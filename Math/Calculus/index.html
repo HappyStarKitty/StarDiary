@@ -1085,6 +1085,37 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+<span class="md-ellipsis">
+    材料热力学
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_6_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+            材料热力学
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Phy/Thermodynamics_Of_Materials/chap1/">
+<span class="md-ellipsis">
+    Chap1 The Behavior of Solutions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Phy/Thermodynamics_Of_Materials/addition/">
+<span class="md-ellipsis">
+    Addition
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -1566,7 +1597,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../AA/Aerodynamics/chap2/">
 <span class="md-ellipsis">
-    Chap2 流体力学基本方程
+    Chap2 流体力学AA基本方程
   </span>
 </a>
 </li>
@@ -1967,6 +1998,37 @@
 <a class="md-nav__link" href="../../AA/Finite_Element_Method/chap4/">
 <span class="md-ellipsis">
     Chap4 Truss element
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
+<span class="md-ellipsis">
+    导航原理与技术
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_8_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_8">
+<span class="md-nav__icon md-icon"></span>
+            导航原理与技术
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AA/Navigation_Principle/chap1/">
+<span class="md-ellipsis">
+    Chap1 绪论
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AA/Navigation_Principle/chap2/">
+<span class="md-ellipsis">
+    Chap2 导航的数学基础
   </span>
 </a>
 </li>
@@ -2634,11 +2696,6 @@ K = \frac{|y''|}{\left(1 + y'^2\right)^{3/2}}
 K = \frac{|x'(t)\,y''(t) - y'(t)\,x''(t)|}{\left[\,x'(t)^2 + y'(t)^2\,\right]^{3/2}}
 \]</div>
 </div>
-<div class="admonition formula">
-<p class="admonition-title">雅可比行列式</p>
-<p><span class="arithmatex">\(<span class="arithmatex">\(\frac{\partial (x,y)}{\partial (u,v)}=\left|\begin{array}{cccc}\frac{\partial x}{\partial u} &amp; \frac{\partial x}{\partial v} \\ \frac{\partial y}{\partial u} &amp; \frac{\partial y}{\partial v}
-\end{array}\right|\)</span>\)</span></p>
-</div>
 <h2 id="_2">积分<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <div class="admonition formula">
 <p class="admonition-title">分部积分</p>
@@ -2657,32 +2714,21 @@ K = \frac{|x'(t)\,y''(t) - y'(t)\,x''(t)|}{\left[\,x'(t)^2 + y'(t)^2\,\right]^{3
 \iint_{D} \begin{vmatrix} \dfrac{\partial}{\partial x} &amp; \dfrac{\partial}{\partial y} \\[2ex] P &amp; Q \end{vmatrix} \mathrm{d}x \mathrm{d}y = \oint_{\Gamma} P \, \mathrm{d}x + Q \, \mathrm{d}y
 \]</div>
 </div>
-<div class="admonition formula">
-<p class="admonition-title">高斯公式</p>
-<div class="arithmatex">\[\oiint_S F\cdot \mathrm{d}S=\iiint_V \nabla \cdot F \mathrm{d}V\]</div>
-</div>
-<div class="admonition formula">
-<p class="admonition-title">梯度公式</p>
-<div class="arithmatex">\[\oiint_S p dS=\iiint_V \nabla pdV\]</div>
-</div>
-<div class="admonition definition">
-<p class="admonition-title">散度</p>
-<div class="arithmatex">\[\nabla \cdot A=\frac{\partial A_x}{\partial x}+\frac{\partial A_y}{\partial y}+\frac{\partial A_z}{\partial z}, A=A_x i + A_y j + A_zk\]</div>
-</div>
 <div class="admonition definition">
 <p class="admonition-title">梯度</p>
-<div class="arithmatex">\[\nabla p=\frac{\partial p}{\partial x}i+\frac{\partial p}{\partial y}\mathbf{j}+\frac{\partial p}{\partial z}k, p=p(x,y,z)\]</div>
+<p>矢量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\dfrac{\partial u}{\partial x}\boldsymbol{i} + \dfrac{\partial u}{\partial y}\boldsymbol{j} + \dfrac{\partial u}{\partial z}\boldsymbol{k} = \left( \dfrac{\partial u}{\partial x}, \dfrac{\partial u}{\partial y}, \dfrac{\partial u}{\partial z} \right)\)</span><span class="heti-spacing"> </span></span>被称为函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u(P)\)</span><span class="heti-spacing"> </span></span>在点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(P\)</span><span class="heti-spacing"> </span></span>处的<b>梯度</b>，即为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{grad}\ u\)</span></span></p>
 </div>
 <div class="admonition definition">
 <p class="admonition-title">旋度</p>
-<div class="arithmatex">\[\nabla \times A=\left|\begin{array}{cccc}i &amp; j &amp; k \\
-\frac{\partial}{\partial x} &amp; \frac{\partial}{\partial y} &amp; \frac{\partial}{\partial z} \\
-A_x &amp; A_y &amp; A_z\end{array}\right|\]</div>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}(x, y, z) = (P(x, y, z), Q(x, y, z), R(x, y, z))\)</span><span class="heti-spacing"> </span></span>为空间区域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(V\)</span><span class="heti-spacing"> </span></span>上的向量函数，对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(V\)</span><span class="heti-spacing"> </span></span>上一点<span><span class="heti-spacing"> </span><span class="arithmatex">\(M(x, y, z)\)</span></span>，定义向量函数<span><span class="heti-spacing"> </span><span class="arithmatex">\(\left( \dfrac{\partial R}{\partial y} - \dfrac{\partial Q}{\partial z}, \dfrac{\partial P}{\partial z} - \dfrac{\partial R}{\partial x}, \dfrac{\partial Q}{\partial x} - \dfrac{\partial P}{\partial y} \right)\)</span></span>，称它为向量函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>在点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(M(x, y, z)\)</span><span class="heti-spacing"> </span></span>处的<b>旋度</b>，记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(\operatorname{\mathbf{rot}} \boldsymbol{A}\)</span></span></p>
+<p>行列式表示法：</p>
+<div class="arithmatex">\[
+\operatorname{\mathbf{rot}} \boldsymbol{A} = \begin{vmatrix} \boldsymbol{i} &amp; \boldsymbol{j} &amp; \boldsymbol{k} \\[1ex] \dfrac{\partial}{\partial x} &amp; \dfrac{\partial}{\partial y} &amp; \dfrac{\partial}{\partial z} \\[2ex] P &amp; Q &amp; R \end{vmatrix}
+\]</div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">速度散度</p>
-<div class="arithmatex">\[\nabla\cdot V=\frac{1}{\partial V}\frac{D(\partial V)}{Dt}=\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial w}{\partial z}\]</div>
-<p>速度散度表示单位体积的运动流体微元的体积随时间的变化率</p>
+<div class="admonition definition">
+<p class="admonition-title">散度</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}(x, y, z) = (P(x, y, z), Q(x, y, z), R(x, y, z))\)</span><span class="heti-spacing"> </span></span>为空间区域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(V\)</span><span class="heti-spacing"> </span></span>上的向量函数，对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(V\)</span><span class="heti-spacing"> </span></span>上的每一点<span><span class="heti-spacing"> </span><span class="arithmatex">\((x, y, z)\)</span></span>，称函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\dfrac{\partial P}{\partial x} + \dfrac{\partial Q}{\partial y} + \dfrac{\partial R}{\partial z}\)</span><span class="heti-spacing"> </span></span>为向量函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>在点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(M(x, y, z)\)</span><span class="heti-spacing"> </span></span>处的<b>散度</b>，记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(\operatorname{div} \boldsymbol{A}(x, y, z)\)</span></span></p>
 </div>
 <p><img alt="无法显示" src="figures/tdsdxd.png"/></p>
 <div class="admonition definition">

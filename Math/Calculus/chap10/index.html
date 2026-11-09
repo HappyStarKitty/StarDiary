@@ -1203,6 +1203,37 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+<span class="md-ellipsis">
+    材料热力学
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_6_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+            材料热力学
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Phy/Thermodynamics_Of_Materials/chap1/">
+<span class="md-ellipsis">
+    Chap1 The Behavior of Solutions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Phy/Thermodynamics_Of_Materials/addition/">
+<span class="md-ellipsis">
+    Addition
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -1684,7 +1715,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../AA/Aerodynamics/chap2/">
 <span class="md-ellipsis">
-    Chap2 流体力学基本方程
+    Chap2 流体力学AA基本方程
   </span>
 </a>
 </li>
@@ -2085,6 +2116,37 @@
 <a class="md-nav__link" href="../../../AA/Finite_Element_Method/chap4/">
 <span class="md-ellipsis">
     Chap4 Truss element
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
+<span class="md-ellipsis">
+    导航原理与技术
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_8_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_8">
+<span class="md-nav__icon md-icon"></span>
+            导航原理与技术
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../AA/Navigation_Principle/chap1/">
+<span class="md-ellipsis">
+    Chap1 绪论
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../AA/Navigation_Principle/chap2/">
+<span class="md-ellipsis">
+    Chap2 导航的数学基础
   </span>
 </a>
 </li>
@@ -2906,6 +2968,16 @@
 <p>称为函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}(P) = \boldsymbol{A}(x, y, z)\)</span><span class="heti-spacing"> </span></span>沿定侧曲面<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(S\)</span><span class="heti-spacing"> </span></span>的第二类曲面积分</p>
 <p>第二类曲面积分又被称为对坐标曲面积分</p>
 </div>
+<p>称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{e}_n\mathrm{d}S\)</span><span class="heti-spacing"> </span></span>为有向面积元素，常记为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}\mathbf{S}\)</span></span>，其三个投影分别为</p>
+<div class="arithmatex">\[\cos\alpha\mathrm{d}S=\mathrm{d}y\mathrm{d}z,\cos\beta\mathrm{d}S=\mathrm{d}z\mathrm{d}x,\cos\gamma\mathrm{d}S=\mathrm{d}x\mathrm{d}y\]</div>
+<p>第二类曲面积分可写成如下形式：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\iint_{S} \boldsymbol{A} \cdot \boldsymbol{e}_n \, \mathrm{d}S &amp;= \iint_{S} \boldsymbol{A} \cdot \mathrm{d}\boldsymbol{S} = \iint_{S} (P \cos \alpha + Q \cos \beta + R \cos \gamma) \, \mathrm{d}S \\
+&amp;= \iint_{S} P(x, y, z) \, \mathrm{d}y \mathrm{d}z + Q(x, y, z) \, \mathrm{d}z \mathrm{d}x + R(x, y, z) \, \mathrm{d}x \mathrm{d}y
+\end{aligned}
+\]</div>
+<p>采用这种记法时，这里的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}x\mathrm{d}y,\mathrm{d}z\mathrm{d}x,\mathrm{d}x\mathrm{d}y\)</span><span class="heti-spacing"> </span></span>可能为正，可能为负，甚至为零，而当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{e}_n\)</span><span class="heti-spacing"> </span></span>改变方向时，它们都要改变符号，与二重积分的面积元素<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}x\mathrm{d}y\)</span><span class="heti-spacing"> </span></span>总取正值是不同的</p>
 <div class="admonition note">
 <p class="admonition-title">第二类曲面积分的四种形式</p>
 <ul>
@@ -2931,6 +3003,19 @@
 <p class="admonition-title">例题</p>
 <p><img alt="wfxs" src="../figures/chap10/lt.png"/></p>
 <p>注意：上下两片曲面的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(sgn(\frac{\pi}{2}-\gamma)\)</span><span class="heti-spacing"> </span></span>是不同的，与第一类曲面积分有区别</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">例题</p>
+<p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sum\)</span><span class="heti-spacing"> </span></span>为曲面<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(z=\sqrt{x^2+y^2}\)</span><span class="heti-spacing"> </span></span>的下侧，<span><span class="arithmatex">\(P=P(x,y,z),Q=Q(x,y,z),R=R(x,y,z)\)</span><span class="heti-spacing"> </span></span>均为连续函数，则<span><span class="heti-spacing"> </span><span class="arithmatex">\(\iint_{\sum} P\mathrm{d}y\mathrm{d}z-Q\mathrm{d}z\mathrm{d}x=\)</span>____</span></p>
+<p>A.<span class="arithmatex">\(\iint_{\sum} (-\frac{x}{z}P+\frac{y}{z}Q)\mathrm{d}x\mathrm{d}y\)</span></p>
+<p>B.<span class="arithmatex">\(\iint_{\sum} (-\frac{x}{z}P-\frac{y}{z}Q)\mathrm{d}x\mathrm{d}y\)</span></p>
+<p>C.<span class="arithmatex">\(\iint_{\sum} (\frac{x}{z}P-\frac{y}{z}Q)\mathrm{d}x\mathrm{d}y\)</span></p>
+<p>D.<span class="arithmatex">\(\iint_{\sum} (\frac{x}{z}P+\frac{y}{z}Q)\mathrm{d}x\mathrm{d}y\)</span></p>
+<p>答案：A</p>
+<p>曲面的法向量为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbf{n}=(z^\prime_x,z^\prime_y,-1)\)</span></span></p>
+<p>其方向余弦为<span><span class="heti-spacing"> </span><span class="arithmatex">\(\cos\alpha=\frac{x}{\sqrt{2}z},\cos\beta=\frac{y}{\sqrt{2}z},\cos\gamma=\frac{-1}{\sqrt{2}}\)</span></span></p>
+<p>由转换公式<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}S=\frac{\mathrm{d}y\mathrm{d}z}{\cos\alpha},\mathrm{d}S=\frac{\mathrm{d}z\mathrm{d}x}{\cos\beta},\mathrm{d}S=\frac{\mathrm{d}x\mathrm{d}y}{\cos\gamma}\)</span></span></p>
+<p>即可得出答案</p>
 </div>
 <h3 id="_7">高斯公式<a class="headerlink" href="#_7" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h3>
 <div class="admonition formula">
@@ -3009,11 +3094,11 @@
 <div class="admonition definition">
 <p class="admonition-title">旋度</p>
 <p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}(x, y, z) = (P(x, y, z), Q(x, y, z), R(x, y, z))\)</span><span class="heti-spacing"> </span></span>为空间区域<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(V\)</span><span class="heti-spacing"> </span></span>上的向量函数，对<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(V\)</span><span class="heti-spacing"> </span></span>上一点<span><span class="heti-spacing"> </span><span class="arithmatex">\(M(x, y, z)\)</span></span>，定义向量函数<span><span class="heti-spacing"> </span><span class="arithmatex">\(\left( \dfrac{\partial R}{\partial y} - \dfrac{\partial Q}{\partial z}, \dfrac{\partial P}{\partial z} - \dfrac{\partial R}{\partial x}, \dfrac{\partial Q}{\partial x} - \dfrac{\partial P}{\partial y} \right)\)</span></span>，称它为向量函数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>在点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(M(x, y, z)\)</span><span class="heti-spacing"> </span></span>处的<b>旋度</b>，记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(\operatorname{\mathbf{rot}} \boldsymbol{A}\)</span></span></p>
-</div>
 <p>行列式表示法：</p>
 <div class="arithmatex">\[
 \operatorname{\mathbf{rot}} \boldsymbol{A} = \begin{vmatrix} \boldsymbol{i} &amp; \boldsymbol{j} &amp; \boldsymbol{k} \\[1ex] \dfrac{\partial}{\partial x} &amp; \dfrac{\partial}{\partial y} &amp; \dfrac{\partial}{\partial z} \\[2ex] P &amp; Q &amp; R \end{vmatrix}
 \]</div>
+</div>
 <p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{e}_\tau\)</span><span class="heti-spacing"> </span></span>是曲线<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(L\)</span><span class="heti-spacing"> </span></span>在点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(M(x, y, z)\)</span><span class="heti-spacing"> </span></span>处于指定的方向一致的单位切向量，向量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathrm{d}\boldsymbol{s} = \boldsymbol{e}_\tau \, \mathrm{d}s\)</span><span class="heti-spacing"> </span></span>被称为弧长元素向量</p>
 <p><span><span class="arithmatex">\(\therefore\)</span><span class="heti-spacing"> </span></span>斯托克斯公式的第<span class="heti-skip"><span class="heti-spacing"> </span>3<span class="heti-spacing"> </span></span>种表示法：</p>
 <div class="arithmatex">\[
