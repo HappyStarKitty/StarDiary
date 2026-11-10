@@ -2860,12 +2860,24 @@ x_j = \frac{D_j}{D}, \quad j = 1, 2, \cdots, n
 <p>矩阵的秩是矩阵初等变换的不变量</p>
 </div>
 <h2 id="gauss"><span>Gauss<span class="heti-spacing"> </span></span>消元过程中的不变量<a class="headerlink" href="#gauss" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<div class="admonition theorem">
+<p class="admonition-title">定理</p>
+<p>对于任意一个<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(n\)</span><span class="heti-spacing"> </span></span>元线性方程组，设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(A\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\bar{A}\)</span><span class="heti-spacing"> </span></span>分别表示该线性方程组的系数矩阵及其增广矩阵，则</p>
+<p><span>(1)<span class="heti-spacing"> </span></span>线性方程组有解<span><span class="heti-spacing"> </span><span class="arithmatex">\(\leftrightarrow r(A)=r(\bar{A})\)</span></span></p>
+<p>线性方程组无解<span><span class="heti-spacing"> </span><span class="arithmatex">\(\leftrightarrow r(A)&lt;r(\bar{A})\)</span></span></p>
+<p><span>(2)<span class="heti-spacing"> </span></span>当线性方程组有解时，</p>
+<p>有唯一解<span><span class="heti-spacing"> </span><span class="arithmatex">\(\leftrightarrow r(A)=n\)</span></span></p>
+<p>有无穷多个解<span><span class="heti-spacing"> </span><span class="arithmatex">\(\leftrightarrow r(A)&lt;n\)</span></span></p>
+<p>对于一个有解的线性方程组</p>
 <p>未知量的总数<span class="heti-skip"><span class="heti-spacing"> </span>=<span class="heti-spacing"> </span></span>自由未知量的总数<span class="heti-skip"><span class="heti-spacing"> </span>+<span class="heti-spacing"> </span></span>系数矩阵的秩</p>
+</div>
 <h2 id="_4">矩阵的相抵<a class="headerlink" href="#_4" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <div class="admonition definition">
 <p class="admonition-title">矩阵相抵</p>
 <p>设<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\mathbb{P}\)</span><span class="heti-spacing"> </span></span>为数域，<span class="arithmatex">\(\boldsymbol{A} \in \mathbb{P}^{m \times n}\)</span>，<span class="arithmatex">\(\boldsymbol{B} \in \mathbb{P}^{m \times n}\)</span>，若<span><span class="heti-spacing"> </span><span class="arithmatex">\(r(\boldsymbol{A}) = r(\boldsymbol{B})\)</span></span>，则称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>与<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{B}\)</span><span class="heti-spacing"> </span></span><b>相抵</b>（或<b>等价</b><heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，记作<span><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A} \stackrel{R}{\sim} \boldsymbol{B}\)</span></span></p>
 </div>
+<p>通常，当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(r(\boldsymbol{A}) = r\)</span><span class="heti-spacing"> </span></span>时，称<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\begin{pmatrix} \boldsymbol{E}_r &amp; \boldsymbol{O} \\ \boldsymbol{O} &amp; \boldsymbol{O} \end{pmatrix}\)</span><span class="heti-spacing"> </span></span>为<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\boldsymbol{A}\)</span><span class="heti-spacing"> </span></span>的相抵标准形（或等价标准形）</p>
+<p>显然，任意一个矩阵的相抵标准形均是唯一的</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
